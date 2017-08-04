@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  ample_admin_routes [ :pages ]
+  ample_public_routes [ :pages ],
+    controllers: { pages: 'public/pages' }
 end
