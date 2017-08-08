@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Use the title from a page's frontmatter if it has one -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= current_page.data.title || "Middleman" %></title>
+    <script src="//use.typekit.net/gmn4gir.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
   </head>
   <body>
     <%= yield %>
+    <script src="//use.fontawesome.com/13def86e84.js"></script>
   </body>
 </html>

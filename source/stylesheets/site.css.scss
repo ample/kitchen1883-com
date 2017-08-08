@@ -1,24 +1,88 @@
+@import 'variables';
+@import 'mixins';
+@import 'bootstrap';
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  @include font-serif();
+  background: $brown image-url('dark-wood.jpg') repeat top left;
+  color: $beige;
 }
 
-a {
-  color: rgba(#000, 0.7);
+main {
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+h1, h2 {
+  @include font-bold;
+}
+
+h1 {
+  font-size: 2.6375em;
+  margin-bottom: .4em;
+  @media(min-width: $screen-sm) {
+    font-size: 3.36375em;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  @media(min-width: $screen-sm) {
+    font-size: 2.1em;
+  }
+}
+
+hr {
+  width: 50%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: $green;
+  color: $green;
+  border: 0 none;
+}
+
+.btn {
+  @include font-sans();
+  font-size: 0.8em;
+  font-weight: 100;
+  padding: 0.65em 1.75em;
+}
+
+.brand {
+  float: none;
+  width: 774px;
+  margin: 0 auto;
+}
+
+.main-wrapper {
+  background: image-url('logo-stacked.png') no-repeat center right;
+  margin-top: 3em;
+  padding-top: 1.5em;
+  min-height: 774px;
+}
+
+.push-top {
+  margin-top: 1em;
+}
+
+.push-bottom {
+  margin-bottom: 1em;
+}
+
+.push-ends {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.list-social {
+  margin-top: 2em;
+  li {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+}
+
+.site-footer {
+  @include font-sans();
+  font-size: 0.65em;
+  color: $light-gray;
 }

@@ -1,0 +1,17 @@
+@mixin font-sans() {
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin font-serif() {
+  font-family: $font-family-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-bold() {
+  font-family: $font-family-bold;
+  font-style: normal;
+  font-weight: 700;
+}
