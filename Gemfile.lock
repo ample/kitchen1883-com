@@ -1,5 +1,5 @@
 GIT
-  remote: https://ample-mg:6cad0ada6d31c8ec5f93cf14f6a5e55ff0f9b235@github.com/ample/ample_admin.git
+  remote: https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git
   revision: 1fbbb393797ad381bef7a2a9e4b4c1caa2094e88
   specs:
     ample_admin (2.4.1)
@@ -69,7 +69,7 @@ GEM
     ancestry (3.0.1)
       activerecord (>= 3.2.0)
     arel (8.0.0)
-    autoprefixer-rails (7.1.2.3)
+    autoprefixer-rails (7.1.2.4)
       execjs
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
