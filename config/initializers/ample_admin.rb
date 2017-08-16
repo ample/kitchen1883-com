@@ -1,6 +1,7 @@
 AmpleAdmin.configure do |config|
 
   config.root_permalink = 'index'
+  config.auth_model = :user
 
   config.templates = {
     pages: {

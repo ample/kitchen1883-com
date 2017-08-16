@@ -1,0 +1,29 @@
+records:
+
+  - sprig_id: 1
+    first_name: 'Taylor'
+    last_name: 'MacDonald'
+    email: 'taylor@helloample.com'
+    password: 'changeme'
+    password_confirmation: 'changeme'
+
+  - sprig_id: 2
+    first_name: 'Becky'
+    last_name: 'Singson'
+    email: 'becky@helloample.com'
+    password: 'changeme'
+    password_confirmation: 'changeme'
+
+  - sprig_id: 3
+    first_name: 'Sean'
+    last_name: 'Davis'
+    email: 'sean@helloample.com'
+    password: 'changeme'
+    password_confirmation: 'changeme'
+
+  - sprig_id: 4
+    first_name: 'Sarah'
+    last_name: 'Sachs'
+    email: 'sarah@helloample.com'
+    password: 'changeme'
+    password_confirmation: 'changeme'

@@ -11,6 +11,8 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'ample_admin', git: 'https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git'
+gem 'devise'
+gem 'figaro'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
