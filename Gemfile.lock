@@ -8,6 +8,12 @@ GIT
       websocket-driver (>= 0.2.0)
 
 GIT
+  remote: https://github.com/vigetlabs/sprig.git
+  revision: f7cfbb8927d09153c8a9597310fc82463620266c
+  specs:
+    sprig (0.3.0)
+
+GIT
   remote: https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git
   revision: 1fbbb393797ad381bef7a2a9e4b4c1caa2094e88
   specs:
@@ -359,6 +365,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers
+  sprig (~> 0.3.0)!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

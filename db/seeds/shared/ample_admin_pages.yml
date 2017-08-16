@@ -1,0 +1,8 @@
+records:
+
+  - sprig_id: 'idx'
+    title: 'New American Comfort Food'
+    nav_name: 'Home'
+    permalink: 'index'
+    template_filename: 'index'
+    active: true

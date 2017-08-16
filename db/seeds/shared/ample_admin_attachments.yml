@@ -1,0 +1,4 @@
+records:
+
+  - sprig_id: 'FPO'
+    file: "<%= File.open(File.join(Rails.root,'app/assets/images/fpo.jpg')) %>"

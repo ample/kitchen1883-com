@@ -28,6 +28,10 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+group :development, :staging do
+  gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
+end
+
 group :test do
   gem 'factory_girl_rails'
   gem 'guard-rspec'
