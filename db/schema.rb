@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170816013704) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ample_admin_attachables", force: :cascade do |t|
     t.string "alt_text"
     t.string "owner_type"
