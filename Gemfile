@@ -15,6 +15,7 @@ gem 'ample_admin', git: 'https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476
 gem 'devise'
 gem 'figaro'
 gem 'paperclip-azure', '~> 1.0'
+gem 'imgix-rails'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
