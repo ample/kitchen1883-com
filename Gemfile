@@ -14,6 +14,7 @@ gem 'pg'
 gem 'ample_admin', git: 'https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git'
 gem 'devise'
 gem 'figaro'
+gem 'paperclip-azure', '~> 1.0'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
