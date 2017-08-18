@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= yield(:jumbotron) if content_for?(:jumbotron) %>
     <div class="container">
       <%= yield %>
     </div>
