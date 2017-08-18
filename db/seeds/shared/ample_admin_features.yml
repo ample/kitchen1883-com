@@ -1,0 +1,81 @@
+records:
+
+  - sprig_id: 'idx_img01'
+    title: 'Nibh Tortor Tristique'
+    active: true
+    feature_type: 'image'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_img02'
+    title: 'Ipsum Condimentum Pharetra'
+    active: true
+    feature_type: 'image'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_img03'
+    title: 'Quam Amet'
+    active: true
+    feature_type: 'image'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_img04'
+    title: 'Sem Tellus Tortor'
+    active: true
+    feature_type: 'image'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_img05'
+    title: 'Sollicitudin Cras'
+    active: true
+    feature_type: 'image'
+    region: 'main'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_img06'
+    title: 'Tristique Parturient Ullamcorper Cursus'
+    active: true
+    feature_type: 'image'
+    region: 'main'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: image\n"
+
+  - sprig_id: 'idx_content_block'
+    title: 'Locations / Hours'
+    active: true
+    feature_type: 'content_block'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 2
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"9003 US Highway 42  \\r\\nUnion, KY 41091  \\r\\n(513) 421-2100\\r\\n\\r\\n**MON-THR**\n    \\ \\r\\n11:00am - 9:00pm\\r\\n\\r\\n**FRI**\n    \\ \\r\\n11:00am - 10:00pm\\r\\n\\r\\n**SAT**\n    \\ \\r\\n9:00am\n    - 10:00pm\\r\\n\\r\\n**SUN**\n    \\ \\r\\n9:00am - 9:00pm\\r\\n\\r\\n\"\n  block_type: text\n"
+
+  - sprig_id: 'idx_header'
+    title: 'Fill Up On The Good Stuff'
+    active: true
+    feature_type: 'header'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 0
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"The food you want to eat. A place to feel happy.  \\r\\nWelcome to the melting\n    pot of American flavors.\"\n  block_type: text\n"
