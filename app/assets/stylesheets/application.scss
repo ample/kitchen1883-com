@@ -1,10 +1,6 @@
+@import 'overrides';
 @import 'bootstrap';
-
-
-.container {
-  max-width: 60em;
-  @include make-container();
-}
+@import 'base/**/*';
 
 .feature-group {
   @include make-row();

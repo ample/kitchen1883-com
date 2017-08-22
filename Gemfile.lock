@@ -400,6 +400,7 @@ PLATFORMS
 
 DEPENDENCIES
   ample_admin!
+  autoprefixer-rails
   bootstrap
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -434,4 +435,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.13.6
+   1.15.3

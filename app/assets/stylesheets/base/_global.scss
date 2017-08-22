@@ -1,0 +1,10 @@
+body {
+  background: image-url('bg-dark-wood.jpg') center 1440px;
+  color: $white;
+  font-family: 'adelle';
+}
+
+.container {
+  max-width: 60em;
+  @include make-container();
+}
