@@ -10,11 +10,7 @@ features:
 --- %>
 
 <% content_for :jumbotron do %>
-  <header style="background-image: url(<%= ix_image_url(current_object.attachment.file.path(:jumbotron), auto: 'format,compress') if current_object.attachment.present? %>)">
-    <div class="container text-center">
-      <h1 class="text-inverted"><%= current_object.title %></h1>
-    </div>
-  </header>
+  <%= render 'public/partials/jumbotron' %>
 <% end %>
 
 <div class="lead text-center"><%= markdown current_object.body %></div>

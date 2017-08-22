@@ -1,23 +1,10 @@
 <%# ---
 name: Default Template
 description: This is the base page template
-fields:
-  subheader: string
+fields: {}
 help: {}
 regions: {}
-features:
-  - media_object
+features: {}
 --- %>
 
-<h1><%= current_object.title %></h1>
-<h2><%= current_object.blocks.dig(:subheader, :body) %></h2>
-
-<div class="row">
-  <div class="col-sm-6">
-    <%= markdown current_object.body %>
-  </div>
-
-  <aside class="col-sm-6">
-    <%= render partial: 'public/media_object', collection: current_media_objects %>
-  </aside>
-</div>
+<%= markdown current_object.body %>
