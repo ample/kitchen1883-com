@@ -1,3 +1,10 @@
-<figure>
-  <%= ix_image_tag image.image_path(:original), auto: 'format,compress', w: 270, h: 270, fit: 'crop', class: 'img-fluid' %>
-</figure>
+<div class="grid-item <%= "w#{image.grid_width} h#{image.grid_height}" %>">
+  <%= ix_image_tag(
+    image.image_path(:original),
+    auto: 'format,compress',
+    w: (image.grid_width.to_i * 270) - ((image.grid_height.to_i - 1) * 16),
+    h: (image.grid_height.to_i * 270) - ((image.grid_width.to_i - 1) * 16),
+    fit: 'crop',
+    class: 'img-fluid'
+  ) %>
+</div>

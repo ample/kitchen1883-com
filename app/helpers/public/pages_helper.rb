@@ -24,4 +24,9 @@ module Public::PagesHelper
     end
   end
 
+  def render_feature(type)
+    features = current_object.features_by_type(types: type).sort_by(&:id)
+    render partial: "public/features/#{type}", collection: features
+  end
+
 end

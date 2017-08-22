@@ -14,4 +14,7 @@ features:
 <% end %>
 
 <div class="lead text-center"><%= markdown current_object.body %></div>
-<%= render_grouped_features %>
+
+<div class="masonry">
+  <%= render_feature(:image) %>
+</div>
