@@ -1,0 +1,24 @@
+<%# ---
+name: Menu
+fields: {}
+regions:
+  - main
+features:
+  - header
+  - menu_item
+--- %>
+
+
+<% content_for :jumbotron do %>
+  <header style="background-image: url(<%= ix_image_url(current_parent.attachment.file.path(:jumbotron), auto: 'format,compress') if current_parent.try(:attachment).present? %>)">
+    <div class="container text-center">
+      <h1 class="text-inverted"><%= current_parent.title %></h1>
+      <%= markdown current_parent.body %>
+    </div>
+  </header>
+<% end %>
+
+<%= render 'public/partials/subnav' %>
+
+<h2><%= current_object.title %></h2>
+<%= render_grouped_features %>

@@ -5,9 +5,11 @@
   max-width: 60em;
   @include make-container();
 }
+
 .feature-group {
   @include make-row();
 }
+
 figure {
   @include make-col-ready();
 
@@ -17,4 +19,8 @@ figure {
   @media (min-width: 32.1em) {
     @include make-col(4);
   }
+}
+
+.menu-item {
+  @include make-col(4);
 }

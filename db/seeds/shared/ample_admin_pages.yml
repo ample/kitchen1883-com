@@ -6,3 +6,32 @@ records:
     permalink: 'index'
     template_filename: 'index'
     active: true
+
+  - sprig_id: 'menu'
+    title: 'Menu'
+    body: "We have something for everyone.\nFind the food that makes you feel good inside."
+    permalink: 'menu'
+    template_filename: 'menu'
+    active: true
+
+  - sprig_id: 'menu_brunch'
+    title: 'Brunch'
+    permalink: 'brunch'
+    template_filename: 'menu'
+    parent_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
+    active: true
+
+  - sprig_id: 'menu_lunch-dinner'
+    title: 'Lunch / Dinner'
+    permalink: 'lunch-dinner'
+    template_filename: 'menu'
+    parent_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
+    active: true
+
+  - sprig_id: 'menu_drinks'
+    title: 'Drinks'
+    permalink: 'drinks'
+    template_filename: 'menu'
+    parent_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
+    active: true
+

@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git
-  revision: 18342e2c1f9df3b493d2109269cb4541d800cd23
+  revision: 95f3ae88cf8a1c3cb05d6bbdfea89c0a58032120
   specs:
     ample_admin (2.4.1)
       ancestry
@@ -244,7 +244,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     orm_adapter (0.5.0)
-    paper_trail (7.1.0)
+    paper_trail (7.1.1)
       activerecord (>= 4.0, < 5.2)
       request_store (~> 1.1)
     paperclip (5.1.0)

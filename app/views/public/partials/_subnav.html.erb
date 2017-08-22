@@ -1,0 +1,5 @@
+<ul class="list-inline">
+<% current_subnav.each do |child| %>
+  <li class="list-inline-item"><%= link_to (child.nav_name.present? ? child.nav_name : child.title), child.hierarchy_permalink %></li>
+<% end %>
+</ul>
