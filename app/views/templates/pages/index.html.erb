@@ -15,10 +15,12 @@ features:
 
 <div class="lead text-center"><%= markdown current_object.body %></div>
 
-<div class="intro border-top-dotten text-center">
-  <%= render_feature(:header) %>
-</div>
+<%= render_feature(:header) %>
 
 <div class="masonry">
   <%= render_feature(:image) %>
+</div>
+
+<div class="hours text-center border-top-dotted">
+  <%= render_feature(:content_block) %>
 </div>
