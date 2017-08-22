@@ -1,6 +1,7 @@
 @import 'overrides';
 @import 'bootstrap';
 @import 'base/**/*';
+@import 'components/**/*';
 
 .feature-group {
   @include make-row();
