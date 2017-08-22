@@ -1,4 +1,6 @@
-<%= content_tag (header.content_tag || 'H2').downcase.to_sym, header.title %>
-<div class="lead">
-  <%= header.body %>
+<div class="border-top-dotted p-5 mt-5">
+  <%= content_tag (header.content_tag || 'H2').downcase.to_sym, header.title, class: 'tk-refrigerator-deluxe text-uppercase' %>
+  <div class="lead mt-3 fz-26 fw-normal">
+    <%= header.body %>
+  </div>
 </div>
