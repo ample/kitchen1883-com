@@ -24,9 +24,13 @@ module Public::PagesHelper
     end
   end
 
-  def render_feature(type)
-    features = current_object.features_by_type(types: type).sort_by(&:id)
-    render partial: "public/features/#{type}", collection: features
+  def bg_img(options = {})
+    return if current_object.try(:attachment).blank?
+    img_url = ix_image_url(
+      current_object.attachment.file.path(:jumbotron),
+      auto: 'format,compress'
+    )
+    "style=\"background-image: url('#{img_url}')\"".html_safe
   end
 
 end
