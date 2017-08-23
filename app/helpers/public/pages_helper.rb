@@ -33,4 +33,15 @@ module Public::PagesHelper
     "style=\"background-image: url('#{img_url}')\"".html_safe
   end
 
+  def fallback(value, *fallbacks)
+    return value if value.present?
+    fallbacks.each { |fallback| return fallback if fallback.present? }
+    nil
+  end
+
+  def template_filename
+    return unless defined?(current_object)
+    current_object.try(:template).try(:filename)
+  end
+
 end

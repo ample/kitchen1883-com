@@ -11,7 +11,7 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  <body>
+  <body class="template-<%= template_filename %>">
     <%= yield(:jumbotron) if content_for?(:jumbotron) %>
     <div class="container">
       <%= yield %>

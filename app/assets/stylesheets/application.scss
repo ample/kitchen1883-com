@@ -1,11 +1,8 @@
-@import 'overrides';
+@import 'utils/helpers';
+@import 'utils/overrides';
 @import 'bootstrap';
 @import 'base/**/*';
 @import 'components/**/*';
-
-.feature-group {
-  @include make-row();
-}
 
 figure {
   @include make-col-ready();
