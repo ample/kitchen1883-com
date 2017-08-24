@@ -9,9 +9,11 @@
   </head>
 
   <body>
+    <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav navbar-nav navbar-right' } %>
     <%= yield(:jumbotron) if content_for?(:jumbotron) %>
     <div class="container">
       <%= yield %>
     </div>
+    <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav navbar-nav navbar-right' } %>
   </body>
 </html>
