@@ -19,6 +19,7 @@ gem 'paperclip-azure', '~> 1.0'
 gem 'imgix-rails'
 gem 'rollbar'
 gem 'bootstrap'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'

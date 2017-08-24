@@ -2,6 +2,7 @@ AmpleAdmin.configure do |config|
 
   config.root_permalink = 'index'
   config.auth_model = :user
+  config.menu_positions = [:global]
 
   config.templates = {
     pages: {

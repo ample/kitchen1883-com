@@ -1,0 +1,8 @@
+<div class="menu">
+  <% if menu.display_title? %>
+    <h3><%= menu.title %></h3>
+  <% end %>
+  <ul class="<%= local_assigns.try(:[], :klasses) || 'list-unstyled' %>">
+    <%= render partial: 'public/links/link', collection: menu.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: menu.position } %>
+  </ul>
+</div>

@@ -1,0 +1,31 @@
+records:
+
+  - sprig_id: m_home
+    menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
+    title: Home
+    href: '#'
+    active: true
+
+  - sprig_id: m_menu
+    menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
+    title: Menu
+    href: '#'
+    active: true
+
+  - sprig_id: m_reservations
+    menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
+    title: Reservations
+    href: '#'
+    active: true
+
+  - sprig_id: m_locations
+    menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
+    title: Locations
+    href: '#'
+    active: true
+
+  - sprig_id: m_careers
+    menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
+    title: Careers
+    href: '#'
+    active: true

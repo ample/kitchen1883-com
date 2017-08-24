@@ -1,0 +1,6 @@
+records:
+
+  - sprig_id: m
+    title: Main Nav
+    active: true
+    position: global
