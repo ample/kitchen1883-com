@@ -1,5 +1,11 @@
 module Public::PagesHelper
 
+  def current_social_accounts
+    Rails.cache.fetch('social_accounts') do
+      AmpleAdmin::SocialAccount.all
+    end
+  end
+
   def menu_link(link, position:nil, children:nil)
     classes = [link.icon]
     if link.computed_href.remove('/') == params[:permalink] || (
