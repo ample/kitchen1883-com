@@ -1,8 +1,17 @@
 @import 'utils/helpers';
 @import 'utils/overrides';
+
 @import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
 @import 'base/**/*';
 @import 'components/**/*';
+
+.container {
+  max-width: 60em;
+  @include make-container();
+}
 
 .feature-group {
   @import 'features/**/*';

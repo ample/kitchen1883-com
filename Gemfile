@@ -20,6 +20,7 @@ gem 'imgix-rails'
 gem 'rollbar'
 gem 'bootstrap'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.2'

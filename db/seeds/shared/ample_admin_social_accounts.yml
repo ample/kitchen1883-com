@@ -1,0 +1,20 @@
+
+records:
+
+  - sprig_id: 'twitter'
+    title: 'Twitter'
+    link: '#'
+    icon: 'fa-twitter'
+    active: true
+
+  - sprig_id: 'instagram'
+    title: 'Instagram'
+    link: '#'
+    icon: 'fa-instagram'
+    active: true
+
+  - sprig_id: 'facebook'
+    title: 'Facebook'
+    link: '#'
+    icon: 'fa-facebook'
+    active: true

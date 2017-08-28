@@ -4,5 +4,8 @@ sprig_shared [
   User,
   AmpleAdmin::Attachment,
   AmpleAdmin::Page,
-  AmpleAdmin::Feature
+  AmpleAdmin::Feature,
+  AmpleAdmin::Menu,
+  AmpleAdmin::Link,
+  AmpleAdmin::SocialAccount
 ]
