@@ -4,6 +4,10 @@
 @import 'base/**/*';
 @import 'components/**/*';
 
+.feature-group {
+  @import 'features/**/*';
+}
+
 figure {
   @include make-col-ready();
 

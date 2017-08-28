@@ -13,6 +13,8 @@ features:
   <%= render 'public/partials/jumbotron' %>
 <% end %>
 
-<div class="lead text-center"><%= markdown current_object.body %></div>
+<div class="lead text-center">
+  <%= markdown current_object.body %>
+</div>
 
 <%= render_grouped_features %>
