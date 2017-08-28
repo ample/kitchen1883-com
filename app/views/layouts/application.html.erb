@@ -13,13 +13,14 @@
 
   <body class="template-<%= template_filename %>">
 
-    <%= render partial: 'public/menus/header_menu', collection: global_nav %>
+    <%= render 'public/partials/header' %>
 
     <%= yield(:jumbotron) if content_for?(:jumbotron) %>
     <div class="container">
       <%= yield %>
     </div>
-    <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav navbar-nav navbar-right' } %>
-    <%= render partial: 'public/partials/social', collection: current_social_accounts %>
+
+    <%= render 'public/partials/footer' %>
+
   </body>
 </html>

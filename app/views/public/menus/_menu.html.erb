@@ -1,3 +1,0 @@
-<ul class="<%= local_assigns.try(:[], :klasses) || 'nav' %>">
-  <%= render partial: 'public/links/link', collection: menu.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: menu.position } %>
-</ul>

@@ -1,0 +1,47 @@
+.global-footer {
+  border-top: .375rem solid rgba($white, 0.15);
+  margin-top: 7.5rem;
+  overflow: hidden;
+  padding: 6rem 0 9.5rem;
+  position: relative;
+
+  &:before {
+    background-image: image-url('kitchen-1883-logo-stacked-03.svg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 18rem;
+    content: ' ';
+    display: block;
+    height: 100%;
+    opacity: 0.175;
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+    width: 16rem;
+  }
+
+  .nav {
+    margin-bottom: 1.75rem;
+  }
+
+  .nav-item:first-child a {
+    padding-left: 0;
+  }
+
+  .social-links a {
+    color: $yellow;
+    display: inline-block;
+    margin-right: 1.25rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

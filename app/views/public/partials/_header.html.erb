@@ -1,0 +1,8 @@
+<header class="menu global-header navbar navbar-light">
+  <a class="navbar-brand" href="/">
+    <%= image_tag 'kitchen-1883-logo.svg' %>
+  </a>
+  <ul class="<%= local_assigns.try(:[], :klasses) || 'nav' %>">
+    <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
+  </ul>
+</header>

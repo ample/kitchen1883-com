@@ -1,4 +1,4 @@
-.menu.navbar {
+.menu {
 
   .nav-link {
     color: $white;
@@ -18,17 +18,4 @@
       width: 24rem;
     }
   }
-
-
-
-
-  // ---------------------------------------- | Header
-
-  &.menu-header {
-    margin-top: 2.125rem;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-  }
 }
-

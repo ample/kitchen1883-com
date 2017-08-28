@@ -1,9 +1,0 @@
-<div class="menu menu-header navbar navbar-light">
-  <% if header_menu.display_title? %>
-    <h3><%= header_menu.title %></h3>
-  <% end %>
-  <a class="navbar-brand" href="/">
-    <%= image_tag 'kitchen-1883-logo.svg' %>
-  </a>
-  <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav justify-content-end' } %>
-</div>
