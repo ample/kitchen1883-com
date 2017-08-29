@@ -57,9 +57,10 @@ module Public::PagesHelper
   end
 
   def bg_img(options = {})
-    return if current_object.try(:attachment).blank?
+    obj = options[:obj] || current_object
+    return if obj.try(:attachment).blank?
     img_url = ix_image_url(
-      current_object.attachment.file.path(:jumbotron),
+      obj.attachment.file.path(:jumbotron),
       auto: 'format,compress'
     )
     "style=\"background-image: url('#{img_url}')\"".html_safe

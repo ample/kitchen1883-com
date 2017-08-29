@@ -9,7 +9,7 @@ features:
 --- %>
 
 <% content_for :jumbotron do %>
-  <%= render 'public/partials/jumbotron' %>
+  <%= render partial: 'public/partials/jumbotron', locals: { obj: current_parent } %>
 <% end %>
 
 <div class="container text-center">

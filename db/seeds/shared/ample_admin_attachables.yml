@@ -5,17 +5,7 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'home-hero').id %>"
 
-  - sprig_id: menu_brunch_hero
+  - sprig_id: menu_hero
     owner_type: "AmpleAdmin::Page"
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
-    attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'menu-hero').id %>"
-
-  - sprig_id: dinner_hero
-    owner_type: "AmpleAdmin::Page"
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
-    attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'menu-hero').id %>"
-
-  - sprig_id: menu_drinks_hero
-    owner_type: "AmpleAdmin::Page"
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
     attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'menu-hero').id %>"
