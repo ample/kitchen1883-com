@@ -10,7 +10,8 @@ module Public::PagesHelper
     classes = [link.icon]
     if link.computed_href.remove('/') == params[:permalink] ||
        (link.is_root? && children.any? {|x| x.computed_href.remove('/') == params[:permalink] }) ||
-       (link.is_root? && request.path == '/' && link.computed_href == '/')
+       (link.is_root? && request.path == '/' && link.computed_href == '/') ||
+       (link.computed_href == '/menu' && @current_permalinks.first == 'menu')
       classes.push('active')
     end
     classes.push('nav-link')
