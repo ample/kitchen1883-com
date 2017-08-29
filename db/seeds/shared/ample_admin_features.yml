@@ -8,7 +8,7 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_img02'
     title: 'Ipsum Condimentum Pharetra'
@@ -18,7 +18,7 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '2'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_img03'
     title: 'Quam Amet'
@@ -28,7 +28,7 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '2'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_img04'
     title: 'Sem Tellus Tortor'
@@ -38,7 +38,7 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_img05'
     title: 'Sollicitudin Cras'
@@ -48,7 +48,7 @@ records:
     owner_type: 'AmpleAdmin::Page'
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_img06'
     title: 'Tristique Parturient Ullamcorper Cursus'
@@ -58,7 +58,7 @@ records:
     owner_type: 'AmpleAdmin::Page'
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: ''\n  block_type: image\ngrid_width: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\ngrid_height: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
 
   - sprig_id: 'idx_content_block'
     title: 'Locations / Hours'

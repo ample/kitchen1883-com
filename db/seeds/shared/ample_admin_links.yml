@@ -3,13 +3,13 @@ records:
   - sprig_id: m_home
     menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
     title: Home
-    href: '#'
+    href: '/'
     active: true
 
   - sprig_id: m_menu
     menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
     title: Menu
-    href: '#'
+    href: '/menu'
     active: true
 
   - sprig_id: m_reservations
