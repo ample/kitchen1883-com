@@ -1,0 +1,32 @@
+&.menu-items {
+  @include make-row();
+  margin: 0;
+
+  .menu-item {
+    @include make-col(4);
+
+    &:nth-child(3n+1) {
+      padding-right: 3rem;
+    }
+
+    &:nth-child(3n+3) {
+      padding-left: 3rem;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .desc {
+      font-size: 1rem;
+      font-family: $font-family-adelle-sans;
+    }
+  }
+}
