@@ -763,6 +763,18 @@ records:
         body: '0'
         block_type: boolean
 
+  - title: Menu Footnote
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 701
+    region: main
+    blocks:
+      body:
+        body: "Brunch served saturdays & sundays 9 am—2 pm  \nMenu items available for take out"
+        block_type: text
+
   # ---------------------------------------- | Menu / Brunch / Headers
 
   - title: More Lunch Than Brunch
@@ -1201,6 +1213,18 @@ records:
       gluten_free:
         body: '0'
         block_type: boolean
+
+  - title: Menu Footnote
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 401
+    region: main
+    blocks:
+      body:
+        body: "Brunch served saturdays & sundays 9 am—2 pm  \nMenu items available for take out"
+        block_type: text
 
   # ---------------------------------------- | Menu / Drinks / Headers
 
