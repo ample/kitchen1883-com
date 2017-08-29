@@ -1,5 +1,5 @@
 <%= content_tag fallback(header.content_tag, 'H2').downcase.to_sym, header.title %>
 
 <div class="content">
-  <%= header.body.html_safe %>
+  <%= header.body.try(:html_safe) %>
 </div>
