@@ -1,0 +1,21 @@
+.menu {
+
+  .nav-link {
+    color: $white;
+    font-family: $font-family-refrigerator-deluxe;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+
+    &.active {
+      color: $yellow;
+    }
+  }
+
+  .navbar-brand {
+    padding: 0;
+
+    img {
+      width: 24rem;
+    }
+  }
+}

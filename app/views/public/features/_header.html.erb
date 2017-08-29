@@ -1,4 +1,5 @@
-<%= content_tag (header.content_tag || 'H2').downcase.to_sym, header.title %>
-<div class="lead">
-  <%= header.body %>
+<%= content_tag fallback(header.content_tag, 'H2').downcase.to_sym, header.title %>
+
+<div class="content">
+  <%= header.body.html_safe %>
 </div>

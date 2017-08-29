@@ -1,4 +1,4 @@
-<li<%= ' class="dropdown"'.html_safe if children = (local_assigns.try(:[], :children) && link.depth <= (local_assigns.try(:[], :depth) || -1) ? link.children.sort_by(&:sort_order) : []) %>>
+<li class="nav-item <%= 'dropdown'.html_safe if children = (local_assigns.try(:[], :children) && link.depth <= (local_assigns.try(:[], :depth) || -1) ? link.children.sort_by(&:sort_order) : []) %>">
   <%= menu_link(link, {position: local_assigns.try(:[], :children), children: children}) %>
   <% unless children.empty? %>
     <ul class="dropdown-menu">

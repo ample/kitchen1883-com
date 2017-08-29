@@ -8,11 +8,12 @@ module Public::PagesHelper
 
   def menu_link(link, position:nil, children:nil)
     classes = [link.icon]
-    if link.computed_href.remove('/') == params[:permalink] || (
-        link.is_root? && children.any? {|x| x.computed_href.remove('/') == params[:permalink] }
-    )
+    if link.computed_href.remove('/') == params[:permalink] ||
+       (link.is_root? && children.any? {|x| x.computed_href.remove('/') == params[:permalink] }) ||
+       (link.is_root? && request.path == '/' && link.computed_href == '/')
       classes.push('active')
     end
+    classes.push('nav-link')
     content = link.computed_title
     unless children.empty?
       content += '&nbsp;<i class="fa fa-sort-desc" aria-hidden="true"></i>'
@@ -25,7 +26,7 @@ module Public::PagesHelper
   def global_nav
     @global_nav ||= begin
       Rails.cache.fetch('global_nav') do
-        AmpleAdmin::Menu.includes(:links).where(ample_admin_links: { ancestry: nil }).active.in_position(:global)
+        AmpleAdmin::Menu.includes(:links).where(ample_admin_links: { ancestry: nil }).active.in_position(:global).first
       end
     end
   end
@@ -52,6 +53,34 @@ module Public::PagesHelper
         end
       end
     end
+  end
+
+  def bg_img(options = {})
+    return if current_object.try(:attachment).blank?
+    img_url = ix_image_url(
+      current_object.attachment.file.path(:jumbotron),
+      auto: 'format,compress'
+    )
+    "style=\"background-image: url('#{img_url}')\"".html_safe
+  end
+
+  def fallback(value, *fallbacks)
+    return value if value.present?
+    fallbacks.each { |fallback| return fallback if fallback.present? }
+    nil
+  end
+
+  def template_filename
+    return unless defined?(current_object)
+    current_object.try(:template).try(:filename)
+  end
+
+  def settings
+    @settings ||= AmpleAdmin::Setting.all
+  end
+
+  def setting(key)
+    settings.select { |s| s.permalink == key.to_s }[0].try(:value).try(:html_safe)
   end
 
 end

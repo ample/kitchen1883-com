@@ -1,0 +1,25 @@
+&.headers {
+  @extend .border-top-dotted;
+  text-align: center;
+
+  #{$all-headings} {
+    font-family: $font-family-brothers;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+
+
+
+  // ---------------------------------------- | Home
+
+  .template-index & {
+    padding-top: 2.875rem;
+
+    .content {
+      font-size: 1.625rem;
+      line-height: 1.85;
+      margin-bottom: 3.75rem;
+    }
+  }
+}

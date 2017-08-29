@@ -1,0 +1,16 @@
+&.images {
+  @include make-row();
+
+  .grid-item {
+    @include make-col(4);
+  }
+
+
+
+
+  // ---------------------------------------- | Home
+
+  .template-index & {
+    margin-bottom: 3.75rem;
+  }
+}

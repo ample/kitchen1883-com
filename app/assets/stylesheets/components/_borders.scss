@@ -1,0 +1,17 @@
+.border-top-dotted {
+  position: relative;
+
+  &:before {
+    background-image: image-url('border-dotted.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 370px;
+    content: ' ';
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

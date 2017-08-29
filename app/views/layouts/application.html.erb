@@ -6,15 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://use.typekit.net/gmn4gir.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
-  <body>
-    <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav navbar-nav navbar-right' } %>
+  <body class="template-<%= template_filename %>">
+
+    <%= render 'public/partials/header' %>
+
     <%= yield(:jumbotron) if content_for?(:jumbotron) %>
     <div class="container">
       <%= yield %>
     </div>
-    <%= render partial: 'public/menus/menu', collection: global_nav, locals: { klasses: 'nav navbar-nav navbar-right' } %>
-    <%= render partial: 'public/partials/social', collection: current_social_accounts %>
+
+    <%= render 'public/partials/footer' %>
+
   </body>
 </html>

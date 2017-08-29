@@ -1,6 +1,13 @@
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import 'utils/helpers';
+@import 'utils/overrides';
+
 @import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+@import 'base/**/*';
+@import 'components/**/*';
+@import 'layouts/**/*';
 
 .container {
   max-width: 60em;
@@ -8,7 +15,7 @@
 }
 
 .feature-group {
-  @include make-row();
+  @import 'features/**/*';
 }
 
 figure {

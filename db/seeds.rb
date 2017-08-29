@@ -7,5 +7,7 @@ sprig_shared [
   AmpleAdmin::Feature,
   AmpleAdmin::Menu,
   AmpleAdmin::Link,
-  AmpleAdmin::SocialAccount
+  AmpleAdmin::SocialAccount,
+  AmpleAdmin::Attachable,
+  AmpleAdmin::Setting
 ]

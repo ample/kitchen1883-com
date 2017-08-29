@@ -1,0 +1,8 @@
+body {
+  background: image-url('bg-dark-wood.jpg') center 1440px;
+}
+
+.container {
+  max-width: 60rem;
+  @include make-container();
+}

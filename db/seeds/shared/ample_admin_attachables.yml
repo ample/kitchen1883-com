@@ -1,0 +1,6 @@
+records:
+
+  - sprig_id: fpo_idx
+    owner_type: "AmpleAdmin::Page"
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'FPO').id %>"
