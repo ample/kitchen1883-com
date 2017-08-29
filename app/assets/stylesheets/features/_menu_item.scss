@@ -1,17 +1,9 @@
 &.menu-items {
-  @include make-row();
-  margin: 0;
+  font-size: 0;
 
   .menu-item {
-    @include make-col(4);
-
-    &:nth-child(3n+1) {
-      padding-right: 3rem;
-    }
-
-    &:nth-child(3n+3) {
-      padding-left: 3rem;
-    }
+    width: calc(100% * (1/3) - 32px);
+    margin-bottom: 1rem;
 
     .title {
       font-size: 1.25rem;
