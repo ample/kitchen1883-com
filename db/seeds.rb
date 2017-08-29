@@ -8,5 +8,6 @@ sprig_shared [
   AmpleAdmin::Menu,
   AmpleAdmin::Link,
   AmpleAdmin::SocialAccount,
-  AmpleAdmin::Attachable
+  AmpleAdmin::Attachable,
+  AmpleAdmin::Setting
 ]

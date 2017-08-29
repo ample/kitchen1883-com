@@ -1,0 +1,7 @@
+records:
+
+  - sprig_id: 'copyright'
+    permalink: copyright
+    key: copyright
+    value: "&copy; Copyright 2017 kitchen1883.com"
+    group: Footer
