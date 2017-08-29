@@ -1,4 +1,5 @@
 .jumbotron {
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,5 +74,14 @@
         content: none;
       }
     }
+  }
+
+
+
+
+  // ---------------------------------------- | Devise
+
+  .template-devise & {
+    min-height: 21rem;
   }
 }
