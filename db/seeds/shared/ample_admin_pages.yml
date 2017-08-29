@@ -35,3 +35,24 @@ records:
     parent_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
     active: true
 
+  - sprig_id: 'location'
+    title: 'Location'
+    body: "Come by and see us.  \nWe bet you can’t help but have a bite."
+    permalink: 'location'
+    template_filename: 'location'
+    active: true
+
+  - sprig_id: 'careers'
+    title: 'Careers'
+    body: "At Kitchen 1883, we strive to create and deliver a genuine,  \nguest-first experience through our food and service."
+    permalink: 'careers'
+    template_filename: 'careers'
+    active: true
+
+  - sprig_id: 'reservations'
+    title: 'Reservations'
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  \nDolor sit amet, consectetur Lorem ipsum ."
+    permalink: 'reservations'
+    template_filename: 'content'
+    active: true
+

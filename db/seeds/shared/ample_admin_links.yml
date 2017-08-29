@@ -15,17 +15,17 @@ records:
   - sprig_id: m_reservations
     menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
     title: Reservations
-    href: '#'
+    href: '/reservations'
     active: true
 
   - sprig_id: m_locations
     menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
-    title: Locations
-    href: '#'
+    title: Location
+    href: '/location'
     active: true
 
   - sprig_id: m_careers
     menu_id: "<%= sprig_record(AmpleAdmin::Menu, 'm').id %>"
     title: Careers
-    href: '#'
+    href: '/careers'
     active: true
