@@ -26,7 +26,7 @@ module Public::PagesHelper
   def global_nav
     @global_nav ||= begin
       Rails.cache.fetch('global_nav') do
-        AmpleAdmin::Menu.includes(:links).where(ample_admin_links: { ancestry: nil }).active.in_position(:global)[0]
+        AmpleAdmin::Menu.includes(:links).where(ample_admin_links: { ancestry: nil }).active.in_position(:global).first
       end
     end
   end
