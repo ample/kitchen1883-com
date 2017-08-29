@@ -9,7 +9,7 @@ records:
 
   - sprig_id: 'menu'
     title: 'Menu'
-    body: "We have something for everyone.\nFind the food that makes you feel good inside."
+    body: "We have something for everyone.  \nFind the food that makes you feel good inside."
     permalink: 'menu'
     template_filename: 'menu'
     active: true

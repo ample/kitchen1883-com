@@ -1,5 +1,8 @@
-<header class="jumbotron jumbotron-home" <%= bg_img(size: :jumbotron) %>>
+<header class="jumbotron" <%= bg_img(size: :jumbotron) %>>
   <div class="container">
     <h1><%= current_object.title %></h1>
+    <div class="desc">
+      <%= markdown current_parent.body if current_parent.body.present? %>
+    </div>
   </div>
 </header>

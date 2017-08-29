@@ -1,74 +1,6 @@
 records:
 
-  - sprig_id: 'idx_img01'
-    title: 'Nibh Tortor Tristique'
-    active: true
-    feature_type: 'image'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_img02'
-    title: 'Ipsum Condimentum Pharetra'
-    active: true
-    feature_type: 'image'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_img03'
-    title: 'Quam Amet'
-    active: true
-    feature_type: 'image'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_img04'
-    title: 'Sem Tellus Tortor'
-    active: true
-    feature_type: 'image'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_img05'
-    title: 'Sollicitudin Cras'
-    active: true
-    feature_type: 'image'
-    region: 'main'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_img06'
-    title: 'Tristique Parturient Ullamcorper Cursus'
-    active: true
-    feature_type: 'image'
-    region: 'main'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 1
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '1'\n  alt_text: ''\n  block_type: image\n"
-
-  - sprig_id: 'idx_content_block'
-    title: 'Locations / Hours'
-    active: true
-    feature_type: 'content_block'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
-    sort_order: 2
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"_9003 US Highway 42  \\r\\nUnion, KY 41091  \\r\\n(513) 421-2100_\\r\\n\\r\\n**MON-THR**\n    \\ \\r\\n11:00am - 9:00pm\\r\\n\\r\\n**FRI**\n    \\ \\r\\n11:00am - 10:00pm\\r\\n\\r\\n**SAT**\n    \\ \\r\\n9:00am\n    - 10:00pm\\r\\n\\r\\n**SUN**\n    \\ \\r\\n9:00am - 9:00pm\\r\\n\\r\\n\"\n  block_type: text\n"
+  # ---------------------------------------- | Home / Headers
 
   - sprig_id: 'idx_header'
     title: 'Fill Up On The Good Stuff'
@@ -80,42 +12,753 @@ records:
     region: 'main'
     blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"The food you want to eat. A place to feel happy.  \\r\\nWelcome to the melting\n    pot of American flavors.\"\n  block_type: text\n"
 
-  - sprig_id: 'lunch-dinner_header'
-    title: 'Appetizer and Sides'
-    active: true
-    feature_type: 'header'
-    owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
-    sort_order: 0
-    region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \n  block_type: text\ncontent_tag: !ruby/hash:AmpleAdmin::Block\n  body: H3\n  block_type: select\n  block_options: H2 H3 H4\n"
+  # ---------------------------------------- | Home / Images
 
-  - sprig_id: 'lunch-dinner_menu-item01'
-    title: 'Ipsum Quam'
+  - sprig_id: 'idx_img01'
+    title: 'Nibh Tortor Tristique'
     active: true
-    feature_type: 'menu_item'
+    feature_type: 'image'
     owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
-    sort_order: 0
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\ndescription: !ruby/hash:AmpleAdmin::Block\n  body: Nullam id dolor id nibh ultricies vehicula ut id elit.\n  block_type: text\nprice: !ruby/hash:AmpleAdmin::Block\n  body: '5'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '2'\n  alt_text: ''\n  block_type: image\n"
 
-  - sprig_id: 'lunch-dinner_menu-item02'
-    title: 'Venenatis Bibendum Tellus'
+  - sprig_id: 'idx_img02'
+    title: 'Ipsum Condimentum Pharetra'
     active: true
-    feature_type: 'menu_item'
+    feature_type: 'image'
     owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
-    sort_order: 0
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 2
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\ndescription: !ruby/hash:AmpleAdmin::Block\n  body: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.\n  block_type: text\nprice: !ruby/hash:AmpleAdmin::Block\n  body: '12'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '3'\n  alt_text: ''\n  block_type: image\n"
 
-  - sprig_id: 'lunch-dinner_menu-item03'
-    title: 'Sem Vestibulum'
+  - sprig_id: 'idx_img03'
+    title: 'Quam Amet'
     active: true
-    feature_type: 'menu_item'
+    feature_type: 'image'
     owner_type: 'AmpleAdmin::Page'
-    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
-    sort_order: 0
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 3
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\ndescription: !ruby/hash:AmpleAdmin::Block\n  body: Maecenas sed diam eget risus varius blandit sit amet non magna.\n  block_type: text\nprice: !ruby/hash:AmpleAdmin::Block\n  body: '12'\n  block_type: string\n"
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '4'\n  alt_text: ''\n  block_type: image\n"
+
+  - sprig_id: 'idx_img04'
+    title: 'Sem Tellus Tortor'
+    active: true
+    feature_type: 'image'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 4
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '5'\n  alt_text: ''\n  block_type: image\n"
+
+  - sprig_id: 'idx_img05'
+    title: 'Sollicitudin Cras'
+    active: true
+    feature_type: 'image'
+    region: 'main'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 5
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '6'\n  alt_text: ''\n  block_type: image\n"
+
+  - sprig_id: 'idx_img06'
+    title: 'Tristique Parturient Ullamcorper Cursus'
+    active: true
+    feature_type: 'image'
+    region: 'main'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 6
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '7'\n  alt_text: ''\n  block_type: image\n"
+
+  # ---------------------------------------- | Home / Content Blocks
+
+  - sprig_id: 'idx_content_block'
+    title: 'Locations / Hours'
+    active: true
+    feature_type: 'content_block'
+    owner_type: 'AmpleAdmin::Page'
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
+    sort_order: 7
+    region: 'main'
+    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"_9003 US Highway 42  \\r\\nUnion, KY 41091  \\r\\n(513) 421-2100_\\r\\n\\r\\n**MON-THR**\n    \\ \\r\\n11:00am - 9:00pm\\r\\n\\r\\n**FRI**\n    \\ \\r\\n11:00am - 10:00pm\\r\\n\\r\\n**SAT**\n    \\ \\r\\n9:00am\n    - 10:00pm\\r\\n\\r\\n**SUN**\n    \\ \\r\\n9:00am - 9:00pm\\r\\n\\r\\n\"\n  block_type: text\n"
+
+  # ---------------------------------------- | Menu / Lunch / Headers
+
+  - title: Appetizer and Sides
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 100
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Salads
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 200
+    region: main
+    blocks:
+      body:
+        body: "_Add chicken or shrimp 4_"
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Sandwiches
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 300
+    region: main
+    blocks:
+      body:
+        body: "_Served with masa waffle fries.  \nAdd a cup of soup or simple side salad 3_"
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Main Fair
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 400
+    region: main
+    blocks:
+      body:
+        body: "_Add a cup of soup or simple side salad 3_"
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: The Sweeter Side
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 500
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Young Adults
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 600
+    region: main
+    blocks:
+      body:
+        body: "_Masa waffle fries, seasonal vegetables & a beverage_"
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  # >>>>>>>>>> Apps
+
+  - title: Featured Soup
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 101
+    region: main
+    blocks:
+      description:
+        body: Seasonal
+        block_type: text
+      price:
+        body: '4/7'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: 'Roasted "Cauli-Sprouts"'
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 102
+    region: main
+    blocks:
+      description:
+        body: Roasted cauliflower & brussels sprouts sweet chili glaze
+        block_type: text
+      price:
+        body: '6'
+        block_type: string
+      veggie:
+        body: '1'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: BBQ Beef Short Rib Sliders (3)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 103
+    region: main
+    blocks:
+      description:
+        body: Bourbon bbq sauce, crispy fried onions, smoked cheddar
+        block_type: text
+      price:
+        body: '11'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Vegan White Bean Chilli
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 104
+    region: main
+    blocks:
+      description:
+        body: White beans, green chilies, cilantro
+        block_type: text
+      price:
+        body: '4/7'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '1'
+        block_type: boolean
+
+  - title: Beer Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 105
+    region: main
+    blocks:
+      description:
+        body: Warm house made braxton beer cheese baked pretzel bites
+        block_type: text
+      price:
+        body: '4/7'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Flash Fried Chicken Wings (8)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 106
+    region: main
+    blocks:
+      description:
+        body: Chili rubbed, bourbon bbq or naked. Ranch or bleu cheese dressing
+        block_type: text
+      price:
+        body: '10'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> Salads
+
+  - title: Crab Remoulade Salad
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 201
+    region: main
+    blocks:
+      description:
+        body: Lump crab meat, lettuce, crisp fried green tomatoes
+        block_type: text
+      price:
+        body: '7/12'
+        block_type: string
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Simple Salad
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 202
+    region: main
+    blocks:
+      price:
+        body: '6/9'
+        block_type: string
+      description:
+        body: Field greens, grape tomatoes, carrots, red onion, corn bread crumbles
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Bibb Wedge
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 203
+    region: main
+    blocks:
+      price:
+        body: '4/7'
+        block_type: string
+      description:
+        body: Bibb lettuce, grape tomatoes, bleu cheese, peppered bacon, red onion, corn bread crumbles
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Kale & Brussels Sprouts
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 204
+    region: main
+    blocks:
+      price:
+        body: '6/11'
+        block_type: string
+      description:
+        body: Marinated cabbage, carrots, jalapenos, dried cranberries, crispy shallots, sweet chili ginger vinaigrette
+        block_type: text
+      veggie:
+        body: '1'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Beet Salad
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 205
+    region: main
+    blocks:
+      price:
+        body: '6/11'
+        block_type: string
+      description:
+        body: Roasted farm fresh beets, oranges, cilantro, boone creek goat cheese, pumpkin seeds, creamy tarragon dressing
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: House-Made Dressings
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 206
+    region: main
+    blocks:
+      price:
+        body: '11'
+        block_type: string
+      description:
+        body: Sweet chili vinaigrette, herb ranch, bleu cheese, sweet maple d creamy tarragon , olive oil & balsamic
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> Sandwiches
+
+  - title: 1883 Burger
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 301
+    region: main
+    blocks:
+      price:
+        body: '10'
+        block_type: string
+      description:
+        body: "Angus beef, lettuce, tomato, pickle american, cheddar, bleu , swiss or smoked mozzarella.\n\nadd - egg, bacon, glier’s goetta, 2"
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Rachel Meats Reuben
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 302
+    region: main
+    blocks:
+      price:
+        body: '12'
+        block_type: string
+      description:
+        body: "Corned beef, smoked turkey, swiss, sauerkraut, house made 1000 island dressing, rye bread<br><br><br>"
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: BLFT Wrap
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 303
+    region: main
+    blocks:
+      price:
+        body: '12'
+        block_type: string
+      description:
+        body: "Fried green tomatoes, hickory smoked bacon, lettuce, red pepper sauce, sharp cheddar cheese.\n\n(vegetarian version available) "
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Chicken Wrap
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 304
+    region: main
+    blocks:
+      price:
+        body: '12'
+        block_type: string
+      description:
+        body: Crispy or grilled chicken breast, roasted tomatoes, smoked mozzarella, avocado sriracha slaw
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> Main Fair
+
+  - title: Chicken & Waffles
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 401
+    region: main
+    blocks:
+      price:
+        body: '12'
+        block_type: string
+      description:
+        body: Crispy chicken breast, waffles, pickled house slaw cayenne maple syrup
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Pan Roasted Pork Tenderloin
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 402
+    region: main
+    blocks:
+      price:
+        body: '17'
+        block_type: string
+      description:
+        body: Horseradish smashed potatoes, blistered carrots, grain mustard sauce, bacon onion jam
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Craft Beer Battered Cod
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 403
+    region: main
+    blocks:
+      price:
+        body: '13'
+        block_type: string
+      description:
+        body: Masa waffle fries, hand battered cod, dill remoulade
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Beef Short Ribs
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 404
+    region: main
+    blocks:
+      price:
+        body: '18'
+        block_type: string
+      description:
+        body: Horseradish smashed potatoes, pan gravy blistered carrots
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> The Sweeter Side
+
+  - title: Apple "Pie" Layered brulee
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 501
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body: Thinly sliced spiced apples, baked custard, vanilla bean ice cream , caramel sauce, oatmeal streusel
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Ice Cream & Sorbet
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 502
+    region: main
+    blocks:
+      price:
+        body: '4'
+        block_type: string
+      description:
+        body: Vanilla bean, salted caramel, dutch chocolate, raspberry sorbet
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Fried Chocolate Chip Cookie Dough
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 503
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body: nutella chocolate sauce
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> Young Adults
+
+  - title: Grilled Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 601
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Hamburger
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 602
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Mac & Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 603
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Chicken & Waffles On A Stick
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 604
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
