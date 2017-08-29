@@ -44,4 +44,15 @@
       font-size: 1.5rem;
     }
   }
+
+  .copyright {
+    bottom: 1.75rem;
+    color: $white;
+    font-family: $font-family-adelle-sans;
+    font-size: .75rem;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 }

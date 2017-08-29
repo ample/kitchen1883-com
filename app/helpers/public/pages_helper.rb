@@ -75,4 +75,12 @@ module Public::PagesHelper
     current_object.try(:template).try(:filename)
   end
 
+  def settings
+    @settings ||= AmpleAdmin::Setting.all
+  end
+
+  def setting(key)
+    settings.select { |s| s.permalink == key.to_s }[0].try(:value).try(:html_safe)
+  end
+
 end
