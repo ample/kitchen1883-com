@@ -8,8 +8,7 @@ default: &default
 
 development:
   <<: *default
-  # database: kitchen1883_development
-  database: kitchen1883_development_02
+  database: kitchen1883_development
 
 test:
   <<: *default
