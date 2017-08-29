@@ -78,7 +78,7 @@ $pink:    #e83e8c;
 $red:     #dc3545;
 $orange:  #fd7e14;
 $yellow:  #959620; // OVERRIDDEN
-$yellow-light: #b9b732; // CUSTOM
+$yellow-light: #B9B732; // CUSTOM
 $yellow-dark: #807F21; // CUSTOM
 $green:   #28a745;
 $teal:    #20c997;
@@ -101,7 +101,7 @@ $colors: (
 );
 
 $theme-colors: (
-  primary: $yellow, // OVERRIDDEN
+  primary: $yellow-light, // OVERRIDDEN
   secondary: $gray-600,
   success: $green,
   info: $cyan,

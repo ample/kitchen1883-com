@@ -1,0 +1,21 @@
+.content-heading {
+  position: relative;
+  border-top: 2px solid $yellow-dark;
+  font-family: $font-family-refrigerator-deluxe;
+  font-size: 4.125rem;
+  margin-bottom: 2.75rem;
+  padding-top: 2.75rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -.5rem;
+    width: 100%;
+    background-color: $yellow-dark;
+    content: ' ';
+    display: block;
+    height: .25rem;
+  }
+}
