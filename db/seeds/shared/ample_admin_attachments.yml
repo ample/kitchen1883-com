@@ -1,4 +1,25 @@
 records:
 
-  - sprig_id: 'FPO'
-    file: "<%= File.open(File.join(Rails.root,'app/assets/images/fpo.jpg')) %>"
+  - sprig_id: 'home-hero'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-hero.png') %>"
+
+  - sprig_id: 'home-img-01'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-01.png') %>"
+
+  - sprig_id: 'home-img-02'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-02.png') %>"
+
+  - sprig_id: 'home-img-03'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-03.png') %>"
+
+  - sprig_id: 'home-img-04'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-04.png') %>"
+
+  - sprig_id: 'home-img-05'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-05.png') %>"
+
+  - sprig_id: 'home-img-06'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/home-img-06.png') %>"
+
+  - sprig_id: 'menu-hero'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/menu-hero.png') %>"
