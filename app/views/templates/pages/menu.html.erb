@@ -12,7 +12,15 @@ features:
   <%= render 'public/partials/jumbotron' %>
 <% end %>
 
-<%= render 'public/partials/subnav' %>
+<div class="container text-center">
+  <div class="btn-group" role="group">
+    <% current_subnav.each do |child| %>
+      <a href="<%= child.hierarchy_permalink %>" class="btn btn-primary <%= 'active' if @current_permalinks.last == child.permalink %>">
+        <%= (child.nav_name.present? ? child.nav_name : child.title) %>
+      </a>
+    <% end %>
+  </div>
+</div>
 
 <h2><%= current_object.title %></h2>
 <%= render_grouped_features %>
