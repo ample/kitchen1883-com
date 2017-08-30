@@ -23,3 +23,24 @@ records:
 
   - sprig_id: 'menu-hero'
     file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/menu-hero.png') %>"
+
+  - sprig_id: 'careers-hero'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/careers-hero.jpg') %>"
+
+  - sprig_id: 'careers-tile-01'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/careers-tile-01.jpg') %>"
+
+  - sprig_id: 'careers-tile-02'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/careers-tile-02.jpg') %>"
+
+  - sprig_id: 'careers-tile-03'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/careers-tile-03.jpg') %>"
+
+  - sprig_id: 'content-img-01'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/content-img-01.jpg') %>"
+
+  - sprig_id: 'location-hero'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/location-hero.jpg') %>"
+
+  - sprig_id: 'reservations-hero'
+    file: "<%= open('https://ample-kroger.s3.amazonaws.com/seeds/reservations-hero.jpg') %>"

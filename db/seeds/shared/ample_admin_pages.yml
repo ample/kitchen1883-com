@@ -41,6 +41,10 @@ records:
     permalink: 'location'
     template_filename: 'location'
     active: true
+    blocks:
+      address:
+        body: 9003 US Highway 42, Union, KY, 41091
+        block_type: string
 
   - sprig_id: 'careers'
     title: 'Careers'
@@ -48,11 +52,22 @@ records:
     permalink: 'careers'
     template_filename: 'careers'
     active: true
+    blocks:
+      application_url:
+        body: https://jobs.kroger.com/hospitality
+        block_type: string
 
   - sprig_id: 'reservations'
     title: 'Reservations'
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  \nDolor sit amet, consectetur Lorem ipsum ."
+    body: "Let us know when you’re coming by.  \nWe’ll save you a seat at the table."
     permalink: 'reservations'
+    template_filename: 'content'
+    active: true
+
+  - sprig_id: 'content_page'
+    title: 'Content Page'
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nDolor sit amet, consectetur Lorem ipsum ."
+    permalink: 'content_page'
     template_filename: 'content'
     active: true
 

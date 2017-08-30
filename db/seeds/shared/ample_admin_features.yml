@@ -86,6 +86,169 @@ records:
     region: 'main'
     blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nbody: !ruby/hash:AmpleAdmin::Block\n  body: \"_9003 US Highway 42  \\r\\nUnion, KY 41091  \\r\\n(513) 421-2100_\\r\\n\\r\\n**MON-THR**\n    \\ \\r\\n11:00am - 9:00pm\\r\\n\\r\\n**FRI**\n    \\ \\r\\n11:00am - 10:00pm\\r\\n\\r\\n**SAT**\n    \\ \\r\\n9:00am\n    - 10:00pm\\r\\n\\r\\n**SUN**\n    \\ \\r\\n9:00am - 9:00pm\\r\\n\\r\\n\"\n  block_type: text\n"
 
+  # ---------------------------------------- | Reservations / Content Blocks
+
+  - title: We can’t wait to see you!
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'reservations').id %>"
+    sort_order: 1
+    region: main
+    blocks:
+      body:
+        body: "If you attempt an online reservation and see, \"none available,\" please call us directly. We check messages throughout the day and will return your call to confirm with you by phone. You can reach us at 123-456-7890.\n\nReservations are accepted up to one month in advance. And we can accommodate parties as large as eight... but no larger (you’ll see when you get here, it’s a cozy little space)."
+        block_type: text
+
+  # ---------------------------------------- | Locations / Content Blocks
+
+  - title: Union, KY
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'location').id %>"
+    sort_order: 1
+    region: main
+    blocks:
+      body:
+        body: "_9003 US Highway 42,  \nUnion, KY, 41091  \n(513) 421-2100_\n\n**Mon-Wed** | 11:00 am - 9:00 pm  \n**Thus-Fri** | 11:00 am - 9:00 pm  \n**Sat** | 9:00 am - 10:00 pm  \n**Sun** | 9:00 - 9:00 pm"
+        block_type: text
+
+  # ---------------------------------------- | Careers / Media Objects
+
+  - title: A Family Culture
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'careers').id %>"
+    sort_order: 1
+    region: main
+    blocks:
+      body:
+        body: Join a community of people that believe food is important. It’s a way for us to connect and bond together. We serve new American Comfort food. And with every plate and every interaction, we hope to provide comfort and joy to everyone that walks through the door.
+        block_type: text
+      link:
+        body: ''
+        block_type: string
+      attachment:
+        body: '10'
+        block_type: image
+
+  - title: Part Of The Kroger Family
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'careers').id %>"
+    sort_order: 2
+    region: main
+    blocks:
+      body:
+        body: Kitchen 1883 is a part of the Kroger Family of Companies which employs nearly 443,000 associates. We hire people who have a passion for helping others and who want to build a relationship with our customers. No matter what stage of your career, you can build your future at here. We look for people who want more, aspire to be more and work hard to achieve their goals.
+        block_type: text
+      link:
+        body: ''
+        block_type: string
+      attachment:
+        body: '11'
+        block_type: image
+
+  - title: The Perks Of Being Here
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'careers').id %>"
+    sort_order: 3
+    region: main
+    blocks:
+      body:
+        body: "- Competitive salary\n- Great benefits \n- On-site training\n- Flexible schedule \n- Opportunity for advancement \n- Connection to a great company "
+        block_type: text
+      link:
+        body: ''
+        block_type: string
+      attachment:
+        body: '12'
+        block_type: image
+
+  # ---------------------------------------- | Content Page / Media Objects
+
+  - title: I Am A Media Object
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 1
+    region: main
+    blocks:
+      body:
+        body: "**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci.**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod."
+        block_type: text
+      link:
+        body: https://www.kroger.com/
+        block_type: string
+      attachment:
+        body:
+        block_type: image
+      large_image:
+        body: 0
+        block_type: boolean
+
+  - title: I Am A Media Object
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 3
+    region: main
+    blocks:
+      body:
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci. In ornare, purus sit amet auctor pretium, [lacus urna](https://kroger.com/) pretium erat, in ornare lacus est et ipsum. Mauris feugiat augue quis dolor tempus sodales."
+        block_type: text
+      link:
+        body:
+        block_type: string
+      attachment:
+        body: '13'
+        block_type: image
+      large_image:
+        body: '0'
+        block_type: boolean
+
+  - title: I Am A Media Object
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 4
+    region: main
+    blocks:
+      body:
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod.\n\n# Header 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod.\n\n## Header 2:\n\n- Ut vel magna nec nunc eleifend convallis ac vitae mi.\n- Etiam sem lectus, consequat id auctor a, luctus in orci.\n- In ornare, purus sit amet auctor pretium, lacus urna pretium erat,.\n- In ornare lacus est et ipsum."
+        block_type: text
+      link:
+        body:
+        block_type: string
+      attachment:
+        body: '13'
+        block_type: image
+      large_image:
+        body: '1'
+        block_type: boolean
+
+  # ---------------------------------------- | Content Page / Content Blocks
+
+  - title: I Am A Content Block
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 2
+    region: main
+    blocks:
+      body:
+        body: "**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci.**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod."
+        block_type: text
+
   # ---------------------------------------- | Menu / Lunch / Headers
 
   - title: Appetizer and Sides
@@ -183,6 +346,8 @@ records:
         body: H3
         block_type: select
         block_options: H2 H3 H4
+
+  # ---------------------------------------- | Menu / Lunch / Menu Items
 
   # >>>>>>>>>> Apps
 
@@ -763,6 +928,8 @@ records:
         body: '0'
         block_type: boolean
 
+  # ---------------------------------------- | Menu / Lunch / Content Block
+
   - title: Menu Footnote
     active: true
     feature_type: content_block
@@ -808,6 +975,8 @@ records:
         body: H3
         block_type: select
         block_options: H2 H3 H4
+
+  # ---------------------------------------- | Menu / Brunch / Menu Items
 
   # >>>>>>>>>>
 
@@ -1214,6 +1383,8 @@ records:
         body: '0'
         block_type: boolean
 
+  # ---------------------------------------- | Menu / Brunch / Content Blocks
+
   - title: Menu Footnote
     active: true
     feature_type: content_block
@@ -1323,6 +1494,8 @@ records:
         body: H3
         block_type: select
         block_options: H2 H3 H4
+
+  # ---------------------------------------- | Menu / Drinks / Menu Items
 
   # >>>>>>>>>> On Draft
 
