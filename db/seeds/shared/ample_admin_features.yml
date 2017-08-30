@@ -172,7 +172,7 @@ records:
 
   # ---------------------------------------- | Content Page / Media Objects
 
-  - title: Headline Goes Here
+  - title: I Am A Media Object
     active: true
     feature_type: media_object
     owner_type: AmpleAdmin::Page
@@ -193,12 +193,12 @@ records:
         body: 0
         block_type: boolean
 
-  - title: Headline Goes Here
+  - title: I Am A Media Object
     active: true
     feature_type: media_object
     owner_type: AmpleAdmin::Page
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
-    sort_order: 2
+    sort_order: 3
     region: main
     blocks:
       body:
@@ -214,12 +214,12 @@ records:
         body: '0'
         block_type: boolean
 
-  - title: Headline Goes Here
+  - title: I Am A Media Object
     active: true
     feature_type: media_object
     owner_type: AmpleAdmin::Page
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
-    sort_order: 3
+    sort_order: 4
     region: main
     blocks:
       body:
@@ -234,6 +234,20 @@ records:
       large_image:
         body: '1'
         block_type: boolean
+
+  # ---------------------------------------- | Content Page / Content Blocks
+
+  - title: I Am A Content Block
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 2
+    region: main
+    blocks:
+      body:
+        body: "**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci.**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod."
+        block_type: text
 
   # ---------------------------------------- | Menu / Lunch / Headers
 
