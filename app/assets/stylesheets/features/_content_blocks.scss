@@ -40,4 +40,32 @@
       margin: 1.5rem 0 -1.5rem;
     }
   }
+
+
+
+
+  // ---------------------------------------- | Menu
+
+  .template-menu & {
+    border-top: 2px solid $yellow-dark;
+    font-family: $font-family-adelle-sans;
+    font-size: .7875rem;
+    text-align: left;
+    padding-top: 3.25rem;
+
+    &:before {
+      background-color: $yellow-dark;
+      background-image: none;
+      height: .25rem;
+      top: 2px;
+    }
+
+    &:last-child {
+      margin-bottom: 2.5rem;
+    }
+
+    #{$all-headings} {
+      display: none;
+    }
+  }
 }

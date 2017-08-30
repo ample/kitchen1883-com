@@ -249,7 +249,7 @@ records:
         body: '0'
         block_type: boolean
 
-  - title: Vegan White Bean Chilli
+  - title: Vegan White Bean Chili
     active: true
     feature_type: menu_item
     owner_type: AmpleAdmin::Page
@@ -762,3 +762,1335 @@ records:
       gluten_free:
         body: '0'
         block_type: boolean
+
+  - title: Menu Footnote
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_lunch-dinner').id %>"
+    sort_order: 701
+    region: main
+    blocks:
+      body:
+        body: "Brunch served saturdays & sundays 9 am—2 pm\n\nMenu items available for take out"
+        block_type: text
+
+  # ---------------------------------------- | Menu / Brunch / Headers
+
+  - title: More Lunch Than Brunch
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 200
+    region: main
+    blocks:
+      body:
+        body: Add chicken or shrimp 4
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Young Adults
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 300
+    region: main
+    blocks:
+      body:
+        body: Masa waffle fries, seasonal vegetables & a beverage
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  # >>>>>>>>>>
+
+  - title: Yogurt, Fruit, Granola, Kentucky Honey
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 101
+    region: main
+    blocks:
+      price:
+        body: '8'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: The Traditional Breakfast
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 102
+    region: main
+    blocks:
+      price:
+        body: '9'
+        block_type: string
+      description:
+        body: 2 brown eggs, hash browns, multigrain toast, your choice breakfast meat
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Shakshuka
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 103
+    region: main
+    blocks:
+      price:
+        body: '11'
+        block_type: string
+      description:
+        body: Slow cooked tomatoes, onion & pepper stew, smoky tasso ham, gently cooked egg, cilantro & multigrain toast
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Belgium Style Waffle
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 104
+    region: main
+    blocks:
+      price:
+        body: '8'
+        block_type: string
+      description:
+        body: Whipped butter, warm syrup, strawberries, blueberries
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Union Benedict
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 105
+    region: main
+    blocks:
+      price:
+        body: '11'
+        block_type: string
+      description:
+        body: Poached eggs, smoked ham & turkey hollandaise & tarragon
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Goetta Sliders (2)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 106
+    region: main
+    blocks:
+      price:
+        body: '7'
+        block_type: string
+      description:
+        body: Maple syrup aioli, roasted roma tomatoes and masa waffle fries
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Ancient Grain Pancakes (3)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 107
+    region: main
+    blocks:
+      price:
+        body: '8'
+        block_type: string
+      description:
+        body: "Whipped butter, maple syrup\n\nAdd a side of meat 2\n\nGoetta, pork sausage, hickory smoked bacon"
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> More Lunch Than Brunch
+
+  - title: Vegan White Bean Chili
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 201
+    region: main
+    blocks:
+      price:
+        body: '4/7'
+        block_type: string
+      description:
+        body: White beans, green chilies, cilantro
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Bibb Wedge
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 202
+    region: main
+    blocks:
+      price:
+        body: '6/11'
+        block_type: string
+      description:
+        body: Bibb lettuce, grape tomatoes, bleu cheese, peppered bacon, red onion, corn bread crumbles
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Chicken Wrap
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 203
+    region: main
+    blocks:
+      price:
+        body: '10'
+        block_type: string
+      description:
+        body: Crispy or grilled chicken breast, roasted tomatoes, smoked mozzarella, avocado sriracha slaw
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Beer Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 204
+    region: main
+    blocks:
+      price:
+        body: '4/7'
+        block_type: string
+      description:
+        body: Warm house made Braxton beer
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Flash Fried Chicken Wings (8)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 205
+    region: main
+    blocks:
+      price:
+        body: '10'
+        block_type: string
+      description:
+        body: Chili rubbed, bourbon bbq or naked. Ranch or bleu cheese dressing
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: 1883 Burger
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 206
+    region: main
+    blocks:
+      price:
+        body: '12'
+        block_type: string
+      description:
+        body: "Angus beef, lettuce, tomato, pickle, and american, cheddar, bleu, swiss or smoked mozzarella\n\nAdd - egg, bacon, local goetta, 2"
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: BLFT Wrap
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 207
+    region: main
+    blocks:
+      price:
+        body: '10'
+        block_type: string
+      description:
+        body: Fried green tomatoes, hickory smoked bacon, lettuce, red pepper sauce, sharp cheddar cheese (vegetarian version available)
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Kale & Brussels Sprouts
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 208
+    region: main
+    blocks:
+      price:
+        body: '6/11'
+        block_type: string
+      description:
+        body: Marinated cabbage, carrots, jalapenos, dried cranber- ries, crispy shallots, sweet chili ginger vinaigrette
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  # >>>>>>>>>> Young Adults
+
+  - title: Grilled Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 301
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Hamburger
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 302
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Mac & Cheese
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 303
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Chicken & Waffles On A Stick
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 304
+    region: main
+    blocks:
+      price:
+        body: '6'
+        block_type: string
+      description:
+        body:
+        block_type: text
+      veggie:
+        body: '0'
+        block_type: boolean
+      gluten_free:
+        body: '0'
+        block_type: boolean
+
+  - title: Menu Footnote
+    active: true
+    feature_type: content_block
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_brunch').id %>"
+    sort_order: 401
+    region: main
+    blocks:
+      body:
+        body: "Brunch served saturdays & sundays 9 am—2 pm\n\nMenu items available for take out"
+        block_type: text
+
+  # ---------------------------------------- | Menu / Drinks / Headers
+
+  - title: On Draft
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 100
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Bottles & Cans
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 200
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Liquor
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 300
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: Red Wine
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 400
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: White Wine
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 500
+    region: main
+    blocks:
+      body:
+        body:
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  - title: House Wine
+    active: true
+    feature_type: header
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 600
+    region: main
+    blocks:
+      body:
+        body: Canyon Road
+        block_type: text
+      content_tag:
+        body: H3
+        block_type: select
+        block_options: H2 H3 H4
+
+  # >>>>>>>>>> On Draft
+
+  - title: Bud light
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 101
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Country boy-shotgun wedding
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 102
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Braxton Storm
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 103
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Stella Artois
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 104
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Madtree
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 105
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Miller lite
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 106
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Blue Moon
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 107
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  # >>>>>>>>>> Bottles & Cans
+
+  - title: Rhinegeist bubbles
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 201
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Michelob Ultra
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 202
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Stella Artois
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 203
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Leinenkugel Shandy
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 204
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Sam Adams Oktoberfest
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 205
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  # >>>>>>>>>> Liquor
+
+  - title: Smirnoff (Vodka)
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 301
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Captain Morgan’s (Rum)
+    sort_order: 302
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Gordons Dry (Gin)
+    sort_order: 303
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Titos (Vodka)
+    sort_order: 304
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Bacardi (Rum)
+    sort_order: 305
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Tanguary (Gin)
+    sort_order: 306
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Grey Goose (Vodka)
+    sort_order: 307
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Malibu (Rum)
+    sort_order: 308
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Plymouth (Gin)
+    sort_order: 309
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Don Julio Blanco (Tequila)
+    sort_order: 310
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Dewar’s (Scotch)
+    sort_order: 311
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Kentucky Tavern (Whiskey)
+    sort_order: 312
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Don Julio Reposado (Tequila)
+    sort_order: 313
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Chivas Regal (Scotch)
+    sort_order: 314
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Jack Daniels (Whiskey)
+    sort_order: 315
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Patron Silver (Tequila)
+    sort_order: 316
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Johnny Walker Black And Red (Scotch)
+    sort_order: 317
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  - title: Crown Royal (Whiskey)
+    sort_order: 318
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    region: main
+    blocks:
+      price:
+        body: 'X'
+        block_type: string
+
+  # >>>>>>>>>> Red Wine
+
+  - title: Blind Taste Pinot Noir
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 401
+    region: main
+    blocks:
+      price:
+        body: '9/27'
+        block_type: string
+      description:
+        body: Bright red cherry nose with notes of leather, mulling spices, rose petal and a touch of vanilla
+        block_type: text
+
+  - title: Seven Falls Merlot
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 402
+    region: main
+    blocks:
+      price:
+        body: '11/33'
+        block_type: string
+      description:
+        body: Juicy and full bodied with hints of cocoa and a rich
+        block_type: text
+
+  - title: Magistrate Cabernet Sauvignon
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 403
+    region: main
+    blocks:
+      price:
+        body: '9/27'
+        block_type: string
+      description:
+        body: Aromas of black cherry, warm spice and vanilla, with assertive flavors of rich plum and dark berries, spiked with currant and espresso
+        block_type: text
+
+  - title: Erath Pinot Noir
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 404
+    region: main
+    blocks:
+      price:
+        body: '13/40'
+        block_type: string
+      description:
+        body: Mouthful of mixed berries and pomegranate. Food friendly acidity 
+        block_type: text
+
+  - title: Bogle Zinfandel
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 405
+    region: main
+    blocks:
+      price:
+        body: '9/27'
+        block_type: string
+      description:
+        body: Flavors of red berries and cranberries with a hint of savory herb
+        block_type: text
+
+  - title: Augment Cabernet Sauvignon
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 406
+    region: main
+    blocks:
+      price:
+        body: '12/36'
+        block_type: string
+      description:
+        body: Aging in bourbon barrels delivers vanilla notes with hints of black cherries and gentle spiciness
+        block_type: text
+
+  - title: Siduri Pinot Noir
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 407
+    region: main
+    blocks:
+      price:
+        body: '48'
+        block_type: string
+      description:
+        body: Graceful, with red fruits, a warm clay character and crisp acidity
+        block_type: text
+
+  - title: Incognito Red Blend
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 408
+    region: main
+    blocks:
+      price:
+        body: '9/27'
+        block_type: string
+      description:
+        body: Flavors of freshly smashed summer red berries, pepper, earth and spice
+        block_type: text
+
+  - title: Decoy Cabernet Sauvignon
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 409
+    region: main
+    blocks:
+      price:
+        body: '48'
+        block_type: string
+      description:
+        body: Aromas of blackberry, currant and cocoa with rich tannins and hints of oak and spice
+        block_type: text
+
+  - title: Kaiken Malbec
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 410
+    region: main
+    blocks:
+      price:
+        body: '10/30'
+        block_type: string
+      description:
+        body: Fresh fruit aromas evoke strawberries and cherries with spicy and floral notes
+        block_type: text
+
+  # >>>>>>>>>> White Wine
+
+  - title: Mionetto Prosecco, 187 ml
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 501
+    region: main
+    blocks:
+      price:
+        body: '7'
+        block_type: string
+      description:
+        body: Intense fruity bouquet with a hint of golden apples
+        block_type: text
+
+  - title: Pine Ridge Chenin Blanc/Viognier
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 502
+    region: main
+    blocks:
+      price:
+        body: '12/36'
+        block_type: string
+      description:
+        body: Juicy, succulent green apple, pear and lots of citrus fruit
+        block_type: text
+
+  - title: Toad Hollow Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 503
+    region: main
+    blocks:
+      price:
+        body: '11/33'
+        block_type: string
+      description:
+        body: Clean and crisp with flavors of mango and melon
+        block_type: text
+
+  - title: Chandon Brut, 750 ml
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 504
+    region: main
+    blocks:
+      price:
+        body: '15/45'
+        block_type: string
+      description:
+        body: Apple, pear and citrus flavors and aromas with a hint of spice that leads to a soft, dry finish
+        block_type: text
+
+  - title: Giesen Sauvignon Blanc
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 505
+    region: main
+    blocks:
+      price:
+        body: '8/24'
+        block_type: string
+      description:
+        body: Aggressive, grapefruit nose; juicy and tangy with silky texture
+        block_type: text
+
+  - title: Kendall Jackson Reserve Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 506
+    region: main
+    blocks:
+      price:
+        body: '11/33'
+        block_type: string
+      description:
+        body: Aromas of vanilla and honey with a hint of toasted oak and butter
+        block_type: text
+
+  - title: Bold Vine Rose
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 507
+    region: main
+    blocks:
+      price:
+        body: '6/18'
+        block_type: string
+      description:
+        body: Flavors of pomegranate, cherry and peach
+        block_type: text
+
+  - title: J Pinot Gris
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 508
+    region: main
+    blocks:
+      price:
+        body: '11/33'
+        block_type: string
+      description:
+        body: Notes of honeydew, jasmine and a bit of minerality
+        block_type: text
+
+  - title: Sonoma Cutrer Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 509
+    region: main
+    blocks:
+      price:
+        body: '48'
+        block_type: string
+      description:
+        body: Flavors of ripe apple, pear, peach and melon balanced with a bright acidity and creaminess
+        block_type: text
+
+  - title: Seven Daughters Moscato
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 510
+    region: main
+    blocks:
+      price:
+        body: '10/30'
+        block_type: string
+      description:
+        body: Flavors of sweet peach, floral and honey
+        block_type: text
+
+  - title: 1883 Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 511
+    region: main
+    blocks:
+      price:
+        body: '10/30'
+        block_type: string
+      description:
+        body: Rich vanilla and brown sugar aromas with green apple flavors
+        block_type: text
+
+  # >>>>>>>>>> House Wine
+
+  - title: Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 601
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: Merlot
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 602
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: Chardonnay
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 603
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: Cabernet Sauvignon
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 604
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: Sauvignon Blanc
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 605
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: Pinot Grigio
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 606
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
+
+  - title: White Zinfandel
+    active: true
+    feature_type: menu_item
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu_drinks').id %>"
+    sort_order: 607
+    region: main
+    blocks:
+      price:
+        body: '5'
+        block_type: string
