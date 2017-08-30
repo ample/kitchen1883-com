@@ -1,7 +1,6 @@
 <div class="media-object">
-  <% url = AmpleAdmin::Attachment.find(media_object.attachment.to_i).file.url %>
   <%= ix_image_tag(
-    url,
+    media_object.image_path(:original),
     auto: 'format,compress',
     fit: 'crop',
     class: 'img-fluid'
