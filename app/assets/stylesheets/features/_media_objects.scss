@@ -1,0 +1,28 @@
+&.media-objects {
+
+	// ---------------------------------------- | Careers
+
+	.template-careers & {
+		@include make-row();
+
+		.media-object {
+		   @include make-col(4);
+		   padding: 0.625rem;
+
+			.title {
+				font-size: 1.25rem;
+				margin-top: 2.625rem;
+				padding: 0.875rem 0;
+			}
+
+			.desc {
+				@extend .border-top-dotted;
+				padding-top: 1.5rem;
+			}
+
+			ul {
+				padding-left: 1rem;
+			}
+		}
+	}
+}

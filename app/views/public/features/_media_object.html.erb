@@ -5,7 +5,7 @@
     fit: 'crop',
     class: 'img-fluid'
   ) if media_object.image_path.present? %>
-  <h3><%= media_object.title %></h3>
+  <h3 class="title"><%= media_object.title %></h3>
   <div class="desc">
     <%= markdown media_object.body.html_safe %>
   </div>
