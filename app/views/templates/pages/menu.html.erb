@@ -27,4 +27,20 @@ features:
   <%= current_object.title %>
 </h2>
 
-<%= render_grouped_features %>
+<div>
+  <%= render_grouped_features %>
+</div>
+
+<% if features_by_type.collect { |f| f[:blocks].try(:[], :veggie).to_bool }.present? %>
+  <div class="icon-group">
+    <%= icon 'veggie', color: 'yellow' %>
+    <span>Vegan</span>
+  </div>
+<% end %>
+
+<% if features_by_type.collect { |f| f[:blocks].try(:[], :gluten_free).to_bool }.present? %>
+  <div class="icon-group">
+    <%= icon 'gluten-free' %>
+    <span>Gluten Free</span>
+  </div
+<% end %>
