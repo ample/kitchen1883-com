@@ -170,6 +170,71 @@ records:
         body: '12'
         block_type: image
 
+  # ---------------------------------------- | Content Page / Media Objects
+
+  - title: Headline Goes Here
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 1
+    region: main
+    blocks:
+      body:
+        body: "**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci.**\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod."
+        block_type: text
+      link:
+        body: https://www.kroger.com/
+        block_type: string
+      attachment:
+        body:
+        block_type: image
+      large_image:
+        body: 0
+        block_type: boolean
+
+  - title: Headline Goes Here
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 2
+    region: main
+    blocks:
+      body:
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod. Ut vel magna nec nunc eleifend convallis ac vitae mi. Etiam sem lectus, consequat id auctor a, luctus in orci. In ornare, purus sit amet auctor pretium, [lacus urna](https://kroger.com/) pretium erat, in ornare lacus est et ipsum. Mauris feugiat augue quis dolor tempus sodales."
+        block_type: text
+      link:
+        body:
+        block_type: string
+      attachment:
+        body: '13'
+        block_type: image
+      large_image:
+        body: '0'
+        block_type: boolean
+
+  - title: Headline Goes Here
+    active: true
+    feature_type: media_object
+    owner_type: AmpleAdmin::Page
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'content_page').id %>"
+    sort_order: 3
+    region: main
+    blocks:
+      body:
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod.\n\n# Header 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum ut tortor vel euismod.\n\n## Header 2:\n\n- Ut vel magna nec nunc eleifend convallis ac vitae mi.\n- Etiam sem lectus, consequat id auctor a, luctus in orci.\n- In ornare, purus sit amet auctor pretium, lacus urna pretium erat,.\n- In ornare lacus est et ipsum."
+        block_type: text
+      link:
+        body:
+        block_type: string
+      attachment:
+        body: '13'
+        block_type: image
+      large_image:
+        body: '1'
+        block_type: boolean
+
   # ---------------------------------------- | Menu / Lunch / Headers
 
   - title: Appetizer and Sides

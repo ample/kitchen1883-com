@@ -3,6 +3,7 @@ AmpleAdmin::FeatureDefinition.define do
     attribute :body, :text
     attribute :link, :string
     attribute :attachment, :image
+    attribute :large_image, :boolean
     attribute :region, nil
   end
 end
