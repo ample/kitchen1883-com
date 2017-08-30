@@ -9,4 +9,9 @@
   <div class="desc">
     <%= markdown media_object.body.html_safe %>
   </div>
+  <% if media_object.link.present? %>
+    <div class="link">
+      <%= link_to 'Learn More', media_object.link, class: 'btn btn-primary' %>
+    </div>
+  <% end %>
 </div>
