@@ -47,12 +47,17 @@
   // ---------------------------------------- | Menu
 
   .template-menu & {
+    border-top: 2px solid $yellow-dark;
     font-family: $font-family-adelle-sans;
-    text-align: left;
     font-size: .7875rem;
+    text-align: left;
+    padding-top: 3.25rem;
 
     &:before {
-      content: none;
+      background-color: $yellow-dark;
+      background-image: none;
+      height: .25rem;
+      top: 2px;
     }
 
     #{$all-headings} {
