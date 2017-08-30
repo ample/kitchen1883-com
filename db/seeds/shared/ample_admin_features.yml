@@ -249,7 +249,7 @@ records:
         body: '0'
         block_type: boolean
 
-  - title: Vegan White Bean Chilli
+  - title: Vegan White Bean Chili
     active: true
     feature_type: menu_item
     owner_type: AmpleAdmin::Page
