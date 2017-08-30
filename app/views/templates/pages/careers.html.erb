@@ -8,4 +8,12 @@ features:
   - media_object
 --- %>
 
-Careers page ...
+<% content_for :jumbotron do %>
+  <%= render 'public/partials/jumbotron' %>
+<% end %>
+
+<%= render_grouped_features %>
+
+<p class="text-center">
+  <%= link_to 'Apply For A Position', current_object.blocks.application_url.body, target: :blank, class: 'btn btn-primary' %>
+</p>

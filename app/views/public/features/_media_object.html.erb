@@ -1,0 +1,13 @@
+<div class="media-object">
+  <% url = AmpleAdmin::Attachment.find(media_object.attachment.to_i).file.url %>
+  <%= ix_image_tag(
+    url,
+    auto: 'format,compress',
+    fit: 'crop',
+    class: 'img-fluid'
+  ) %>
+  <h3><%= media_object.title %></h3>
+  <div class="desc">
+    <%= markdown media_object.body.html_safe %>
+  </div>
+</div>

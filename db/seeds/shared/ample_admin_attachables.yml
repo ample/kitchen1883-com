@@ -9,3 +9,13 @@ records:
     owner_type: "AmpleAdmin::Page"
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'menu').id %>"
     attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'menu-hero').id %>"
+
+  - sprig_id: reservations_hero
+    owner_type: "AmpleAdmin::Page"
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'reservations').id %>"
+    attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'reservations-hero').id %>"
+
+  - sprig_id: location_hero
+    owner_type: "AmpleAdmin::Page"
+    owner_id: "<%= sprig_record(AmpleAdmin::Page, 'location').id %>"
+    attachment_id: "<%= sprig_record(AmpleAdmin::Attachment, 'location-hero').id %>"

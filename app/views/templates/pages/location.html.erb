@@ -9,4 +9,12 @@ features:
   - header
 --- %>
 
-Location page ...
+<% content_for :jumbotron do %>
+  <%= render 'public/partials/jumbotron' %>
+<% end %>
+
+<%= render_grouped_features %>
+
+<p>
+  Map will go here ...
+</p>

@@ -10,4 +10,8 @@ features:
   - media_object
 --- %>
 
-Basic content page ...
+<% content_for :jumbotron do %>
+  <%= render 'public/partials/jumbotron' %>
+<% end %>
+
+<%= render_grouped_features %>
