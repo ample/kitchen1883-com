@@ -1,10 +1,6 @@
-&.content-blocks {
-  @extend .border-top-dotted;
+&.content-blocks { 
   padding-top: 2.875rem;
   text-align: center;
-
-
-
 
   // ---------------------------------------- | Home
 
@@ -47,6 +43,7 @@
   // ---------------------------------------- | Menu
 
   .template-menu & {
+    @extend .border-top-dotted;
     border-top: 2px solid $yellow-dark;
     font-family: $font-family-adelle-sans;
     font-size: .7875rem;
@@ -68,4 +65,18 @@
       display: none;
     }
   }
+
+  // ---------------------------------------- | Location
+
+  .template-location & {
+    text-align: left;
+    @include make-col(3);
+  }
+
+  // ---------------------------------------- | Content
+
+  .template-content & {
+    @extend .border-top-dotted;
+  }
+
 }
