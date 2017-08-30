@@ -13,8 +13,10 @@ features:
   <%= render 'public/partials/jumbotron' %>
 <% end %>
 
-<%= render_grouped_features %>
-
-<div class="map-container">
-  <img src="http://placehold.it/600x350?text=Map">
+<div class="row justify-content-between">
+	<%= render_grouped_features %>
+	<div class="map col-sm-8">
+	  <img src="http://placehold.it/600x350?text=Map">
+	</div>
 </div>
+
