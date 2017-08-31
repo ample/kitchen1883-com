@@ -1,4 +1,5 @@
 #= require jquery
+#= require bootstrap
 #= require rails-ujs
 #= require imagesloaded
 #= require masonry

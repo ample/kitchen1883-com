@@ -1,5 +1,11 @@
 .menu {
 
+  .navbar-nav {
+    @include media-breakpoint-up(sm) {
+      margin-left: auto;
+    }
+  }
+
   .nav-link {
     color: $white;
     font-family: $font-family-refrigerator-deluxe;
@@ -16,6 +22,30 @@
 
     img {
       width: 24rem;
+
+      @include media-breakpoint-down(sm) {
+        width: 11.88rem
+      }
+    }
+  }
+
+  .navbar-collapse {
+    @include media-breakpoint-down(sm) {
+      background: rgba($yellow-dark, .9);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .nav-link {
+    @include media-breakpoint-down(sm) {
+      text-align: center;
     }
   }
 }
