@@ -1,7 +1,8 @@
 <%# ---
 name: Location
 fields:
-  address: string
+  latitude: string
+  longitude: string
 regions:
   - main
 features:
@@ -15,7 +16,27 @@ features:
 
 <div class="row justify-content-between">
   <%= render_grouped_features %>
-  <div class="map col-sm-8">
-    <img src="http://placehold.it/600x350?text=Map">
+  <div id="map" class="col-sm-8" data-lat="<%= current_object.blocks.dig(:latitude) %>" data-lng="<%= current_object.blocks.dig(:longitude) %>">
   </div>
 </div>
+
+<script>
+  var initMap = function() {
+    var container = $('#map').first(),
+        latlng = { lat: container.data('lat'), lng: container.data('lng') };
+
+    var map = new google.maps.Map(container[0], {
+      zoom: 13,
+      center: latlng
+    });
+
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map
+    });
+  }
+</script>
+
+<% content_for :footer do %>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["MAPS_API"] %>&callback=initMap"></script>
+<% end %>
