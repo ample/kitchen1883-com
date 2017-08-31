@@ -1,5 +1,4 @@
 &.content-blocks {
-  @extend .border-top-dotted;
   padding-top: 2.875rem;
   text-align: center;
 
@@ -9,7 +8,7 @@
   // ---------------------------------------- | Home
 
   .template-index & {
-    #{$all-headings} {
+    .content-title {
       font-family: $font-family-refrigerator-deluxe;
       font-size: 2.25rem;
       text-transform: uppercase;
@@ -36,7 +35,6 @@
     strong {
       display: block;
       font-family: $font-family-adelle-sans;
-      font-family: $font-family-adelle-sans;
       margin: 1.5rem 0 -1.5rem;
     }
   }
@@ -47,11 +45,12 @@
   // ---------------------------------------- | Menu
 
   .template-menu & {
+    @extend .border-top-dotted;
     border-top: 2px solid $yellow-dark;
     font-family: $font-family-adelle-sans;
     font-size: .7875rem;
-    text-align: left;
     padding-top: 3.25rem;
+    text-align: left;
 
     &:before {
       background-color: $yellow-dark;
@@ -67,5 +66,58 @@
     #{$all-headings} {
       display: none;
     }
+  }
+
+
+
+
+  // ---------------------------------------- | Location
+
+  .template-location & {
+    @include make-col(3);
+    font-family: $font-family-adelle-sans;
+    padding-top: 0;
+    text-align: left;
+
+    em {
+      color: $yellow-light;
+      font-style: normal;
+    }
+
+    .content-title {
+      font-family: $font-family-refrigerator-deluxe;
+      font-size: 2.25rem;
+      padding-bottom: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0;
+
+      &:before {
+        content: '{ ';
+      }
+
+      &:after {
+        content: ' }';
+      }
+    }
+
+    .content-body {
+      @extend .border-top-dotted;
+      padding-top: 1.5rem;
+      line-height: 1.875rem;
+    }
+
+    .map {
+      border: 2px solid $yellow-dark;
+      width: 100%;
+    }
+  }
+
+
+
+
+  // ---------------------------------------- | Content
+
+  .template-content & {
+    @extend .border-top-dotted;
   }
 }
