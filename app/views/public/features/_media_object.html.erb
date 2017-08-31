@@ -1,14 +1,21 @@
-<div class="media-object">
-  <%= ix_image_tag(
-    media_object.image_path(:original),
-    auto: 'format,compress',
-    fit: 'crop',
-    class: 'img-fluid'
-  ) if media_object.image_path.present? %>
-  <h3><%= media_object.title %></h3>
-  <div class="desc">
-    <%= markdown media_object.body.html_safe %>
+<div class="media-object <%= 'large-image' if media_object.large_image.to_bool %>">
+  <h3 class="row"><%= media_object.title %></h3>
+
+  <div class="<%= 'row' if media_object.image_path.present? %>">
+    <div class="image-container">
+      <%= ix_image_tag(
+        media_object.image_path(:original),
+        auto: 'format,compress',
+        fit: 'crop',
+        class: 'img-fluid'
+      ) if media_object.image_path.present? %>
+    </div>
+    
+    <div class="desc">
+      <%= markdown media_object.body.html_safe %>
+    </div>
   </div>
+
   <% if media_object.link.present? %>
     <div class="link">
       <%= link_to 'Learn More', media_object.link, class: 'btn btn-primary' %>

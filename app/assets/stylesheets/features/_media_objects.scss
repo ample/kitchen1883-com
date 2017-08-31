@@ -1,0 +1,57 @@
+&.media-objects {
+
+  // ---------------------------------------- | Content
+
+  .template-content & {
+  	
+  	.media-object {
+  		margin-bottom: 5.375rem;
+  	}
+
+  	h3 {
+  		@extend .border-full;
+  		padding-bottom: 0.625rem;
+  		margin-bottom: 2.125rem;
+  	}
+
+  	.row {
+  		h3 {
+  			@include make-col(12);
+  		}
+
+			.image-container {
+				@include make-col(4);
+
+				img {
+					width: 100%;
+				}
+			}
+
+			.desc {
+				@include make-col(8);
+				padding-left: 10px;
+			}  		
+  	}
+
+
+    .large-image {
+      width: 100%;
+
+      .image-container {
+      	@include make-col(12);
+
+      	img {
+	      	margin-top: 2.125rem;
+	        width: 100%;
+	      }
+      }
+      
+      .desc {
+      	@include make-col(12);
+      	margin-top: 1rem;
+      	font-size: 0.875rem;
+      }
+    }
+
+  }
+}
