@@ -23,7 +23,7 @@ task :build_svg do
 
   doc = REXML::Document.new(svg_content)
   output = ''
-  doc.write(output, 1)
+  doc.write(output, 2)
 
   File.open(icons_file, 'w+') { |file| file.write(output.to_s) }
 end
