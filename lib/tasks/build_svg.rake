@@ -1,3 +1,5 @@
+require 'rexml/document'
+
 desc 'Combine all SVG icons into a single SVG'
 task :build_svg do
   icons_dir = Rails.root.join('app', 'assets', 'images', 'icons')
@@ -16,5 +18,12 @@ task :build_svg do
   svg_content += '</svg>'
 
   icons_file = Rails.root.join('app', 'assets', 'images', 'icons.svg')
-  File.open(icons_file, 'w+') { |file| file.write(svg_content) }
+
+
+
+  doc = REXML::Document.new(svg_content)
+  output = ''
+  doc.write(output, 1)
+
+  File.open(icons_file, 'w+') { |file| file.write(output.to_s) }
 end
