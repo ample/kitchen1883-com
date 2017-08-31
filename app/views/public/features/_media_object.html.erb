@@ -3,7 +3,8 @@
     media_object.image_path(:original),
     auto: 'format,compress',
     fit: 'crop',
-    class: 'img-fluid'
+    class: 'img-fluid',
+    h: 1500
   ) if media_object.image_path.present? %>
   <h3 class="title"><%= media_object.title %></h3>
   <div class="desc">
