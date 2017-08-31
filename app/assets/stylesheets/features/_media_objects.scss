@@ -1,5 +1,18 @@
 &.media-objects {
 
+  ul {
+    padding: 0;
+    margin: 0 0 0 1rem;
+
+    li {
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
+
   // ---------------------------------------- | Content
 
   .template-content & {
@@ -14,44 +27,59 @@
   		margin-bottom: 2.125rem;
   	}
 
-  	.row {
-  		h3 {
-  			@include make-col(12);
-  		}
+    .image-container {
+      margin: 2.125rem 0;
 
-			.image-container {
-				@include make-col(4);
-
-				img {
-					width: 100%;
-				}
-			}
-
-			.desc {
-				@include make-col(8);
-				padding-left: 10px;
-			}  		
-  	}
-
-
-    .large-image {
-      width: 100%;
-
-      .image-container {
-      	@include make-col(12);
-
-      	img {
-	      	margin-top: 2.125rem;
-	        width: 100%;
-	      }
-      }
-      
-      .desc {
-      	@include make-col(12);
-      	margin-top: 1rem;
-      	font-size: 0.875rem;
+      img {
+        width: 100%;
       }
     }
+    
+    .desc {
+      margin-top: 1rem;
+    }
 
+    h1, h2 {
+      margin-top: 2rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.125rem;   
+    }
+
+    p {
+      line-height: 1.875rem;
+    }
+  }
+
+
+
+
+  // ---------------------------------------- | Careers
+
+  .template-careers & {
+    @include make-row();
+    margin-bottom: 2.5rem;
+
+    .media-object {
+      @include make-col(4);
+      padding: 0.625rem;
+
+      .title {
+        font-size: 1.25rem;
+        margin-top: 2.625rem;
+        padding: 0.875rem 0;
+      }
+
+      .desc {
+        @extend .border-top-dotted;
+        padding-top: 1.5rem;
+      }
+    }
   }
 }

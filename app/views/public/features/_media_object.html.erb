@@ -1,16 +1,17 @@
 <div class="media-object <%= 'large-image' if media_object.large_image.to_bool %>">
-  <h3 class="row"><%= media_object.title %></h3>
 
-  <div class="<%= 'row' if media_object.image_path.present? %>">
-    <div class="image-container">
+  <div>
+    <div class="<%= 'image-container' if media_object.image_path.present? %>">
       <%= ix_image_tag(
         media_object.image_path(:original),
         auto: 'format,compress',
         fit: 'crop',
-        class: 'img-fluid'
+    class: 'img-fluid'
       ) if media_object.image_path.present? %>
     </div>
     
+    <h3 class="title"><%= media_object.title %></h3>
+
     <div class="desc">
       <%= markdown media_object.body.html_safe %>
     </div>
