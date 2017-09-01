@@ -1,7 +1,8 @@
 <%# ---
 name: Location
 fields:
-  address: string
+  latitude: string
+  longitude: string
 regions:
   - main
 features:
@@ -15,7 +16,13 @@ features:
 
 <div class="row justify-content-between">
   <%= render_grouped_features %>
-  <div class="map col-sm-8">
-    <img src="http://placehold.it/600x350?text=Map">
+  <div id="map" class="col-sm-8" data-lat="<%= current_object.blocks.dig(:latitude) %>" data-lng="<%= current_object.blocks.dig(:longitude) %>">
   </div>
 </div>
+
+<% content_for :footer do %>
+  <script>
+    MAP_ICON_URL = '<%= image_url('map-marker.svg') %>';
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["MAPS_API"] %>&callback=Kitchen.Map.init"></script>
+<% end %>

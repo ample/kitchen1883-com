@@ -1,12 +1,33 @@
 .jumbotron {
   background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   margin-bottom: 3.75rem;
   padding: 11.625rem 0 0;
   min-height: 27.75rem;
   text-align: center;
+
+  .bg-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+
+    &:before {
+      background-color: rgba($brown, 0.4);
+      content: ' ';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
 
   .container {
     overflow: hidden;
