@@ -22,7 +22,17 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 1
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '2'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '2'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '1'
+        block_type: string
+      grid_height:
+        body: '1'
+        block_type: string
 
   - sprig_id: 'idx_img02'
     title: 'Ipsum Condimentum Pharetra'
@@ -32,7 +42,17 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 2
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '3'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '4'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '1'
+        block_type: string
+      grid_height:
+        body: '2'
+        block_type: string
 
   - sprig_id: 'idx_img03'
     title: 'Quam Amet'
@@ -42,7 +62,17 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 3
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '4'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '5'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '2'
+        block_type: string
+      grid_height:
+        body: '1'
+        block_type: string
 
   - sprig_id: 'idx_img04'
     title: 'Sem Tellus Tortor'
@@ -52,7 +82,17 @@ records:
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 4
     region: 'main'
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '5'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '3'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '1'
+        block_type: string
+      grid_height:
+        body: '1'
+        block_type: string
 
   - sprig_id: 'idx_img05'
     title: 'Sollicitudin Cras'
@@ -62,7 +102,17 @@ records:
     owner_type: 'AmpleAdmin::Page'
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 5
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '6'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '6'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '1'
+        block_type: string
+      grid_height:
+        body: '1'
+        block_type: string
 
   - sprig_id: 'idx_img06'
     title: 'Tristique Parturient Ullamcorper Cursus'
@@ -72,7 +122,17 @@ records:
     owner_type: 'AmpleAdmin::Page'
     owner_id: "<%= sprig_record(AmpleAdmin::Page, 'idx').id %>"
     sort_order: 6
-    blocks: "--- !ruby/hash:AmpleAdmin::BlockList\nattachment: !ruby/hash:AmpleAdmin::Block\n  body: '7'\n  alt_text: ''\n  block_type: image\n"
+    blocks:
+      attachment:
+        body: '7'
+        alt_text: ''
+        block_type: image
+      grid_width:
+        body: '1'
+        block_type: string
+      grid_height:
+        body: '1'
+        block_type: string
 
   # ---------------------------------------- | Home / Content Blocks
 
@@ -97,7 +157,7 @@ records:
     region: main
     blocks:
       body:
-        body: "If you attempt an online reservation and see, \"none available,\" please call us directly. We check messages throughout the day and will return your call to confirm with you by phone. You can reach us at 123-456-7890.\n\nReservations are accepted up to one month in advance. And we can accommodate parties as large as eight... but no larger (you’ll see when you get here, it’s a cozy little space)."
+        body: "If you attempt an online reservation and see, \"none available,\" please call us directly. We check messages throughout the day and will return your call to confirm with you by phone. You can reach us at [123-456-7890](tel:1234567890).\n\n**Parties of 8 or larger? Please call ahead [123-456-7890](tel:1234567890).**\n\nThis cozy little space can host small occasions, baby showers, retirement celebrations, family gatherings and more (with a little notice)."
         block_type: text
 
   # ---------------------------------------- | Locations / Content Blocks
@@ -186,12 +246,6 @@ records:
       link:
         body: https://www.kroger.com/
         block_type: string
-      attachment:
-        body:
-        block_type: image
-      large_image:
-        body: 0
-        block_type: boolean
 
   - title: I Am A Media Object
     active: true
@@ -210,8 +264,11 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
-        body: '0'
+      small_image:
+        body: '1'
+        block_type: boolean
+      header_above_image:
+        body: '1'
         block_type: boolean
 
   - title: I Am A Media Object
@@ -231,7 +288,10 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
+      small_image:
+        body: '0'
+        block_type: boolean
+      header_above_image:
         body: '1'
         block_type: boolean
 

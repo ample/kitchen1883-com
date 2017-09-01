@@ -1,8 +1,41 @@
 &.images {
-  @include make-row();
+  font-size: 0;
 
-  .grid-item {
-    @include make-col(4);
+  .image {
+    position: relative;
+    display: inline-block;
+    width: calc(25% - 1rem);
+    margin: 0 0 1rem;
+    padding: 0;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+
+    &.h2:before {
+      padding-top: calc(200% + 16px);
+    }
+
+    &.w2 {
+      width: calc(50% - 1rem);
+      &:before {
+        padding-top: calc(50% - 8px);
+      }
+    }
+
+    .image-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $brown;
+    }
   }
 
 

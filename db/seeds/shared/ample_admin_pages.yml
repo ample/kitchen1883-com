@@ -42,8 +42,11 @@ records:
     template_filename: 'location'
     active: true
     blocks:
-      address:
-        body: 9003 US Highway 42, Union, KY, 41091
+      latitude:
+        body: '39.871228'
+        block_type: string
+      longitude:
+        body: '-83.489569'
         block_type: string
 
   - sprig_id: 'careers'
