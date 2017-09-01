@@ -97,7 +97,7 @@ records:
     region: main
     blocks:
       body:
-        body: "If you attempt an online reservation and see, \"none available,\" please call us directly. We check messages throughout the day and will return your call to confirm with you by phone. You can reach us at 123-456-7890.\n\nReservations are accepted up to one month in advance. And we can accommodate parties as large as eight... but no larger (you’ll see when you get here, it’s a cozy little space)."
+        body: "If you attempt an online reservation and see, \"none available,\" please call us directly. We check messages throughout the day and will return your call to confirm with you by phone. You can reach us at [123-456-7890](tel:1234567890).\n\n**Parties of 8 or larger? Please call ahead [123-456-7890](tel:1234567890).**\n\nThis cozy little space can host small occasions, baby showers, retirement celebrations, family gatherings and more (with a little notice)."
         block_type: text
 
   # ---------------------------------------- | Locations / Content Blocks
@@ -186,12 +186,6 @@ records:
       link:
         body: https://www.kroger.com/
         block_type: string
-      attachment:
-        body:
-        block_type: image
-      large_image:
-        body: 0
-        block_type: boolean
 
   - title: I Am A Media Object
     active: true
@@ -210,8 +204,11 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
-        body: '0'
+      small_image:
+        body: '1'
+        block_type: boolean
+      header_above_image:
+        body: '1'
         block_type: boolean
 
   - title: I Am A Media Object
@@ -231,7 +228,10 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
+      small_image:
+        body: '0'
+        block_type: boolean
+      header_above_image:
         body: '1'
         block_type: boolean
 

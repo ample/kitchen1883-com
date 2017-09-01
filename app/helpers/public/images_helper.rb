@@ -1,4 +1,4 @@
-module ImagesHelper
+module Public::ImagesHelper
 
   def icon(name, options = {})
     classes  = "icon icon-#{name} color-#{options[:color]} #{options[:size]} "

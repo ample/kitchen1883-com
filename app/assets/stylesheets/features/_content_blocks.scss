@@ -118,6 +118,27 @@
   // ---------------------------------------- | Content
 
   .template-content & {
-    @extend .border-top-dotted;
+    margin-bottom: 5.375rem;
+    text-align: left;
+
+    .content-title {
+      @extend .border-full;
+      padding-bottom: 0.625rem;
+      margin-bottom: 2.125rem;
+    }
+
+    .desc {
+      @extend .border-top-dotted;
+      padding-top: 1.5rem;
+    }
+
+    p {
+      line-height: 1.875rem;
+    }
+
+    .content-body {
+      font-family: $font-family-adelle-sans;
+    }
   }
+
 }
