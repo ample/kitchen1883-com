@@ -1,11 +1,3 @@
-<%# TODO: Support multi-column layout %>
-<div class="grid-item <%= "w#{image.grid_width} h#{image.grid_height}" %>">
-  <%= ix_image_tag(
-    image.image_path(:original),
-    auto: 'format,compress',
-    w: (image.grid_width.to_i * 270) - ((image.grid_height.to_i - 1) * 16),
-    h: (image.grid_height.to_i * 270) - ((image.grid_width.to_i - 1) * 16),
-    fit: 'crop',
-    class: 'img-fluid'
-  ) %>
+<div class="image <%= "w#{image.grid_width} h#{image.grid_height}" %>">
+  <div class="image-content" style="background-image: url('<%= image.feature.blocks.attachment.attachment.file.url %>');"></div>
 </div>

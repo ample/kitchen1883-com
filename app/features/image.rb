@@ -1,6 +1,8 @@
 AmpleAdmin::FeatureDefinition.define do
   factory :image do
     attribute :attachment, :image
+    attribute :grid_width, :string
+    attribute :grid_height, :string
     attribute :region, nil
   end
 end
