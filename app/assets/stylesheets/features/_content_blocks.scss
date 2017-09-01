@@ -1,4 +1,4 @@
-&.content-blocks { 
+&.content-blocks {
   padding-top: 2.875rem;
   text-align: center;
 
@@ -134,6 +134,10 @@
 
     p {
       line-height: 1.875rem;
+    }
+
+    .content-body {
+      font-family: $font-family-adelle-sans;
     }
   }
 
