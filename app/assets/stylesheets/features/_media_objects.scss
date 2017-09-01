@@ -10,22 +10,26 @@
     }
   }
 
+  .desc {
+    font-family: $font-family-adelle-sans;
+  }
+
 
 
 
   // ---------------------------------------- | Content
 
   .template-content & {
-  	
-  	.media-object {
-  		margin-bottom: 5.375rem;
-  	}
 
-  	h3 {
-  		@extend .border-full;
-  		padding-bottom: 0.625rem;
-  		margin-bottom: 2.125rem;
-  	}
+    .media-object {
+      margin-bottom: 5.375rem;
+    }
+
+    h3 {
+      @extend .border-full;
+      padding-bottom: 0.625rem;
+      margin-bottom: 2.125rem;
+    }
 
     .image-container {
       margin: 2.125rem 0;
@@ -34,7 +38,7 @@
         width: 100%;
       }
     }
-    
+
     .desc {
       margin-top: 1rem;
     }
@@ -49,7 +53,7 @@
     }
 
     h2 {
-      font-size: 1.125rem;   
+      font-size: 1.125rem;
     }
 
     p {
