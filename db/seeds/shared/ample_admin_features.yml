@@ -186,12 +186,6 @@ records:
       link:
         body: https://www.kroger.com/
         block_type: string
-      attachment:
-        body:
-        block_type: image
-      large_image:
-        body: 0
-        block_type: boolean
 
   - title: I Am A Media Object
     active: true
@@ -210,8 +204,11 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
-        body: '0'
+      small_image:
+        body: '1'
+        block_type: boolean
+      header_above_image:
+        body: '1'
         block_type: boolean
 
   - title: I Am A Media Object
@@ -231,7 +228,10 @@ records:
       attachment:
         body: '13'
         block_type: image
-      large_image:
+      small_image:
+        body: '0'
+        block_type: boolean
+      header_above_image:
         body: '1'
         block_type: boolean
 
