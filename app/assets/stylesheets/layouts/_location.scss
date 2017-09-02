@@ -1,0 +1,18 @@
+.template-location {
+
+  #map {
+    border: 2px solid $yellow-dark;
+    min-height: 25rem;
+    min-width: calc(100% - 32px);
+    margin: 0 1rem;
+
+
+    @include media-breakpoint-up(md) {
+      min-width: 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+    }
+  }
+}

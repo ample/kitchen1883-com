@@ -35,13 +35,17 @@
 
   h1 {
     font-family: $font-family-refrigerator-deluxe;
-    font-size: 5.125rem;
+    font-size: 4.25rem;
     margin-bottom: 4.5rem;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
     overflow: hidden;
     text-align: center;
+
+    @include media-breakpoint-up(md) {
+      font-size: 5.125rem;
+    }
 
     &:before,
     &:after {

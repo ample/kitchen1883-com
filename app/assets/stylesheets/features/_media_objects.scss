@@ -84,8 +84,18 @@
     margin-bottom: 2.5rem;
 
     .media-object {
-      @include make-col(4);
+      @include make-col(12);
       padding: 0.625rem;
+      text-align: center;
+
+      @include media-breakpoint-up(md) {
+        @include make-col(4);
+        text-align: left;
+      }
+
+      .media-img img {
+        max-height: 25rem;
+      }
 
       .title {
         font-size: 1.25rem;
@@ -95,6 +105,15 @@
       .desc {
         @extend .border-top-dotted;
         padding-top: 1.5rem;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        @include media-breakpoint-up(md) {
+          list-style-type: disc;
+          margin: 1rem;
+        }
       }
     }
   }
