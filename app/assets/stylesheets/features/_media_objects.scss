@@ -22,6 +22,11 @@
       text-transform: uppercase;
     }
 
+    .title {
+      font-family: $font-family-adelle;
+      text-transform: none;
+    }
+
     h1 {
       font-size: 2rem;
     }
