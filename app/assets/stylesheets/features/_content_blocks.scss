@@ -10,8 +10,12 @@
   .template-index & {
     .content-title {
       font-family: $font-family-refrigerator-deluxe;
-      font-size: 2.25rem;
+      font-size: 2rem;
       text-transform: uppercase;
+
+      @include media-breakpoint-up(md) {
+        font-size: 2.25rem;
+      }
 
       &:before {
         content: '{ ';
@@ -23,8 +27,12 @@
     }
 
     p {
-      font-size: 1.125rem;
+      font-size: 1rem;
       margin: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.125rem;
+      }
     }
 
     em {

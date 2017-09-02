@@ -4,8 +4,12 @@
 
   #{$all-headings} {
     font-family: $font-family-brothers;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      font-size: 3rem;
+    }
   }
 
 
@@ -17,9 +21,20 @@
     padding-top: 2.875rem;
 
     .content {
-      font-size: 1.625rem;
+      font-size: 1rem;
       line-height: 1.85;
       margin-bottom: 3.75rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1.625rem;
+      }
+
+      br {
+        line-height: 2.5rem;
+        @include media-breakpoint-up(md) {
+          line-height: normal;
+        }
+      }
     }
   }
 
