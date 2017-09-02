@@ -33,16 +33,13 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.5'
 gem 'paperclip-azure', '~> 1.0'
 gem 'rollbar'
+gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-group :development, :staging do
-  gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
 end
 
 # ---------------------------------------- | Testing / Debugging
