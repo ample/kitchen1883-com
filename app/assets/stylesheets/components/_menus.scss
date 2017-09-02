@@ -2,7 +2,14 @@
 
   .navbar-nav {
     @include media-breakpoint-up(sm) {
-      margin-left: auto;
+      margin-top: 5.625rem;
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-up(sm) {
+      display: block;
+      text-align: center;
     }
   }
 
@@ -11,6 +18,10 @@
     font-family: $font-family-refrigerator-deluxe;
     font-size: 1.125rem;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+      display: inline-block;
+    }
 
     &.active {
       color: $yellow-light;
@@ -26,38 +37,43 @@
 
       @include media-breakpoint-down(sm) {
         width: 11.88rem;
-        z-index: 900;
+        z-index: 9;
       }
     }
   }
 
   .navbar-toggler {
-    z-index: 900;
+    z-index: 9;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .navbar-collapse {
-    display: none;
-    &.show {
-      @include media-breakpoint-down(sm) {
-        background: rgba($yellow-dark, .9);
+    @include media-breakpoint-down(sm) {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+      transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+
+      &.show {
+        background: rgba($brown, .97);
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }      
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transition: visibility 0.25s linear, opacity 0.25s linear;
+      }
     }
-
-
   }
 
   .nav-link {
     @include media-breakpoint-down(sm) {
       text-align: center;
     }
-  }    
-
+  }
 }

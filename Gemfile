@@ -20,6 +20,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'imgix-rails'
 gem 'jquery-rails'
+gem 'popper_js'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
