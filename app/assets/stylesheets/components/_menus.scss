@@ -1,4 +1,14 @@
+// -- See components/_mobile_menu for header menu on small screens
+
 .menu {
+
+  .navbar {
+    margin: 3rem;
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+  }
 
   .nav-link {
     color: $white;
@@ -15,6 +25,7 @@
     padding: 0;
 
     img {
+      position: relative;
       width: 24rem;
     }
   }

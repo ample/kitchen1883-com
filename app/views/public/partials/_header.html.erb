@@ -1,8 +1,22 @@
-<header class="menu global-header navbar navbar-light">
+<nav class="menu global-header navbar navbar-expand-md navbar-light">
+
   <a class="navbar-brand" href="/">
     <%= image_tag 'kitchen-1883-logo.svg' %>
   </a>
-  <ul class="<%= local_assigns.try(:[], :klasses) || 'nav' %>">
-    <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
-  </ul>
-</header>
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <!--<span class="navbar-toggler-icon"></span>-->
+    <div id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="<%= local_assigns.try(:[], :klasses) || 'navbar-nav' %>">
+      <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
+    </ul>
+  </div>
+</nav>

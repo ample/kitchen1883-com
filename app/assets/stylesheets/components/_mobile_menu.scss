@@ -1,0 +1,110 @@
+.global-header {
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+
+    // Logo
+    .navbar-brand img {
+      margin: 1rem 0 0;
+      width: 11.88rem;
+      z-index: 9;
+    }
+
+    // List
+    .navbar-nav {
+      margin-top: 5.625rem;
+    }
+
+    // List Items
+    .nav-item {
+      display: block;
+      text-align: center;
+    }
+
+    // Links / Anchors
+    .nav-link {
+      display: inline-block;
+    }
+
+    // Mobile trigger
+    .navbar-toggler {
+      margin-top: .75rem;
+      z-index: 9;
+      &:hover {
+        cursor: pointer;
+      }
+
+      &[aria-expanded='true'] + .navbar-collapse {
+        background: rgba($brown, .97);
+        height: 100vh !important;
+        left: 0;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        transition: visibility 0.25s linear, opacity 0.25s linear;
+        visibility: visible;
+        width: 100vw;
+        z-index: 1;
+      }
+    }
+
+    // Menu
+    .navbar-collapse {
+      display: block;
+      opacity: 0;
+      transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+      visibility: hidden;
+      z-index: -1;
+    }
+  }
+}
+
+// Mobile trigger icon
+#menu-icon {
+  height: 1.25rem;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  width: 1.5rem;
+
+  .navbar-toggler[aria-expanded='true'] & span {
+    &:nth-child(1) {
+      left: 50%;
+      top: 0.75rem;
+      width: 0%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      left: 50%;
+      top: 0.75rem;
+      width: 0%;
+    }
+  }
+
+  span {
+    background-color: $white;
+    display: block;
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),&:nth-child(3) {
+      top: 0.5rem;
+    }
+
+    &:nth-child(4) {
+      top: 1rem;
+    }
+  }
+}
