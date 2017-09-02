@@ -5,28 +5,33 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# ---------------------------------------- | Base
+
 gem 'rails', '~> 5.1.3'
-gem 'sqlite3'
+
+gem 'pg'
 gem 'puma', '~> 3.7'
+
+# ---------------------------------------- | Assets
+
+gem 'autoprefixer-rails'
+gem 'bootstrap'
+gem 'coffee-rails', '~> 4.2'
+gem 'font-awesome-sass', '~> 4.7.0'
+gem 'imgix-rails'
+gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'pg'
+
+# ---------------------------------------- | Utilities
+
 # gem 'ample_admin', path: File.join(File.dirname(__FILE__), '../ample_admin')
 gem 'ample_admin', git: 'https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git'
 gem 'devise'
 gem 'figaro'
-gem 'paperclip-azure', '~> 1.0'
-gem 'imgix-rails'
-gem 'rollbar'
-gem 'bootstrap'
-gem 'autoprefixer-rails'
-gem 'popper_js'
-gem 'font-awesome-sass', '~> 4.7.0'
-
-gem 'jquery-rails'
-gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'paperclip-azure', '~> 1.0'
+gem 'rollbar'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -35,23 +40,25 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :development, :test do
-  gem 'rspec-rails', '>= 3.5.0'
-  gem 'pry-rails'
-end
-
 group :development, :staging do
   gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
 end
 
+# ---------------------------------------- | Testing / Debugging
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails', '>= 3.5.0'
+end
+
 group :test do
+  gem 'capybara', '~> 2.13'
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'guard-rspec'
-  gem 'database_cleaner'
   gem 'launchy'
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
   gem 'poltergeist', git: 'https://github.com/ample/poltergeist.git'
+  gem 'selenium-webdriver'
   gem 'shoulda-matchers', require: false
   gem 'vcr'
   gem 'webmock'
