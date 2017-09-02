@@ -1,5 +1,7 @@
 class Public::PagesController < AmpleAdmin::Public::PagesController
 
+  http_basic_authenticate_with name: 'kroger', password: 'kitchen1883'
+
   def show
     if current_permalinks == ['menu']
       redirect_to(first_child_path)
