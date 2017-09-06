@@ -7,8 +7,14 @@
 
   &:hover,
   &:active,
+  &:focus:hover,
+  &:focus:active,
   &.btn-primary.active {
     background-color: $yellow;
     color: $white;
+  }
+
+  &:focus {
+    background-color: darken($yellow-light, 5%);
   }
 }
