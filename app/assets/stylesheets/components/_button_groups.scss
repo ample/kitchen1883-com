@@ -1,7 +1,32 @@
 .btn-group {
 
+  @include media-breakpoint-down(xs) {
+    display: flex;
+    flex-direction: column;
+  }
+
   .btn-primary:focus {
     box-shadow: none;
+  }
+
+  .btn {
+    @include media-breakpoint-down(xs) {
+      flex: 0 0 100%;
+
+      &:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-radius: 0;
+        @include border-top-radius($border-radius);
+      }
+
+      &:last-child:not(:first-child) {
+        border-radius: 0;
+        @include border-bottom-radius($border-radius);
+      }
+
+      & + .btn {
+        margin: 0;
+      }
+    }
   }
 
 
