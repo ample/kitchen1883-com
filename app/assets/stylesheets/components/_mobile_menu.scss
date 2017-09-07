@@ -33,6 +33,10 @@
         cursor: pointer;
       }
 
+      &:focus {
+        outline: none;
+      }
+
       &[aria-expanded='true'] + .navbar-collapse {
         opacity: 1;
         transition: visibility 0.25s linear, opacity 0.25s linear;
