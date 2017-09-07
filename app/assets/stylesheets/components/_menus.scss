@@ -26,7 +26,11 @@
 
     img {
       position: relative;
-      width: 24rem;
+      width: 16rem;
+
+      @include media-breakpoint-up(lg) {
+        width: 24rem;
+      }
     }
   }
 }
