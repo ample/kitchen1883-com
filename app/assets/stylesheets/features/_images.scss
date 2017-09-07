@@ -4,9 +4,13 @@
   .image {
     position: relative;
     display: inline-block;
-    width: calc(25% - 1rem);
+    width: calc(50% - 1rem);
     margin: 0 0 1rem;
     padding: 0;
+
+    @include media-breakpoint-up(sm) {
+      width: calc(25% - 1rem);
+    }
 
     &:before {
       content: '';
@@ -14,12 +18,31 @@
       padding-top: 100%;
     }
 
+    &.w1.h1:last-child {
+      width: calc(100% - 1rem);
+      @include media-breakpoint-up(sm) {
+        width: calc(25% - 1rem);
+      }
+      &:before {
+        padding-top: calc(50% - 8px);
+        @include media-breakpoint-up(sm) {
+          padding-top: 100%;
+        }
+      }
+    }
+
     &.h2:before {
-      padding-top: calc(200% + 16px);
+      padding-top: 100%;
+      @include media-breakpoint-up(sm) {
+        padding-top: calc(200% + 16px);
+      }
     }
 
     &.w2 {
-      width: calc(50% - 1rem);
+      width: calc(100% - 1rem);
+      @include media-breakpoint-up(sm) {
+        width: calc(50% - 1rem);
+      }
       &:before {
         padding-top: calc(50% - 8px);
       }
@@ -45,5 +68,6 @@
 
   .template-index & {
     margin-bottom: 3.75rem;
+    margin-left: 1rem;
   }
 }
