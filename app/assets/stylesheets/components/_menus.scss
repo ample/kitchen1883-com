@@ -29,4 +29,10 @@
       width: 24rem;
     }
   }
+
+  .navbar-toggler {
+    &:focus {
+      outline: none;
+    }
+  }
 }
