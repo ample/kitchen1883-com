@@ -17,13 +17,13 @@
     <%= render 'public/partials/header' %>
 
     <%= yield(:jumbotron) if content_for?(:jumbotron) %>
+
     <div class="container">
       <%= yield %>
+      <p>&nbsp;</p>
     </div>
 
     <%= render 'public/partials/footer' %>
-
-    <%= yield(:footer) if content_for?(:footer) %>
 
   </body>
 </html>
