@@ -33,9 +33,13 @@
       position: relative;
       width: 16rem;
 
-      @include media-breakpoint-up(lg) {
-        width: 24rem;
-      }
+  &.navbar-expand-md {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    .navbar-collapse {
+      -ms-flex: 0 0 auto;
     }
   }
 }
