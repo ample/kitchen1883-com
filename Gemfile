@@ -28,6 +28,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # gem 'ample_admin', path: File.join(File.dirname(__FILE__), '../ample_admin')
 gem 'ample_admin', git: 'https://kitchen1883:5950a043d18cd58a875bcfbde6a16875476b8c6e@github.com/ample/ample_admin.git'
+gem 'dalli'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.5'

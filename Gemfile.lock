@@ -137,6 +137,7 @@ GEM
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    dalli (2.7.6)
     database_cleaner (1.6.1)
     devise (4.3.0)
       bcrypt (~> 3.0)
@@ -402,6 +403,7 @@ DEPENDENCIES
   bootstrap
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  dalli
   database_cleaner
   devise
   factory_girl_rails

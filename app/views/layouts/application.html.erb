@@ -12,18 +12,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body class="template-<%= template_filename %>">
+  <% cache_if cacheable?, [:body, current_publish, request.path] do %>
+    <body class="template-<%= template_filename %>">
 
-    <%= render 'public/partials/header' %>
+      <%= render 'public/partials/header' %>
 
-    <%= yield(:jumbotron) if content_for?(:jumbotron) %>
+      <%= yield(:jumbotron) if content_for?(:jumbotron) %>
 
-    <div class="container">
-      <%= yield %>
-      <p>&nbsp;</p>
-    </div>
+      <div class="container">
+        <%= yield %>
+        <p>&nbsp;</p>
+      </div>
 
-    <%= render 'public/partials/footer' %>
+      <%= render 'public/partials/footer' %>
 
-  </body>
+    </body>
+  <% end %>
 </html>
