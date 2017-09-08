@@ -2,7 +2,8 @@ html {
   opacity: 0;
   visibility: hidden;
 
-  &.wf-active {
+  &.wf-active,
+  &.wf-inactive {
     opacity: 1;
     transition: visibility 0.25s linear, opacity 0.25s linear;
     visibility: visible;
