@@ -28,10 +28,17 @@
 
   .navbar-brand {
     padding: 0;
+    width: 16rem;
+
+    @include media-breakpoint-up(lg) {
+      width: 24rem;
+    }
 
     img {
       position: relative;
-      width: 16rem;
+      width: 100%;
+    }
+  }
 
   &.navbar-expand-md {
     -webkit-box-pack: justify;
