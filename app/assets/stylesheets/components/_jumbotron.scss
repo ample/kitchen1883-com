@@ -67,14 +67,22 @@
 
     &:before {
       @include media-breakpoint-up(sm) {
-        margin-left: calc(-50% - 32px);
+        left: -15%;
         text-align: right;
+      }
+
+      @include media-breakpoint-up(md) {
+        left: -10%;
       }
     }
 
     &:after {
       @include media-breakpoint-up(sm) {
-        margin-left: 2rem;
+        left: 65%;
+      }
+
+      @include media-breakpoint-up(md) {
+        left: 60%;
       }
     }
   }
