@@ -8,17 +8,18 @@
 
   &:before {
     background-image: image-url('kitchen-1883-logo-stacked.svg');
-    background-position: top right;
+    background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 18rem;
+    bottom: -5rem;
     content: ' ';
     display: block;
     height: 100%;
+    height: 500px;
     opacity: 0.175;
     position: absolute;
-    right: 4rem;
-    top: 4rem;
-    width: 100%;
+    right: -3rem;
+    width: 100vw;
     z-index: -1;
   }
 

@@ -1,3 +1,14 @@
+html {
+  opacity: 0;
+  visibility: hidden;
+
+  &.wf-active {
+    opacity: 1;
+    transition: visibility 0.25s linear, opacity 0.25s linear;
+    visibility: visible;
+  }
+}
+
 body {
   background: image-url('bg-dark-wood.jpg') center 1440px;
 }

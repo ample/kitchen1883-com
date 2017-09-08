@@ -3,7 +3,6 @@ class Kitchen.Map
   constructor: ->
     @setVars()
     @initMap()
-    @applyStyles()
     @addMarker()
 
   @init: ->
@@ -20,14 +19,10 @@ class Kitchen.Map
     @map = new google.maps.Map(@container[0],
       zoom: 13
       center: @location
-      disableDefaultUI: true
-      mapTypeControlOptions:
-        mapTypeIds: ['roadmap', 'styled_map']
+      styles: @styles()
+      mapTypeControl: false
+      streetViewControl: false
     );
-
-  applyStyles: ->
-    @map.mapTypes.set('styled_map', @styles());
-    @map.setMapTypeId('styled_map');
 
   addMarker: ->
     @marker = new google.maps.Marker(
@@ -37,7 +32,7 @@ class Kitchen.Map
     )
 
   styles: ->
-    new (google.maps.StyledMapType)([
+    [
       {
         'elementType': 'geometry'
         'stylers': [ { 'color': '#f5f5f5' } ]
@@ -124,4 +119,4 @@ class Kitchen.Map
         'elementType': 'labels.text.fill'
         'stylers': [ { 'color': '#9e9e9e' } ]
       }
-    ])
+    ]
