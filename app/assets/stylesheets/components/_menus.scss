@@ -8,16 +8,21 @@
 
   .navbar-nav {
     margin-left: auto;
-  }
 
-  .nav-link {
-    color: $white;
-    font-family: $font-family-refrigerator-deluxe;
-    font-size: 1.125rem;
-    text-transform: uppercase;
+    .nav-link {
+      color: $white;
+      font-family: $font-family-refrigerator-deluxe;
+      font-size: 1.125rem;
+      text-transform: uppercase;
 
-    &.active {
-      color: $yellow-light;
+      &.active {
+        color: $yellow-light;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+      }
     }
   }
 
@@ -26,7 +31,11 @@
 
     img {
       position: relative;
-      width: 24rem;
+      width: 16rem;
+
+      @include media-breakpoint-up(lg) {
+        width: 24rem;
+      }
     }
   }
 }

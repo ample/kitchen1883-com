@@ -1,5 +1,6 @@
 .jumbotron {
   background-color: transparent;
+  border-bottom: 1px solid rgba(255,255,255,.1);
   position: relative;
   margin-bottom: 3.75rem;
   padding: 11.625rem 1rem 0;
@@ -36,7 +37,7 @@
   h1 {
     font-family: $font-family-refrigerator-deluxe;
     font-size: 15vw;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
@@ -83,7 +84,7 @@
     display: inline-block;
     font-family: $font-family-brothers;
     font-size: 1.25rem;
-    line-height: 1.8;
+    line-height: 1.5;
     margin-bottom: 4.5rem;
     text-transform: uppercase;
   }
@@ -94,11 +95,10 @@
   // ---------------------------------------- | Home
 
   .template-index & {
-    padding: 16.25rem 1rem 17.5rem;
+    padding: 7rem 1rem 0;
 
-    @include media-breakpoint-up(lg) {
-      padding-left: 8.5rem;
-      padding-right: 8.5rem;
+    @include media-breakpoint-up(md) {
+      padding: 12rem 1rem 6rem;
     }
 
     .container {
