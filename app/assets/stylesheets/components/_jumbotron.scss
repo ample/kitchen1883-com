@@ -39,7 +39,6 @@
     font-size: 15vw;
     margin-bottom: 3.5rem;
     text-transform: uppercase;
-    position: relative;
     z-index: 1;
     overflow: hidden;
     text-align: center;
@@ -52,40 +51,37 @@
       font-size: 5.125rem;
     }
 
-    &:before,
-    &:after {
-      @include media-breakpoint-up(sm) {
-        position: absolute;
-        top: 51%;
-        overflow: hidden;
-        width: 50%;
-        height: .125rem;
-        content: '\a0';
-        background-color: $white;
-      }
-    }
+    &.decoration span {
+      position: relative;
 
-    &:before {
-      @include media-breakpoint-up(sm) {
-        left: -15%;
-        text-align: right;
+      &:before,
+      &:after {
+        @include media-breakpoint-up(sm) {
+          content: "";
+          position: absolute;
+          height: .125rem;
+          border-bottom: 1px solid $white;
+          top: 50%;
+          width: 250%;
+        }
       }
 
-      @include media-breakpoint-up(md) {
-        left: -10%;
-      }
-    }
-
-    &:after {
-      @include media-breakpoint-up(sm) {
-        left: 65%;
+      &:before {
+        @include media-breakpoint-up(sm) {
+          right: 100%;
+          margin-right: 15px;
+        }
       }
 
-      @include media-breakpoint-up(md) {
-        left: 60%;
+      &:after {
+        @include media-breakpoint-up(sm) {
+          left: 100%;
+          margin-left: 15px;
+        }
       }
     }
   }
+
 
 
   .desc {
