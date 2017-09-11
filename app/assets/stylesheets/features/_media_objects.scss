@@ -11,7 +11,7 @@
   }
 
   .media-img {
-    margin-bottom: 2.625rem;
+    margin-bottom: 1.875rem;
   }
 
   .media-text {
@@ -95,6 +95,7 @@
 
       @include media-breakpoint-up(md) {
         @include make-col(4);
+        padding: 0.625rem 1.5rem;
         text-align: left;
       }
 
@@ -117,7 +118,7 @@
         margin: 0;
         @include media-breakpoint-up(md) {
           list-style-type: disc;
-          margin: 1rem;
+          margin: 0 1rem 1rem;
         }
       }
     }
