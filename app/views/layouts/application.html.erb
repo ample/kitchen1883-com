@@ -26,6 +26,8 @@
 
       <%= render 'public/partials/footer' %>
 
+      <%= yield(:footer) if content_for?(:footer) %>
+
     </body>
   <% end %>
 </html>
