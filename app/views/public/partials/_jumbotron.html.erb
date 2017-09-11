@@ -4,7 +4,11 @@
     <div class="bg-img" <%= bg_img(obj: obj, size: :jumbotron) %>></div>
   <% end %>
   <div class="container">
+  <% if current_page? root_path %>
     <h1><%= obj.title %></h1>
+  <% else %>
+    <h1 class="decoration"><span><%= obj.title %></span></h1>
+  <% end %>
     <div class="desc">
       <%= markdown obj.body if obj.body.present? %>
     </div>
