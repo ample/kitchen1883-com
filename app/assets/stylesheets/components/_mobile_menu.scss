@@ -30,6 +30,9 @@
       margin-top: .75rem;
       padding: 0.25rem 0 0.25rem 0.75rem;
       z-index: 9;
+      -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+      order: 3;
 
       &:hover {
         cursor: pointer;
@@ -37,6 +40,11 @@
 
       &:focus {
         outline: none;
+      }
+
+      &[aria-expanded='true'] > #menu-icon {
+        display: block;
+        z-index: 20;
       }
 
       &[aria-expanded='true'] + .navbar-collapse {
@@ -60,6 +68,9 @@
       visibility: hidden;
       width: 100vw;
       z-index: -1;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
     }
   }
 }
