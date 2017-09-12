@@ -3,11 +3,11 @@
     <a class="logo" href="/">
       <%= image_tag 'kitchen-1883-logo-white.svg' %>
     </a>
-    <header class="menu">
+    <div class="menu">
       <ul class="<%= local_assigns.try(:[], :klasses) || 'nav' %>">
         <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
       </ul>
-    </header>
+    </div>
     <div class="social-links">
       <%= render partial: 'public/partials/social', collection: current_social_accounts %>
     </div>
