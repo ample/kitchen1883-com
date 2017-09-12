@@ -37,9 +37,16 @@
       margin-bottom: .375rem;
       padding-right: 2.375rem;
 
+      span {
+        margin-right: .25rem;
+      }
+
       svg {
         line-height: inherit;
-        margin-left: .25rem;
+
+        &.icon-veggie {
+          margin-left: -5px;
+        }
       }
     }
 
