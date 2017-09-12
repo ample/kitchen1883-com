@@ -2,7 +2,7 @@
   <span class="float-right price"><%= menu_item.price %></span>
   <h4 class="title">
     <span><%= menu_item.title %></span>
-    <%= icon 'veggie', color: 'yellow' if menu_item.vegan.to_bool %>
+    <%= icon 'veggie' if menu_item.vegan.to_bool %>
     <%= icon 'gluten-free' if menu_item.gluten_free.to_bool %>
   </h4>
   <div class="desc">
