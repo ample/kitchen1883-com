@@ -5,7 +5,6 @@
   </a>
 
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <!--<span class="navbar-toggler-icon"></span>-->
     <div id="menu-icon">
       <span></span>
       <span></span>
@@ -15,7 +14,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="<%= local_assigns.try(:[], :klasses) || 'navbar-nav' %>">
+    <ul class="<%= local_assigns.try(:[], :klasses) || 'navbar-nav nav' %>">
       <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
     </ul>
   </div>
