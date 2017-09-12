@@ -1,4 +1,6 @@
-# TODO: There is a positioning issue, likely due to the flash of fonts
+$(document).ready () ->
+  svg4everybody()
+
 $(document).ready () ->
   for imageGroup in $('.feature-group.images')
     $(imageGroup).masonry

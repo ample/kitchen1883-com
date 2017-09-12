@@ -12,7 +12,7 @@ task :build_svg do
     icon_name = doc.css('#Page-1 > g')[0]['id']
     content = doc.css('#Page-1 g').to_s
     svg_content += "<svg width=\"256px\" height=\"256px\" viewBox=\"0 0 256 256\" id=\"#{icon_name}\">\
-  #{content.gsub(/[a-z\-]+=\"[a-zA-Z0-9\-\#]+\"/, '')}\
+  #{content.gsub(/[id]+=\"[a-zA-Z0-9\-\#]+\"/, '')}\
 </svg>"
   end
   svg_content += '</svg>'
