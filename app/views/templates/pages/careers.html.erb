@@ -1,7 +1,8 @@
 <%# ---
 name: Careers
 fields:
-  application_url: string
+  button_label: string
+  button_url: string
 regions:
   - main
 features:
@@ -15,5 +16,5 @@ features:
 <%= render_grouped_features %>
 
 <p class="text-center">
-  <%= link_to 'Apply For A Position', current_object.blocks.application_url.body, target: :blank, class: 'btn btn-primary' %>
+  <%= link_to current_object.blocks.button_label.body, current_object.blocks.button_url.body, target: :blank, class: 'btn btn-primary' %>
 </p>
