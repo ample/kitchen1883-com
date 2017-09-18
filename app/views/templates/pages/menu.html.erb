@@ -1,6 +1,7 @@
 <%# ---
 name: Menu
-fields: {}
+fields:
+  season: string
 regions:
   - main
 features:
@@ -25,6 +26,11 @@ features:
 
 <h2 class="content-heading">
   <%= current_object.title %>
+  <% if current_object.blocks.season.try(:body).present? %>
+    <span class="content-subheading">
+      <%= current_object.blocks.season.body %>
+    </span>
+  <% end %>
 </h2>
 
 <div class="groups">
