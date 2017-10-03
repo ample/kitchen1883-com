@@ -7,6 +7,11 @@
   min-height: 27.75rem;
   text-align: center;
 
+  @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+    padding-top: 6.625rem;
+    min-height: 23.75rem;
+  }
+
   .bg-img {
     background-position: center;
     background-repeat: no-repeat;
@@ -38,6 +43,9 @@
     font-family: $font-family-refrigerator-deluxe;
     font-size: 15vw;
     margin-bottom: 3.5rem;
+    @media (max-width: map-get($grid-breakpoints, sm) - 1) {
+      margin-bottom: 1.5rem;
+    }
     text-transform: uppercase;
     z-index: 1;
     overflow: hidden;
