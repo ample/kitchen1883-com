@@ -11,7 +11,7 @@ features:
 --- %>
 
 <% content_for :jumbotron do %>
-  <%= render partial: 'public/partials/jumbotron', locals: { obj: current_parent } %>
+  <%= render partial: 'public/partials/jumbotron', locals: { obj: current_object.attachment.present? ? current_object : current_parent } %>
 <% end %>
 
 <div class="container text-center">
