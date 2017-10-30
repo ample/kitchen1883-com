@@ -32,6 +32,11 @@ features:
     </span>
   <% end %>
 </h2>
+<% if current_object.body.present? %>
+  <div class="content-body">
+    <%== markdown current_object.body %>
+  </div>
+<% end %>
 
 <div class="groups">
   <%= render_grouped_features %>
