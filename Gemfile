@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'paperclip-azure', '~> 1.0'
 gem 'rollbar'
 gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
+gem 'sitemap_generator', '~> 5.2.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
