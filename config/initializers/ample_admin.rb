@@ -17,6 +17,7 @@ AmpleAdmin.configure do |config|
 
   config.attachment_styles = {
     jumbotron: '1400x>',
+    og: '1200x1200#',
     square: '270x270#',
     v_rectangle: '270x570#',
     h_rectangle: '570x270#',

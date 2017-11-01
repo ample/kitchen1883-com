@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    helper_method :cacheable?, :current_publish
+    helper_method :cacheable?, :current_publish, :current_meta_objects
+
+    def current_meta_objects
+      []
+    end
 
     def current_publish
       @current_publish ||= begin

@@ -37,6 +37,11 @@ gem 'rollbar'
 gem 'sprig', '~> 0.3.0', git: 'https://github.com/vigetlabs/sprig.git'
 gem 'sitemap_generator', '~> 5.2.0'
 
+group :staging, :production do
+  gem 'heroku-deflater'
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

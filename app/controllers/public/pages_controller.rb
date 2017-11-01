@@ -1,8 +1,10 @@
 class Public::PagesController < AmpleAdmin::Public::PagesController
 
-  if Rails.env.production?
-    http_basic_authenticate_with name: 'kroger', password: 'kitchen1883'
-  end
+  include Configuring
+
+  # if Rails.env.production?
+  #   http_basic_authenticate_with name: 'kroger', password: 'kitchen1883'
+  # end
 
   def show
     if current_permalinks == ['menu']

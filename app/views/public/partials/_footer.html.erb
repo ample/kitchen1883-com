@@ -5,7 +5,7 @@
     </a>
     <div class="menu">
       <ul class="<%= local_assigns.try(:[], :klasses) || 'nav' %>">
-        <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
+        <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } if global_nav && global_nav.try(:links) %>
       </ul>
     </div>
     <div class="social-links">

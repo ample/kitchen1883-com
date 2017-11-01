@@ -86,4 +86,12 @@ module Public::PagesHelper
     settings.select { |s| s.permalink == key.to_s }[0].try(:value).try(:html_safe)
   end
 
+  def page_title
+    "#{@page_title ? "#{@page_title} | " : ""}#{site_title}"
+  end
+
+  def site_title
+    @site_title ||= AmpleAdmin::Setting.find_by_permalink('site-title') || 'Kitchen1883'
+  end
+
 end
