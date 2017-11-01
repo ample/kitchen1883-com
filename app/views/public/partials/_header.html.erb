@@ -15,7 +15,7 @@
 
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="<%= local_assigns.try(:[], :klasses) || 'navbar-nav nav' %>">
-      <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } %>
+      <%= render partial: 'public/links/link', collection: global_nav.links.sort_by(&:sort_order), locals: { children: true, depth: 0, position: global_nav.position } if global_nav && global_nav.try(:links) %>
     </ul>
   </div>
 </nav>

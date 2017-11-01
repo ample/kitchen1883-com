@@ -1,5 +1,7 @@
 class Public::PagesController < AmpleAdmin::Public::PagesController
 
+  include Configuring
+
   if Rails.env.production?
     http_basic_authenticate_with name: 'kroger', password: 'kitchen1883'
   end
