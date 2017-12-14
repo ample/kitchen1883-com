@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /admin
+Sitemap: https://kitchen1883.blob.core.windows.net/kitchen1883-production/sitemap.xml
