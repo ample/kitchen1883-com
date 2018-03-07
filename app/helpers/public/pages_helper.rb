@@ -35,10 +35,10 @@ module Public::PagesHelper
   def current_subnav
     @current_nav_items ||= begin
       Rails.cache.fetch([current_object, 'subnav']) do
-        if current_object.has_children?
-          current_object.children
+        if current_object.children.live.present?
+          current_object.children.live
         else
-          current_object.siblings
+          current_object.siblings.live
         end
       end
     end
