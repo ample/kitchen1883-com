@@ -50,6 +50,9 @@
       <script>try{Typekit.load({ async: true });}catch(e){}</script>
       <%= javascript_include_tag 'application' %>
 
+      <% if Rails.env.production? %>
+        <script type="text/javascript" src="https://my.hellobar.com/08f4d71ab706322e4241e76574823c3326295e33.js" async></script>
+      <% end %>
     </body>
   <% end %>
 </html>
