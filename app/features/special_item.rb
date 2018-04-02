@@ -1,7 +1,7 @@
 AmpleAdmin::FeatureDefinition.define do
   factory :special_item do
     attribute :region, nil
-    attribute :day, :select
+    attribute :day, :string
     attribute :description, :text
     attribute :attachment, :image
   end
