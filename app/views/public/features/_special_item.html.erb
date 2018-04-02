@@ -1,0 +1,15 @@
+<article class="menu-special">
+  <%# if image, show %>
+  <div class="image">
+    <img src="http://placekitten.com/370/272" alt="Kitten">
+  </div>
+  <%# if image, end %>
+  <div class="text">
+    <div class="tag"><%= special_item.day %></div>
+    <h3 class="title"><%= special_item.title %></h3>
+    <hr>
+    <div class="description">
+      <%= markdown special_item.description %>
+    </div>
+  </div>
+</article>

@@ -6,7 +6,7 @@ regions:
   - main
 features:
   - header
-  - menu_item
+  - special_item
   - content_block
 --- %>
 
@@ -26,87 +26,13 @@ features:
 
 <h2 class="content-heading">
   <%= current_object.title %>
-  <% if current_object.blocks.season.try(:body).present? %>
-    <span class="content-subheading">
-      <%= current_object.blocks.season.body %>
-      I'm a subheading
-    </span>
-  <% end %>
 </h2>
 <% if current_object.body.present? %>
-  <div class="content-body">
+  <div class="content-body text-center">
     <%== markdown current_object.body %>
   </div>
 <% end %>
 
 <div class="groups">
   <%= render_grouped_features %>
-  <article class="menu-special">
-    <div class="image">
-      <img src="http://placekitten.com/370/272" alt="Kitten">
-    </div>
-    <div class="text">
-      <div class="tag">Sunday</div>
-      <h3 class="title">Sunday Supper</h3>
-      <hr>
-      <div class="description">
-        <p>Buttermilk Fried Chicken with Chef's Selection of Seasonal Fixin's</p>
-        <p>Half: $15 (feeds 2) | Whole: $25 (feeds 4)</p>
-        <p>Add a bottle of bubbles for $15</p>
-        <p>Another line of text</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="menu-special">
-    <div class="image">
-      <img src="http://placekitten.com/370/252" alt="Kitten">
-    </div>
-    <div class="text">
-      <div class="tag">Monday</div>
-      <h3 class="title">1883 By the Bottle</h3>
-      <hr>
-      <p class="description">Cellar Selections for $18.83 per bottle
-      Kids 10 and under EAT FREE (with adult meal purchase)!</p>
-    </div>
-  </article>
-
-  <article class="menu-special">
-    <div class="text">
-      <div class="tag">Monday</div>
-      <h3 class="title">1883 By the Bottle</h3>
-      <hr>
-      <p class="description">Cellar Selections for $18.83 per bottle
-      Kids 10 and under EAT FREE (with adult meal purchase)!</p>
-    </div>
-  </article>
-
-  <article class="menu-special">
-    <div class="image">
-      <p class="description">placeholder</p>
-    </div>
-    <div class="text">
-      <div class="tag">Monday</div>
-      <h3 class="title">1883 By the Bottle</h3>
-      <hr>
-      <p class="description">Cellar Selections for $18.83 per bottle
-      Kids 10 and under EAT FREE (with adult meal purchase)!</p>
-    </div>
-  </article>
-  </div>
-
-
-<!-- Don't know if we need to keep these, might still be useful for specials -->
-<% if features_by_type.collect { |f| f[:blocks].try(:[], :veggie).to_bool }.present? %>
-  <div class="icon-group">
-    <%= icon 'veggie' %>
-    <span>Vegan</span>
-  </div>
-<% end %>
-
-<% if features_by_type.collect { |f| f[:blocks].try(:[], :gluten_free).to_bool }.present? %>
-  <div class="icon-group">
-    <%= icon 'gluten-free' %>
-    <span>Gluten Free</span>
-  </div
-<% end %>
+</div>
