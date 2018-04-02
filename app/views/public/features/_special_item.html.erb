@@ -1,9 +1,9 @@
 <article class="menu-special">
-  <%# if image, show %>
+  <% if special_item.attachment.present? %>
   <div class="image">
-    <img src="http://placekitten.com/370/272" alt="Kitten">
+    <%= image_tag(special_item.image_path, alt: special_item.alt_text) %>
   </div>
-  <%# if image, end %>
+  <% end %>
   <div class="text">
     <div class="tag"><%= special_item.day %></div>
     <h3 class="title"><%= special_item.title %></h3>

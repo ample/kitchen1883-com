@@ -4,6 +4,7 @@ AmpleAdmin::FeatureDefinition.define do
     attribute :day, :string
     attribute :description, :text
     attribute :attachment, :image
+    attribute :alt_text, :string
   end
 end
 
