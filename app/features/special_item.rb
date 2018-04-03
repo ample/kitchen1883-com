@@ -4,7 +4,6 @@ AmpleAdmin::FeatureDefinition.define do
     attribute :day, ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     attribute :description, :text
     attribute :attachment, :image
-    attribute :alt_text, :string
   end
 end
 
