@@ -1,7 +1,15 @@
 <article class="menu-special">
   <% if special_item.attachment.present? %>
   <div class="image">
-    <%= image_tag(special_item.image_path, alt: special_item.alt_text) %>
+    <%= ix_image_tag(
+          special_item.image_path(:original),
+          auto: 'format,compress',
+          fit: 'crop',
+          class: 'img-fluid',
+          alt: special_item.alt_text,
+          h: 300,
+          w: 400
+        ) if special_item.image_path.present? %>
   </div>
   <% end %>
   <div class="text">
