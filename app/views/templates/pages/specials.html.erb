@@ -1,0 +1,38 @@
+<%# ---
+name: Specials
+fields:
+  season: string
+regions:
+  - main
+features:
+  - header
+  - special_item
+  - content_block
+--- %>
+
+<% content_for :jumbotron do %>
+  <%= render partial: 'public/partials/jumbotron', locals: { obj: current_object.attachment.present? ? current_object : current_parent } %>
+<% end %>
+
+<div class="container text-center">
+  <div class="btn-group" role="group">
+    <% current_subnav.each do |child| %>
+      <a href="<%= child.hierarchy_permalink %>" class="btn btn-primary <%= 'active' if @current_permalinks.last == child.permalink %>">
+        <%= (child.nav_name.present? ? child.nav_name : child.title) %>
+      </a>
+    <% end %>
+  </div>
+</div>
+
+<h2 class="content-heading">
+  <%= current_object.title %>
+</h2>
+<% if current_object.body.present? %>
+  <div class="content-body text-center">
+    <%== markdown current_object.body %>
+  </div>
+<% end %>
+
+<div class="groups">
+  <%= render_grouped_features %>
+</div>
