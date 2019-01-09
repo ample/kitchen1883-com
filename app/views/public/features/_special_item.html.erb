@@ -1,0 +1,25 @@
+<article class="menu-special">
+  <% if special_item.attachment.present? %>
+  <div class="image">
+    <%= ix_image_tag(
+          special_item.image_path(:original),
+          auto: 'format,compress',
+          fit: 'crop',
+          class: 'img-fluid',
+          alt: special_item.alt_text,
+          h: 272,
+          w: 370
+        ) if special_item.image_path.present? %>
+  </div>
+  <% end %>
+  <div class="text">
+    <% if special_item.day.present? %>
+    <div class="tag"><%= special_item.day %></div>
+    <% end %>
+    <h3 class="title"><%= special_item.title %></h3>
+    <hr>
+    <div class="description">
+      <%= markdown special_item.description %>
+    </div>
+  </div>
+</article>

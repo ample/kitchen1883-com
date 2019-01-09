@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This project is using Ruby on Rails and Ample Admin.
 
-Things you may want to cover:
+## It is hosted on Heroku.
+  Heroku has a staging app and a production app:
+  - https://dashboard.heroku.com/apps/kitchen1883-staging
+  - https://dashboard.heroku.com/apps/kitchen1883-com
 
-* Ruby version
+These are the commands to add the heroku branches to your local project
 
-* System dependencies
+```
+$ heroku git:remote -a kitchen1883-com
+$ git remote rename heroku production
+$ heroku git:remote -a kitchen1883-staging
+$ git remote rename heroku staging
+```
 
-* Configuration
+## To pull down production database
 
-* Database creation
+```
+$ be rails db:create
+$ heroku pg:backups:download -r production
+$ pg_restore --verbose --clean --no-acl --no-owner -h localhost -d kitchen1883_development < latest.dump
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ask someone for the `config/application.yml` for the sensitive information not on Github.

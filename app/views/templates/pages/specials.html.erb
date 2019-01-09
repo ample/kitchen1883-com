@@ -1,12 +1,12 @@
 <%# ---
-name: Menu
+name: Specials
 fields:
   season: string
 regions:
   - main
 features:
   - header
-  - menu_item
+  - special_item
   - content_block
 --- %>
 
@@ -26,14 +26,9 @@ features:
 
 <h2 class="content-heading">
   <%= current_object.title %>
-  <% if current_object.blocks.season.try(:body).present? %>
-    <span class="content-subheading">
-      <%= current_object.blocks.season.body %>
-    </span>
-  <% end %>
 </h2>
 <% if current_object.body.present? %>
-  <div class="content-body">
+  <div class="content-body text-center">
     <%== markdown current_object.body %>
   </div>
 <% end %>
@@ -41,17 +36,3 @@ features:
 <div class="groups">
   <%= render_grouped_features %>
 </div>
-
-<% if features_by_type.collect { |f| f[:blocks].try(:[], :veggie).to_bool }.present? %>
-  <div class="icon-group">
-    <%= icon 'veggie' %>
-    <span>Vegetarian</span>
-  </div>
-<% end %>
-
-<% if features_by_type.collect { |f| f[:blocks].try(:[], :gluten_free).to_bool }.present? %>
-  <div class="icon-group">
-    <%= icon 'gluten-free' %>
-    <span>Gluten Free</span>
-  </div
-<% end %>

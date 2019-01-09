@@ -1,0 +1,90 @@
+.template-specials {
+
+  .groups {
+    border-top: 2px solid $yellow-dark;
+    padding-top: 3.5rem;
+  }
+
+  .menu-special {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $beige;
+    text-align: center;
+    margin-bottom: 4rem;
+    flex-direction: row;
+    outline: 1px solid rgba($beige, 0.5);
+    outline-offset: 3px;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+
+    hr {
+      width: 3.375rem;
+      border-top: 2px solid $yellow-dark;
+      margin-top: .625rem;
+      margin-bottom: .875rem;
+    }
+
+    .image {
+      flex: 1;
+      overflow: hidden;
+      max-height: 272px;
+
+      @include media-breakpoint-down(sm) {
+        height: auto;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+      }
+    }
+
+    .text {
+      padding-top: 2.25rem;
+      padding-bottom: 2.25rem;
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+      flex: 1;
+    }
+
+    .tag {
+      display: inline-block;
+      width: 5.6rem;
+      padding-top: .1rem;
+      margin-bottom: 2.06rem;
+      background-color: $brown-dark;
+      font-family: $font-family-adelle;
+      color: $white;
+      font-size: .8rem;
+      line-height: 1.5rem;
+      font-style: italic;
+    }
+
+    .title {
+      color: $brown-dark;
+      font-family: $font-family-brothers;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      margin-bottom: .625rem;
+    }
+
+    .description {
+      color: $brown-dark;
+      font-family: $font-family-adelle-sans;
+      font-size: 1rem;
+      line-height: 1.4rem;
+
+      p {
+        margin-bottom: .5rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
