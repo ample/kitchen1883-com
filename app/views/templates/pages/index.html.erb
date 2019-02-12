@@ -18,3 +18,21 @@ features:
 </div>
 
 <%= render_grouped_features %>
+
+<% content_for :structured_data do %>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Restaurant",
+    "name": "Kitchen 1883",
+    "address": "9003 US Highway 42, Union, KY, 41091",
+    "description": "New American Comfort Food",
+    "image": "<%= restaurant_image_url %>",
+    "priceRange": "<%= restaurant_price_range %>",
+    "servesCuisine": "New American Comfort Food",
+    "openingHours": "Mo-Th 11:00-21:00,Fr 11:00-22:00,Sa 10:00-22:00,Su 10:00-21:00",
+    "telephone": "+18593349450",
+    "hasMenu": <%= menu_structured_data %>
+  }
+  </script>
+<% end %>
