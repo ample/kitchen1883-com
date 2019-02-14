@@ -1,7 +1,9 @@
 module Public::StructuredDataHelper
 
   def menu_structured_data
-    AmpleAdmin::Page.find_by(template_filename: 'menu').children.live
+    menu_page = AmpleAdmin::Page.find_by(template_filename: 'menu')
+    return [] if menu_page.nil?
+    menu_page.children.live
       .collect { |m|
         {
           '@type': 'Menu',
