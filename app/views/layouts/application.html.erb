@@ -53,6 +53,8 @@
       <% if Rails.env.production? %>
         <script type="text/javascript" src="https://my.hellobar.com/08f4d71ab706322e4241e76574823c3326295e33.js" async></script>
       <% end %>
+
+      <%= yield(:structured_data) if content_for?(:structured_data) %>
     </body>
   <% end %>
 </html>

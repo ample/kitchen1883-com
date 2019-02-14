@@ -55,3 +55,16 @@ features:
     <span>Gluten Free</span>
   </div
 <% end %>
+
+<% content_for :structured_data do %>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Menu",
+    "name": "<%= current_object.title %>",
+    "mainEntityOfPage": "<%= request.url %>",
+    "inLanguage": "English",
+    "hasMenuSection": <%= menu_item_structured_data %>
+  }
+  </script>
+<% end %>
