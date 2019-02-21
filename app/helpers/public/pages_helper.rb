@@ -7,7 +7,7 @@ module Public::PagesHelper
   end
 
   def menu_link(link, position:nil, children:nil)
-    classes = [link.icon]
+    classes = [link.icon, link.klass]
     if link.computed_href.remove('/') == params[:permalink] ||
        (link.is_root? && children.any? {|x| x.computed_href.remove('/') == params[:permalink] }) ||
        (link.is_root? && request.path == '/' && link.computed_href == '/') ||
