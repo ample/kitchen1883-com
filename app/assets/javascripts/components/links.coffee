@@ -15,6 +15,8 @@ class Kitchen.Links
         $(link).attr('data-load','true')
 
   isExternal: (url) ->
+    if url.match(/kitchen1883\.com/i) != null
+      return false
     match = url.match(/^([^:\/?#]+:)?(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/)
     if (typeof match[1] == "string" && match[1].length > 0 && match[1].toLowerCase() != location.protocol)
       return true

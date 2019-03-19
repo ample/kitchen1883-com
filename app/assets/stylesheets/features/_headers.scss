@@ -35,6 +35,14 @@
           line-height: normal;
         }
       }
+
+      a {
+        @extend %btn;
+        background-color: $yellow;
+        color: $white;
+        font-size: 0.8em;
+        padding: 0.75rem 3rem;
+      }
     }
   }
 
