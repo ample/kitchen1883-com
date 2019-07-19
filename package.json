@@ -6,6 +6,7 @@
   "author": "Ample <kitchen1883@helloample.com>",
   "dependencies": {
     "gatsby": "^2.13.25",
+    "gatsby-background-image": "^0.8.0",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
