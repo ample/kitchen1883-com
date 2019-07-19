@@ -20,6 +20,16 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      settings: allContentfulSetting {
+        edges {
+          node {
+            key
+            value {
+              value
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     // Create Pages
@@ -30,10 +40,10 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           permalink: node.permalink,
           id: node.contentful_id,
+          settings: result.data.settings.edges.map(e => e.node),
         },
       })
     })
-
     // Create Locations
     result.data.locations.edges.forEach(({ node }) => {
       createPage({
@@ -42,6 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           permalink: node.permalink,
           id: node.contentful_id,
+          settings: result.data.settings.edges.map(e => e.node),
         },
       })
     })
