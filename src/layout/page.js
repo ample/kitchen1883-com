@@ -9,7 +9,7 @@ import Img from "gatsby-image"
 class Page extends React.Component {
   render() {
     const { page } = this.props
-    console.log(page)
+
     return (
       <Layout>
         <p>This is the {page.title} page</p>
