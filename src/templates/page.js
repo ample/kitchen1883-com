@@ -1,21 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../layout"
+import Page from "../layout/page"
 
-import Button from "../components/button"
-
-class Page extends React.Component {
-  render() {
-    const page = this.props.data.page
-
-    return (
-      <Layout>
-        <p>This is the {page.title} page</p>
-        <Button>Hello</Button>
-      </Layout>
-    )
-  }
+export default class extends React.Component {
+  render = () => <Page page={this.props.data.page} />
 }
 
 export const query = graphql`
@@ -25,5 +14,3 @@ export const query = graphql`
     }
   }
 `
-
-export default Page
