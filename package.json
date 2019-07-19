@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kitchen1883-com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "kitchen1883.com",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ample <kitchen1883@helloample.com>",
   "dependencies": {
     "gatsby": "^2.13.25",
     "gatsby-image": "^2.2.6",
@@ -45,9 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ample/kitchen1883-com"
   }
 }
