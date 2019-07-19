@@ -12041,6 +12041,13 @@ react-focus-lock@^1.18.3:
     prop-types "^15.6.2"
     react-clientside-effect "^1.2.0"
 
+react-grid-system@^4.4.10:
+  version "4.4.10"
+  resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-4.4.10.tgz#d5e3a248a1f663189eefb6fe363854d4d9cd7d09"
+  integrity sha512-ZSmQ+284QOYqDKkb5kbaFUWsuczLMQmlkAYNVv2UorG1z177UxQPYcCwmzKXpuGascksImuLpitpMpnn0UacXg==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-helmet-async@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-helmet-async/-/react-helmet-async-1.0.2.tgz#bb55dd8268f7b15aac69c6b22e2f950abda8cc44"
