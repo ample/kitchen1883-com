@@ -1,0 +1,7 @@
+@mixin bgColor($color) {
+  background-color: $color;
+}
+
+body {
+  @include bgColor(transparent);
+}
