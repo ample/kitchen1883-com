@@ -3,16 +3,15 @@ import PropTypes from "prop-types"
 
 import Header from "./header"
 import Footer from "./footer"
-
-import("./globals.scss")
+import GlobalStyles from "./global-styles"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <GlobalStyles>
       <Header />
       <main>{children}</main>
       <Footer />
-    </>
+    </GlobalStyles>
   )
 }
 
