@@ -5,7 +5,9 @@
   "version": "0.1.0",
   "author": "Ample <kitchen1883@helloample.com>",
   "dependencies": {
+    "babel-jest": "^24.8.0",
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-gatsby": "^0.2.7",
     "gatsby": "^2.13.25",
     "gatsby-background-image": "^0.8.0",
     "gatsby-image": "^2.2.6",
@@ -19,13 +21,16 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-transformer-remark": "^2.6.7",
     "gatsby-transformer-sharp": "^2.2.3",
+    "identity-obj-proxy": "^3.0.0",
     "intersection-observer": "^0.7.0",
+    "jest": "^24.8.0",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-grid-system": "^4.4.10",
     "react-helmet": "^5.2.1",
+    "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
@@ -49,7 +54,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
