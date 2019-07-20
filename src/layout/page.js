@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 import Layout from "./index"
 
-import Button from "../components/button"
+import Markdown from "../components/markdown"
 import Img from "gatsby-image"
 
 class Page extends React.Component {
@@ -13,7 +13,7 @@ class Page extends React.Component {
     return (
       <Layout>
         <p>This is the {page.title} page</p>
-        <Button>Hello</Button>
+        <Markdown node={page.description} />
         <Img fluid={page.jumbotronImage.fluid} />
       </Layout>
     )
