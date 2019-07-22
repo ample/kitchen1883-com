@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Page from "../layout/page"
+import { Page } from "../templates/page"
 
 // eslint-disable-next-line
 import PageAttributes from "../fragments/page-attributes"
