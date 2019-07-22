@@ -8,13 +8,17 @@ const containersMap = {
 }
 
 const Containers = ({ data }) =>
-  data.map((container, i) => {
+  (data || []).map((container, i) => {
     const Container = containersMap[container.internal.type]
     return <Container key={i} data={container.blocks} />
   })
 
 Containers.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
+}
+
+Containers.defaultProps = {
+  data: [],
 }
 
 export default Containers
