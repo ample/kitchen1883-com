@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react"
 import { withKnobs, select, text } from "@storybook/addon-knobs"
 import centered from "@storybook/addon-centered/react"
 
-import GlobalStyles from "../src/layout/global-styles"
+import GlobalStyles from "../src/components/layout/global-styles"
 import Button from "../src/components/button"
 
 const stories = storiesOf("Button", module)

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Styles from "../layout/style-variables"
+import Styles from "./layout/style-variables"
 
 const StyledButton = styled.a`
   background-color: ${props => Styles.colors[props.color]};
