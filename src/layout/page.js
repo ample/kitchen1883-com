@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 
 import Layout from "./index"
 
+import Containers from "../containers"
+
 import Markdown from "../components/markdown"
 import Img from "gatsby-image"
 
@@ -12,9 +14,16 @@ class Page extends React.Component {
 
     return (
       <Layout>
-        <p>This is the {page.title} page</p>
-        <Markdown node={page.description} />
-        <Img fluid={page.jumbotronImage.fluid} />
+        <div>
+          <h1>{page.title}</h1>
+          <Markdown node={page.description} />
+          <Img fluid={page.jumbotronImage.fluid} style={{ width: "200px" }} />
+          <hr />
+        </div>
+
+        <Containers data={page.containers} />
+
+        <hr />
       </Layout>
     )
   }
