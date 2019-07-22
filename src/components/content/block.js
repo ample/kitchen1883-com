@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
-import Markdown from "../components/markdown"
+import Markdown from "../markdown"
 
 const ContentBlock = props => (
   <div>

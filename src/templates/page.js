@@ -6,14 +6,24 @@ import Img from "gatsby-image"
 // eslint-disable-next-line
 import PageAttributes from "../fragments/page-attributes"
 
-import Containers from "../containers"
-
+import Content from "../components/content"
 import Layout from "../components/layout"
 import Markdown from "../components/markdown"
 
 // ---------------------------------------- | Page (Shared Component)
 
 class Page extends React.Component {
+  containersMap = {
+    ContentfulContentContainer: Content,
+  }
+
+  containers(data = []) {
+    return (data || []).map((container, i) => {
+      const Container = this.containersMap[container.internal.type]
+      return <Container key={i} data={container.blocks} />
+    })
+  }
+
   render() {
     const { page } = this.props
 
@@ -26,7 +36,7 @@ class Page extends React.Component {
           <hr />
         </div>
 
-        <Containers data={page.containers} />
+        {this.containers(page.containers)}
 
         <hr />
       </Layout>
