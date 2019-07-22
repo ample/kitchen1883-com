@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
 
 import Layout from "./index"
 
 import Containers from "../containers"
 
 import Markdown from "../components/markdown"
-import Img from "gatsby-image"
 
 class Page extends React.Component {
   render() {

@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Ample <kitchen1883@helloample.com>",
   "dependencies": {
+    "@storybook/addon-backgrounds": "^5.1.9",
+    "@storybook/addon-centered": "^5.1.9",
     "babel-jest": "^24.8.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.7",
