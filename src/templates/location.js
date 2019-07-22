@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../layout"
+import Layout from "../components/layout"
 
 class Location extends React.Component {
   render() {
