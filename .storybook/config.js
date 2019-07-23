@@ -1,5 +1,6 @@
 import { configure } from "@storybook/react"
 import { action } from "@storybook/addon-actions"
+import "@storybook/addon-console"
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../stories", true, /.stories.js$/)
