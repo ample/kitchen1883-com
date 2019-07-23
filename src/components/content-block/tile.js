@@ -7,7 +7,7 @@ import HTML from "../utilities/html"
 const Tile = props => (
   <div>
     {props.image && <Img fluid={props.image.fluid} style={{ width: "200px" }} />}
-    {props.body && <HTML node={props.body} />}
+    {props.body && <HTML field={props.body} />}
   </div>
 )
 

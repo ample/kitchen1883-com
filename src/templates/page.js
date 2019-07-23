@@ -31,7 +31,7 @@ class Page extends React.Component {
       <Layout>
         <div>
           <h1>{page.title}</h1>
-          <HTML node={page.description} />
+          <HTML field={page.description} />
           <Img fluid={page.jumbotronImage.fluid} style={{ width: "200px" }} />
           <hr />
         </div>
