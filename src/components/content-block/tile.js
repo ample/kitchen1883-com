@@ -2,16 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 
-import Markdown from "../markdown"
+import HTML from "../utilities/html"
 
-const ContentBlock = props => (
+const Tile = props => (
   <div>
     {props.image && <Img fluid={props.image.fluid} style={{ width: "200px" }} />}
-    {props.body && <Markdown node={props.body} />}
+    {props.body && <HTML node={props.body} />}
   </div>
 )
 
-ContentBlock.propTypes = {
+Tile.propTypes = {
   background_color: PropTypes.string,
   body: PropTypes.object,
   button_label: PropTypes.string,
@@ -20,4 +20,4 @@ ContentBlock.propTypes = {
   text_align: PropTypes.string,
 }
 
-export default ContentBlock
+export default Tile

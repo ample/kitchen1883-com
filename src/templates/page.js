@@ -6,15 +6,15 @@ import Img from "gatsby-image"
 // eslint-disable-next-line
 import PageAttributes from "../fragments/page-attributes"
 
-import Content from "../components/content"
+import ContentBlock from "../components/content-block"
+import HTML from "../components/utilities/html"
 import Layout from "../components/layout"
-import Markdown from "../components/markdown"
 
 // ---------------------------------------- | Page (Shared Component)
 
 class Page extends React.Component {
   containersMap = {
-    ContentfulContentContainer: Content,
+    ContentfulContentContainer: ContentBlock,
   }
 
   containers(data = []) {
@@ -31,7 +31,7 @@ class Page extends React.Component {
       <Layout>
         <div>
           <h1>{page.title}</h1>
-          <Markdown node={page.description} />
+          <HTML node={page.description} />
           <Img fluid={page.jumbotronImage.fluid} style={{ width: "200px" }} />
           <hr />
         </div>

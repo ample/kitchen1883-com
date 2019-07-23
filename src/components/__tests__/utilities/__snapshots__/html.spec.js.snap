@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HTML renders correctly 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<p>Hello World</p>",
+    }
+  }
+/>
+`;
+
+exports[`HTML renders null for empty objects 1`] = `null`;
+
+exports[`HTML renders null for incorrectly structured objects 1`] = `null`;
