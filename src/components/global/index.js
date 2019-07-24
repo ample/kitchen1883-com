@@ -4,7 +4,7 @@ import bp from "./ref/screen.scss"
 
 export { colors }
 export { fonts }
-export default screen = {
+export const screen = {
   min: {
     sm: `(min-width: ${bp.sm}px)`,
     md: `(min-width: ${bp.md}px)`,
