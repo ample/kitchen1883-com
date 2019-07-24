@@ -1,6 +1,6 @@
-import colors from "./vars/colors.scss"
-import fonts from "./vars/fonts.scss"
-import bp from "./vars/screen.scss"
+import colors from "./ref/colors.scss"
+import fonts from "./ref/fonts.scss"
+import bp from "./ref/screen.scss"
 
 export { colors }
 export { fonts }
