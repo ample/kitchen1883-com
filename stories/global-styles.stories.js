@@ -48,32 +48,33 @@ stories.add(
               <h6>h6 Label</h6>
             </div>
             <p>
-              &lt;body/p/section> default or .md: <br/>Cras justo odio, dapibus ac facilisis in, egestas eget quam. <a href="#">Donec
-              ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet
-              rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at
-              eros. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in,
-              egestas eget quam.
+              &lt;body/p/section> default or .md: <br />
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
+              <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
+              lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
+              consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo
+              odio, dapibus ac facilisis in, egestas eget quam.
             </p>
             <p className="lg">
-              &lt;p/section> .lg: <br/>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper
-              nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum
-              faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas
-              eget quam.
+              &lt;p/section> .lg: <br />
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
             </p>
             <p className="xl">
-              &lt;p/section> .xl: <br/>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper
-              nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum
-              faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas
-              eget quam.
+              &lt;p/section> .xl: <br />
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
             </p>
             <p className="sm">
-              &lt;p/section> .sm: <br/>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper
-              nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum
-              faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas
-              eget quam.
+              &lt;p/section> .sm: <br />
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
             </p>
           </Table>
         </div>
@@ -136,18 +137,25 @@ stories.add(
           <Group>
             <h5>
               Fonts <br />
-              <code>$&#123;fonts.name&#125;</code>
+              <code>$&#123;fonts.type&#125;</code>
             </h5>
             <section className="xl">
-              <div className="avenir">Avenir</div>
-              <div>Marion</div>
+              <div>
+                <code>fonts.serif</code>
+                <br />
+                Vollkorn
+              </div>
+              <br />
+              <div className="sans">
+                <code>fonts.sans</code>
+                <br />
+                Montserrat
+              </div>
             </section>
           </Group>
 
           <Group>
-            <h5>
-              Media Queries <br />
-            </h5>
+            <h5>Media Queries</h5>
             (max-width)
             <section>
               <code>
@@ -205,8 +213,8 @@ const Group = styled.div`
     padding: 1rem;
     border: 1px solid gainsboro;
   }
-  .avenir {
-    font-family: ${g.fonts.avenir};
+  .sans {
+    font-family: ${g.fonts.sans};
     margin-bottom: 1rem;
   }
 `

@@ -1,8 +1,8 @@
 // Font families
-$marion: marion, georgia, serif; // 400, 700
-$avenir: "avenir next", "lucida grande", sans-serif; // 400, 600
+$serif: vollkorn, serif; // 400, 700
+$sans: montserrat, sans-serif; // 400, 700
 
 :export {
-  marion: $marion;
-  avenir: $avenir;
+  serif: $serif;
+  sans: $sans;
 }

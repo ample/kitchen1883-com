@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: $avenir;
+  font-family: $sans;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 1.7;
@@ -42,8 +42,8 @@ h6 {
 }
 
 h1 {
-  font-family: $avenir;
-  font-weight: 600;
+  font-family: $sans;
+  font-weight: 700;
   font-size: 6.3rem;
   text-transform: uppercase;
   text-align: center;
@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-family: $marion;
+  font-family: $serif;
   font-weight: 700;
   font-size: 4.2rem;
   text-transform: capitalize;
@@ -61,8 +61,8 @@ h2 {
 }
 
 h3 {
-  font-family: $avenir;
-  font-weight: 600;
+  font-family: $sans;
+  font-weight: 700;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 0.6rem;
@@ -70,8 +70,8 @@ h3 {
 }
 
 h4 {
-  font-family: $avenir;
-  font-weight: 600;
+  font-family: $sans;
+  font-weight: 700;
   font-size: 3rem;
   text-transform: uppercase;
   text-align: center;
@@ -80,8 +80,8 @@ h4 {
 }
 
 h5 {
-  font-family: $avenir;
-  font-weight: 600;
+  font-family: $sans;
+  font-weight: 700;
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
@@ -90,7 +90,7 @@ h5 {
 }
 
 h6 {
-  font-family: $marion;
+  font-family: $serif;
   font-weight: 700;
   font-size: 2.2rem;
   text-transform: uppercase;
@@ -118,7 +118,7 @@ section {
   }
   // Use 'md' only as a reset. This is the default style.
   &.md {
-    font-family: $avenir;
+    font-family: $sans;
     font-size: 1.5rem;
     line-height: 1.7;
   }
@@ -126,7 +126,7 @@ section {
     font-size: 1.8rem;
   }
   &.xl {
-    font-family: $marion;
+    font-family: $serif;
     font-size: 2.2rem;
     line-height: 1.18;
   }
