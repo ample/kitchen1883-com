@@ -16,7 +16,6 @@ stories.addDecorator(withKnobs)
 stories.add(
   "Single Block",
   () => {
-    console.log(fixture)
     let markdown = text("Body", `## ${fixture[0].title}\n\n${fixture[0].body}`)
 
     let data = [{ body: { childMarkdownRemark: { html: marked(markdown) } } }]

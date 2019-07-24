@@ -5,7 +5,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,6 +28,14 @@ module.exports = {
             resolve: "gatsby-remark-external-links",
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: "bgz6frc",
+        },
       },
     },
   ],
