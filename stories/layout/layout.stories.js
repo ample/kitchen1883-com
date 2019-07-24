@@ -3,10 +3,10 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
 
-import GlobalStyles from "../src/components/layout/global-styles"
-import Layout from "../src/components/layout"
+import GlobalStyles from "../../src/components/layout/global-styles"
+import Layout from "../../src/components/layout"
 
-import notes from "./notes/layout.md"
+import notes from "../__notes__/layout/layout.md"
 
 const stories = storiesOf("Layout", module)
 

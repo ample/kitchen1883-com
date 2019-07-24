@@ -30,5 +30,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: "bgz6frc",
+        },
+      },
+    },
   ],
 }
