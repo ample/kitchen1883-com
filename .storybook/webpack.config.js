@@ -27,6 +27,13 @@ module.exports = ({ config }) => {
     include: path.resolve(__dirname, "../"),
   })
 
+  // Support YAML files
+  config.module.rules.push({
+    test: /\.ya?ml$/,
+    use: ["yml-loader"],
+    include: path.resolve(__dirname, "../"),
+  })
+
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ["browser", "module", "main"]
 

@@ -10227,7 +10227,7 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2:
+js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.13.0, js-yaml@^3.13.1, js-yaml@^3.5.2, js-yaml@^3.8.3:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
@@ -17275,6 +17275,14 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
   integrity sha1-AI4G2AlDIMNy28L47XagymyKxBk=
+
+yml-loader@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/yml-loader/-/yml-loader-2.1.0.tgz#b976b8691b537b6d3dc7d92a9a7d34b90de10870"
+  integrity sha512-mo42d5FQWlXxpyTEpYywPu1LzK3F69pPPCOB8WKgJi8s+aqaogQP7XnXTjSobbKzzlZ/wXm7kg9CkP4x4ZnVMw==
+  dependencies:
+    js-yaml "^3.8.3"
+    loader-utils "^1.1.0"
 
 yoga-layout-prebuilt@^1.9.3:
   version "1.9.3"
