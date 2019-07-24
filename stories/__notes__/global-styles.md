@@ -1,6 +1,6 @@
 # Global Styles
 
-This component combines normalized CSS with the default Kitchen1883 brand. Styles can be found in `components/global/styles.scss` and `components/global/ref/normalize.css`.
+This component combines normalized CSS with the default Kitchen1883 brand. Styles can be found in `components/global/styles.scss` and `components/global/ref/normalize.css`. Except for bug fixes, these files shouldn't be edited since they may break dependent component styles.
 
 ## No Import Required
 
@@ -28,5 +28,4 @@ Images are set to `display: inline-block`.
 
 ## class="dark"
 
-Adding this class will make the component and it's children have white text. This available to test a knob, with optional story backgrounds.
-
+Adding this class will make the component and it's children have white text. This is available to test as a knob, with optional story backgrounds.
