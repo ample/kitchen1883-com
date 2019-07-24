@@ -7,6 +7,8 @@ import centered from "@storybook/addon-centered/react"
 import GlobalStyles from "../src/components/layout/global-styles"
 import Button from "../src/components/button"
 
+import notes from "./__notes__/button.md"
+
 const stories = storiesOf("Button", module)
 
 stories.addDecorator(withKnobs)
@@ -19,15 +21,19 @@ stories.addParameters({
   ],
 })
 
-stories.add("Button", () => {
-  let children = text("Text (children)", "Hello World")
-  let color = select("Color (color)", ["grey", "white"], "grey")
+stories.add(
+  "Button",
+  () => {
+    let children = text("Text (children)", "Hello World")
+    let color = select("Color (color)", ["grey", "white"], "grey")
 
-  return (
-    <GlobalStyles>
-      <Button color={color} href="#">
-        {children}
-      </Button>
-    </GlobalStyles>
-  )
-})
+    return (
+      <GlobalStyles>
+        <Button color={color} href="#">
+          {children}
+        </Button>
+      </GlobalStyles>
+    )
+  },
+  { notes: notes }
+)

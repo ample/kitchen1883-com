@@ -6,8 +6,8 @@ import { withKnobs, text } from "@storybook/addon-knobs"
 import GlobalStyles from "../src/components/layout/global-styles"
 import ContentBlock from "../src/components/content-block"
 
-import fixture from "./fixtures/content-block.json"
-import notes from "./notes/content-block.md"
+import fixture from "./__fixtures__/content-block.json"
+import notes from "./__notes__/content-block.md"
 
 const stories = storiesOf("Content Blocks", module)
 
