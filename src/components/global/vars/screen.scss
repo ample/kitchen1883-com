@@ -1,0 +1,21 @@
+$sm: 576;
+$md: 768;
+$lg: 992;
+$xl: 1200;
+
+$screen-max-sm: $sm - 1px;
+$screen-max-md: $md - 1px;
+$screen-max-lg: $lg - 1px;
+$screen-max-xl: $xl - 1px;
+
+$screen-min-sm: $sm + 0px;
+$screen-min-md: $md + 0px;
+$screen-min-lg: $lg + 0px;
+$screen-min-xl: $xl + 0px;
+
+:export {
+  sm: $sm;
+  md: $md;
+  lg: $lg;
+  xl: $xl;
+}
