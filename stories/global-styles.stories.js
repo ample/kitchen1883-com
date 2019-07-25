@@ -123,6 +123,10 @@ stories.add(
                 <code>gray800</code>
               </div>
               <div>
+                <div className="gray900"></div>
+                <code>gray900</code>
+              </div>
+              <div>
                 <div className="black"></div>
                 <code>black</code>
               </div>
@@ -232,7 +236,7 @@ const Swatches = styled.div`
   justify-content: center;
   & > div {
     flex: 0 1 auto;
-    min-width: 200px;
+    min-width: 150px;
     padding: 1rem 1.5rem;
     color: ${g.colors.gray800};
     text-align: center;
@@ -251,6 +255,9 @@ const Swatches = styled.div`
       }
       &.gray800 {
         background-color: ${g.colors.gray800};
+      }
+      &.gray900 {
+        background-color: ${g.colors.gray900};
       }
       &.black {
         background-color: ${g.colors.black};
