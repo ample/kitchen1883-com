@@ -46,35 +46,44 @@ stories.add(
           <div>
             <h6>h6 Label</h6>
           </div>
-          <p>
-            &lt;body/p/section> default or .md: <br />
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
-            <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
-            lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam.
-          </p>
-          <p className="lg">
-            &lt;p/section> .lg: <br />
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
-            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
-            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-          </p>
-          <p className="xl">
-            &lt;p/section> .xl: <br />
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
-            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
-            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-          </p>
-          <p className="sm">
-            &lt;p/section> .sm: <br />
-            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
-            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
-            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-          </p>
+          <section>
+            <Notes className="sm">
+              <strong>The following classes work with:</strong>
+              <p>
+                <code>&lt;p> &lt;section> &lt;nav> &lt;header> &lt;footer> &lt;div></code>
+              </p>
+              <p>.className (Desktop size / Mobile size)</p>
+            </Notes>
+            <p>
+              <strong>default, .md (16px/13px) </strong>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
+              <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
+              lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
+              consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo
+              odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <p className="lg">
+              <strong>.lg (18px/14px) </strong>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <p className="xl">
+              <strong>.xl (22px/18px) </strong>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+            <p className="sm">
+              <strong>.sm (13px/10.5px) </strong>
+              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
+              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
+              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+            </p>
+          </section>
         </div>
       </GlobalStyles>
     )
@@ -203,6 +212,15 @@ const Group = styled.div`
     font-family: ${g.fonts.sans};
     margin-bottom: 1rem;
   }
+`
+
+const Notes = styled.section`
+  color: ${g.colors.gray800};
+  max-width: 57.6rem;
+  text-align: center;
+  margin: 4rem auto 2rem;
+  padding: 1rem;
+  background-color: ${g.colors.gray100};
 `
 
 const Swatches = styled.div`

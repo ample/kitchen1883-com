@@ -16,8 +16,8 @@ html {
 
 body {
   font-family: $sans;
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: $gray400;
 }
@@ -28,6 +28,11 @@ a {
 
 img {
   display: inline-block;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 h1,
@@ -111,15 +116,19 @@ pre {
 // ------------------- Utility Classes
 
 p,
-section {
+section,
+nav,
+header,
+footer,
+div {
   &.sm {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 1.4;
   }
   // Use 'md' only as a reset. This is the default style.
   &.md {
     font-family: $sans;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: 1.7;
   }
   &.lg {
@@ -141,7 +150,7 @@ section {
 
 @media (max-width: $screen-max-md) {
   body {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   h1 {
     font-size: 4.4rem;
@@ -158,19 +167,23 @@ section {
     font-size: 1.75rem;
   }
   p,
-  section {
+  section,
+  nav,
+  header,
+  footer,
+  div {
     &.sm {
       font-size: 1.05rem;
     }
     // Use 'md' only as a reset. This is the default style.
     &.md {
-      font-size: 1.4rem;
-    }
-    &.lg {
       font-size: 1.3rem;
     }
+    &.lg {
+      font-size: 1.4rem;
+    }
     &.xl {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
     }
   }
   code,
