@@ -47,7 +47,7 @@ stories.add(
             <h6>h6 Label</h6>
           </div>
           <section>
-            <Notes className="sm">
+            <Notes className="text-sm">
               <strong>The following classes work with:</strong>
               <p>
                 <code>&lt;p> &lt;section> &lt;nav> &lt;header> &lt;footer> &lt;div></code>
@@ -55,29 +55,29 @@ stories.add(
               <p>.className (Desktop size / Mobile size)</p>
             </Notes>
             <p>
-              <strong>default, .md (16px/13px) </strong>
+              <strong>default, .text-md (16px/13px) </strong>
               Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
               <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
               lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
               consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo
               odio, dapibus ac facilisis in, egestas eget quam.
             </p>
-            <p className="lg">
-              <strong>.lg (18px/14px) </strong>
+            <p className="text-lg">
+              <strong>.text-lg (18px/14px) </strong>
               Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
               non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
               dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
               blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
             </p>
-            <p className="xl">
-              <strong>.xl (22px/18px) </strong>
+            <p className="text-xl">
+              <strong>.text-xl (22px/18px) </strong>
               Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
               non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
               dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
               blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
             </p>
-            <p className="sm">
-              <strong>.sm (13px/10.5px) </strong>
+            <p className="text-sm">
+              <strong>.text-sm (13px/10.5px) </strong>
               Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
               non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
               dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
