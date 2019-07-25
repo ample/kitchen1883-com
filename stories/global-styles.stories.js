@@ -219,8 +219,11 @@ const Notes = styled.section`
   max-width: 57.6rem;
   text-align: center;
   margin: 4rem auto 2rem;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-color: ${g.colors.gray100};
+  .dark & {
+    background-color: rgba(255,255,255,.05);
+  }
 `
 
 const Swatches = styled.div`
