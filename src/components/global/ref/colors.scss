@@ -1,0 +1,20 @@
+$white:   #ffffff;
+$gray100: #f9f9f9;
+$gray400: #8f8f8f;
+$gray800: #404040;
+$black:   #000000;
+$cream:   #f6f7ea;
+$olive:   #8f8c36;
+$navy:    #2f3f51;
+
+// JS Object
+:export {
+  white:    $white;
+  gray100:  $gray100;
+  gray400:  $gray400;
+  gray800:  $gray800;
+  black:    $black;
+  cream:    $cream;
+  olive:    $olive;
+  navy:     $navy;
+}

@@ -1,0 +1,8 @@
+// Font families
+$serif: vollkorn, serif; // 400, 700
+$sans: montserrat, sans-serif; // 400, 700
+
+:export {
+  serif: $serif;
+  sans: $sans;
+}

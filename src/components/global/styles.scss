@@ -1,0 +1,181 @@
+@import "ref/normalize.css";
+@import "ref/colors.scss";
+@import "ref/fonts.scss";
+@import "ref/screen.scss";
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $sans;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: $gray400;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 0.36em;
+}
+
+h1 {
+  font-family: $sans;
+  font-weight: 700;
+  font-size: 6.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+h2 {
+  font-family: $serif;
+  font-weight: 700;
+  font-size: 4.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0;
+  color: $gray800;
+}
+
+h3 {
+  font-family: $sans;
+  font-weight: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  color: $black;
+}
+
+h4 {
+  font-family: $sans;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  color: $navy;
+}
+
+h5 {
+  font-family: $sans;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  color: $navy;
+}
+
+h6 {
+  font-family: $serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  color: $gray800;
+}
+
+code,
+pre {
+  text-transform: lowercase;
+  font-family: "courier";
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+
+// ------------------- Utility Classes
+
+p,
+section {
+  &.sm {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  // Use 'md' only as a reset. This is the default style.
+  &.md {
+    font-family: $sans;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  &.lg {
+    font-size: 1.8rem;
+  }
+  &.xl {
+    font-family: $serif;
+    font-size: 2.2rem;
+    line-height: 1.18;
+  }
+}
+
+.dark,
+.dark * {
+  color: $white;
+}
+
+// ------------------ Phone/Tablet Styles
+
+@media (max-width: $screen-max-md) {
+  body {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 4.4rem;
+    letter-spacing: 0.7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.7rem;
+    letter-spacing: 0.4rem;
+  }
+  h6 {
+    font-size: 1.75rem;
+  }
+  p,
+  section {
+    &.sm {
+      font-size: 1.05rem;
+    }
+    // Use 'md' only as a reset. This is the default style.
+    &.md {
+      font-size: 1.4rem;
+    }
+    &.lg {
+      font-size: 1.3rem;
+    }
+    &.xl {
+      font-size: 1.75rem;
+    }
+  }
+  code,
+  pre {
+    font-family: "courier";
+    font-size: 1.2rem;
+  }
+}

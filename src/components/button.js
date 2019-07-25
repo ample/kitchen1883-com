@@ -2,11 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import Styles from "./layout/style-variables"
+import { colors } from "./global"
 
 const StyledButton = styled.a`
-  background-color: ${props => Styles.colors[props.color]};
-  color: ${props => Styles.colors[props.color == "white" ? "grey" : "white"]};
+  background-color: ${props => colors[props.color]};
+  color: ${props => colors[props.color == "white" ? "grey800" : "white"]};
   display: inline-block;
   line-height: 1;
   padding: 1rem 2.5rem;
@@ -22,7 +22,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  color: "grey",
+  color: "grey800",
 }
 
 export default Button
