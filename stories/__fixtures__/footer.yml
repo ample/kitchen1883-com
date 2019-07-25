@@ -1,0 +1,14 @@
+nav:
+  - label: Union
+    href: /union
+  - label: Anderson
+    href: /anderson
+  - label: Contact
+    href: /contact
+  - label: Careers
+    href: /careers
+social:
+  - site: facebook
+    href: https://facebook.com
+  - site: twitter
+    href: https://twitter.com
