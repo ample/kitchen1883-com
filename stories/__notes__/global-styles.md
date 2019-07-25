@@ -24,7 +24,7 @@ Links inherit their parent component's style and color.
 
 ## &lt;img>
 
-Images are set to `display: inline-block`.
+Images are set to `display: inline-block; vertical-align: middle;` to remove the default bottom white space.
 
 ## class="dark"
 
