@@ -28,55 +28,53 @@ stories.add(
     return (
       <GlobalStyles>
         <div className={dark ? "dark" : ""}>
-          <Table>
-            <div>
-              <h1>h1 Page Title</h1>
-            </div>
-            <div>
-              <h2>h2 Serif Section Title</h2>
-            </div>
-            <div>
-              <h3>h3 Sans-serif Section Title</h3>
-            </div>
-            <div>
-              <h4>h4 Header</h4>
-            </div>
-            <div>
-              <h5>h5 Sub-Header</h5>
-            </div>
-            <div>
-              <h6>h6 Label</h6>
-            </div>
-            <p>
-              &lt;body/p/section> default or .md: <br />
-              Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
-              <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
-              lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
-              consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo
-              odio, dapibus ac facilisis in, egestas eget quam.
-            </p>
-            <p className="lg">
-              &lt;p/section> .lg: <br />
-              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
-              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
-              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-            </p>
-            <p className="xl">
-              &lt;p/section> .xl: <br />
-              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
-              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
-              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-            </p>
-            <p className="sm">
-              &lt;p/section> .sm: <br />
-              Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
-              non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-              dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur
-              blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-            </p>
-          </Table>
+          <div>
+            <h1>h1 Page Title</h1>
+          </div>
+          <div>
+            <h2>h2 Serif Section Title</h2>
+          </div>
+          <div>
+            <h3>h3 Sans-serif Section Title</h3>
+          </div>
+          <div>
+            <h4>h4 Header</h4>
+          </div>
+          <div>
+            <h5>h5 Sub-Header</h5>
+          </div>
+          <div>
+            <h6>h6 Label</h6>
+          </div>
+          <p>
+            &lt;body/p/section> default or .md: <br />
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam.{" "}
+            <a href="#">Donec ullamcorper</a> nulla non metus auctor fringilla. Vivamus sagittis
+            lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac
+            consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam.
+          </p>
+          <p className="lg">
+            &lt;p/section> .lg: <br />
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
+            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
+            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+          </p>
+          <p className="xl">
+            &lt;p/section> .xl: <br />
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
+            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
+            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+          </p>
+          <p className="sm">
+            &lt;p/section> .sm: <br />
+            Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
+            metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+            auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit
+            tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+          </p>
         </div>
       </GlobalStyles>
     )
@@ -189,18 +187,6 @@ stories.add(
 )
 
 // ------------------ For Spec Sheets only
-
-const Table = styled.div`
-  > div {
-    display: flex;
-    > :first-child {
-      flex: 1 0 100px;
-    }
-    > :last-child {
-      flex: 1 1 auto;
-    }
-  }
-`
 
 const Group = styled.div`
   text-align: center;
