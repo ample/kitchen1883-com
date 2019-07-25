@@ -23,7 +23,7 @@ colors.navy
 Import all variable objects under a parent object:
 
 ```js
-import { * } as g from "./global"
+import * as g from "./global"
 
 g.colors.navy
 ```
