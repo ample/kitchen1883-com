@@ -16,7 +16,7 @@ Use rems wherever possible. `1rem` = `10px`
 
 ## &lt;p>, &lt;section>, &lt;nav>, &lt;header>, &lt;footer>, &lt;div>
 
-These elements have three optional classes, shown on the Canvas tab: `sm`, `lg`, `xl`. You can also use `md` to reset the font size back to default.
+These elements have three optional classes, shown on the Canvas tab: `text-sm`, `text-lg`, `text-xl`. You can also use `text-md` to reset the font size back to default.
 
 ## &lt;a>
 

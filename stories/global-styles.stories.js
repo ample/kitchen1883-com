@@ -5,8 +5,8 @@ import { withKnobs, boolean } from "@storybook/addon-knobs"
 
 import GlobalStyles from "../src/components/layout/global-styles"
 import * as g from "../src/components/global"
-import notes_styles from "./__notes__/global-styles.md"
-import notes_variables from "./__notes__/global-variables.md"
+import notes_styles from "./__notes__/global/styles.md"
+import notes_variables from "./__notes__/global/variables.md"
 
 const stories = storiesOf("Global", module)
 
