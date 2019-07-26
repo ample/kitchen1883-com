@@ -14,9 +14,9 @@ The type styles adjust to mobile-friendly sizes at the `md` breakpoint.
 
 Use rems wherever possible. `1rem` = `10px`
 
-## &lt;p>, &lt;section>
+## &lt;p>, &lt;section>, &lt;nav>, &lt;header>, &lt;footer>, &lt;div>
 
-These elements have three optional classes, shown on the Canvas tab: `sm`, `lg`, `xl`. You can also use `md` to reset the font size back to default.
+These elements have three optional classes, shown on the Canvas tab: `text-sm`, `text-lg`, `text-xl`. You can also use `text-md` to reset the font size back to default.
 
 ## &lt;a>
 
@@ -24,7 +24,7 @@ Links inherit their parent component's style and color.
 
 ## &lt;img>
 
-Images are set to `display: inline-block`.
+Images are set to `display: inline-block; vertical-align: middle;` to remove the default bottom white space.
 
 ## class="dark"
 
