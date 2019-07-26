@@ -21,7 +21,7 @@ const Icon = styled(Link)`
     border-radius: 100%;
     width: 3.6rem;
     height: 3.6rem;
-    transition: background .15s ease;
+    transition: background 0.15s ease;
   }
   svg {
     width: ${props => (props.dark ? "1.9rem" : "2.4rem")};
@@ -59,7 +59,11 @@ const typeList = {
 const SocialIcons = props => (
   <div>
     {props.icons.map((icon, idx) => (
-      <Icon to={icon.url} key={`social_${props.location}_${idx}`} dark={props.dark ? 1 : 0}>
+      <Icon
+        to={icon.url}
+        key={`social_${props.location.replace(/\s/g, "")}_${idx}`}
+        dark={props.dark ? 1 : 0}
+      >
         <div>
           <SVG src={typeList[icon.type]} />
         </div>
@@ -79,7 +83,7 @@ SocialIcons.defaultProps = {
   location: undefined,
   icons: undefined,
   // each icon object:
-  //   type (facebook/twitter)
+  //   type ("facebook" || "twitter")
   //   url
 }
 

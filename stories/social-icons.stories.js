@@ -7,7 +7,7 @@ import * as g from "../src/components/global"
 
 import SocialIcons from "../src/components/social-icons"
 import data from "./__fixtures__/social-icons.yml"
-// import notes from "./__notes__/component.md"
+import notes from "./__notes__/social-icons.md"
 
 const stories = storiesOf("Social Icons", module)
 
@@ -30,6 +30,6 @@ stories.add(
         <SocialIcons location={data.location} icons={data.icons} dark={dark} />
       </GlobalStyles>
     )
-  }
-  // { notes: notes }
+  },
+  { notes: notes }
 )
