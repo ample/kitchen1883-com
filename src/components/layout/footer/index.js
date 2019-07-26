@@ -52,14 +52,7 @@ const Footer = props => (
 )
 
 Footer.propTypes = {
-  data: PropTypes.object,
-}
-
-Footer.defaultProps = {
-  data: {
-    nav: [],
-    social: [],
-  },
+  data: PropTypes.object.isRequired,
 }
 
 export default Footer
