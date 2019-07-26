@@ -75,17 +75,13 @@ const SocialIcons = props => (
 
 SocialIcons.propTypes = {
   icons: PropTypes.array.isRequired,
+  // valid icon types: "facebook", "twitter"
   location: PropTypes.string.isRequired,
   dark: PropTypes.bool,
 }
 
 SocialIcons.defaultProps = {
   dark: false,
-  location: undefined,
-  icons: undefined,
-  // each icon object:
-  //   type ("facebook" || "twitter")
-  //   url
 }
 
 export default SocialIcons

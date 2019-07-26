@@ -9,7 +9,7 @@ import Footer from "../../src/components/layout/footer"
 import data from "../__fixtures__/footer.yml"
 import notes from "../__notes__/layout/footer.md"
 
-const stories = storiesOf("Layout/Footer", module)
+const stories = storiesOf("Layout", module)
 
 stories.addDecorator(withKnobs)
 
