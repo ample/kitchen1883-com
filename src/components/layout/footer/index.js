@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import * as g from "../../global"
 
+import Link from "../../utilities/link"
 import Logo from "../../logo"
 import FooterNav from "./nav"
 import SocialIcons from "../../social-icons"
@@ -40,7 +41,9 @@ const StyledLogo = styled(Logo)`
 
 const Footer = props => (
   <StyledFooter>
-    <StyledLogo color={g.colors.white} />
+    <Link to="/">
+      <StyledLogo color={g.colors.white} />
+    </Link>
     <FooterNav nav={props.data.nav} />
     <SocialIcons
       location={props.data.social.location}
