@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
 const FooterNav = props => (
   <StyledNav className="dark">
     {props.nav.map((link, idx) => (
-      <Link to={link.href} key={`footerNav_${idx}`}>
+      <Link to={link.url} key={`footerNav_${idx}`}>
         {link.label}
       </Link>
     ))}
@@ -38,7 +38,7 @@ const FooterNav = props => (
 )
 
 FooterNav.propTypes = {
-  nav: PropTypes.array,
+  nav: PropTypes.array.isRequired,
 }
 
 export default FooterNav

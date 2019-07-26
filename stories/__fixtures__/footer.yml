@@ -1,12 +1,12 @@
 nav:
   - label: Union
-    href: /union
+    url: /union
   - label: Anderson
-    href: /anderson
+    url: /anderson
   - label: Contact
-    href: /contact
+    url: /contact
   - label: Careers
-    href: /careers
+    url: /careers
 social:
   location: All
   icons:
