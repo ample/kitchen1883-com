@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import * as g from "../../global"
 import FooterNav from "./nav"
+import Logo from "../../logo"
 
 const StyledFooter = styled.footer`
   text-align: center;
@@ -16,11 +17,16 @@ const StyledFooter = styled.footer`
   }
 `
 
+const StyledLogo = styled(Logo)`
+  height: 3.6rem;
+  @media ${g.screen.max.sm} {
+    height: 2.2rem;
+  }
+`
+
 const Footer = props => (
   <StyledFooter>
-
-    {/* <Logo /> */}
-
+    <StyledLogo color={g.colors.white} />
     <FooterNav nav={props.data.nav} />
 
     {/* <Social /> */}
