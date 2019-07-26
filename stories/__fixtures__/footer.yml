@@ -8,7 +8,10 @@ nav:
   - label: Careers
     href: /careers
 social:
-  - site: facebook
-    href: https://facebook.com
-  - site: twitter
-    href: https://twitter.com
+  location: All
+  icons:
+  - type: facebook
+    url: https://facebook.com
+  - type: twitter
+    url: https://twitter.com
+

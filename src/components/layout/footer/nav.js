@@ -9,11 +9,10 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
   a {
     text-decoration: none;
     font-family: ${g.fonts.serif};
-    padding: 2.8rem 3.2rem;
+    padding: 2rem 3.2rem;
     &:hover {
       text-decoration: underline;
     }
@@ -22,7 +21,6 @@ const StyledNav = styled.nav`
   @media ${g.screen.max.sm} {
     flex-direction: column;
     margin: 1rem auto;
-
     a {
       padding: 1.1rem;
     }
