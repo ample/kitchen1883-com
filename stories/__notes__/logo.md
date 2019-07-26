@@ -10,6 +10,7 @@ Logo accepts one optional string prop: `color`. The default color is `black`.
 
 ```jsx
 import Logo from "./logo"
+import { colors } from "./global"
 
 <Logo color={colors.white} />
 ```
