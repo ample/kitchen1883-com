@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import SVG from "react-inlinesvg"
 
 import * as g from "./global"
 
@@ -16,13 +17,24 @@ const Icon = styled(Link)`
   > div {
     display: inline-flex;
     justify-content: center;
-    background-color: ${props => (props.dark ? g.colors.white : "transparent")};
+    background: ${props => (props.dark ? g.colors.white : "transparent")};
     border-radius: 100%;
     width: 3.6rem;
     height: 3.6rem;
+    transition: background .15s ease;
   }
-  img {
+  svg {
     width: ${props => (props.dark ? "1.9rem" : "2.4rem")};
+    transition: fill 0.15s ease;
+  }
+
+  &:hover {
+    > div {
+      background: ${props => (props.dark ? g.colors.olive : "transparent")};
+    }
+    svg {
+      fill: ${props => (props.dark ? "" : g.colors.olive)};
+    }
   }
 
   @media ${g.screen.max.sm} {
@@ -33,7 +45,7 @@ const Icon = styled(Link)`
       width: 2.9rem;
       height: 2.9rem;
     }
-    img {
+    svg {
       width: ${props => (props.dark ? "1.5rem" : "1.9rem")};
     }
   }
@@ -49,7 +61,7 @@ const SocialIcons = props => (
     {props.icons.map((icon, idx) => (
       <Icon to={icon.url} key={`social_${props.location}_${idx}`} dark={props.dark ? 1 : 0}>
         <div>
-          <img src={typeList[icon.type]} alt={`${icon.type} - ${props.location}`} />
+          <SVG src={typeList[icon.type]} />
         </div>
       </Icon>
     ))}
@@ -66,7 +78,7 @@ SocialIcons.defaultProps = {
   dark: false,
   location: undefined,
   icons: undefined,
-  // each icon:
+  // each icon object:
   //   type (facebook/twitter)
   //   url
 }
