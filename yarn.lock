@@ -6774,7 +6774,7 @@ executable@^4.1.0:
   dependencies:
     pify "^2.2.0"
 
-exenv@^1.2.1:
+exenv@^1.2.1, exenv@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
@@ -13600,6 +13600,11 @@ react-focus-lock@^1.18.3:
     prop-types "^15.6.2"
     react-clientside-effect "^1.2.0"
 
+react-from-dom@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-from-dom/-/react-from-dom-0.2.2.tgz#9ab0dd17bdb54330a49d21362e5a5bb984efb480"
+  integrity sha512-3CU7KpHiAoOA4xsi9GOWdDCNTiAJPrsgAdqNbv6dnurRV8f2zGManPAQcGiP1fiR5ZXl0Qbu0Mpaec44YtY+cg==
+
 react-grid-system@^4.4.10:
   version "4.4.10"
   resolved "https://registry.yarnpkg.com/react-grid-system/-/react-grid-system-4.4.10.tgz#d5e3a248a1f663189eefb6fe363854d4d9cd7d09"
@@ -13648,6 +13653,15 @@ react-hotkeys@2.0.0-pre4:
   integrity sha512-oa+UncSWyOwMK3GExt+oELXaR7T3ItgcMolsupQFdKvwkEhVAluJd5rYczsRSQpQlVkdNoHG46De2NUeuS+88Q==
   dependencies:
     prop-types "^15.6.1"
+
+react-inlinesvg@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-inlinesvg/-/react-inlinesvg-1.1.2.tgz#dc6378454e997c73fb546869625d38dc8ce7253a"
+  integrity sha512-wsVa05pBOobLlF4cIXGN0bes6N8EyPmO+CLitdXN4U7RCjVTfKRZMQkiEAnXMYVXHnaLrE+EfuUTu9fAl1GRmg==
+  dependencies:
+    exenv "^1.2.2"
+    once "^1.4.0"
+    react-from-dom "^0.2.2"
 
 react-input-autosize@^2.2.1:
   version "2.2.1"
