@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link as GatsbyLink } from "gatsby"
 
-const Link = ({ children, to, activeClassName, ...other }) => {
+const Link = ({ children, to, activeClassName, target, ...other }) => {
   const internalLink = /^\/(?!\/)/.test(to)
 
   return internalLink ? (
@@ -10,7 +10,7 @@ const Link = ({ children, to, activeClassName, ...other }) => {
       {children}
     </GatsbyLink>
   ) : (
-    <a href={to} {...other}>
+    <a href={to} target={target} {...other}>
       {children}
     </a>
   )
@@ -18,6 +18,12 @@ const Link = ({ children, to, activeClassName, ...other }) => {
 
 Link.propTypes = {
   to: PropTypes.string.isRequired,
+  target: PropTypes.string, // exclusive to external links
+  activeClassName: PropTypes.string, // exclusive to internal links
+}
+
+Link.defaultProps = {
+  target: "_blank",
 }
 
 export default Link

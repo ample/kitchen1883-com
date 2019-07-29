@@ -1,7 +1,7 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs, text } from "@storybook/addon-knobs"
-//
+
 import GlobalStyles from "../../src/components/layout/global-styles"
 import Link from "../../src/components/utilities/link"
 
