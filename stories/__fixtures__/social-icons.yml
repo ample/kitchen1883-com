@@ -1,0 +1,6 @@
+location: Union
+icons:
+  - type: facebook
+    url: https://facebook.com
+  - type: twitter
+    url: https://twitter.com
