@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs"
 
 import GlobalStyles from "../../src/components/layout/global-styles"
 
-import Item from "../../src/components/menu/item"
+import MenuItem from "../../src/components/menu/item"
 import data from "../__fixtures__/menu/section.yml"
 // import notes from "../__notes__/component.md"
 
@@ -24,7 +24,7 @@ stories.add(
 
     return (
       <GlobalStyles>
-        <Item
+        <MenuItem
           label={label}
           price={price}
           body={body}

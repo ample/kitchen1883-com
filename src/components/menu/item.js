@@ -28,7 +28,7 @@ const Headline = styled.div`
   }
 `
 
-const Item = props => (
+const MenuItem = props => (
   <div>
     <Headline>
       <div className="label">
@@ -42,7 +42,7 @@ const Item = props => (
   </div>
 )
 
-Item.propTypes = {
+MenuItem.propTypes = {
   label: PropTypes.string.isRequired,
   body: PropTypes.string,
   price: PropTypes.string,
@@ -50,9 +50,9 @@ Item.propTypes = {
   gluten_free: PropTypes.bool,
 }
 
-Item.defaultProps = {
+MenuItem.defaultProps = {
   vegetarian: false,
   gluten_free: false,
 }
 
-export default Item
+export default MenuItem

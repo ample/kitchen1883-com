@@ -5,7 +5,7 @@ import { Container } from "react-grid-system"
 
 import GlobalStyles from "../../src/components/layout/global-styles"
 
-import Section from "../../src/components/menu/section"
+import MenuSection from "../../src/components/menu/section"
 import data from "../__fixtures__/menu/section.yml"
 // import notes from "../__notes__/component.md"
 
@@ -21,7 +21,7 @@ stories.add(
     return (
       <GlobalStyles>
         <Container>
-          <Section
+          <MenuSection
             label={data.label}
             body={body ? data.body : undefined}
             items={data.items}
