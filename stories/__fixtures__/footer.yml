@@ -1,0 +1,17 @@
+nav:
+  - label: Union
+    url: /union
+  - label: Anderson
+    url: /anderson
+  - label: Contact
+    url: /contact
+  - label: Careers
+    url: /careers
+social:
+  location: All
+  icons:
+  - type: facebook
+    url: https://facebook.com
+  - type: twitter
+    url: https://twitter.com
+
