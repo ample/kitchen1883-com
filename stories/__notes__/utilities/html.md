@@ -1,7 +1,7 @@
 # HTML Utility
 
-The HTML utility accepts a single required property `field`. The field property
-must be an object with a `childMarkdownRemark` key, which subsequently has a
+The HTML utility accepts two properties. The first is a required property `field`. The field
+property must be an object with a `childMarkdownRemark` key, which subsequently has a
 single key, `html`, which ultimately holds the HTML string that is to be
 rendered within a `<div>` element.
 
@@ -11,6 +11,10 @@ plugin](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/). And,
 generally, we only need to use this component in conjunction with data coming
 from the CMS database. Thus, it was likely transformed from markdown into an
 HTML string.
+
+The HTML utility also accepts an optional string property `className`. It allows the
+component to be styled, either with CSS classes or by extending it with Styled
+Components: `styled(HTML)`.
 
 ## Usage
 

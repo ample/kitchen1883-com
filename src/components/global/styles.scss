@@ -123,20 +123,24 @@ nav,
 header,
 footer,
 div {
-  &.text-sm {
+  &.text-sm,
+  &.text-sm * {
     font-size: 1.3rem;
     line-height: 1.4;
   }
   // Use 'md' only as a reset. This is the default style.
-  &.text-md {
+  &.text-md,
+  &.text-md * {
     font-family: $sans;
     font-size: 1.6rem;
     line-height: 1.7;
   }
-  &.text-lg {
+  &.text-lg,
+  &.text-lg * {
     font-size: 1.8rem;
   }
-  &.text-xl {
+  &.text-xl,
+  &.text-xl * {
     font-family: $serif;
     font-size: 2.2rem;
     line-height: 1.18;
@@ -174,17 +178,21 @@ div {
   header,
   footer,
   div {
-    &.text-sm {
+    &.text-sm,
+    &.text-sm * {
       font-size: 1.05rem;
     }
     // Use 'md' only as a reset. This is the default style.
-    &.text-md {
+    &.text-md,
+    &.text-md * {
       font-size: 1.3rem;
     }
-    &.text-lg {
+    &.text-lg,
+    &.text-lg * {
       font-size: 1.4rem;
     }
-    &.text-xl {
+    &.text-xl,
+    &.text-xl * {
       font-size: 1.8rem;
     }
   }
