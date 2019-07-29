@@ -1,0 +1,6 @@
+- desc: External links use standard <a>
+  url: https://www.kitchen1883.com/
+  label: https://www.kitchen1883.com/
+- desc: Internal links use Gatsby <Link>
+  url: /about
+  label: /about
