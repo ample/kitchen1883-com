@@ -13,8 +13,24 @@ There is also one optional prop `dark` that turns on the dark theme, with white 
 
 ## Usage
 
+Component:
+
 ```jsx
 <SocialIcons location={data.location} icons={data.icons} dark={bool} />
+```
+
+Data format:
+
+```jsx
+{
+  location: "Union",
+  icons: [
+    {
+      type: "facebook",
+      url: "#"
+    },
+  ]
+}
 ```
 
 ## Adding New Social Media Types
@@ -35,13 +51,11 @@ const typeList = {
 }
 ```
 
-Update the defaultProps note to document the available options:
+Update the comment in `propTypes` to document the available options:
 
 ```jsx
-SocialIcons.defaultProps = {
-  icons: undefined,
-  // each icon object:
-  //   type ("facebook" || "twitter" || "instagram")
-  //   url
+SocialIcons.propTypes = {
+  icons: PropTypes.array.isRequired,
+  // valid icon types: "facebook", "twitter", "instagram"
 }
 ```
