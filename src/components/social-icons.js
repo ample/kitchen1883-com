@@ -63,7 +63,6 @@ const SocialIcons = props => (
         to={icon.url}
         key={`social_${props.location.replace(/\s/g, "")}_${idx}`}
         dark={props.dark ? 1 : 0}
-        target="_blank"
       >
         <div>
           <SVG src={typeList[icon.type]} />
