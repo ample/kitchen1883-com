@@ -5,7 +5,7 @@ import { Container } from "react-grid-system"
 
 import GlobalStyles from "../../src/components/layout/global-styles"
 
-import MenuSection from "../../src/components/menu/section"
+import Menu from "../../src/components/menu"
 import data from "../__fixtures__/menu.yml"
 // import notes from "../__notes__/component.md"
 
@@ -14,21 +14,11 @@ const stories = storiesOf("Menu", module)
 stories.addDecorator(withKnobs)
 
 stories.add(
-  "Section",
+  "Menu",
   () => {
-    let section = data.sections[2]
-    let body = boolean("Section Descption", true)
-    let first = boolean("First Section", false)
     return (
       <GlobalStyles>
-        <Container>
-          <MenuSection
-            label={section.label}
-            body={body ? section.body : undefined}
-            items={section.items}
-            firstSection={first}
-          />
-        </Container>
+        <Menu {...data} />
       </GlobalStyles>
     )
   }

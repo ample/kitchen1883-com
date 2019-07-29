@@ -5,7 +5,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs"
 import GlobalStyles from "../../src/components/layout/global-styles"
 
 import MenuItem from "../../src/components/menu/item"
-import data from "../__fixtures__/menu/section.yml"
+import data from "../__fixtures__/menu.yml"
 // import notes from "../__notes__/component.md"
 
 const stories = storiesOf("Menu", module)
@@ -15,7 +15,7 @@ stories.addDecorator(withKnobs)
 stories.add(
   "Item",
   () => {
-    let item = data.items[0]
+    let item = data.sections[2].items[0]
     let label = text("Label", item.label)
     let price = text("Price", item.price)
     let body = text("Body", item.body)
