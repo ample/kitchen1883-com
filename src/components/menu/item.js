@@ -7,13 +7,6 @@ import * as g from "../global"
 import gluten_free from "../../images/icons/diet-gluten-free.svg"
 import vegetarian from "../../images/icons/diet-vegetarian.svg"
 
-const StyledItem = styled.div`
-  font-family: ${g.fonts.serif};
-  p {
-    font-size: 1.4rem;
-  }
-`
-
 const Headline = styled.div`
   display: flex;
   justify-content: space-between;
@@ -36,7 +29,7 @@ const Headline = styled.div`
 `
 
 const Item = props => (
-  <StyledItem>
+  <div>
     <Headline>
       <div className="label">
         {props.label}
@@ -46,7 +39,7 @@ const Item = props => (
       <div>{props.price}</div>
     </Headline>
     <p>{props.body}</p>
-  </StyledItem>
+  </div>
 )
 
 Item.propTypes = {
