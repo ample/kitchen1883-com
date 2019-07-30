@@ -6,7 +6,7 @@ import { Container } from "react-grid-system"
 import GlobalStyles from "../../src/components/layout/global-styles"
 
 import Menu from "../../src/components/menu"
-import data from "../__fixtures__/menu.yml"
+import data from "../__fixtures__/menus.yml"
 // import notes from "../__notes__/component.md"
 
 const stories = storiesOf("Menu", module)
@@ -18,7 +18,7 @@ stories.add(
   () => {
     return (
       <GlobalStyles>
-        <Menu {...data} />
+        <Menu menus={data} />
       </GlobalStyles>
     )
   }

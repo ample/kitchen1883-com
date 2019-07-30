@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container } from "react-grid-system"
 
 import * as g from "../global"
-import MenuSection from "./section"
+import MenuTabs from "./tabs"
+import MenuCategory from "./category"
 
 const StyledHeader = styled.header`
   background-color: ${g.colors.navy};
@@ -16,28 +17,33 @@ const StyledHeader = styled.header`
   }
 `
 
-const Menu = props => (
-  <div>
-    <StyledHeader>
-      <h3>Menu</h3>
-      {/* Category Tabs */}
-    </StyledHeader>
-    <Container>
-      {props.sections.map((section, idx) => (
-        <MenuSection
-          {...section}
-          firstSection={idx === 0 ? true : false}
-          key={`${props.title}_section_${idx}`}
-        />
-      ))}
-      {/* Legend */}
-    </Container>
-  </div>
-)
+const Menu = props => {
+  const tabs = Array.from(props.menus, menu => menu.label)
+  const sections = Array.from(props.menus, menu => menu.sections)
+
+  let [activeCategory, setCategory] = useState(sections[0])
+  let [activeTab, setTab] = useState(0)
+  const changeTab = idx => {
+    setCategory(sections[idx])
+    setTab(idx)
+  }
+
+  return (
+    <div>
+      <StyledHeader>
+        <h3>Menu</h3>
+        <MenuTabs tabs={tabs} onClick={changeTab} activeTab={activeTab} />
+      </StyledHeader>
+      <Container>
+        <MenuCategory sections={activeCategory} />
+        {/* Legend */}
+      </Container>
+    </div>
+  )
+}
 
 Menu.propTypes = {
-  label: PropTypes.string.isRequired,
-  sections: PropTypes.array.isRequired,
+  menus: PropTypes.array.isRequired,
 }
 
 export default Menu
