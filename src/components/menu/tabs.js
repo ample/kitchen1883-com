@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-grid-system"
 import * as g from "../global"
 
 const Tab = styled.button`
+  flex: 1;
   background: ${g.colors.navy};
   color: ${g.colors.white};
   border: none;
@@ -36,14 +37,14 @@ const Tab = styled.button`
 
 const MenuTabs = props => {
   return (
-    <Container>
-      <Row>
+    <Container component="nav">
+      <Row gutterWidth={20}>
         {props.tabs.map((tab, idx) => (
           <Col key={`menu_category_${idx}`}>
             <Tab
-              onClick={() => props.onClick(idx)}
               type="button"
               className={idx == props.activeTab ? " active-tab " : ""}
+              onClick={() => props.onClick(idx)}
             >
               {tab}
             </Tab>

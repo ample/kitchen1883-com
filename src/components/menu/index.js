@@ -2,10 +2,13 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container } from "react-grid-system"
+import SVG from "react-inlinesvg"
 
 import * as g from "../global"
 import MenuTabs from "./tabs"
 import MenuCategory from "./category"
+import gluten_free from "../../images/icons/diet-gluten-free.svg"
+import vegetarian from "../../images/icons/diet-vegetarian.svg"
 
 const StyledHeader = styled.header`
   background-color: ${g.colors.navy};
@@ -17,26 +20,42 @@ const StyledHeader = styled.header`
   }
 `
 
+const Legend = styled.div`
+  color: ${g.colors.navy};
+  font-family: ${g.fonts.serif};
+  font-size: 1.4rem;
+  margin-top: 4.5rem;
+  margin-bottom: 3rem;
+  svg {
+    vertical-align: baseline;
+    margin-right: 0.5rem;
+  }
+`
+
 const Menu = props => {
   const tabs = Array.from(props.menus, menu => menu.label)
   const sections = Array.from(props.menus, menu => menu.sections)
 
-  let [activeCategory, setCategory] = useState(sections[0])
-  let [activeTab, setTab] = useState(0)
-  const changeTab = idx => {
-    setCategory(sections[idx])
-    setTab(idx)
-  }
+  let [activeIdx, setIdx] = useState(0)
+  const changeCategory = idx => setIdx(idx)
 
   return (
     <div>
       <StyledHeader>
         <h3>Menu</h3>
-        <MenuTabs tabs={tabs} onClick={changeTab} activeTab={activeTab} />
+        <MenuTabs tabs={tabs} activeTab={activeIdx} onClick={changeCategory} />
       </StyledHeader>
+
       <Container>
-        <MenuCategory sections={activeCategory} />
-        {/* Legend */}
+        <MenuCategory sections={sections[activeIdx]} />
+        <Legend>
+          <div>
+            <SVG src={vegetarian} /> Vegetarian
+          </div>
+          <div>
+            <SVG src={gluten_free} /> Gluten Free
+          </div>
+        </Legend>
       </Container>
     </div>
   )
