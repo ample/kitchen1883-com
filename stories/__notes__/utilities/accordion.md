@@ -59,6 +59,8 @@ const StyledAccordion = styled(Accordion)`
 
   }
 
+.rc-collapse-anim-active {}     ${/* Open & Close Transition */}
+
   .rc-collapse-content {        ${/* Collapsible Container - Outer Wrapper */}
     .rc-collapse-content-box {  ${/* Collapsible Container - Inner Wrapper */}
     }
