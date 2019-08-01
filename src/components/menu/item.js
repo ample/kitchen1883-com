@@ -17,9 +17,9 @@ const Headline = styled.div`
 
   & > .label svg {
     vertical-align: baseline;
-    margin: auto 0.5rem;
+    margin: auto 0.4rem;
     &:first-of-type {
-      margin-left: 1rem;
+      margin-left: 0.8rem;
     }
   }
 

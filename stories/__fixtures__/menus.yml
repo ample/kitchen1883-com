@@ -14,7 +14,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -33,7 +32,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -56,7 +54,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -77,7 +74,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -96,7 +92,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -119,7 +114,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -140,7 +134,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -159,7 +152,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -182,7 +174,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -203,7 +194,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -222,7 +212,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -243,7 +232,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -262,7 +250,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
@@ -285,7 +272,6 @@
         - label: Lorem Nibh Dolor
           price: "7"
           body: Maecenas sed diam eget risus varius blandit sit amet non magna.
-          vegetarian: true
         - label: Pellentesque Ipsum Vehicula
           price: "12"
           body: Nulla vitae elit libero, a pharetra augue.
