@@ -35,6 +35,12 @@ export const PageAttributes = graphql`
           type
         }
       }
+      ... on ContentfulLocationsContainer {
+        show_maps
+        internal {
+          type
+        }
+      }
     }
   }
 `

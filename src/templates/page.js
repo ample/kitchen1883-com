@@ -26,6 +26,7 @@ class Page extends React.Component {
 
   render() {
     const { page } = this.props
+    console.log(JSON.stringify(page.containers))
 
     return (
       <Layout>

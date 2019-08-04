@@ -1,15 +1,56 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
+import styled from "styled-components"
 
 import HTML from "../utilities/html"
 
-const Tile = props => (
-  <div>
-    {props.image && <Img fluid={props.image.fluid} style={{ width: "200px" }} />}
-    {props.body && <HTML field={props.body} />}
-  </div>
-)
+const Wrapper = styled.div`
+  position: relative;
+  text-align: ${props => props.textAlign};
+
+  * {
+    text-align: ${props => props.textAlign};
+  }
+
+  .tile-img {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+`
+
+const SoloWrapper = styled(Wrapper)`
+  padding-bottom: 11.1rem;
+  padding-top: 11.1rem;
+`
+
+const TileWrapper = styled(Wrapper)`
+  height: 56.3rem;
+  width: 25%;
+
+  .tile-text {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 4rem;
+  }
+`
+
+const Tile = props => {
+  const WrapperTagName = props.solo ? SoloWrapper : TileWrapper
+  return (
+    <WrapperTagName textAlign={props.text_align}>
+      {props.image && <Img className="tile-img" fluid={props.image.fluid} />}
+      {props.body && (
+        <div className="tile-text">
+          <HTML field={props.body} />
+        </div>
+      )}
+    </WrapperTagName>
+  )
+}
 
 Tile.propTypes = {
   background_color: PropTypes.string,
@@ -17,7 +58,13 @@ Tile.propTypes = {
   button_label: PropTypes.string,
   button_url: PropTypes.string,
   image: PropTypes.object,
+  solo: PropTypes.bool,
   text_align: PropTypes.string,
+}
+
+Tile.defaultProps = {
+  solo: false,
+  text_align: "center",
 }
 
 export default Tile
