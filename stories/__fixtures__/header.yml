@@ -1,0 +1,24 @@
+nav:
+  - label: Menu + Locations
+    url: /
+    menu:
+    - label: Union
+      url: /menu/union
+    - label: Anderson
+      url: /menu/anderson
+  - label: Reservations
+    url: /reservations
+    menu: false
+  - label: About
+    url: /about
+    menu: false
+  - label: Catering
+    url: /catering
+    menu: false
+  - label: Order Online
+    url: /
+    menu:
+    - label: Union
+      url: /order/union
+    - label: Anderson
+      url: /order/anderson
