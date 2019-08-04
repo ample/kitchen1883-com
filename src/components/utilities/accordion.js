@@ -61,5 +61,4 @@ Accordion.defaultProps = {
   destroyInactivePanel: true,
 }
 
-export { Panel }
-export default Accordion
+export { Accordion, Panel }
