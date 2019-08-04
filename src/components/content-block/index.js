@@ -11,7 +11,8 @@ const TileWrapper = styled.div`
 
 class ContentBlock extends React.Component {
   blocks() {
-    return this.props.data.map((block, i) => <Tile idx={i} {...block} key={i} />)
+    const blocks = this.props.data
+    return blocks.map((block, i) => <Tile count={blocks.length} idx={i} {...block} key={i} />)
   }
 
   isSolo() {
@@ -22,7 +23,7 @@ class ContentBlock extends React.Component {
     const WrapperTagName = this.isSolo() ? Container : TileWrapper
     return (
       <WrapperTagName>
-        {this.isSolo() && <Tile solo={true} {...this.props.data[0]} />}
+        {this.isSolo() && <Tile count={1} {...this.props.data[0]} />}
         {!this.isSolo() && this.blocks()}
       </WrapperTagName>
     )

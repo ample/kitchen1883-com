@@ -25,9 +25,12 @@ const SoloWrapper = styled(Wrapper)`
   padding-top: 11.1rem;
 `
 
+// TODO: If image is first and text second, then image should be 75% and text
+// should be 25%. Should that be handled by the blocks wrapper?
+
 const TileWrapper = styled(Wrapper)`
   height: 56.3rem;
-  width: 25%;
+  width: ${props => ((props.count == 3 && props.idx == 0) || props.count == 2 ? "50%" : "25%")};
 
   .tile-text {
     align-items: center;
@@ -39,9 +42,9 @@ const TileWrapper = styled(Wrapper)`
 `
 
 const Tile = props => {
-  const WrapperTagName = props.solo ? SoloWrapper : TileWrapper
+  const WrapperTagName = props.count > 1 ? TileWrapper : SoloWrapper
   return (
-    <WrapperTagName textAlign={props.text_align}>
+    <WrapperTagName count={props.count} idx={props.idx} textAlign={props.text_align}>
       {props.image && <Img className="tile-img" fluid={props.image.fluid} />}
       {props.body && (
         <div className="tile-text">
@@ -57,13 +60,13 @@ Tile.propTypes = {
   body: PropTypes.object,
   button_label: PropTypes.string,
   button_url: PropTypes.string,
+  count: PropTypes.number,
+  idx: PropTypes.number,
   image: PropTypes.object,
-  solo: PropTypes.bool,
   text_align: PropTypes.string,
 }
 
 Tile.defaultProps = {
-  solo: false,
   text_align: "center",
 }
 
