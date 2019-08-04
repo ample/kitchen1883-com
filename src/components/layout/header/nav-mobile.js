@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import SVG from "react-inlinesvg"
@@ -8,14 +8,7 @@ import Link from "../../utilities/link"
 import { Accordion, Panel } from "../../utilities/accordion"
 import hamburger from "../../../images/icons/icon-hamburger.svg"
 
-const NavIcon = styled.div`
-  display: block;
-  position: absolute;
-  left: 2.4rem;
-  top: 2.8rem;
-`
-
-const navMixin = css`
+const linkMixin = css`
   flex: 1;
   display: flex;
   justify-content: flex-start;
@@ -29,23 +22,30 @@ const navMixin = css`
   border-bottom: 1px solid ${g.colors.black};
 `
 
-const StyledNav = styled.nav`
-  display: flex;
+const NavIcon = styled.div`
+  display: block;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  padding: 2.6rem 2.4rem;
+  cursor: pointer;
+`
+
+const StyledList = styled.nav`
+  display: ${props => (props.isOpen ? "flex" : "none")};
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-
   a {
-    ${navMixin}
+    ${linkMixin}
   }
 `
 
 const StyledAccordion = styled(Accordion)`
   &.rc-collapse {
     .rc-collapse-item .rc-collapse-header {
-      ${navMixin}
+      ${linkMixin}
     }
-
     .rc-collapse-content-box a {
       background-color: ${g.colors.white};
       color: ${g.colors.gray800};
@@ -54,40 +54,47 @@ const StyledAccordion = styled(Accordion)`
   }
 `
 
+const NavLink = props => (
+  <Link to={props.link.url} activeClassName="nav-active" onClick={props.onclick}>
+    {props.link.label}
+  </Link>
+)
+
 const Expandable = props => (
   <StyledAccordion accordion={false}>
     <Panel header={props.header}>
-      {props.menu.map((navItem, idx) => (
-        <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${props.idx}_${idx}`}>
-          {navItem.label}
-        </Link>
+      {props.menu.map((link, idx) => (
+        <NavLink link={link} key={`nav_mobile_${props.header}_${idx}`} onclick={props.onclick} />
       ))}
     </Panel>
   </StyledAccordion>
 )
 
 const HeaderNavMobile = props => {
+  const [isOpen, setOpen] = useState(false)
+  const toggleNav = () => setOpen(!isOpen)
+
   return (
-    <StyledNav>
-      <NavIcon>
+    <>
+      <NavIcon onClick={toggleNav}>
         <SVG src={hamburger} />
       </NavIcon>
 
-      {props.nav.map((navItem, idx) =>
-        navItem.menu ? (
-          <Expandable
-            header={navItem.label}
-            menu={navItem.menu}
-            idx={idx}
-            key={`headerNav_${idx}`}
-          />
-        ) : (
-          <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${idx}`}>
-            {navItem.label}
-          </Link>
-        )
-      )}
-    </StyledNav>
+      <StyledList isOpen={isOpen}>
+        {props.nav.map((navItem, idx) =>
+          navItem.menu ? (
+            <Expandable
+              header={navItem.label}
+              menu={navItem.menu}
+              onclick={toggleNav}
+              key={`nav_mobile_${idx}`}
+            />
+          ) : (
+            <NavLink link={navItem} key={`nav_mobile_${idx}`} onclick={toggleNav} />
+          )
+        )}
+      </StyledList>
+    </>
   )
 }
 

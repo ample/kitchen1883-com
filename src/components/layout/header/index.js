@@ -6,8 +6,8 @@ import * as g from "../../global"
 
 import Link from "../../utilities/link"
 import Logo from "../../logo"
-// import HeaderNavMobile from "./nav-mobile"
-import HeaderNavDesktop from "./nav-desktop"
+import HeaderNavMobile from "./nav-mobile"
+// import HeaderNavDesktop from "./nav-desktop"
 
 
 const StyledHeader = styled.header`
@@ -32,7 +32,8 @@ const Footer = props => (
     <Link to="/">
       <StyledLogo />
     </Link>
-    <HeaderNavDesktop nav={props.data.nav} />
+    <HeaderNavMobile nav={props.data.nav} />
+    {/* <HeaderNavDesktop nav={props.data.nav} /> */}
   </StyledHeader>
 )
 
