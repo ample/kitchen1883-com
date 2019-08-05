@@ -21,7 +21,7 @@ In this utility, the plugin component `Collapse` has been renamed `Accordion` to
 Import the Accordion and Panel components:
 
 ```jsx
-import Accordion, { Panel } from "./utilities/accordion"
+import { Accordion, Panel } from "./utilities/accordion"
 ```
 
 Each set of Panels should be wrapped in an `Accordion` component. The prop `accordion={false}` allows more than one panel to be open at a time.

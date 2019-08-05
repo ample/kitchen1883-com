@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react"
 import GlobalStyles from "../../src/components/layout/global-styles"
 import * as g from "../../src/components/global"
 
-import Accordion, { Panel } from "../../src/components/utilities/accordion"
+import { Accordion, Panel } from "../../src/components/utilities/accordion"
 import notes from "../__notes__/utilities/accordion.md"
 
 const stories = storiesOf("Utilities", module)
