@@ -1,8 +1,6 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs, text } from "@storybook/addon-knobs"
-
-import GlobalStyles from "../src/components/layout/global-styles"
 import Map from "../src/components/map"
 
 const stories = storiesOf("Map", module)
@@ -16,9 +14,9 @@ stories.add(
   "Map",
   () => {
     return (
-      <GlobalStyles>
-        <Map />
-      </GlobalStyles>
+      <div style={{ height: `434px`, width: '412px'}}>
+        <Map/>
+      </div>
     )
   },
   { notes: notes }
