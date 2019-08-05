@@ -2,10 +2,12 @@ import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container } from "react-grid-system"
+import MediaQuery from "react-responsive"
 import SVG from "react-inlinesvg"
 
 import * as g from "../global"
-import MenuTabs from "./tabs"
+import NavDesktop from "./nav-desktop"
+import NavMobile from "./nav-mobile"
 import MenuCategory from "./category"
 import gluten_free from "../../images/icons/diet-gluten-free.svg"
 import vegetarian from "../../images/icons/diet-vegetarian.svg"
@@ -13,10 +15,15 @@ import vegetarian from "../../images/icons/diet-vegetarian.svg"
 const StyledHeader = styled.header`
   background-color: ${g.colors.navy};
   padding-top: 13rem;
+  height: 100%;
   h3 {
     color: ${g.colors.white};
     text-align: center;
     padding-bottom: 1.8rem;
+  }
+
+  @media ${g.screen.max.md} {
+    padding-top: 3rem;
   }
 `
 
@@ -40,14 +47,23 @@ const Menu = props => {
   const changeCategory = idx => setIdx(idx)
 
   return (
-    <div>
-      <StyledHeader>
-        <h3>Menu</h3>
-        <MenuTabs tabs={tabs} activeTab={activeIdx} onClick={changeCategory} />
-      </StyledHeader>
+    <>
+      <MediaQuery query={g.screen.max.md}>
+        <StyledHeader>
+          <h3>Menu</h3>
+          <NavMobile tabs={tabs} sections={sections} activeIdx={activeIdx} />
+        </StyledHeader>
+      </MediaQuery>
+
+      <MediaQuery query={g.screen.min.md}>
+        <StyledHeader>
+          <h3>Menu</h3>
+          <NavDesktop tabs={tabs} activeTab={activeIdx} onClick={changeCategory} />
+        </StyledHeader>
+        <MenuCategory sections={sections[activeIdx]} />
+      </MediaQuery>
 
       <Container>
-        <MenuCategory sections={sections[activeIdx]} />
         <Legend>
           <div>
             <SVG src={vegetarian} /> Vegetarian
@@ -57,7 +73,7 @@ const Menu = props => {
           </div>
         </Legend>
       </Container>
-    </div>
+    </>
   )
 }
 

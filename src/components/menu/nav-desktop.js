@@ -35,7 +35,7 @@ const Tab = styled.button`
   }
 `
 
-const MenuTabs = props => {
+const NavDesktop = props => {
   return (
     <Container component="nav">
       <Row gutterWidth={20}>
@@ -55,10 +55,10 @@ const MenuTabs = props => {
   )
 }
 
-MenuTabs.propTypes = {
+NavDesktop.propTypes = {
   tabs: PropTypes.array.isRequired,
   activeTab: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 }
 
-export default MenuTabs
+export default NavDesktop

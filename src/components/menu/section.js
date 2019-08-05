@@ -11,6 +11,10 @@ const StyledSection = styled.section`
   font-family: ${g.fonts.serif};
   font-size: 1.4rem;
   margin-top: 7rem;
+
+  @media ${g.screen.max.md} {
+    margin-top: 3rem;
+  }
 `
 
 const StyledHTML = styled(HTML)`

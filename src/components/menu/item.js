@@ -14,6 +14,7 @@ const Headline = styled.div`
   font-size: 2rem;
   font-weight: 700;
   text-transform: capitalize;
+  margin-top: 0.5rem;
 
   & > .label svg {
     vertical-align: baseline;
@@ -25,6 +26,7 @@ const Headline = styled.div`
 
   @media ${g.screen.max.md} {
     font-size: 1.7rem;
+    margin-top: 0.8rem;
   }
 `
 
