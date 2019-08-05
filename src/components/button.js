@@ -1,10 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import Link from "./utilities/link"
 
 import { colors } from "./global"
 
-const StyledButton = styled.a`
+const StyledButton = styled(Link)`
   background-color: ${props => colors[props.color]};
   color: ${props => colors[props.color == "white" ? "gray800" : "white"]};
   display: inline-block;
@@ -38,7 +39,11 @@ const buttonMap = {
 
 const Button = props => {
   const TagName = buttonMap[props.size] || MediumButton
-  return <TagName {...props}>{props.children}</TagName>
+  return (
+    <TagName {...props} block={props.block.toString()}>
+      {props.children}
+    </TagName>
+  )
 }
 
 Button.propTypes = {
@@ -50,7 +55,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   block: false,
-  color: "grey800",
+  color: "gray800",
   size: "md",
 }
 

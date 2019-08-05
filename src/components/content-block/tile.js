@@ -5,6 +5,7 @@ import styled from "styled-components"
 
 import { colors } from "../global"
 
+import Button from "../button"
 import HTML from "../utilities/html"
 
 const colorMap = {
@@ -14,10 +15,10 @@ const colorMap = {
   white: colors.white,
 }
 
-// TODO: Add support for:
-//  - Buttons
+// TODO:
 //  - Full-width image with text
 //  - Full-width image without text
+//  - Write tests for this component
 
 const Wrapper = styled.div`
   background-color: ${props => colorMap[props.backgroundColor] || "transparent"};
@@ -25,7 +26,7 @@ const Wrapper = styled.div`
   text-align: ${props => props.textAlign || "center"};
 
   * {
-    color: ${props => colors[props.props.backgroundColor == "white" ? "grey800" : "white"]};
+    color: ${props => colors[props.backgroundColor == "white" ? "gray800" : "white"]};
     text-align: ${props => props.textAlign || "center"};
   }
 
@@ -33,6 +34,12 @@ const Wrapper = styled.div`
     height: 100%;
     position: absolute;
     width: 100%;
+  }
+
+  .tile-button {
+    background-color: ${props => colors[props.backgroundColor == "white" ? "gray800" : "white"]};
+    color: ${props => colors[props.backgroundColor == "white" ? "white" : "gray800"]};
+    width: auto;
   }
 `
 
@@ -56,7 +63,6 @@ const TileWrapper = styled(Wrapper)`
 
 const Tile = props => {
   const WrapperTagName = props.solo ? SoloWrapper : TileWrapper
-  console.log(props.background_color)
   return (
     <WrapperTagName
       backgroundColor={props.background_color}
@@ -66,7 +72,14 @@ const Tile = props => {
       {props.image && <Img className="tile-img" fluid={props.image.fluid} />}
       {props.body && (
         <div className="tile-text">
-          <HTML field={props.body} />
+          <div>
+            <HTML field={props.body} />
+            {props.button_label && props.button_url && (
+              <Button className="tile-button" to={props.button_url} color="white">
+                {props.button_label}
+              </Button>
+            )}
+          </div>
         </div>
       )}
     </WrapperTagName>

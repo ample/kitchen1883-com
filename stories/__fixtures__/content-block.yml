@@ -27,7 +27,7 @@
         <p>If you are impassioned or have a hobby sharing great food finds, then we are hungry to learn more about you.</p>
   image:
   background_color: grey
-  text_align:
+  text_align: left
   button_label: Careers
   button_url: "/careers"
 - body:
