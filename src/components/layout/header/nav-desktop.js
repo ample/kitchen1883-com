@@ -34,7 +34,7 @@ const HeaderNavDesktop = props => (
     <StyledNav>
       {props.nav.map((link, idx) => (
         <Link to={link.url} activeClassName="nav-active" key={`headerNav_${idx}`}>
-          {link.label}
+          {link.title}
         </Link>
       ))}
     </StyledNav>

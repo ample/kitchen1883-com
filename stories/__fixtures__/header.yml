@@ -1,24 +1,23 @@
-nav:
-  - label: Menu + Locations
-    url: /
-    menu:
-    - label: Union
+- title: Menu + Locations
+  url: /
+  contentfulchildren:
+    - title: Union
       url: /menu/union
-    - label: Anderson
+    - title: Anderson
       url: /menu/anderson
-  - label: Reservations
-    url: /reservations
-    menu: false
-  - label: About
-    url: /about
-    menu: false
-  - label: Catering
-    url: /catering
-    menu: false
-  - label: Order Online
-    url: /
-    menu:
-    - label: Union
+- title: Reservations
+  url: /reservations
+  contentfulchildren: false
+- title: About
+  url: /about
+  contentfulchildren: false
+- title: Catering
+  url: /catering
+  contentfulchildren: false
+- title: Order Online
+  url: /
+  contentfulchildren:
+    - title: Union
       url: /order/union
-    - label: Anderson
+    - title: Anderson
       url: /order/anderson

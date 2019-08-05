@@ -64,7 +64,7 @@ const StyledAccordion = styled(Accordion)`
 
 const NavLink = props => (
   <Link to={props.link.url} activeClassName="nav-active" onClick={props.onclick}>
-    {props.link.label}
+    {props.link.title}
   </Link>
 )
 
@@ -90,10 +90,10 @@ const HeaderNavMobile = props => {
 
       <StyledList isOpen={isOpen}>
         {props.nav.map((navItem, idx) =>
-          navItem.menu ? (
+          navItem.contentfulchildren ? (
             <Expandable
-              header={navItem.label}
-              menu={navItem.menu}
+              header={navItem.title}
+              menu={navItem.contentfulchildren}
               onclick={toggleNav}
               key={`nav_mobile_${idx}`}
             />

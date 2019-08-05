@@ -28,22 +28,22 @@ const StyledLogo = styled(Logo)`
   }
 `
 
-const Footer = props => (
+const Header = props => (
   <StyledHeader>
     <Link to="/">
       <StyledLogo />
     </Link>
     <MediaQuery query={g.screen.max.md}>
-      <HeaderNavMobile nav={props.data.nav} />
+      <HeaderNavMobile nav={props.data} />
     </MediaQuery>
     <MediaQuery query={g.screen.min.md}>
-      <HeaderNavDesktop nav={props.data.nav} />
+      <HeaderNavDesktop nav={props.data} />
     </MediaQuery>
   </StyledHeader>
 )
 
-Footer.propTypes = {
-  data: PropTypes.object.isRequired,
+Header.propTypes = {
+  data: PropTypes.array.isRequired,
 }
 
-export default Footer
+export default Header
