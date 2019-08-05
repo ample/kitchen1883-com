@@ -14,12 +14,10 @@ const colorMap = {
   white: colors.white,
 }
 
-const contrastColorMap = {
-  dark_green: colors.white,
-  grey: colors.white,
-  light_green: colors.white,
-  white: "inherit",
-}
+// TODO: Add support for:
+//  - Buttons
+//  - Full-width image with text
+//  - Full-width image without text
 
 const Wrapper = styled.div`
   background-color: ${props => colorMap[props.backgroundColor] || "transparent"};
@@ -27,7 +25,7 @@ const Wrapper = styled.div`
   text-align: ${props => props.textAlign || "center"};
 
   * {
-    color: ${props => contrastColorMap[props.backgroundColor] || "inherit"};
+    color: ${props => colors[props.props.backgroundColor == "white" ? "grey800" : "white"]};
     text-align: ${props => props.textAlign || "center"};
   }
 
