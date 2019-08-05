@@ -12,10 +12,10 @@ const TileWrapper = styled.div`
 class ContentBlock extends React.Component {
   blocks() {
     const blocks = this.props.data
-    return blocks.map((block, i) => <Tile width={this.blockWidth(block, i)} {...block} key={i} />)
+    return blocks.map((block, i) => <Tile width={this.blockWidth(i)} {...block} key={i} />)
   }
 
-  blockWidth(block, idx) {
+  blockWidth(idx) {
     switch (this.props.data.length) {
       case 2:
         if (this.props.data.filter(b => b.image).length === 0) return "50%"

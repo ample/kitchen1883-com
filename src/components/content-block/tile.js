@@ -3,13 +3,31 @@ import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import { colors } from "../global"
+
 import HTML from "../utilities/html"
 
+const colorMap = {
+  dark_green: colors.oliveDark,
+  grey: colors.gray800,
+  light_green: colors.olive,
+  white: colors.white,
+}
+
+const contrastColorMap = {
+  dark_green: colors.white,
+  grey: colors.white,
+  light_green: colors.white,
+  white: "inherit",
+}
+
 const Wrapper = styled.div`
+  background-color: ${props => colorMap[props.backgroundColor] || "transparent"};
   position: relative;
   text-align: ${props => props.textAlign || "center"};
 
   * {
+    color: ${props => contrastColorMap[props.backgroundColor] || "inherit"};
     text-align: ${props => props.textAlign || "center"};
   }
 
@@ -40,8 +58,13 @@ const TileWrapper = styled(Wrapper)`
 
 const Tile = props => {
   const WrapperTagName = props.solo ? SoloWrapper : TileWrapper
+  console.log(props.background_color)
   return (
-    <WrapperTagName width={props.width} textAlign={props.text_align}>
+    <WrapperTagName
+      backgroundColor={props.background_color}
+      textAlign={props.text_align}
+      width={props.width}
+    >
       {props.image && <Img className="tile-img" fluid={props.image.fluid} />}
       {props.body && (
         <div className="tile-text">
