@@ -12,7 +12,9 @@ const TileWrapper = styled.div`
 class ContentBlock extends React.Component {
   blocks() {
     const blocks = this.props.data
-    return blocks.map((block, i) => <Tile width={this.blockWidth(i)} {...block} key={i} />)
+    return blocks.map((block, i) => (
+      <Tile featured={blocks.length === 1} width={this.blockWidth(i)} {...block} key={i} />
+    ))
   }
 
   blockWidth(idx) {
@@ -30,7 +32,8 @@ class ContentBlock extends React.Component {
   }
 
   isSolo() {
-    return this.props.data.length <= 1
+    const blocks = this.props.data
+    return blocks.length === 1 && !blocks[0].image
   }
 
   render() {

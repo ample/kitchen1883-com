@@ -29,7 +29,7 @@
   background_color: grey
   text_align: left
   button_label: Careers
-  button_url: "/careers"
+  button_url: javascript:void(0)
 - body:
   image:
     fluid:

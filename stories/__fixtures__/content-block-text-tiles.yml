@@ -1,0 +1,34 @@
+- body:
+    childMarkdownRemark:
+      html: |-
+        <p>
+          Food is a way for us to connect and bond together. If you are food
+          impassioned or have a hobby in sharing great food finds, then we are
+          hungry to learn more about you. And, if you’re interested in
+          opportunities to grow your food career — Kitchen 1883 offers
+          competitive pay, rewards, and benefits designed to meet a variety of
+          needs, no matter where you are in your life.
+        </p>
+        <h2>Join a team that believes food is important.</h2>
+  image:
+  background_color: dark_green
+  text_align: right
+  button_label:
+  button_url:
+- body:
+    childMarkdownRemark:
+      html: |-
+        <h2>The perks of working at Kitchen 1883.</h2>
+        <ul>
+          <li>Competitive pay</li>
+          <li>Great benefits</li>
+          <li>On-site training</li>
+          <li>Flexible schedule</li>
+          <li>Opportunity for advancement</li>
+          <li>Connection to a great company</li>
+        </ul>
+  image:
+  background_color: light_green
+  text_align: left
+  button_label: Apply Today
+  button_url: javascript:void(0)
