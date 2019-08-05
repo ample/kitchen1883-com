@@ -20,6 +20,10 @@ const linkMixin = css`
   text-decoration: none;
   padding: 1.7rem 2rem;
   border-bottom: 1px solid ${g.colors.black};
+  &.nav-active {
+    font-weight: 700;
+    color: ${g.colors.cream};
+  }
 `
 
 const NavIcon = styled.div`
@@ -50,6 +54,10 @@ const StyledAccordion = styled(Accordion)`
       background-color: ${g.colors.white};
       color: ${g.colors.gray800};
       border-bottom: 1px solid ${g.colors.gray200};
+      &.nav-active {
+        font-weight: 700;
+        color: ${g.colors.olive};
+      }
     }
   }
 `
