@@ -12,7 +12,21 @@ const TileWrapper = styled.div`
 class ContentBlock extends React.Component {
   blocks() {
     const blocks = this.props.data
-    return blocks.map((block, i) => <Tile count={blocks.length} idx={i} {...block} key={i} />)
+    return blocks.map((block, i) => <Tile width={this.blockWidth(block, i)} {...block} key={i} />)
+  }
+
+  blockWidth(block, idx) {
+    switch (this.props.data.length) {
+      case 2:
+        if (this.props.data.filter(b => b.image).length === 0) return "50%"
+        return idx == 0 ? "75%" : "25%"
+      case 3:
+        return idx == 0 ? "50%" : "25%"
+      case 4:
+        return "25%"
+      default:
+        return "100%"
+    }
   }
 
   isSolo() {
@@ -23,7 +37,7 @@ class ContentBlock extends React.Component {
     const WrapperTagName = this.isSolo() ? Container : TileWrapper
     return (
       <WrapperTagName>
-        {this.isSolo() && <Tile count={1} {...this.props.data[0]} />}
+        {this.isSolo() && <Tile solo={true} {...this.props.data[0]} />}
         {!this.isSolo() && this.blocks()}
       </WrapperTagName>
     )
