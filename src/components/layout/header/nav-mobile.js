@@ -61,18 +61,18 @@ const StyledAccordion = styled(Accordion)`
     }
   }
 `
-
-const NavLink = props => (
-  <Link to={props.link.url} activeClassName="nav-active" onClick={props.onclick}>
-    {props.link.title}
-  </Link>
-)
-
 const Expandable = props => (
   <StyledAccordion accordion={false}>
     <Panel header={props.header}>
       {props.menu.map((link, idx) => (
-        <NavLink link={link} key={`nav_mobile_${props.header}_${idx}`} onclick={props.onclick} />
+        <Link
+          to={link.url}
+          activeClassName="nav-active"
+          onClick={props.onclick}
+          key={`nav_mobile_${props.header}_${idx}`}
+        >
+          {link.title}
+        </Link>
       ))}
     </Panel>
   </StyledAccordion>
@@ -98,7 +98,14 @@ const HeaderNavMobile = props => {
               key={`nav_mobile_${idx}`}
             />
           ) : (
-            <NavLink link={navItem} key={`nav_mobile_${idx}`} onclick={toggleNav} />
+            <Link
+              to={navItem.url}
+              activeClassName="nav-active"
+              onClick={toggleNav}
+              key={`nav_mobile_${idx}`}
+            >
+              {navItem.title}
+            </Link>
           )
         )}
       </StyledList>
