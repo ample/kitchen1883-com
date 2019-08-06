@@ -17,7 +17,7 @@ stories.addParameters({
     { name: "white", value: g.colors.white, default: true },
     { name: "gray800", value: g.colors.gray800, default: true },
     { name: "navy", value: g.colors.navy, default: true },
-    { name: "olive", value: g.colors.olive, default: true },
+    { name: "olive500", value: g.colors.olive500, default: true },
   ],
 })
 
@@ -135,8 +135,12 @@ stories.add(
                 <code>cream</code>
               </div>
               <div>
-                <div className="olive"></div>
-                <code>olive</code>
+                <div className="olive500"></div>
+                <code>olive500</code>
+              </div>
+              <div>
+                <div className="olive700"></div>
+                <code>olive700</code>
               </div>
               <div>
                 <div className="navy"></div>
@@ -226,7 +230,7 @@ const Notes = styled.section`
   padding: 2rem 1rem 1rem 1rem;
   background-color: ${g.colors.gray100};
   .dark & {
-    background-color: rgba(255,255,255,.05);
+    background-color: rgba(255, 255, 255, 0.05);
   }
 `
 
@@ -265,8 +269,11 @@ const Swatches = styled.div`
       &.cream {
         background-color: ${g.colors.cream};
       }
-      &.olive {
-        background-color: ${g.colors.olive};
+      &.olive500 {
+        background-color: ${g.colors.olive500};
+      }
+      &.olive700 {
+        background-color: ${g.colors.olive700};
       }
       &.navy {
         background-color: ${g.colors.navy};

@@ -8,9 +8,9 @@ import Button from "../button"
 import { colors } from "../global"
 
 const colorMap = {
-  dark_green: colors.oliveDark,
+  dark_green: colors.olive700,
   grey: colors.gray800,
-  light_green: colors.olive,
+  light_green: colors.olive500,
   white: colors.white,
 }
 

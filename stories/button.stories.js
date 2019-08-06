@@ -30,7 +30,7 @@ stories.add(
 
     return (
       <GlobalStyles>
-        <Button color={color} size={size} href="javascript:void(0)">
+        <Button color={color} size={size} to="javascript:void(0)">
           {children}
         </Button>
       </GlobalStyles>
