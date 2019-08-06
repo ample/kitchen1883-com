@@ -565,7 +565,7 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
     width="50%"
   >
     <div
-      className="sc-EHOje iBhrUI"
+      className="sc-EHOje fCRTfD"
     >
       <div
         className="block-content"
@@ -593,7 +593,7 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
     width="50%"
   >
     <div
-      className="sc-EHOje fljlPw"
+      className="sc-EHOje bWKsJw"
     >
       <div
         className="block-content"
