@@ -1,14 +1,14 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import { withKnobs, select } from "@storybook/addon-knobs"
+import { withKnobs, select, boolean, number } from "@storybook/addon-knobs"
 
 import GlobalStyles from "../src/components/layout/global-styles"
 import ContentBlock from "../src/components/content-block"
 
-import soloFixture from "./__fixtures__/content-block-solo.yml"
-import imageTilesFixture from "./__fixtures__/content-block-image-tiles.yml"
-import textTilesFixture from "./__fixtures__/content-block-text-tiles.yml"
-import featuredImageFixture from "./__fixtures__/content-block-featured-image.yml"
+import soloTextFeature from "./__fixtures__/content-block/solo-text.yml"
+import imageTilesFixture from "./__fixtures__/content-block/image-tiles.yml"
+import textTilesFixture from "./__fixtures__/content-block/text-tiles.yml"
+import featuredImageFixture from "./__fixtures__/content-block/featured-image.yml"
 import notes from "./__notes__/content-block.md"
 
 const template = data => (
@@ -17,26 +17,51 @@ const template = data => (
   </GlobalStyles>
 )
 
-const options = {
+const storyOptions = {
   knobs: { escapeHTML: false },
   notes: notes,
 }
+
+const colorOptions = ["white", "light_green", "dark_green", "grey"]
+const textAlignOptions = ["left", "center", "right"]
 
 const stories = storiesOf("Content Blocks", module)
 
 stories.addDecorator(withKnobs)
 
-stories.add("Solo Block", () => template(soloFixture), options)
+stories.add(
+  "Solo Text",
+  () => {
+    const fixture = [...soloTextFeature][0]
+    fixture.button_label = boolean("Show Button", false) ? "Say Hi" : null
+    fixture.background_color = select("Background Color", colorOptions, "white")
+    fixture.text_align = select("Text Align", textAlignOptions, "center")
+    return template([fixture])
+  },
+  storyOptions
+)
+
+stories.add(
+  "Solo Image",
+  () => {
+    const fixture = [...featuredImageFixture][0]
+    if (fixture.body) fixture.bodyBak = fixture.body
+    const hideText = boolean("Hide Text", false)
+    fixture.body = hideText ? null : fixture.bodyBak
+    fixture.button_label = hideText ? null : "Order Online"
+    fixture.text_align = select("Text Align", textAlignOptions, "left")
+    return template(featuredImageFixture)
+  },
+  storyOptions
+)
 
 stories.add(
   "Image Tiles",
   () => {
-    const num = select("Number of blocks", [2, 3, 4], 4)
+    const num = number("Number of blocks", 4, { range: true, min: 2, max: 4, step: 1 })
     return template(imageTilesFixture.slice(0, num))
   },
-  options
+  storyOptions
 )
 
-stories.add("Text Tiles", () => template(textTilesFixture), options)
-
-stories.add("Featured Image", () => template(featuredImageFixture), options)
+stories.add("Text Tiles", () => template(textTilesFixture), storyOptions)

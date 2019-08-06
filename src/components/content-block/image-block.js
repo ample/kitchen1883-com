@@ -27,6 +27,7 @@ const Wrapper = styled.div`
     bottom: 5rem;
     left: ${props => (["left", null].includes(props.textAlign) ? "0" : "auto")};
     right: ${props => (props.textAlign === "right" ? "0" : "auto")};
+    width: 100%;
 
     &,
     *:not(a) {

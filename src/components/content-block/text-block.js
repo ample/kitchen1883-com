@@ -63,7 +63,10 @@ const TextBlock = props => (
     <div className="block-content">
       <HTML field={props.body} />
       {props.button_label && props.button_url && (
-        <Button to={props.button_url} color="white">
+        <Button
+          to={props.button_url}
+          color={props.background_color === "white" ? "gray800" : "white"}
+        >
           {props.button_label}
         </Button>
       )}

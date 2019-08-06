@@ -7,3 +7,7 @@
           the soul. We serve New American Comfort food — welcoming guests with flavors they love and
           treating them to a relaxing atmosphere.
         </p>
+  text_align: center
+  button_label: Say Hi
+  button_url: javascript:void(0)
+  background_color: white
