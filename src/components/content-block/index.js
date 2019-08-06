@@ -1,14 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { Container } from "react-grid-system"
 import styled from "styled-components"
 
-// import Tile from "./tile"
-import ImageBlock from "./image"
-import TextBlock from "./text"
+import ImageBlock from "./image-block"
+import TextBlock from "./text-block"
 
 const Wrapper = styled.div`
-  /* background: red; */
   display: flex;
   height: ${props => props.height || "auto"};
 `
@@ -19,13 +16,6 @@ const Block = styled.div`
 `
 
 class ContentBlock extends React.Component {
-  // blocks() {
-  //   const blocks = this.props.data
-  //   return blocks.map((block, i) => (
-  //     <Tile featured={blocks.length === 1} width={this.blockWidth(i)} {...block} key={i} />
-  //   ))
-  // }
-
   hasImages() {
     return this.props.data.filter(b => b.image).length > 0
   }
@@ -60,7 +50,7 @@ class ContentBlock extends React.Component {
     const TagName = block.image ? ImageBlock : TextBlock
     return (
       <Block width={this.blockWidth(idx)} key={idx}>
-        <TagName solo={this.isSolo()} {...block}></TagName>
+        <TagName solo={this.isSolo()} wrapperHeight={this.wrapperHeight()} {...block}></TagName>
       </Block>
     )
   }
