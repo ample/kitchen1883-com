@@ -7,7 +7,7 @@ import GlobalStyles from "../../src/components/layout/global-styles"
 import Header from "../../src/components/layout/header"
 
 import data from "../__fixtures__/header.yml"
-// import notes from "../__notes__/layout/header.md"
+import notes from "../__notes__/layout/header.md"
 
 const stories = storiesOf("Layout", module)
 
@@ -17,8 +17,8 @@ stories.add(
   "Header",
   () => (
     <GlobalStyles>
-      <Header data={data} />
+      <Header nav={data} />
     </GlobalStyles>
   ),
-  // { notes: notes }
+  { notes: notes }
 )

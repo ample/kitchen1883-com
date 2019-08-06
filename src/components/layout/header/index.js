@@ -33,16 +33,16 @@ const Header = props => (
       <StyledLogo />
     </Link>
     <MediaQuery query={g.screen.max.md}>
-      <HeaderNavMobile nav={props.data} />
+      <HeaderNavMobile nav={props.nav} />
     </MediaQuery>
     <MediaQuery query={g.screen.min.md}>
-      <HeaderNavDesktop nav={props.data} />
+      <HeaderNavDesktop nav={props.nav} />
     </MediaQuery>
   </StyledHeader>
 )
 
 Header.propTypes = {
-  data: PropTypes.array.isRequired,
+  nav: PropTypes.array.isRequired,
 }
 
 export default Header
