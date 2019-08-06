@@ -8,7 +8,7 @@ import ContentBlock from "../src/components/content-block"
 import soloTextFeature from "./__fixtures__/content-block/solo-text.yml"
 import imageTilesFixture from "./__fixtures__/content-block/image-tiles.yml"
 import textTilesFixture from "./__fixtures__/content-block/text-tiles.yml"
-import featuredImageFixture from "./__fixtures__/content-block/featured-image.yml"
+import featuredImageFixture from "./__fixtures__/content-block/solo-image.yml"
 import notes from "./__notes__/content-block.md"
 
 const template = data => (
