@@ -2,16 +2,17 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container } from "react-grid-system"
-import ReactTooltip from "react"
 
 import * as g from "../../global"
 import Link from "../../utilities/link"
+import Tooltip from "../../utilities/tooltip"
 
 const StyledNav = styled(Container)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  a {
+  a,
+  .tooltip-trigger {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -19,6 +20,7 @@ const StyledNav = styled(Container)`
     text-decoration: none;
     font-family: ${g.fonts.serif};
     padding: 2rem 0.2rem;
+    cursor: pointer;
 
     &:hover,
     &:focus,
@@ -27,19 +29,42 @@ const StyledNav = styled(Container)`
       color: ${g.colors.olive};
     }
   }
+
+  .tooltip-container {
+    border-radius: 0px !important;
+  }
 `
 
-const HeaderNavDesktop = props => (
-  <Container>
-    <StyledNav>
-      {props.nav.map((link, idx) => (
-        <Link to={link.url} activeClassName="nav-active" key={`headerNav_${idx}`}>
-          {link.title}
-        </Link>
-      ))}
-    </StyledNav>
-  </Container>
-)
+const HeaderNavDesktop = props => {
+  const dropdown = content =>
+    content.map((navItem, idx) => (
+      <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${navItem.title}_${idx}`}>
+        {navItem.title}
+      </Link>
+    ))
+  return (
+    <Container>
+      <StyledNav>
+        {props.nav.map((navItem, idx) =>
+          navItem.contentfulchildren ? (
+            <Tooltip
+              placement="bottom"
+              trigger="click"
+              tooltip={dropdown(navItem.contentfulchildren)}
+              key={`headerNav_${idx}`}
+            >
+              {navItem.title}
+            </Tooltip>
+          ) : (
+            <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${idx}`}>
+              {navItem.title}
+            </Link>
+          )
+        )}
+      </StyledNav>
+    </Container>
+  )
+}
 
 HeaderNavDesktop.propTypes = {
   nav: PropTypes.array.isRequired,

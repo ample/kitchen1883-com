@@ -12,7 +12,6 @@ import HeaderNavDesktop from "./nav-desktop"
 
 
 const StyledHeader = styled.header`
-  border: 1px solid pink;
   text-align: center;
   color: ${g.colors.gray800};
   position: relative;
