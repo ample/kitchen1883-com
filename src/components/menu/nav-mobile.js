@@ -22,6 +22,17 @@ const StyledAccordion = styled(Accordion)`
         font-weight: 700;
         letter-spacing: 0.2rem;
         padding: 2rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          box-shadow 0.15s ease-in-out;
+      }
+    }
+    .rc-collapse-item-active {
+      .rc-collapse-header {
+        background-color: ${g.colors.white};
+        color: ${g.colors.navy};
+        box-shadow: inset 0 0.1rem 1rem 0 ${g.colors.gray200};
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          box-shadow 0.15s ease-in-out;
       }
     }
   }
