@@ -13,7 +13,7 @@ const StyledButton = styled(Link)`
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  width: ${props => (props.block ? "100%" : "auto")};
+  width: ${props => (props.block === "true" ? "100%" : "auto")};
 `
 
 const SmallButton = styled(StyledButton)`
