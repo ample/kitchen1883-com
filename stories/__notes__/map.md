@@ -3,7 +3,7 @@ The Map component should be used for any page where an image of the stores locat
 
 ## Usage
 
-`Map` accepts three required props representing latitude,longitude, and zoom: `lat`,`lng`, and `zoom`. The default values are `lat: 38.9620796`, `lng: -84.6784822` and `zoom: 15` cooresponding to the Union KY location.
+`Map` accepts three required props representing latitude,longitude, and zoom: `lat`,`lng`, and `zoom`. `zoom` has a default value of 15.
 
 ```jsx
 import Map from "./map"

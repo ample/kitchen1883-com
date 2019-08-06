@@ -14,8 +14,8 @@ stories.add(
   "Map",
   () => {
     return (
-      <div style={{ height: `434px`, width: '412px'}}>
-        <Map/>
+      <div class="THISISANEXAMPLE" style={{ height: `434px`, width: '412px'}}>
+        <Map lat={39.09} lng={-84.51}/>
       </div>
     )
   },
