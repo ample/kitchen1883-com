@@ -7,7 +7,7 @@ import GlobalStyles from "../../src/components/layout/global-styles"
 
 import Menu from "../../src/components/menu"
 import data from "../__fixtures__/menus.yml"
-// import notes from "../__notes__/component.md"
+import notes from "../__notes__/menu/index.md"
 
 const stories = storiesOf("Menu", module)
 
@@ -21,6 +21,6 @@ stories.add(
         <Menu menus={data} />
       </GlobalStyles>
     )
-  }
-  // { notes: notes }
+  },
+  { notes: notes }
 )

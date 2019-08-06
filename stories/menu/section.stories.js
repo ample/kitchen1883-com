@@ -7,7 +7,7 @@ import GlobalStyles from "../../src/components/layout/global-styles"
 
 import MenuSection from "../../src/components/menu/section"
 import data from "../__fixtures__/menu.yml"
-// import notes from "../__notes__/component.md"
+import notes from "../__notes__/menu/section.md"
 
 const stories = storiesOf("Menu", module)
 
@@ -18,7 +18,7 @@ stories.add(
   () => {
     let section = data.sections[2]
     let body = boolean("Section Descption", true)
-    let first = boolean("First Section", false)
+    let idx = boolean("First Section", false)
     return (
       <GlobalStyles>
         <Container>
@@ -26,11 +26,11 @@ stories.add(
             label={section.label}
             body={body ? section.body : undefined}
             items={section.items}
-            firstSection={first}
+            idx={idx ? 0 : 1}
           />
         </Container>
       </GlobalStyles>
     )
-  }
-  // { notes: notes }
+  },
+  { notes: notes }
 )

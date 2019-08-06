@@ -51,7 +51,7 @@ const Menu = props => {
       <MediaQuery query={g.screen.max.md}>
         <StyledHeader>
           <h3>Menu</h3>
-          <NavMobile tabs={tabs} sections={sections} activeIdx={activeIdx} />
+          <NavMobile tabs={tabs} sections={sections} />
         </StyledHeader>
       </MediaQuery>
 
