@@ -24,6 +24,7 @@ const NoMaps = props => (
   <StyledLocations bgColor={props.background_color} label={props.label ? 1 : 0}>
     <Container>
       {props.label && <h2>{props.label}</h2>}
+
       <Row justify="center">
         {props.locations.map((loc, idx) => (
           <Col

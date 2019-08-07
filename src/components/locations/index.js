@@ -9,9 +9,9 @@ const Locations = props => {
 }
 
 Locations.propTypes = {
+  locations: PropTypes.array.isRequired,
   background_color: PropTypes.string,
   label: PropTypes.string,
-  locations: PropTypes.array,
   show_maps: PropTypes.bool,
 }
 
