@@ -9,13 +9,14 @@ import PageAttributes from "../fragments/page-attributes"
 import ContentBlock from "../components/content-block"
 import HTML from "../components/utilities/html"
 import Layout from "../components/layout"
+import LocationsContainer from "../components/locations-container"
 
 // ---------------------------------------- | Page (Shared Component)
 
 class Page extends React.Component {
   containersMap = {
     ContentfulContentContainer: ContentBlock,
-    ContentfulLocationsContainer: ContentBlock,
+    ContentfulLocationsContainer: LocationsContainer,
   }
 
   containers(data = []) {
