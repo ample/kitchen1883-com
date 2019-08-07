@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import MediaQuery from 'react-responsive'
+import MediaQuery from "react-responsive"
 
 import * as g from "../../global"
 
@@ -9,7 +9,6 @@ import Link from "../../utilities/link"
 import Logo from "../../logo"
 import HeaderNavMobile from "./nav-mobile"
 import HeaderNavDesktop from "./nav-desktop"
-
 
 const StyledHeader = styled.header`
   text-align: center;
