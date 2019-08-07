@@ -35,6 +35,11 @@ export const PageAttributes = graphql`
           type
         }
       }
+      ... on ContentfulLocationsContainer {
+        internal {
+          type
+        }
+      }
     }
   }
 `

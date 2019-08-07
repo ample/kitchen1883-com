@@ -1,0 +1,23 @@
+- title: Menu + Locations
+  url: /
+  contentfulchildren:
+    - title: Union
+      url: /menu/union
+    - title: Anderson
+      url: /menu/anderson
+- title: Reservations
+  url: /reservations
+  contentfulchildren: false
+- title: About
+  url: /about
+  contentfulchildren: false
+- title: Catering
+  url: /catering
+  contentfulchildren: false
+- title: Order Online
+  url: /
+  contentfulchildren:
+    - title: Union
+      url: /order/union
+    - title: Anderson
+      url: /order/anderson
