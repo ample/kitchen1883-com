@@ -1,20 +1,19 @@
 import colors from "./ref/colors.scss"
 import fonts from "./ref/fonts.scss"
-import bp from "./ref/screen.scss"
+import breakpoints from "./ref/screen.scss"
 
-export { colors }
-export { fonts }
+export { colors, fonts, breakpoints }
 export const screen = {
   min: {
-    sm: `(min-width: ${bp.sm}px)`,
-    md: `(min-width: ${bp.md}px)`,
-    lg: `(min-width: ${bp.lg}px)`,
-    xl: `(min-width: ${bp.xl}px)`,
+    sm: `(min-width: ${breakpoints.sm}px)`,
+    md: `(min-width: ${breakpoints.md}px)`,
+    lg: `(min-width: ${breakpoints.lg}px)`,
+    xl: `(min-width: ${breakpoints.xl}px)`,
   },
   max: {
-    sm: `(max-width: ${bp.sm - 1}px)`,
-    md: `(max-width: ${bp.md - 1}px)`,
-    lg: `(max-width: ${bp.lg - 1}px)`,
-    xl: `(max-width: ${bp.xl - 1}px)`,
+    sm: `(max-width: ${breakpoints.sm - 1}px)`,
+    md: `(max-width: ${breakpoints.md - 1}px)`,
+    lg: `(max-width: ${breakpoints.lg - 1}px)`,
+    xl: `(max-width: ${breakpoints.xl - 1}px)`,
   },
 }
