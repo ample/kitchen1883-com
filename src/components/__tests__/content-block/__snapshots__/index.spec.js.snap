@@ -2,15 +2,26 @@
 
 exports[`ContentBlock - Image Tiles renders 1`] = `
 <div
-  className="sc-bZQynM cgBiMl"
-  height="56.3rem"
+  className="sc-bZQynM fRnuUx"
+  height={
+    Object {
+      "lg": "56.3rem",
+      "sm": "36rem",
+    }
+  }
 >
   <div
-    className="sc-gzVnrw evOcNN"
+    className="sc-gzVnrw dMzTKs"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="25%"
   >
     <div
-      className="sc-ifAKCX hNGKLQ"
+      className="sc-ifAKCX fsvWyk"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -114,11 +125,17 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw evOcNN"
+    className="sc-gzVnrw dMzTKs"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="25%"
   >
     <div
-      className="sc-EHOje kahPij"
+      className="sc-EHOje kdgEDg"
     >
       <div
         className="block-content"
@@ -145,11 +162,17 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw evOcNN"
+    className="sc-gzVnrw dMzTKs"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="25%"
   >
     <div
-      className="sc-ifAKCX hNGKLQ"
+      className="sc-ifAKCX fsvWyk"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -253,11 +276,17 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw evOcNN"
+    className="sc-gzVnrw dMzTKs"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="25%"
   >
     <div
-      className="sc-ifAKCX hNGKLQ"
+      className="sc-ifAKCX fsvWyk"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -371,22 +400,38 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
 
 exports[`ContentBlock - No Blocks renders 1`] = `
 <div
-  className="sc-bZQynM lhtyiW"
-  height="auto"
+  className="sc-bZQynM fRnuUx"
+  height={
+    Object {
+      "lg": "auto",
+      "sm": "auto",
+    }
+  }
 />
 `;
 
 exports[`ContentBlock - Solo Image renders 1`] = `
 <div
-  className="sc-bZQynM cgBiMl"
-  height="56.3rem"
+  className="sc-bZQynM fRnuUx"
+  height={
+    Object {
+      "lg": "56.3rem",
+      "sm": "36rem",
+    }
+  }
 >
   <div
-    className="sc-gzVnrw gATUFx"
+    className="sc-gzVnrw bMXqBk"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="100%"
   >
     <div
-      className="sc-ifAKCX hNGKLQ"
+      className="sc-ifAKCX fsvWyk"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -513,15 +558,26 @@ exports[`ContentBlock - Solo Image renders 1`] = `
 
 exports[`ContentBlock - Solo Text renders 1`] = `
 <div
-  className="sc-bZQynM lhtyiW"
-  height="auto"
+  className="sc-bZQynM fRnuUx"
+  height={
+    Object {
+      "lg": "auto",
+      "sm": "auto",
+    }
+  }
 >
   <div
-    className="sc-gzVnrw gATUFx"
+    className="sc-gzVnrw dTQsyb"
+    height={
+      Object {
+        "lg": "auto",
+        "sm": "auto",
+      }
+    }
     width="100%"
   >
     <div
-      className="is-solo sc-EHOje gPpEos"
+      className="is-solo sc-EHOje itjQMz"
     >
       <div
         className="block-content"
@@ -557,15 +613,26 @@ exports[`ContentBlock - Solo Text renders 1`] = `
 
 exports[`ContentBlock - Text Tiles renders 1`] = `
 <div
-  className="sc-bZQynM cgBiMl"
-  height="56.3rem"
+  className="sc-bZQynM fRnuUx"
+  height={
+    Object {
+      "lg": "56.3rem",
+      "sm": "36rem",
+    }
+  }
 >
   <div
-    className="sc-gzVnrw eVMTru"
+    className="sc-gzVnrw iLkmsn"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="50%"
   >
     <div
-      className="sc-EHOje fCRTfD"
+      className="sc-EHOje bFlTNz"
     >
       <div
         className="block-content"
@@ -589,11 +656,17 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw eVMTru"
+    className="sc-gzVnrw iLkmsn"
+    height={
+      Object {
+        "lg": "56.3rem",
+        "sm": "36rem",
+      }
+    }
     width="50%"
   >
     <div
-      className="sc-EHOje bWKsJw"
+      className="sc-EHOje bLhVMQ"
     >
       <div
         className="block-content"

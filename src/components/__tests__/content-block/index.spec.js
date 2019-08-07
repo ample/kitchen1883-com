@@ -34,7 +34,7 @@ describe("ContentBlock - No Blocks", () => {
   })
   it("gets set to auto height", () => {
     const wrapper = shallow(<ContentBlock blocks={[]} />)
-    expect(wrapper.instance().wrapperHeight()).toEqual("auto")
+    expect(wrapper.instance().wrapperHeight()).toEqual({ sm: "auto", lg: "auto" })
   })
 })
 
@@ -60,7 +60,7 @@ describe("ContentBlock - Solo Text", () => {
   })
   it("gets set to auto height", () => {
     const wrapper = shallow(<ContentBlock blocks={soloTextFixture} />)
-    expect(wrapper.instance().wrapperHeight()).toEqual("auto")
+    expect(wrapper.instance().wrapperHeight()).toEqual({ sm: "auto", lg: "auto" })
   })
   it("sets the first block to 100% width", () => {
     const wrapper = shallow(<ContentBlock blocks={soloTextFixture} />)
@@ -91,7 +91,7 @@ describe("ContentBlock - Solo Image", () => {
   })
   it("gets set to explicit height", () => {
     const wrapper = shallow(<ContentBlock blocks={soloImageFixture} />)
-    expect(wrapper.instance().wrapperHeight()).toEqual("56.3rem")
+    expect(wrapper.instance().wrapperHeight()).toEqual({ sm: "36rem", lg: "56.3rem" })
   })
   it("sets the first block to 100% width", () => {
     const wrapper = shallow(<ContentBlock blocks={soloImageFixture} />)
@@ -122,7 +122,7 @@ describe("ContentBlock - Text Tiles", () => {
   })
   it("gets set to explicit height", () => {
     const wrapper = shallow(<ContentBlock blocks={textTilesFixture} />)
-    expect(wrapper.instance().wrapperHeight()).toEqual("56.3rem")
+    expect(wrapper.instance().wrapperHeight()).toEqual({ sm: "36rem", lg: "56.3rem" })
   })
   it("sets both blocks to 50% width", () => {
     const wrapper = shallow(<ContentBlock blocks={textTilesFixture} />)
@@ -154,7 +154,7 @@ describe("ContentBlock - Image Tiles", () => {
   })
   it("gets set to explicit height", () => {
     const wrapper = shallow(<ContentBlock blocks={imageTilesFixture} />)
-    expect(wrapper.instance().wrapperHeight()).toEqual("56.3rem")
+    expect(wrapper.instance().wrapperHeight()).toEqual({ sm: "36rem", lg: "56.3rem" })
   })
   it("sets all blocks to 25% width", () => {
     const wrapper = shallow(<ContentBlock blocks={imageTilesFixture} />)
