@@ -36,3 +36,60 @@
       url: /
     - icon: twitter
       url: /
+- title: Dolor
+  address: 9003 US Highway 42, Union, KY, 41091
+  phone: (859) 334-9450
+  hours:
+    - days: Monday-Thursday
+      hours: 11AM - 9PM
+    - days: Friday
+      hours: 11AM - 10PM
+    - days: Saturday
+      hours: 10AM - 10PM
+    - days: Sunday
+      hours: 10AM - 9PM
+  order_online_url: /order-online
+  menu_pdf: /
+  social_links:
+    - icon: facebook
+      url: /
+    - icon: twitter
+      url: /
+- title: Tellus
+  address: 9003 US Highway 42, Union, KY, 41091
+  phone: (859) 334-9450
+  hours:
+    - days: Monday-Thursday
+      hours: 11AM - 9PM
+    - days: Friday
+      hours: 11AM - 10PM
+    - days: Saturday
+      hours: 10AM - 10PM
+    - days: Sunday
+      hours: 10AM - 9PM
+  order_online_url: /order-online
+  menu_pdf: /
+  social_links:
+    - icon: facebook
+      url: /
+    - icon: twitter
+      url: /
+- title: Pellentesque
+  address: 9003 US Highway 42, Union, KY, 41091
+  phone: (859) 334-9450
+  hours:
+    - days: Monday-Thursday
+      hours: 11AM - 9PM
+    - days: Friday
+      hours: 11AM - 10PM
+    - days: Saturday
+      hours: 10AM - 10PM
+    - days: Sunday
+      hours: 10AM - 9PM
+  order_online_url: /order-online
+  menu_pdf: /
+  social_links:
+    - icon: facebook
+      url: /
+    - icon: twitter
+      url: /

@@ -20,7 +20,12 @@ const CTAs = styled.div`
   display: flex;
   margin-top: 1rem;
   > * {
-    margin: 0rem 0.5rem;
+    &:first-of-type {
+      margin-right: 0.5rem;
+    }
+    &:last-of-type {
+      margin-left: 0.5rem;
+    }
   }
 `
 
@@ -172,17 +177,17 @@ const Location = props => {
         </tbody>
       </HoursTag>
 
-      {props.social && <SocialIcons location={props.title} icons={props.social} dark={props.jumbotron ? true : false}/>}
+      {props.social_links && <SocialIcons location={props.title} icons={props.social_links} dark={props.jumbotron ? true : false}/>}
 
-      {(props.menu || props.order) && (
+      {(props.menu_pdf || props.order_online_url) && (
         <CTAs>
-          {props.menu && (
-            <Button to={props.menu} block={true}>
+          {props.menu_pdf && (
+            <Button to={props.menu_pdf} block={true}>
               View Menu
             </Button>
           )}
-          {props.order && (
-            <Button to={props.order} block={true}>
+          {props.order_online_url && (
+            <Button to={props.order_online_url} block={true}>
               Order Online
             </Button>
           )}
@@ -197,9 +202,9 @@ Location.propTypes = {
   address: PropTypes.string.isRequired,
   phone: PropTypes.string.isRequired,
   hours: PropTypes.array.isRequired,
-  social: PropTypes.array,
-  menu: PropTypes.string,
-  order: PropTypes.string,
+  social_links: PropTypes.array,
+  menu_pdf: PropTypes.string,
+  order_online_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }
 
