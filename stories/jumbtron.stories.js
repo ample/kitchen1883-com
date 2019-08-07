@@ -9,7 +9,7 @@ import Jumbotron from "../src/components/jumbotron"
 
 import fixture from "./__fixtures__/jumbotron.yml"
 
-// import notes from "./__notes__/component.md"
+import notes from "./__notes__/jumbotron.md"
 
 const stories = storiesOf("Jumbotron", module)
 
@@ -26,6 +26,6 @@ stories.add(
         </Jumbotron>
       </GlobalStyles>
     )
-  }
-  // { notes: notes }
+  },
+  { notes: notes }
 )
