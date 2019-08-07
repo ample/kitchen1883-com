@@ -3,12 +3,13 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Link from "./utilities/link"
 
-import { colors } from "./global"
+import { colors, screen } from "./global"
 
 const StyledButton = styled(Link)`
   background-color: ${props => colors[props.color]};
   color: ${props => colors[props.color === "white" ? "gray800" : "white"]};
   display: inline-block;
+  font-weight: 700;
   line-height: 1;
   text-align: center;
   text-decoration: none;
@@ -17,18 +18,39 @@ const StyledButton = styled(Link)`
 `
 
 const SmallButton = styled(StyledButton)`
-  font-size: 1.4rem;
-  padding: 0.8rem 1.6rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.13rem;
+  padding: 0.7rem 1.8rem;
+
+  @media ${screen.min.md} {
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+  }
 `
 
 const MediumButton = styled(StyledButton)`
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.18rem;
+  padding: 0.8rem 1.6rem;
+
+  @media ${screen.min.md} {
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+  }
 `
 
 const LargeButton = styled(StyledButton)`
-  font-size: 2.1rem;
-  padding: 1.4rem 2.6rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  padding: 1rem 2rem;
+
+  @media ${screen.min.md} {
+    font-size: 1.8rem;
+    letter-spacing: 0.28rem;
+    padding: 1.4rem 2.5rem;
+  }
 `
 
 const buttonMap = {
@@ -39,6 +61,7 @@ const buttonMap = {
 
 const Button = props => {
   const TagName = buttonMap[props.size] || MediumButton
+  console.log(TagName)
   return (
     <TagName {...props} block={props.block.toString()}>
       {props.children}
@@ -51,6 +74,11 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.string,
   size: PropTypes.string,
+
+  // Passed onto the Link component
+  to: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  activeClassName: PropTypes.string,
 }
 
 Button.defaultProps = {
