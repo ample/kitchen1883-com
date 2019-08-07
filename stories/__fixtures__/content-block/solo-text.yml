@@ -1,0 +1,13 @@
+- body:
+    childMarkdownRemark:
+      html: |
+        <h2>We're for the community and the meals they love.</h2>
+        <p>
+          Kitchen 1883 is about gathering with people that matter and enjoying food that speaks to
+          the soul. We serve New American Comfort food — welcoming guests with flavors they love and
+          treating them to a relaxing atmosphere.
+        </p>
+  text_align: center
+  button_label: Say Hi
+  button_url: javascript:void(0)
+  background_color: white

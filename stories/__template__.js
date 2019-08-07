@@ -20,7 +20,7 @@ const stories = storiesOf(/* Story Group */, module)
 //     { name: "white", value: g.colors.white, default: true },
 //     { name: "gray800", value: g.colors.gray800, default: true },
 //     { name: "navy", value: g.colors.navy, default: true },
-//     { name: "olive", value: g.colors.olive, default: true },
+//     { name: "olive500", value: g.colors.olive500, default: true },
 //   ],
 // })
 
