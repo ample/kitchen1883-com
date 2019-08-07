@@ -26,16 +26,21 @@ stories.addParameters({
 stories.add(
   "Locations",
   () => {
-    let count = number("Number of Locations", 5, { range: true, min: 1, max: 5, step: 1})
+    let count = number("Location Count", 5, { range: true, min: 1, max: 5, step: 1 })
+    let label = boolean("Panel w/ Header", true)
+    let bgColor = boolean("Gray Background", false)
     return (
       <GlobalStyles>
-        <Locations locations={data.slice(0, count)}/>
+        <Locations
+          locations={data.slice(0, count)}
+          label={label ? "Call Us" : undefined}
+          background_color={bgColor ? "gray100" : undefined}
+        />
       </GlobalStyles>
     )
   }
   // { notes: notes }
 )
-
 
 stories.add(
   "Single Location",

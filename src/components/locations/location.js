@@ -72,7 +72,7 @@ const OpenHours = styled.table`
     }
   }
   @media ${g.screen.min.md} {
-    margin-top: 3rem;
+    margin-top: 2rem;
     td {
       &.days {
         font-size: 1.7rem;
@@ -177,7 +177,13 @@ const Location = props => {
         </tbody>
       </HoursTag>
 
-      {props.social_links && <SocialIcons location={props.title} icons={props.social_links} dark={props.jumbotron ? true : false}/>}
+      {props.social_links && (
+        <SocialIcons
+          location={props.title}
+          icons={props.social_links}
+          dark={props.jumbotron ? true : false}
+        />
+      )}
 
       {(props.menu_pdf || props.order_online_url) && (
         <CTAs>
