@@ -6,7 +6,7 @@ The Social Icons component displays a list of social media icons and links. It h
 
 `icons` is an array of objects that should have the following items:
 
-- `type`: `"facebook" || "twitter"`
+- `icon`: `"facebook" || "twitter"`
 - `url`: Link to the social account
 
 There is also one optional prop `dark` that turns on the dark theme, with white circles behind the icons. The default is `false`. This is set up as a story knob.
@@ -26,7 +26,7 @@ Data format:
   location: "Union",
   icons: [
     {
-      type: "facebook",
+      icon: "facebook",
       url: "#"
     },
   ]

@@ -65,7 +65,7 @@ const SocialIcons = props => (
         dark={props.dark ? 1 : 0}
       >
         <div>
-          <SVG src={typeList[icon.type]} />
+          <SVG src={typeList[icon.icon]} />
         </div>
       </Icon>
     ))}
