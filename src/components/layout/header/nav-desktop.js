@@ -26,7 +26,7 @@ const StyledNav = styled(Container)`
     &:focus,
     &.nav-active {
       font-weight: 700;
-      color: ${g.colors.olive};
+      color: ${g.colors.olive500};
     }
   }
 
