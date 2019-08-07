@@ -29,12 +29,14 @@ stories.add(
     let count = number("Location Count", 5, { range: true, min: 1, max: 5, step: 1 })
     let label = boolean("Panel w/ Header", true)
     let bgColor = boolean("Gray Background", false)
+    let showMaps = boolean("Show Maps", true)
     return (
       <GlobalStyles>
         <Locations
           locations={data.slice(0, count)}
           label={label ? "Call Us" : undefined}
           background_color={bgColor ? "gray100" : undefined}
+          show_maps={showMaps}
         />
       </GlobalStyles>
     )
