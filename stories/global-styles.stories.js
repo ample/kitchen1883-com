@@ -115,6 +115,10 @@ stories.add(
                 <code>gray100</code>
               </div>
               <div>
+                <div className="gray200"></div>
+                <code>gray200</code>
+              </div>
+              <div>
                 <div className="gray400"></div>
                 <code>gray400</code>
               </div>
@@ -253,6 +257,9 @@ const Swatches = styled.div`
       }
       &.gray100 {
         background-color: ${g.colors.gray100};
+      }
+      &.gray200 {
+        background-color: ${g.colors.gray200};
       }
       &.gray400 {
         background-color: ${g.colors.gray400};

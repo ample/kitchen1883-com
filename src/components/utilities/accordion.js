@@ -36,7 +36,7 @@ const StyledCollapse = styled(Collapse)`
   }
 
   .rc-collapse-anim-active {
-    transition: height 0.2s ease-out;
+    transition: height 0.3s ease-in-out;
   }
 
   .rc-collapse-content {
@@ -62,4 +62,5 @@ Accordion.defaultProps = {
 }
 
 export { Accordion, Panel }
+
 export default Accordion

@@ -41,6 +41,8 @@
     "react-grid-system": "^4.4.10",
     "react-helmet": "^5.2.1",
     "react-inlinesvg": "^1.1.2",
+    "react-popper-tooltip": "^2.8.3",
+    "react-responsive": "^7.0.0",
     "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.2",
     "yaml-jest": "^1.0.5",
