@@ -32,12 +32,11 @@ const SmallButton = styled(StyledButton)`
 const MediumButton = styled(StyledButton)`
   font-size: 1.1rem;
   letter-spacing: 0.18rem;
-  padding: 0.8rem 1.6rem;
+  padding: 1.1rem 1.2rem;
 
   @media ${screen.min.md} {
     font-size: 1.3rem;
-    letter-spacing: 0.2rem;
-    padding: 1rem 2rem;
+    padding: 1.2rem;
   }
 `
 
