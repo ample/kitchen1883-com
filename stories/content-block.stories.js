@@ -13,7 +13,7 @@ import notes from "./__notes__/content-block.md"
 
 const template = data => (
   <GlobalStyles>
-    <ContentBlock data={data} />
+    <ContentBlock blocks={data} />
   </GlobalStyles>
 )
 

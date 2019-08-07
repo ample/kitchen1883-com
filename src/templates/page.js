@@ -15,12 +15,13 @@ import Layout from "../components/layout"
 class Page extends React.Component {
   containersMap = {
     ContentfulContentContainer: ContentBlock,
+    ContentfulLocationsContainer: ContentBlock,
   }
 
   containers(data = []) {
     return (data || []).map((container, i) => {
       const Container = this.containersMap[container.internal.type]
-      return <Container key={i} data={container.blocks} />
+      return <Container key={i} {...container} />
     })
   }
 

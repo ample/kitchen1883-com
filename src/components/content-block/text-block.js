@@ -61,7 +61,7 @@ const TextBlock = props => (
     textAlign={props.text_align}
   >
     <div className="block-content">
-      <HTML field={props.body} />
+      {props.body && <HTML field={props.body} />}
       {props.button_label && props.button_url && (
         <Button
           to={props.button_url}

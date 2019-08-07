@@ -12,7 +12,7 @@ which should be an array of blocks, **even if there is only one block**.
 ```jsx
 import ContentBlock from "./content-block"
 
-const MyComp = props => <ContentBlock data={[...]} />
+const MyComp = props => <ContentBlock blocks={[...]} />
 ```
 
 ## Options (i.e. Data Structure)

@@ -7,7 +7,7 @@ import { colors } from "./global"
 
 const StyledButton = styled(Link)`
   background-color: ${props => colors[props.color]};
-  color: ${props => colors[props.color == "white" ? "gray800" : "white"]};
+  color: ${props => colors[props.color === "white" ? "gray800" : "white"]};
   display: inline-block;
   line-height: 1;
   text-align: center;

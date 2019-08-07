@@ -53,7 +53,7 @@ const ImageBlock = props => (
     <Img className="block-image" fluid={props.image.fluid} />
     <div className="block-content-wrapper">
       <div className="block-content">
-        <HTML field={props.body} />
+        {props.body && <HTML field={props.body} />}
         {props.button_label && props.button_url && (
           <Button to={props.button_url} color="white">
             {props.button_label}

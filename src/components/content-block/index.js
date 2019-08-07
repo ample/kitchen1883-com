@@ -17,15 +17,15 @@ const Block = styled.div`
 
 class ContentBlock extends React.Component {
   hasImages() {
-    return this.props.data.filter(b => b.image).length > 0
+    return this.props.blocks.filter(b => b.image).length > 0
   }
 
   isSolo() {
-    return this.props.data.length === 1
+    return this.props.blocks.length === 1
   }
 
   hasMultipleBlocks() {
-    return this.props.data.length > 1
+    return this.props.blocks.length > 1
   }
 
   wrapperHeight() {
@@ -33,12 +33,12 @@ class ContentBlock extends React.Component {
   }
 
   blockWidth(idx) {
-    switch (this.props.data.length) {
+    switch (this.props.blocks.length) {
       case 2:
-        if (this.props.data.filter(b => b.image).length === 0) return "50%"
-        return idx == 0 ? "75%" : "25%"
+        if (this.props.blocks.filter(b => b.image).length === 0) return "50%"
+        return idx === 0 ? "75%" : "25%"
       case 3:
-        return idx == 0 ? "50%" : "25%"
+        return idx === 0 ? "50%" : "25%"
       case 4:
         return "25%"
       default:
@@ -58,14 +58,14 @@ class ContentBlock extends React.Component {
   render() {
     return (
       <Wrapper height={this.wrapperHeight()}>
-        {this.props.data.map((b, i) => this.renderBlock(b, i))}
+        {this.props.blocks.map((b, i) => this.renderBlock(b, i))}
       </Wrapper>
     )
   }
 }
 
 ContentBlock.propTypes = {
-  data: PropTypes.array.isRequired,
+  blocks: PropTypes.array.isRequired,
 }
 
 export default ContentBlock
