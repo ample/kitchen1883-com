@@ -4,14 +4,12 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import { breakpoints, colors, fonts, screen } from "./global"
+import Logo from "./logo"
+
+// ---------------------------------------- | Base Styles
 
 const Wrapper = styled.div`
-  height: ${props => props.wrapperHeight.sm || Jumbotron.defaultProps.wrapperHeight.sm};
   position: relative;
-
-  @media ${screen.min.md} {
-    height: ${props => props.wrapperHeight.lg || Jumbotron.defaultProps.wrapperHeight.lg};
-  }
 
   .jumbotron-image {
     height: 100%;
@@ -23,26 +21,17 @@ const Wrapper = styled.div`
     align-items: center;
     display: flex;
     height: 100%;
+    margin: 0 auto;
     position: relative;
-
-    @media ${screen.min.md} {
-      display: block;
-      max-width: ${() => breakpoints.md - 10}px;
-      margin: 0 auto;
-    }
   }
 
   .jumbotron-content {
+    margin: 0 auto;
     position: relative;
-    max-width: 48rem;
+  }
 
-    @media ${screen.min.md} {
-      position: absolute;
-      bottom: 4rem;
-    }
-
-    &,
-    *:not(a) {
+  .jumbotron-markup {
+    * {
       color: ${colors.white};
       font-family: ${fonts.serif};
       font-size: 1.7rem;
@@ -75,23 +64,113 @@ const Wrapper = styled.div`
   }
 `
 
-const Jumbotron = props => (
-  <Wrapper wrapperHeight={props.height}>
-    <Img className="jumbotron-image" fluid={props.image.fluid} />
-    <div className="jumbotron-content-wrapper">
-      <div className="jumbotron-content">{props.children}</div>
-    </div>
-  </Wrapper>
-)
+// ---------------------------------------- | Default Styles
+
+const DefaultWrapper = styled(Wrapper)`
+  height: 38rem;
+
+  @media ${screen.min.md} {
+    height: 43rem;
+  }
+
+  .jumbotron-content-wrapper {
+    @media ${screen.min.md} {
+      display: block;
+      max-width: ${() => breakpoints.md - 10}px;
+    }
+  }
+
+  .jumbotron-content {
+    max-width: 48rem;
+
+    @media ${screen.min.md} {
+      position: absolute;
+      bottom: 4rem;
+    }
+  }
+`
+
+// ---------------------------------------- | Home Styles
+
+const HomeWrapper = styled(Wrapper)`
+  height: 43rem;
+
+  @media ${screen.min.md} {
+    height: 86rem;
+  }
+
+  .jumbotron-content {
+    padding: 0 1rem;
+    max-width: 25rem;
+    width: 100%;
+
+    @media ${screen.min.md} {
+      max-width: 68rem;
+    }
+  }
+
+  .jumbotron-markup {
+    margin: 0 auto;
+    max-width: 25rem;
+
+    @media ${screen.min.md} {
+      max-width: 55rem;
+    }
+
+    * {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      text-align: center;
+
+      @media ${screen.min.md} {
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+      }
+    }
+  }
+
+  .jumbotron-logo {
+    margin-bottom: 2rem;
+  }
+`
+
+// ---------------------------------------- | Location Styles
+
+const LocationWrapper = styled(Wrapper)``
+
+// ---------------------------------------- | Component
+
+const Jumbotron = props => {
+  const TagName = {
+    default: DefaultWrapper,
+    home: HomeWrapper,
+    location: LocationWrapper,
+  }[props.theme || "default"]
+
+  return (
+    <TagName wrapperHeight={props.height}>
+      <Img className="jumbotron-image" fluid={props.image.fluid} />
+      <div className="jumbotron-content-wrapper">
+        <div className="jumbotron-content">
+          {props.theme === "home" && (
+            <div class="jumbotron-logo">
+              <Logo color="white" />
+            </div>
+          )}
+          <div className="jumbotron-markup">{props.children}</div>
+        </div>
+      </div>
+    </TagName>
+  )
+}
 
 Jumbotron.propTypes = {
-  height: PropTypes.object,
+  theme: PropTypes.string, // default, home, location
   image: PropTypes.object.isRequired,
-  width: PropTypes.bool,
 }
 
 Jumbotron.defaultProps = {
-  height: { sm: "38rem", lg: "43rem" },
+  theme: "default",
 }
 
 export default Jumbotron
