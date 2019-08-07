@@ -9,6 +9,7 @@
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-console": "^1.2.1",
     "@storybook/addon-notes": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.10",
     "babel-jest": "^24.8.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.7",
