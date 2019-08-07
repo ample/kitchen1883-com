@@ -62,4 +62,5 @@ Accordion.defaultProps = {
 }
 
 export { Accordion, Panel }
+
 export default Accordion
