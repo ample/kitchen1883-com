@@ -56,7 +56,7 @@ const StyledAccordion = styled(Accordion)`
       border-bottom: 1px solid ${g.colors.gray200};
       &.nav-active {
         font-weight: 700;
-        color: ${g.colors.olive};
+        color: ${g.colors.olive500};
       }
     }
   }

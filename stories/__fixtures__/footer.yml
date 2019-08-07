@@ -10,8 +10,8 @@ nav:
 social:
   location: All
   icons:
-  - type: facebook
+  - icon: facebook
     url: https://facebook.com
-  - type: twitter
+  - icon: twitter
     url: https://twitter.com
 

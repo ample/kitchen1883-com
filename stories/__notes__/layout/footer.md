@@ -22,7 +22,7 @@ social: {
   location: "Union",
   icons: [
     {
-      type: "facebook",
+      icon: "facebook",
       url: "#"
     },
   ]
