@@ -61,7 +61,6 @@ const buttonMap = {
 
 const Button = props => {
   const TagName = buttonMap[props.size] || MediumButton
-  console.log(TagName)
   return (
     <TagName {...props} block={props.block.toString()}>
       {props.children}

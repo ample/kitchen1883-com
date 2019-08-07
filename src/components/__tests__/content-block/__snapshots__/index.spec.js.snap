@@ -150,7 +150,7 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat bIKaPc"
+          className="sc-bdVaJa sc-htpNat kdPigF"
           color="white"
           href="javascript:void(0)"
           size="md"
@@ -541,7 +541,7 @@ exports[`ContentBlock - Solo Image renders 1`] = `
           />
           <a
             block="false"
-            className="sc-bdVaJa sc-htpNat bIKaPc"
+            className="sc-bdVaJa sc-htpNat kdPigF"
             color="white"
             href="javascript:void(0)"
             size="md"
@@ -597,7 +597,7 @@ exports[`ContentBlock - Solo Text renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat heshkg"
+          className="sc-bdVaJa sc-htpNat gTJZCD"
           color="gray800"
           href="javascript:void(0)"
           size="md"
@@ -688,7 +688,7 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat bIKaPc"
+          className="sc-bdVaJa sc-htpNat kdPigF"
           color="white"
           href="javascript:void(0)"
           size="md"
