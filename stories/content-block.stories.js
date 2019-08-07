@@ -6,9 +6,9 @@ import GlobalStyles from "../src/components/layout/global-styles"
 import ContentBlock from "../src/components/content-block"
 
 import soloTextFeature from "./__fixtures__/content-block/solo-text.yml"
+import soloImageFixture from "./__fixtures__/content-block/solo-image.yml"
 import imageTilesFixture from "./__fixtures__/content-block/image-tiles.yml"
 import textTilesFixture from "./__fixtures__/content-block/text-tiles.yml"
-import featuredImageFixture from "./__fixtures__/content-block/solo-image.yml"
 import notes from "./__notes__/content-block.md"
 
 const template = data => (
@@ -44,13 +44,13 @@ stories.add(
 stories.add(
   "Solo Image",
   () => {
-    const fixture = [...featuredImageFixture][0]
+    const fixture = [...soloImageFixture][0]
     if (fixture.body) fixture.bodyBak = fixture.body
     const hideText = boolean("Hide Text", false)
     fixture.body = hideText ? null : fixture.bodyBak
     fixture.button_label = hideText ? null : "Order Online"
     fixture.text_align = select("Text Align", textAlignOptions, "left")
-    return template(featuredImageFixture)
+    return template(soloImageFixture)
   },
   storyOptions
 )

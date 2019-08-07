@@ -5,7 +5,7 @@ import styled from "styled-components"
 import HTML from "../utilities/html"
 
 import Button from "../button"
-import { colors } from "../global"
+import { colors, screen } from "../global"
 
 const colorMap = {
   dark_green: colors.olive700,
@@ -22,7 +22,11 @@ const Wrapper = styled.div`
   height: 100%;
 
   &.is-solo {
-    padding: 6rem 1rem;
+    padding: 2rem 0;
+
+    @media ${screen.min.md} {
+      padding: 6rem 0;
+    }
 
     .block-content {
       max-width: 100rem;

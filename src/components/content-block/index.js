@@ -5,14 +5,22 @@ import styled from "styled-components"
 import ImageBlock from "./image-block"
 import TextBlock from "./text-block"
 
+import { screen } from "../global"
+
 const Wrapper = styled.div`
-  display: flex;
-  height: ${props => props.height || "auto"};
+  @media ${screen.min.md} {
+    display: flex;
+  }
 `
 
 const Block = styled.div`
+  height: ${props => (props.height ? props.height.sm : "auto")};
   position: relative;
-  width: ${props => props.width || "100%"};
+
+  @media ${screen.min.md} {
+    height: ${props => (props.height ? props.height.lg : "auto")};
+    width: ${props => props.width || "100%"};
+  }
 `
 
 class ContentBlock extends React.Component {
@@ -29,7 +37,8 @@ class ContentBlock extends React.Component {
   }
 
   wrapperHeight() {
-    return this.hasMultipleBlocks() || this.hasImages() ? "56.3rem" : "auto"
+    if (this.hasMultipleBlocks() || this.hasImages()) return { sm: "36rem", lg: "56.3rem" }
+    return { sm: "auto", lg: "auto" }
   }
 
   blockWidth(idx) {
@@ -49,7 +58,7 @@ class ContentBlock extends React.Component {
   renderBlock(block, idx) {
     const TagName = block.image ? ImageBlock : TextBlock
     return (
-      <Block width={this.blockWidth(idx)} key={idx}>
+      <Block height={this.wrapperHeight()} width={this.blockWidth(idx)} key={idx}>
         <TagName solo={this.isSolo()} wrapperHeight={this.wrapperHeight()} {...block}></TagName>
       </Block>
     )

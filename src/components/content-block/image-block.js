@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import HTML from "../utilities/html"
 
 import Button from "../button"
-import { colors, fonts } from "../global"
+import { breakpoints, colors, fonts, screen } from "../global"
 
 const Wrapper = styled.div`
   .block-image {
@@ -17,22 +17,39 @@ const Wrapper = styled.div`
 
   .block-content-wrapper {
     position: relative;
-    max-width: 100rem;
-    height: ${props => props.wrapperHeight};
+    max-width: ${breakpoints.lg - 10}px;
+    height: ${props => props.wrapperHeight.sm};
     margin: 0 auto;
+
+    @media ${screen.min.md} {
+      height: ${props => props.wrapperHeight.lg};
+    }
   }
 
   .block-content {
     position: absolute;
-    bottom: 5rem;
-    left: ${props => (["left", null].includes(props.textAlign) ? "0" : "auto")};
-    right: ${props => (props.textAlign === "right" ? "0" : "auto")};
+    bottom: 3.6rem;
     width: 100%;
+
+    @media ${screen.min.md} {
+      bottom: 5rem;
+      left: ${props => (["left", null].includes(props.textAlign) ? "2rem" : "auto")};
+      right: ${props => (props.textAlign === "right" ? "2rem" : "auto")};
+    }
+
+    @media ${screen.min.lg} {
+      left: ${props => (["left", null].includes(props.textAlign) ? "0" : "auto")};
+      right: ${props => (props.textAlign === "right" ? "0" : "auto")};
+    }
 
     &,
     *:not(a) {
       color: ${colors.white};
-      text-align: ${props => props.textAlign || "left"};
+      text-align: center;
+
+      @media ${screen.min.md} {
+        text-align: ${props => props.textAlign || "left"};
+      }
     }
 
     h1,
@@ -68,7 +85,7 @@ ImageBlock.propTypes = {
   image: PropTypes.object.isRequired,
   text_align: PropTypes.string,
   width: PropTypes.bool,
-  wrapperHeight: PropTypes.string,
+  wrapperHeight: PropTypes.object,
 }
 
 ImageBlock.defaultProps = {
