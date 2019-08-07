@@ -30,10 +30,10 @@ const Icon = styled(Link)`
 
   &:hover {
     > div {
-      background: ${props => (props.dark ? g.colors.olive : "transparent")};
+      background: ${props => (props.dark ? g.colors.olive500 : "transparent")};
     }
     svg {
-      fill: ${props => (props.dark ? "" : g.colors.olive)};
+      fill: ${props => (props.dark ? "" : g.colors.olive500)};
     }
   }
 

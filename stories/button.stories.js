@@ -24,12 +24,13 @@ stories.addParameters({
 stories.add(
   "Button",
   () => {
-    let children = text("Text (children)", "Hello World")
-    let color = select("Color (color)", ["grey", "white"], "grey")
+    let children = text("Text (children)", "Click Me!")
+    let color = select("Color (color)", { Gray: "gray800", White: "white" }, "gray800")
+    let size = select("Size", { Small: "sm", Medium: "md", Large: "lg" }, "md")
 
     return (
       <GlobalStyles>
-        <Button color={color} href="#">
+        <Button color={color} size={size} to="javascript:void(0)">
           {children}
         </Button>
       </GlobalStyles>

@@ -1,24 +1,26 @@
-$white:   #ffffff;
+$white: #ffffff;
 $gray100: #f9f9f9;
 $gray200: #dfdfdf;
 $gray400: #8f8f8f;
 $gray800: #404040;
 $gray900: #272727;
-$black:   #000000;
-$cream:   #f6f7ea;
-$olive:   #8f8c36;
-$navy:    #2f3f51;
+$black: #000000;
+$cream: #f6f7ea;
+$olive500: #8f8c36;
+$olive700: #737128;
+$navy: #2f3f51;
 
 // JS Object
 :export {
-  white:    $white;
-  gray100:  $gray100;
-  gray200:  $gray200;
-  gray400:  $gray400;
-  gray800:  $gray800;
-  gray900:  $gray900;
-  black:    $black;
-  cream:    $cream;
-  olive:    $olive;
-  navy:     $navy;
+  black: $black;
+  cream: $cream;
+  gray100: $gray100;
+  gray200: $gray200;
+  gray400: $gray400;
+  gray800: $gray800;
+  gray900: $gray900;
+  navy: $navy;
+  olive500: $olive500;
+  olive700: $olive700;
+  white: $white;
 }
