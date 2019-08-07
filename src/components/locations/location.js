@@ -5,6 +5,7 @@ import styled, { css } from "styled-components"
 import * as g from "../global"
 import Link from "../utilities/link"
 import SocialIcons from "../social-icons"
+import Button from "../button"
 
 const StyledLocation = styled.div`
   text-align: center;
@@ -13,10 +14,13 @@ const StyledLocation = styled.div`
   }
 `
 
+const Contact = styled.div``
+
 const CTAs = styled.div`
   display: flex;
+  margin-top: 1rem;
   > * {
-    flex: 1 1 50%;
+    margin: 0rem 0.5rem;
   }
 `
 
@@ -79,6 +83,7 @@ const OpenHours = styled.table`
 const OpenHoursJumbo = styled.table`
   ${openHrsMixin}
   margin-top: 4.4rem;
+  margin-bottom: 1.5rem;
   tbody {
     display: block;
     max-width: ${g.breakpoints.sm * 0.5}px;
@@ -147,42 +152,40 @@ const Location = props => {
   const HoursTag = props.jumbotron ? OpenHoursJumbo : OpenHours
   return (
     <StyledLocation className={props.jumbotron ? " dark " : ""}>
-      {props.jumbotron ? <h1>Anderson</h1> : <h6>Anderson</h6>}
+      {props.jumbotron ? <h1>{props.title}</h1> : <h6>{props.title}</h6>}
 
-      <div className={props.jumbotron ? " text-lg " : ""}>
-        <div>9003 US Highway 42, Union, KY, 41091</div>
-        <Link to="tel:1-859-334-9450" target="_self">
-          (859) 334-9450
+      <Contact className={props.jumbotron ? " text-lg " : ""}>
+        <div>{props.address}</div>
+        <Link to={`tel:${props.phone}`} target="_self">
+          {props.phone}
         </Link>
-      </div>
+      </Contact>
 
       <HoursTag>
         <tbody>
-          <tr>
-            <td className="days">Wednesday - Thursday</td>
-            <td className="hours">9 am - 5 pm</td>
-          </tr>
-          <tr>
-            <td className="days">Friday</td>
-            <td className="hours">11 am - 10 pm</td>
-          </tr>
-          <tr>
-            <td className="days">Saturday</td>
-            <td className="hours">9 am - 5 pm</td>
-          </tr>
-          <tr>
-            <td className="days">Sunday</td>
-            <td className="hours">9 am - 5 pm</td>
-          </tr>
+          {props.hours.map((block, idx) => (
+            <tr key={`location_${props.title}_${idx}`}>
+              <td className="days">{block.days}</td>
+              <td className="hours">{block.hours}</td>
+            </tr>
+          ))}
         </tbody>
       </HoursTag>
 
-      {props.social_links && <SocialIcons />}
+      {props.social && <SocialIcons location={props.title} icons={props.social} dark={props.jumbotron ? true : false}/>}
 
-      {(props.menu_pdf || props.order_online_url) && (
+      {(props.menu || props.order) && (
         <CTAs>
-          {props.menu_pdf && <Button to={props.menu_pdf}>View Menu</Button>}
-          {props.order_online_url && <Button to={props.order_online_url}>Order Online</Button>}
+          {props.menu && (
+            <Button to={props.menu} block={true}>
+              View Menu
+            </Button>
+          )}
+          {props.order && (
+            <Button to={props.order} block={true}>
+              Order Online
+            </Button>
+          )}
         </CTAs>
       )}
     </StyledLocation>
@@ -190,10 +193,14 @@ const Location = props => {
 }
 
 Location.propTypes = {
+  title: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  hours: PropTypes.array.isRequired,
+  social: PropTypes.array,
+  menu: PropTypes.string,
+  order: PropTypes.string,
   jumbotron: PropTypes.bool,
-  social_links: PropTypes.array,
 }
-
-Location.defaultProps = {}
 
 export default Location

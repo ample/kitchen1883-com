@@ -6,7 +6,7 @@ import GlobalStyles from "../../src/components/layout/global-styles"
 import * as g from "../../src/components/global"
 
 import Location from "../../src/components/locations/location"
-import data from "../__fixtures__/location.yml"
+import data from "../__fixtures__/locations.yml"
 // import notes from "./__notes__/component.md"
 
 const stories = storiesOf("Locations", module)
@@ -26,9 +26,20 @@ stories.add(
   "Locations",
   () => {
     let jumbotron = boolean("Jumbotron", false)
-    return(
+    let social = boolean("Social Links", true)
+    let buttons = boolean("Button Links", true)
+    return (
       <GlobalStyles>
-        <Location jumbotron={jumbotron} />
+        <Location
+          title={data[0].title}
+          address={data[0].address}
+          phone={data[0].phone}
+          hours={data[0].hours}
+          social={social ? data[0].social_links : false}
+          menu={buttons ? data[0].menu_pdf : false}
+          order={buttons ? data[0].order_online_url : false}
+          jumbotron={jumbotron}
+        />
       </GlobalStyles>
     )
   }
