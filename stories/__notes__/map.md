@@ -1,5 +1,10 @@
 # Map
-The Map component should be used for any page where an image of the stores location would be needed. 
+
+The Map component renders an interactive google map and places a pin in the
+middle of the map.
+
+The map scales to fit its container. **You must explicitly set a height on that
+container for it to render properly.**
 
 ## Usage
 
@@ -8,15 +13,13 @@ The Map component should be used for any page where an image of the stores locat
 ```jsx
 import Map from "./map"
 
-    <Map lat={39.09} lng={-84.51} />
+<Map lat={...} lng={...} />
 ```
 
-By default, Map will scale to fill the width of its container. To change the size of `Map` add styles to a parent container. The width will scale automatically:
+## Options
 
-```jsx
-import Map from "./map"
-
-<div classname="container">
-    <Map lat={39.09} lng={-84.51} />
-</div>
-```
+| Name             | Default | Description                                                 |
+| ---------------- | ------- | ----------------------------------------------------------- |
+| `lat` (required) |         | Sets the center latitude and places the pin in the center.  |
+| `lng` (required) |         | Sets the center longitude and places the pin in the center. |
+| `zoom`           | `15`    | Sets the zoom level.                                        |
