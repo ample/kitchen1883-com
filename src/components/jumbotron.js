@@ -170,7 +170,7 @@ const Jumbotron = props => {
       <div className="jumbotron-content-wrapper">
         <div className="jumbotron-content">
           {props.theme === "home" && (
-            <div class="jumbotron-logo">
+            <div className="jumbotron-logo">
               <Logo color="white" />
             </div>
           )}

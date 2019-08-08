@@ -15,8 +15,8 @@ exports.createPages = ({ graphql, actions }) => {
       locations: allContentfulLocation {
         edges {
           node {
-            permalink
             contentful_id
+            permalink
           }
         }
       }

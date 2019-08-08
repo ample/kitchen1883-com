@@ -17,8 +17,6 @@ const Layout = ({ children, navMenus = [], settings = [] }) => {
     return collection.length > 0 ? collection[0].value.value : null
   }
 
-  console.log(getMenuLinks("FooterMenu"))
-
   return (
     <GlobalStyles>
       <Header nav={getMenuLinks("HeaderMenu")} />

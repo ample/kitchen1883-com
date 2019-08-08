@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
 
 // eslint-disable-next-line
 import PageAttributes from "../fragments/page-attributes"
 
 import ContentBlock from "../components/content-block"
 import HTML from "../components/utilities/html"
+import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
 import LocationsContainer from "../components/locations-container"
 
@@ -27,26 +27,19 @@ class Page extends React.Component {
   }
 
   render() {
-    const { page, navMenus, settings } = this.props
+    const { children, page, navMenus, settings } = this.props
 
     return (
       <Layout navMenus={navMenus} settings={settings}>
-        <div>
-          <h1>{page.title}</h1>
-          <HTML field={page.description} />
-          <Img fluid={page.jumbotronImage.fluid} style={{ width: "200px" }} />
-          <hr />
-        </div>
-
+        {children}
         {this.containers(page.containers)}
-
-        <hr />
       </Layout>
     )
   }
 }
 
 Page.propTypes = {
+  children: PropTypes.element,
   navMenus: PropTypes.array,
   page: PropTypes.object,
   settings: PropTypes.array,
@@ -62,12 +55,15 @@ export { Page }
 
 class PageTemplate extends React.Component {
   render = () => {
+    const { page } = this.props.data
+    const { navMenus, settings } = this.props.pageContext
     return (
-      <Page
-        page={this.props.data.page}
-        navMenus={this.props.pageContext.navMenus}
-        settings={this.props.pageContext.settings}
-      />
+      <Page page={page} navMenus={navMenus} settings={settings}>
+        <Jumbotron theme="default" image={page.jumbotronImage}>
+          <h1>{page.title}</h1>
+          <HTML field={page.description} />
+        </Jumbotron>
+      </Page>
     )
   }
 }

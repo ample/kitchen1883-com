@@ -3,17 +3,25 @@ import { graphql } from "gatsby"
 
 import { Page } from "../templates/page"
 
+import HTML from "../components/utilities/html"
+import Jumbotron from "../components/jumbotron"
+
 // eslint-disable-next-line
 import PageAttributes from "../fragments/page-attributes"
 
 export default class extends React.Component {
   render = () => {
+    const { page, navMenus, settings } = this.props.data
     return (
       <Page
-        page={this.props.data.page}
-        navMenus={this.props.data.navMenus.edges.map(e => e.node)}
-        settings={this.props.data.settings.edges.map(e => e.node)}
-      />
+        page={page}
+        navMenus={navMenus.edges.map(e => e.node)}
+        settings={settings.edges.map(e => e.node)}
+      >
+        <Jumbotron theme="home" image={page.jumbotronImage}>
+          <HTML field={page.description} />
+        </Jumbotron>
+      </Page>
     )
   }
 }
