@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Container, Row, Col } from "react-grid-system"
 
 import * as g from "../global"
 import { Accordion, Panel } from "../utilities/accordion"

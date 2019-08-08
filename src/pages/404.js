@@ -1,12 +1,56 @@
 import React from "react"
+import { graphql } from "gatsby"
 
+import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
+import Link from "../components/utilities/link"
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+export default class extends React.Component {
+  render = () => {
+    const { page, navMenus, settings } = this.props.data
+    return (
+      <Layout navMenus={navMenus.edges.map(e => e.node)} settings={settings.edges.map(e => e.node)}>
+        <Jumbotron theme="error" image={page.jumbotronImage}>
+          <h1>Page Not Found</h1>
+          <p>The page you're trying to access cannot be located.</p>
+          <p>
+            Please <Link to="/contact">contact us</Link> if you need help.
+          </p>
+        </Jumbotron>
+      </Layout>
+    )
+  }
+}
 
-export default NotFoundPage
+export const query = graphql`
+  query NotFoundPageQuery {
+    page: contentfulPage(layout: { eq: "home" }) {
+      ...PageAttributes
+    }
+    navMenus: allContentfulNavMenu {
+      edges {
+        node {
+          title
+          links {
+            title
+            url
+            contentfulchildren {
+              title
+              url
+            }
+          }
+        }
+      }
+    }
+    settings: allContentfulSetting {
+      edges {
+        node {
+          key
+          value {
+            value
+          }
+        }
+      }
+    }
+  }
+`

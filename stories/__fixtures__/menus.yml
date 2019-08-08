@@ -4,37 +4,61 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Brunch Drinks
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Brunch Salads
       body:
@@ -44,19 +68,31 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
 - label: Lunch
   sections:
@@ -64,37 +100,61 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Lunch Drinks
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Lunch Salads
       body:
@@ -104,19 +164,31 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
 - label: Dinner
   sections:
@@ -124,37 +196,61 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Dinner Drinks
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Dinner Salads
       body:
@@ -164,19 +260,31 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
 - label: Bourbon
   sections:
@@ -184,37 +292,61 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Mixed Drinks
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
 - label: Catering
   sections:
@@ -222,37 +354,61 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Catering Drinks
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true
     - label: Catering Salads
       body:
@@ -262,17 +418,29 @@
       items:
         - label: Sunrise Parfait
           price: "8"
-          body: Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Yogurt, fresh fruit, and granola topped with Kentucky honey. and granola topped with honey.</p>
           vegetarian: true
           gluten_free: true
         - label: Quam Lorem Euismod
           price: "10"
-          body: Aenean lacinia bibendum nulla sed consectetur.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Aenean lacinia bibendum nulla sed consectetur.</p>
           gluten_free: true
         - label: Lorem Nibh Dolor
           price: "7"
-          body: Maecenas sed diam eget risus varius blandit sit amet non magna.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         - label: Pellentesque Ipsum Vehicula
           price: "12"
-          body: Nulla vitae elit libero, a pharetra augue.
+          body:
+            childMarkdownRemark:
+              html: |
+                <p>Nulla vitae elit libero, a pharetra augue.</p>
           vegetarian: true

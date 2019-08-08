@@ -43,7 +43,7 @@ const NavDesktop = props => {
           <Col key={`menu_category_${idx}`}>
             <Tab
               type="button"
-              className={idx == props.activeTab ? " active-tab " : ""}
+              className={idx === props.activeTab ? " active-tab " : ""}
               onClick={() => props.onClick(idx)}
             >
               {tab}

@@ -1,17 +1,16 @@
 nav:
-  - label: Union
+  - title: Union
     url: /union
-  - label: Anderson
+  - title: Anderson
     url: /anderson
-  - label: Contact
+  - title: Contact
     url: /contact
-  - label: Careers
+  - title: Careers
     url: /careers
 social:
   location: All
   icons:
-  - icon: facebook
-    url: https://facebook.com
-  - icon: twitter
-    url: https://twitter.com
-
+    - icon: facebook
+      url: https://facebook.com
+    - icon: twitter
+      url: https://twitter.com

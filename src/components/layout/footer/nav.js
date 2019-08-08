@@ -31,7 +31,7 @@ const FooterNav = props => (
   <StyledNav className="dark">
     {props.nav.map((link, idx) => (
       <Link to={link.url} key={`footerNav_${idx}`}>
-        {link.label}
+        {link.title}
       </Link>
     ))}
   </StyledNav>

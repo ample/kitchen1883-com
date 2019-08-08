@@ -15,8 +15,29 @@ exports.createPages = ({ graphql, actions }) => {
       locations: allContentfulLocation {
         edges {
           node {
-            permalink
             contentful_id
+            permalink
+            title
+            address {
+              address
+            }
+            phone
+            hours {
+              days
+              hours
+            }
+            order_online_url
+            menu_pdf {
+              file {
+                url
+              }
+            }
+            social_links {
+              icon
+              url
+            }
+            lat
+            lng
           }
         }
       }
@@ -26,6 +47,21 @@ exports.createPages = ({ graphql, actions }) => {
             key
             value {
               value
+            }
+          }
+        }
+      }
+      navMenus: allContentfulNavMenu {
+        edges {
+          node {
+            title
+            links {
+              title
+              url
+              contentfulchildren {
+                title
+                url
+              }
             }
           }
         }
@@ -40,6 +76,8 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           permalink: node.permalink,
           id: node.contentful_id,
+          locations: result.data.locations.edges.map(e => e.node),
+          navMenus: result.data.navMenus.edges.map(e => e.node),
           settings: result.data.settings.edges.map(e => e.node),
         },
       })
@@ -52,6 +90,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           permalink: node.permalink,
           id: node.contentful_id,
+          navMenus: result.data.navMenus.edges.map(e => e.node),
           settings: result.data.settings.edges.map(e => e.node),
         },
       })
