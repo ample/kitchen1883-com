@@ -55,7 +55,7 @@ const HasMaps = props =>
             </div>
           </Col>
           <Col className="map">
-            <Map lat={loc.map.lat} lng={loc.map.lng} />
+            <Map lat={loc.lat} lng={loc.lng} />
           </Col>
         </Row>
       </Container>

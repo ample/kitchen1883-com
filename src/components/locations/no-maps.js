@@ -29,7 +29,7 @@ const NoMaps = props => (
         {props.locations.map((loc, idx) => (
           <Col
             md={6}
-            xl={props.locations.length < 3 || props.locations.length == 4 ? 6 : 4}
+            xl={props.locations.length < 3 || props.locations.length === 4 ? 6 : 4}
             key={`location_${idx}`}
             className="loc"
           >

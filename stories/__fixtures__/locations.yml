@@ -1,5 +1,6 @@
 - title: Union
-  address: 9003 US Highway 42, Union, KY, 41091
+  address:
+    address: 9003 US Highway 42, Union, KY, 41091
   phone: (859) 334-9450
   hours:
     - days: Monday-Thursday
@@ -11,17 +12,19 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf: /
+  menu_pdf:
+    file:
+      url: /
   social_links:
     - icon: facebook
       url: /
     - icon: twitter
       url: /
-  map:
-    lat: 39.09
-    lng: -84.51
+  lat: 39.09
+  lng: -84.51
 - title: Anderson
-  address: 9003 US Highway 42, Union, KY, 41091
+  address:
+    address: 9003 US Highway 42, Union, KY, 41091
   phone: (859) 334-9450
   hours:
     - days: Monday-Thursday
@@ -33,17 +36,19 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf: /
+  menu_pdf:
+    file:
+      url: /
   social_links:
     - icon: facebook
       url: /
     - icon: twitter
       url: /
-  map:
-    lat: 39.09
-    lng: -84.51
+  lat: 39.09
+  lng: -84.51
 - title: Dolor
-  address: 9003 US Highway 42, Union, KY, 41091
+  address:
+    address: 9003 US Highway 42, Union, KY, 41091
   phone: (859) 334-9450
   hours:
     - days: Monday-Thursday
@@ -55,17 +60,19 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf: /
+  menu_pdf:
+    file:
+      url: /
   social_links:
     - icon: facebook
       url: /
     - icon: twitter
       url: /
-  map:
-    lat: 39.09
-    lng: -84.51
+  lat: 39.09
+  lng: -84.51
 - title: Tellus
-  address: 9003 US Highway 42, Union, KY, 41091
+  address:
+    address: 9003 US Highway 42, Union, KY, 41091
   phone: (859) 334-9450
   hours:
     - days: Monday-Thursday
@@ -77,17 +84,19 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf: /
+  menu_pdf:
+    file:
+      url: /
   social_links:
     - icon: facebook
       url: /
     - icon: twitter
       url: /
-  map:
-    lat: 39.09
-    lng: -84.51
+  lat: 39.09
+  lng: -84.51
 - title: Pellentesque
-  address: 9003 US Highway 42, Union, KY, 41091
+  address:
+    address: 9003 US Highway 42, Union, KY, 41091
   phone: (859) 334-9450
   hours:
     - days: Monday-Thursday
@@ -99,12 +108,13 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf: /
+  menu_pdf:
+    file:
+      url: /
   social_links:
     - icon: facebook
       url: /
     - icon: twitter
       url: /
-  map:
-    lat: 39.09
-    lng: -84.51
+  lat: 39.09
+  lng: -84.51

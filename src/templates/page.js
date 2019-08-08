@@ -9,18 +9,20 @@ import ContentBlock from "../components/content-block"
 import HTML from "../components/utilities/html"
 import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
-import LocationsContainer from "../components/locations-container"
+import Locations from "../components/locations"
 
 // ---------------------------------------- | Page (Shared Component)
 
 class Page extends React.Component {
   containersMap = {
     ContentfulContentContainer: ContentBlock,
-    ContentfulLocationsContainer: LocationsContainer,
+    ContentfulLocationsContainer: Locations,
   }
 
   containers(data = []) {
     return (data || []).map((container, i) => {
+      if (container.internal.type === "ContentfulLocationsContainer")
+        container.locations = this.props.locations
       const Container = this.containersMap[container.internal.type]
       return <Container key={i} {...container} />
     })
@@ -40,6 +42,7 @@ class Page extends React.Component {
 
 Page.propTypes = {
   children: PropTypes.element,
+  locations: PropTypes.array,
   navMenus: PropTypes.array,
   page: PropTypes.object,
   settings: PropTypes.array,
@@ -56,9 +59,9 @@ export { Page }
 class PageTemplate extends React.Component {
   render = () => {
     const { page } = this.props.data
-    const { navMenus, settings } = this.props.pageContext
+    const { locations, navMenus, settings } = this.props.pageContext
     return (
-      <Page page={page} navMenus={navMenus} settings={settings}>
+      <Page page={page} locations={locations} navMenus={navMenus} settings={settings}>
         <Jumbotron theme="default" image={page.jumbotronImage}>
           <h1>{page.title}</h1>
           <HTML field={page.description} />

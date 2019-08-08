@@ -160,7 +160,7 @@ const Location = props => {
       {props.jumbotron ? <h1>{props.title}</h1> : <h6>{props.title}</h6>}
 
       <Contact className={props.jumbotron ? " text-lg " : ""}>
-        <div>{props.address}</div>
+        <div>{props.address.address}</div>
         <Link to={`tel:${props.phone}`} target="_self">
           {props.phone}
         </Link>
@@ -188,7 +188,7 @@ const Location = props => {
       {(props.menu_pdf || props.order_online_url) && (
         <CTAs>
           {props.menu_pdf && (
-            <Button to={props.menu_pdf} block={true}>
+            <Button to={props.menu_pdf.file.url} block={true}>
               View Menu
             </Button>
           )}
@@ -205,11 +205,11 @@ const Location = props => {
 
 Location.propTypes = {
   title: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  address: PropTypes.object.isRequired,
   phone: PropTypes.string.isRequired,
   hours: PropTypes.array.isRequired,
   social_links: PropTypes.array,
-  menu_pdf: PropTypes.string,
+  menu_pdf: PropTypes.object,
   order_online_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }
