@@ -1,0 +1,267 @@
+@import "../../global/ref/colors.scss";
+@import "../../global/ref/screen.scss";
+
+.carousel {
+  position: relative;
+  width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    display: inline-block;
+    pointer-events: none;
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  // ------------------------ Arrows
+
+  .control-arrow,
+  &.carousel-slider .control-arrow {
+    transition: all 0.15s ease-in-out;
+    opacity: 0.45;
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    background: 0 0;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+    &:before {
+      margin: 0 5px;
+      display: inline-block;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      content: "";
+      background-image: url(../../../images/icons/icon-chevron.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 96px 96px;
+      height: 96px;
+      width: 96px;
+    }
+  }
+
+  .control-arrow {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .control-disabled.control-arrow {
+    opacity: 0;
+    cursor: inherit;
+    display: none;
+  }
+
+  .control-prev.control-arrow {
+    left: 65px;
+    &:before {
+      content: "";
+      transform: rotate(180deg);
+    }
+  }
+
+  .control-next.control-arrow {
+    right: 65px;
+    &:before {
+      content: "";
+    }
+  }
+
+  .control-arrow {
+    outline: 0;
+    border: 0;
+    background: 0 0;
+    top: 50%;
+    margin-top: -13px;
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-max-xl) {
+    &.carousel-slider .control-arrow:before {
+      background-size: 48px 48px;
+      height: 48px;
+      width: 48px;
+    }
+    .control-prev.control-arrow {
+      left: 12px;
+    }
+    .control-next.control-arrow {
+      right: 12px;
+    }
+  }
+
+  // ------------------------ Thumbnails
+  .thumbs-wrapper {
+    margin: 20px;
+    overflow: hidden;
+  }
+
+  .thumbs {
+    transition: all 0.15s ease-in;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    list-style: none;
+    white-space: nowrap;
+  }
+  .thumb {
+    transition: border 0.15s ease-in;
+    display: inline-block;
+    width: 80px;
+    margin-right: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 3px solid $white;
+    padding: 2px;
+    &:focus {
+      border: 3px solid $gray200;
+      outline: 0;
+    }
+    &.selected,
+    &:hover {
+      border: 3px solid $gray800;
+    }
+    img {
+      vertical-align: top;
+    }
+  }
+
+  // ------------------------ Contents
+
+  &.carousel-slider {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    .control-arrow {
+      top: 0;
+      color: $white;
+      font-size: 26px;
+      bottom: 0;
+      margin-top: 0;
+      padding: 5px;
+    }
+  }
+
+  .slider-wrapper {
+    overflow: hidden;
+    margin: auto;
+    width: 100%;
+    transition: height 0.15s ease-in;
+    &.axis-horizontal .slider {
+      -ms-box-orient: horizontal;
+      display: flex;
+      .slide {
+        flex-direction: column;
+        flex-flow: column;
+      }
+    }
+    &.axis-vertical {
+      -ms-box-orient: horizontal;
+      display: flex;
+      .slider {
+        flex-direction: column;
+      }
+    }
+  }
+  .slider {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style: none;
+    width: 100%;
+    &.animated {
+      transition: all 0.35s ease-in-out;
+    }
+  }
+
+  // ------------------------ Slide
+
+  .slide {
+    min-width: 100%;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    max-height: 66rem;
+    > div {
+      display: flex;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      display: block;
+      vertical-align: top;
+      border: 0;
+      object-fit: cover;
+    }
+    iframe {
+      display: inline-block;
+      width: calc(100% - 80px);
+      margin: 0 40px 40px;
+      border: 0;
+    }
+    .legend {
+      transition: all 0.5s ease-in-out;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      margin-left: -45%;
+      width: 90%;
+      border-radius: 10px;
+      background: $black;
+      color: $white;
+      padding: 10px;
+      font-size: 12px;
+      text-align: center;
+      opacity: 0.25;
+      transition: opacity 0.35s ease-in-out;
+    }
+  }
+  &:hover .slide .legend {
+    opacity: 1;
+  }
+
+  // ------------------------ Dots
+
+  .control-dots {
+    position: absolute;
+    bottom: 0;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
+    @media (min-width: $screen-min-lg) {
+      bottom: 0;
+    }
+    .dot {
+      transition: opacity 0.25s ease-in;
+      opacity: 0.3;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+      background: $white;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 8px;
+      &.selected,
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  // ------------------------ Status
+  .carousel-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+    color: $white;
+  }
+}
