@@ -23,7 +23,7 @@ export const LocationAttributes = graphql`
       sections {
         title
         label
-        description {
+        body {
           childMarkdownRemark {
             html
           }

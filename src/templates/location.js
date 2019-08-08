@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
+import Menu from "../components/menu"
 
 // eslint-disable-next-line
 import LocationAttributes from "../fragments/location-attributes"
@@ -14,7 +15,7 @@ class Location extends React.Component {
 
     const jumbotronAttributes = {
       title: location.title,
-      address: location.address.address,
+      address: location.address,
       hours: location.hours,
       phone: location.phone,
     }
@@ -26,6 +27,7 @@ class Location extends React.Component {
           image={location.images[0]}
           location={jumbotronAttributes}
         ></Jumbotron>
+        <Menu menus={location.menus} />
       </Layout>
     )
   }

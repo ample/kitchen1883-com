@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Container } from "react-grid-system"
 
-import * as g from "../global"
 import MenuSection from "./section"
 
 const MenuCategory = props => (

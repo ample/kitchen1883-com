@@ -4,6 +4,8 @@ import styled from "styled-components"
 import SVG from "react-inlinesvg"
 
 import * as g from "../global"
+import HTML from "../utilities/html"
+
 import gluten_free from "../../images/icons/diet-gluten-free.svg"
 import vegetarian from "../../images/icons/diet-vegetarian.svg"
 
@@ -40,13 +42,13 @@ const MenuItem = props => (
       </div>
       <div>{props.price}</div>
     </Headline>
-    <p>{props.body}</p>
+    <HTML field={props.body} />
   </div>
 )
 
 MenuItem.propTypes = {
   label: PropTypes.string.isRequired,
-  body: PropTypes.string,
+  body: PropTypes.object,
   price: PropTypes.string,
   vegetarian: PropTypes.bool,
   gluten_free: PropTypes.bool,

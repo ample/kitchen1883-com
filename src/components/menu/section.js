@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Container, Col } from "react-grid-system"
+import { Col } from "react-grid-system"
 
 import * as g from "../global"
 import HTML from "../utilities/html"
@@ -50,7 +50,7 @@ const Items = styled.div`
 
 const MenuSection = props => (
   <StyledSection>
-    {props.idx == 0 ? <h4>{props.label}</h4> : <h5>{props.label}</h5>}
+    {props.idx === 0 ? <h4>{props.label}</h4> : <h5>{props.label}</h5>}
 
     {props.body && (
       <Col sm={10} xl={8} offset={{ sm: 1, xl: 2 }}>
