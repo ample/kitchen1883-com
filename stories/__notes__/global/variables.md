@@ -13,7 +13,7 @@ The color, font, and breakpoint variables are created and exported from `refs/*.
 Import any combination of the three variable objects and use them directly:
 
 ```js
-import { colors, fonts, screen } from "./global"
+import { colors, fonts, screen } from "./global-variables"
 
 colors.navy
 ```
@@ -23,7 +23,7 @@ colors.navy
 Import all variable objects under a parent object:
 
 ```js
-import * as g from "./global"
+import * as g from "./global-variables"
 
 g.colors.navy
 ```

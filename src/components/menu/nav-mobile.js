@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import * as g from "../global"
+import * as g from "../global-variables"
 import { Accordion, Panel } from "../utilities/accordion"
 import MenuCategory from "./category"
 

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import SVG from "react-inlinesvg"
 
-import * as g from "../global"
+import * as g from "../global-variables"
 import HTML from "../utilities/html"
 
 import gluten_free from "../../images/icons/diet-gluten-free.svg"

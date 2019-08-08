@@ -10,9 +10,9 @@ Logo accepts one optional string prop: `color`. The default color is `black`.
 
 ```jsx
 import Logo from "./logo"
-import { colors } from "./global"
+import { colors } from "./global-variables"
 
-<Logo color={colors.white} />
+;<Logo color={colors.white} />
 ```
 
 By default, the logo will scale to fill the width of its container. To change the size of the logo use `height` in styled components. The width will scale automatically:
@@ -20,7 +20,7 @@ By default, the logo will scale to fill the width of its container. To change th
 ```jsx
 import styled from "styled-components"
 import Logo from "./logo"
-import { screen } from "./global"
+import { screen } from "./global-variables"
 
 const StyledLogo = styled(Logo)`
   height: 3.6rem;

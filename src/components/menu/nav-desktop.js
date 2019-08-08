@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-grid-system"
 
-import * as g from "../global"
+import * as g from "../global-variables"
 
 const Tab = styled.button`
   flex: 1;

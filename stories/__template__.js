@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react"
 // import centered from "@storybook/addon-centered/react"
 
 import GlobalStyles from "../src/components/layout/global-styles"
-import * as g from "../src/components/global"
+import * as g from "../src/components/global-variables"
 
 import /* Component */ from "../src/components/"
 // import data from "./__fixtures__/component.yml"

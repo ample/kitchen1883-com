@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import HTML from "../utilities/html"
 
 import Button from "../button"
-import { breakpoints, colors, fonts, screen } from "../global"
+import { breakpoints, colors, fonts, screen } from "../global-variables"
 
 const Wrapper = styled.div`
   .block-image {

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react"
 import { withKnobs, boolean } from "@storybook/addon-knobs"
 
 import GlobalStyles from "../src/components/layout/global-styles"
-import * as g from "../src/components/global"
+import * as g from "../src/components/global-variables"
 
 import SocialIcons from "../src/components/social-icons"
 import data from "./__fixtures__/social-icons.yml"

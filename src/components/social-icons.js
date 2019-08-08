@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import SVG from "react-inlinesvg"
 
-import * as g from "./global"
+import * as g from "./global-variables"
 
 import Link from "./utilities/link"
 import facebook from "../images/icons/social-facebook.svg"

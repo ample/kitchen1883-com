@@ -5,7 +5,7 @@ import styled from "styled-components"
 import HTML from "../utilities/html"
 
 import Button from "../button"
-import { colors, screen } from "../global"
+import { colors, screen } from "../global-variables"
 
 const colorMap = {
   dark_green: colors.olive700,
