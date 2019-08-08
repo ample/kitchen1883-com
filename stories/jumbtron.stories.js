@@ -19,11 +19,11 @@ stories.addDecorator(withKnobs)
 stories.add(
   "Jumbotron",
   () => {
-    const theme = select("Theme", ["default", "home", "location"], "location")
+    const theme = select("Theme", ["default", "home", "location", "error"], "default")
     return (
       <GlobalStyles>
         <Jumbotron image={fixture.image} theme={theme} location={locationFixture[0]}>
-          <HTML field={fixture[theme].body} />
+          {fixture[theme].body && <HTML field={fixture[theme].body} />}
         </Jumbotron>
       </GlobalStyles>
     )

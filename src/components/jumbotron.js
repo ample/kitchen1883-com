@@ -155,12 +155,25 @@ const LocationWrapper = styled(Wrapper)`
   }
 `
 
+// ---------------------------------------- | Error Styles
+
+const ErrorWrapper = styled(HomeWrapper)`
+  .jumbotron-content {
+    max-width: 60rem;
+  }
+
+  .jumbotron-markup {
+    max-width: 60rem;
+  }
+`
+
 // ---------------------------------------- | Component
 
 const Jumbotron = props => {
   const TagName = {
     default: DefaultWrapper,
     home: HomeWrapper,
+    error: ErrorWrapper,
     location: LocationWrapper,
   }[props.theme || "default"]
 

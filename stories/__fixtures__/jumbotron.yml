@@ -26,4 +26,10 @@ home:
     childMarkdownRemark:
       html: |
         <p>The food you want to eat. A place to feel happy.<br>Welcome to the melting pot of American flavors.</p>
+error:
+  body:
+    childMarkdownRemark:
+      html: |
+        <h1>Page Not Found</h1>
+        <p>The page you are looking for is not here!</p>
 location: {}
