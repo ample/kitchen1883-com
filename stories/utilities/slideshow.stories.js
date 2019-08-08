@@ -5,7 +5,7 @@ import GlobalStyles from "../../src/components/layout/global-styles"
 import * as g from "../../src/components/global"
 
 import Slideshow from "../../src/components/utilities/slideshow"
-// import notes from "./__notes__/component.md"
+import notes from "../__notes__/utilities/slideshow.md"
 
 const stories = storiesOf("Utilities", module)
 
@@ -27,6 +27,6 @@ stories.add(
         </Slideshow>
       </GlobalStyles>
     )
-  }
-  // { notes: notes }
+  },
+  { notes: notes }
 )
