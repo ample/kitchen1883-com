@@ -2,7 +2,6 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 
 import GlobalStyles from "../../src/components/layout/global-styles"
-import * as g from "../../src/components/global"
 
 import Slideshow from "../../src/components/utilities/slideshow"
 import notes from "../__notes__/utilities/slideshow.md"

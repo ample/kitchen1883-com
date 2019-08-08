@@ -191,6 +191,14 @@
       display: flex;
       height: 100%;
     }
+    .gatsby-image-wrapper {
+      height: 33rem;
+      width: 100%;
+
+      @media (min-width: $screen-min-lg) {
+        height: 65rem;
+      }
+    }
     img {
       width: 100%;
       display: block;

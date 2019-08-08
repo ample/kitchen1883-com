@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import { Container } from "react-grid-system"
 
 import Button from "../components/button"
@@ -10,6 +11,7 @@ import Menu from "../components/menu"
 
 // eslint-disable-next-line
 import LocationAttributes from "../fragments/location-attributes"
+import Slideshow from "../components/utilities/slideshow"
 
 class Location extends React.Component {
   menuButtons = () => {
@@ -30,6 +32,21 @@ class Location extends React.Component {
           </p>
         )}
       </Container>
+    )
+  }
+
+  slideshow() {
+    const { location } = this.props.data
+    if (location.images.length === 0) return null
+    const slides = location.images.map((img, i) => (
+      <div key={i}>
+        <Img fluid={img.fluid} />
+      </div>
+    ))
+    return (
+      <div>
+        <Slideshow>{slides}</Slideshow>
+      </div>
     )
   }
 
@@ -59,6 +76,8 @@ class Location extends React.Component {
         <Container style={{ height: "48rem", marginBottom: "5rem", marginTop: "3rem" }}>
           <Map lat={location.lat} lng={location.lng} />
         </Container>
+
+        {this.slideshow()}
       </Layout>
     )
   }
