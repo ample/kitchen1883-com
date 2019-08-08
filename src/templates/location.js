@@ -8,7 +8,7 @@ class Location extends React.Component {
     const location = this.props.data.location
 
     return (
-      <Layout navMenus={this.props.pageContext.navMenus}>
+      <Layout navMenus={this.props.pageContext.navMenus} settings={this.props.pageContext.settings}>
         <p>This is the {location.title} Location</p>
       </Layout>
     )

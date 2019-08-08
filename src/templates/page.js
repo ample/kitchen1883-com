@@ -27,10 +27,10 @@ class Page extends React.Component {
   }
 
   render() {
-    const { page, navMenus } = this.props
+    const { page, navMenus, settings } = this.props
 
     return (
-      <Layout navMenus={navMenus}>
+      <Layout navMenus={navMenus} settings={settings}>
         <div>
           <h1>{page.title}</h1>
           <HTML field={page.description} />
@@ -49,6 +49,7 @@ class Page extends React.Component {
 Page.propTypes = {
   navMenus: PropTypes.array,
   page: PropTypes.object,
+  settings: PropTypes.array,
 }
 
 Page.defaultProps = {
@@ -61,7 +62,13 @@ export { Page }
 
 class PageTemplate extends React.Component {
   render = () => {
-    return <Page page={this.props.data.page} navMenus={this.props.pageContext.navMenus} />
+    return (
+      <Page
+        page={this.props.data.page}
+        navMenus={this.props.pageContext.navMenus}
+        settings={this.props.pageContext.settings}
+      />
+    )
   }
 }
 

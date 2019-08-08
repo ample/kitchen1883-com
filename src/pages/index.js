@@ -12,6 +12,7 @@ export default class extends React.Component {
       <Page
         page={this.props.data.page}
         navMenus={this.props.data.navMenus.edges.map(e => e.node)}
+        settings={this.props.data.settings.edges.map(e => e.node)}
       />
     )
   }
@@ -33,6 +34,16 @@ export const query = graphql`
               title
               url
             }
+          }
+        }
+      }
+    }
+    settings: allContentfulSetting {
+      edges {
+        node {
+          key
+          value {
+            value
           }
         }
       }

@@ -7,13 +7,12 @@ Footer uses three components: `Logo`, `FooterNav`, and `SocialIcons`. It require
 
 The Footer styles adjust at the `sm` and `md` breakpoints.
 
-
 ## Data Format
 
 ```jsx
 nav: [
   {
-    label: "Contact"
+    title: "Contact"
     url: "#"
   },
 ],
