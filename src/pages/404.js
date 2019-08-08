@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container } from "react-grid-system"
 
 import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
