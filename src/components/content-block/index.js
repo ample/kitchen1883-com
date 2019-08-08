@@ -5,7 +5,7 @@ import styled from "styled-components"
 import ImageBlock from "./image-block"
 import TextBlock from "./text-block"
 
-import { screen } from "../global"
+import { screen } from "../../styles/variables"
 
 const Wrapper = styled.div`
   @media ${screen.min.md} {

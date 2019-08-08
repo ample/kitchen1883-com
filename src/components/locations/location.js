@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 
-import * as g from "../global"
+import * as g from "../../styles/variables"
 import Link from "../utilities/link"
 import SocialIcons from "../social-icons"
 import Button from "../button"

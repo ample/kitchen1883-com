@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Link from "./utilities/link"
 
-import { colors, screen } from "./global"
+import { colors, screen } from "../styles/variables"
 
 const StyledButton = styled(Link)`
   background-color: ${props => colors[props.color]};

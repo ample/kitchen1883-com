@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import SVG from "react-inlinesvg"
 
-import * as g from "../../global"
+import * as g from "../../../styles/variables"
 import Link from "../../utilities/link"
 import { Accordion, Panel } from "../../utilities/accordion"
 import hamburger from "../../../images/icons/icon-hamburger.svg"

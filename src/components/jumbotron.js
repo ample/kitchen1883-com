@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { breakpoints, colors, fonts, screen } from "./global"
+import { breakpoints, colors, fonts, screen } from "../styles/variables"
 import Location from "./locations/location"
 import Logo from "./logo"
 

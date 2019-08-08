@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Col } from "react-grid-system"
 
-import * as g from "../global"
+import * as g from "../../styles/variables"
 import HTML from "../utilities/html"
 import MenuItem from "./item"
 

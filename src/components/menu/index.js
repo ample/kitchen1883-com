@@ -5,7 +5,7 @@ import { Container } from "react-grid-system"
 import MediaQuery from "react-responsive"
 import SVG from "react-inlinesvg"
 
-import * as g from "../global"
+import * as g from "../../styles/variables"
 import NavDesktop from "./nav-desktop"
 import NavMobile from "./nav-mobile"
 import MenuCategory from "./category"

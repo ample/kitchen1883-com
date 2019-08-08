@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import MediaQuery from "react-responsive"
 
-import * as g from "../../global"
+import * as g from "../../../styles/variables"
 
 import Link from "../../utilities/link"
 import Logo from "../../logo"

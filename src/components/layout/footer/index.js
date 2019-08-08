@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import * as g from "../../global"
+import * as g from "../../../styles/variables"
 
 import Link from "../../utilities/link"
 import Logo from "../../logo"
@@ -23,7 +23,7 @@ const StyledFooter = styled.footer`
     padding: 4.8rem;
     padding-bottom: 8rem;
 
-    .copy{
+    .copy {
       margin-top: 3rem;
     }
   }
