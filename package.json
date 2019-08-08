@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Ample <kitchen1883@helloample.com>",
   "dependencies": {
+    "@glidejs/glide": "^3.3.0",
     "@storybook/addon-backgrounds": "^5.1.9",
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-console": "^1.2.1",
@@ -44,6 +45,7 @@
     "react-inlinesvg": "^1.1.2",
     "react-popper-tooltip": "^2.8.3",
     "react-responsive": "^7.0.0",
+    "react-responsive-carousel": "^3.1.49",
     "react-test-renderer": "^16.8.6",
     "styled-components": "^4.3.2",
     "yaml-jest": "^1.0.5",
