@@ -30,6 +30,21 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+      navMenus: allContentfulNavMenu {
+        edges {
+          node {
+            title
+            links {
+              title
+              url
+              contentfulchildren {
+                title
+                url
+              }
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     // Create Pages
@@ -41,6 +56,7 @@ exports.createPages = ({ graphql, actions }) => {
           permalink: node.permalink,
           id: node.contentful_id,
           settings: result.data.settings.edges.map(e => e.node),
+          navMenus: result.data.navMenus.edges.map(e => e.node),
         },
       })
     })
@@ -53,6 +69,7 @@ exports.createPages = ({ graphql, actions }) => {
           permalink: node.permalink,
           id: node.contentful_id,
           settings: result.data.settings.edges.map(e => e.node),
+          navMenus: result.data.navMenus.edges.map(e => e.node),
         },
       })
     })

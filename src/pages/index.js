@@ -7,13 +7,35 @@ import { Page } from "../templates/page"
 import PageAttributes from "../fragments/page-attributes"
 
 export default class extends React.Component {
-  render = () => <Page page={this.props.data.page} />
+  render = () => {
+    return (
+      <Page
+        page={this.props.data.page}
+        navMenus={this.props.data.navMenus.edges.map(e => e.node)}
+      />
+    )
+  }
 }
 
 export const query = graphql`
   query HomePageQuery {
     page: contentfulPage(layout: { eq: "home" }) {
       ...PageAttributes
+    }
+    navMenus: allContentfulNavMenu {
+      edges {
+        node {
+          title
+          links {
+            title
+            url
+            contentfulchildren {
+              title
+              url
+            }
+          }
+        }
+      }
     }
   }
 `
