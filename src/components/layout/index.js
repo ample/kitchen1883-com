@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// import GlobalStyles from "./global-styles"
-
 import Header from "./header"
 import Footer from "./footer"
 
@@ -18,7 +16,7 @@ const Layout = ({ children, navMenus = [], settings = [] }) => {
   }
 
   return (
-    <div>
+    <>
       <Header nav={getMenuLinks("HeaderMenu")} />
       <main>{children}</main>
       <Footer
@@ -27,7 +25,7 @@ const Layout = ({ children, navMenus = [], settings = [] }) => {
           social: { location: "n/a", icons: JSON.parse(getSetting("footer_icons")) },
         }}
       />
-    </div>
+    </>
   )
 }
 
