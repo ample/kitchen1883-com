@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import { breakpoints, colors, fonts, screen } from "./global"
+import Location from "./locations/location"
 import Logo from "./logo"
 
 // ---------------------------------------- | Base Styles
@@ -136,7 +137,23 @@ const HomeWrapper = styled(Wrapper)`
 
 // ---------------------------------------- | Location Styles
 
-const LocationWrapper = styled(Wrapper)``
+const LocationWrapper = styled(Wrapper)`
+  height: 45rem;
+
+  @media ${screen.min.md} {
+    height: 72rem;
+  }
+
+  .jumbotron-content-wrapper {
+    display: block;
+  }
+
+  .jumbotron-content {
+    bottom: 3rem;
+    position: absolute;
+    width: 100%;
+  }
+`
 
 // ---------------------------------------- | Component
 
@@ -157,7 +174,16 @@ const Jumbotron = props => {
               <Logo color="white" />
             </div>
           )}
-          <div className="jumbotron-markup">{props.children}</div>
+          {props.theme === "location" && props.location && (
+            <Location
+              title={props.location.title}
+              address={props.location.address}
+              phone={props.location.phone}
+              hours={props.location.hours}
+              jumbotron={true}
+            />
+          )}
+          {props.children && <div className="jumbotron-markup">{props.children}</div>}
         </div>
       </div>
     </TagName>
@@ -165,8 +191,9 @@ const Jumbotron = props => {
 }
 
 Jumbotron.propTypes = {
-  theme: PropTypes.string, // default, home, location
   image: PropTypes.object.isRequired,
+  location: PropTypes.object,
+  theme: PropTypes.string, // default, home, location
 }
 
 Jumbotron.defaultProps = {

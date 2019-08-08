@@ -26,3 +26,4 @@ home:
     childMarkdownRemark:
       html: |
         <p>The food you want to eat. A place to feel happy.<br>Welcome to the melting pot of American flavors.</p>
+location: {}
