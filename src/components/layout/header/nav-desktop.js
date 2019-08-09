@@ -13,7 +13,7 @@ const StyledNav = styled(Container)`
   flex-wrap: wrap;
   a,
   .tooltip-trigger {
-    flex: 1;
+    flex: auto;
     display: flex;
     justify-content: center;
     align-items: center;
