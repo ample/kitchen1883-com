@@ -92,7 +92,6 @@ const OpenHoursJumbo = styled.table`
   ${openHrsMixin}
   margin-top: 4.4rem;
   margin-bottom: 1.5rem;
-
   tbody {
     display: block;
     max-width: ${g.breakpoints.sm * 0.5}px;
@@ -100,12 +99,12 @@ const OpenHoursJumbo = styled.table`
   }
   td {
     &.days {
-      flex: 1 1 60%;
+      flex: 1 1 58%;
       text-align: left;
       font-size: 1.4rem;
     }
     &.hours {
-      flex: 1 1 40%;
+      flex: 1 1 42%;
       font-size: 1.4rem;
       font-weight: 700;
     }
