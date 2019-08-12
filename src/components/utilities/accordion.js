@@ -51,8 +51,8 @@ const StyledCollapse = styled(Collapse)`
   }
 `
 
-const Accordion = ({ children, className, destroyInactivePanel, ...props }) => (
-  <StyledCollapse {...props} destroyInactivePanel={destroyInactivePanel} className={className}>
+const Accordion = ({ children, className, ...props }) => (
+  <StyledCollapse className={className} {...props}>
     {children}
   </StyledCollapse>
 )
