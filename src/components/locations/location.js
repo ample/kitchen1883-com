@@ -1,18 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
+import { Container } from "react-grid-system"
 
 import * as g from "../global-variables"
 import Link from "../utilities/link"
 import SocialIcons from "../social-icons"
 import Button from "../button"
 
-const StyledLocation = styled.div`
+const StyledLocation = styled(Container)`
   text-align: center;
   h1 {
     margin-bottom: 0.5rem;
   }
-  &.jumbotron *{
+  &.jumbotron * {
     text-shadow: 0px 1px 1px rgb(20, 20, 20), 0px 0px 9px rgba(0, 0, 0, 0.75);
   }
 `
@@ -90,8 +91,7 @@ const OpenHours = styled.table`
 
 const OpenHoursJumbo = styled.table`
   ${openHrsMixin}
-  margin-top: 4.4rem;
-  margin-bottom: 1.5rem;
+  margin: 4.4rem auto 1.5rem auto;
   tbody {
     display: block;
     max-width: ${g.breakpoints.sm * 0.5}px;
@@ -102,11 +102,15 @@ const OpenHoursJumbo = styled.table`
       flex: 1 1 58%;
       text-align: left;
       font-size: 1.4rem;
+      letter-spacing: 1px;
+      line-height: 2.9rem;
     }
     &.hours {
       flex: 1 1 42%;
       font-size: 1.4rem;
       font-weight: 700;
+      letter-spacing: 0.9px;
+      line-height: 2.9rem;
     }
   }
 
@@ -119,11 +123,15 @@ const OpenHoursJumbo = styled.table`
       &.days {
         flex: 1 1 65%;
         font-size: 2.2rem;
+        letter-spacing: 1.5px;
+        line-height: 3.4rem;
       }
       &.hours {
         flex: 1 1 35%;
         font-size: 1.8rem;
         font-weight: 400;
+        letter-spacing: 1.75px;
+        line-height: 4rem;
       }
     }
   }
@@ -132,7 +140,7 @@ const OpenHoursJumbo = styled.table`
     tbody {
       display: flex;
       flex-wrap: wrap;
-      max-width: 99.2rem;
+      max-width: ${g.breakpoints.lg * 0.9}px;
     }
     tr {
       flex: 1 1 50%;
@@ -140,9 +148,11 @@ const OpenHoursJumbo = styled.table`
     td {
       &.days {
         flex: 1 1 50%;
+        line-height: 4.6rem;
       }
       &.hours {
         flex: 1 1 50%;
+        line-height: 5.3rem;
       }
     }
     tr {
