@@ -24,7 +24,7 @@ stories.add(
         <Locations
           locations={data.slice(0, count)}
           label={label ? "Call Us" : undefined}
-          background_color={bgColor ? "gray100" : undefined}
+          background_color={bgColor ? "grey" : undefined}
           show_maps={showMaps}
         />
       </GlobalStyles>
