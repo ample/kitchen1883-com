@@ -39,6 +39,7 @@ const Wrapper = styled.div`
       line-height: 2.6rem;
       text-align: center;
       margin: 0 auto;
+      text-shadow: 0px 1px 1px rgb(20, 20, 20), 0px 0px 9px rgba(0, 0, 0, 0.75);
 
       @media ${screen.min.md} {
         font-size: 2.2rem;
