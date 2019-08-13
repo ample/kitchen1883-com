@@ -12,9 +12,7 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf:
-    file:
-      url: /
+  permalink: /
   social_links:
     - icon: facebook
       url: /
@@ -38,9 +36,7 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf:
-    file:
-      url: /
+  permalink: /
   social_links:
     - icon: facebook
       url: /
@@ -62,9 +58,7 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf:
-    file:
-      url: /
+  permalink: /
   social_links:
     - icon: facebook
       url: /
@@ -86,9 +80,7 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf:
-    file:
-      url: /
+  permalink: /
   social_links:
     - icon: facebook
       url: /
@@ -110,9 +102,7 @@
     - days: Sunday
       hours: 10AM - 9PM
   order_online_url: /order-online
-  menu_pdf:
-    file:
-      url: /
+  permalink: /
   social_links:
     - icon: facebook
       url: /

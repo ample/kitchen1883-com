@@ -209,7 +209,7 @@ Location.propTypes = {
   phone: PropTypes.string.isRequired,
   hours: PropTypes.array.isRequired,
   social_links: PropTypes.array,
-  menu_pdf: PropTypes.object,
+  permalink: PropTypes.string,
   order_online_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }

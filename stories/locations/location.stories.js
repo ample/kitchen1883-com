@@ -36,7 +36,7 @@ stories.add(
           phone={data[0].phone}
           hours={data[0].hours}
           social_links={social ? data[0].social_links : false}
-          menu_pdf={buttons ? data[0].menu_pdf : false}
+          permalink={buttons ? data[0].permalink : false}
           order_online_url={buttons ? data[0].order_online_url : false}
           jumbotron={jumbotron}
         />
