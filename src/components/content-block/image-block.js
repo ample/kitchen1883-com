@@ -21,6 +21,10 @@ const Wrapper = styled.div`
     height: ${props => props.wrapperHeight.sm};
     margin: 0 auto;
 
+    @media ${screen.min.sm} and ${screen.max.lg} {
+      height: ${props => props.wrapperHeight.md};
+    }
+
     @media ${screen.min.lg} {
       height: ${props => props.wrapperHeight.lg};
     }
