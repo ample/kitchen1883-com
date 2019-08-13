@@ -9,8 +9,8 @@ The following props should be passed from the CMS:
 - `phone`: Required string
 - `hours`: Required array of objects listing the open days and hours
 - `social_links`: Array
-- `menu_pdf`: String URL
-- `order_online_url`: String URl
+- `permalink`: String URL
+- `order_online_url`: String URL
 
 There is one additional boolean prop `jumbotron` (see below).
 
@@ -26,7 +26,7 @@ import Location from "./locations/location"
   phone={}
   hours={}
   social_links={}
-  menu_pdf={e}
+  permalink={}
   order_online_url={}
   jumbotron={}
 />

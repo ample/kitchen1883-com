@@ -8,6 +8,7 @@ import * as g from "./global-variables"
 import Link from "./utilities/link"
 import facebook from "../images/icons/social-facebook.svg"
 import twitter from "../images/icons/social-twitter.svg"
+import instagram from "../images/icons/social-instagram.svg"
 
 const Icon = styled(Link)`
   display: inline-flex;
@@ -24,7 +25,7 @@ const Icon = styled(Link)`
     transition: background 0.15s ease-out;
   }
   svg {
-    width: ${props => (props.dark ? "1.9rem" : "2.4rem")};
+    width: ${props => (props.dark ? "1.8rem" : "2.4rem")};
     transition: fill 0.15s ease-out;
   }
 
@@ -54,6 +55,7 @@ const Icon = styled(Link)`
 const typeList = {
   facebook: facebook,
   twitter: twitter,
+  instagram: instagram,
 }
 
 const SocialIcons = props => (
@@ -74,7 +76,7 @@ const SocialIcons = props => (
 
 SocialIcons.propTypes = {
   icons: PropTypes.array.isRequired,
-  // valid icon types: "facebook", "twitter"
+  // valid icon types: "facebook", "twitter", "instagram"
   location: PropTypes.string.isRequired,
   dark: PropTypes.bool,
 }
