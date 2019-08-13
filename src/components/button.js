@@ -15,6 +15,12 @@ const StyledButton = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   width: ${props => (props.block === "true" ? "100%" : "auto")};
+  transition: background-color 0.15s ease-out, color 0.15s ease-out;
+  &:hover,
+  &:focus {
+    background-color: ${props => (props.color !== "white" ? colors.olive500 : colors[props.color])};
+    color: ${props => (props.color === "white" ? colors.olive500 : colors.white)};
+  }
 `
 
 const SmallButton = styled(StyledButton)`
