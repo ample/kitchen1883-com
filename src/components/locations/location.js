@@ -88,6 +88,19 @@ const OpenHours = styled.table`
 
 const OpenHoursJumbo = styled.table`
   ${openHrsMixin}
+  border-collapse: collapse;
+  &.days {
+    text-transform: capitalize;
+    font-family: ${g.fonts.serif};
+  }
+  &.hours {
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    margin-left: 0rem;
+    text-align: left;
+    padding-left: 0.6rem;
+  }
+
   margin: 4.4rem auto 1.5rem auto;
   tbody {
     display: block;
@@ -121,7 +134,7 @@ const OpenHoursJumbo = styled.table`
         flex: 1 1 65%;
         font-size: 2.2rem;
         letter-spacing: 1.5px;
-        line-height: 3.4rem;
+        line-height: 3.5rem;
       }
       &.hours {
         flex: 1 1 35%;
@@ -135,29 +148,25 @@ const OpenHoursJumbo = styled.table`
 
   @media ${g.screen.min.lg} {
     tbody {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: ${g.breakpoints.lg * 0.9}px;
+      max-width: none;
+      display: inline-grid;
+      grid-column-gap: 12rem;
+      grid-template-columns: repeat(2, auto);
     }
     tr {
-      flex: 1 1 50%;
+      display: inline-flex;
+      align-items: baseline;
     }
     td {
+      white-space: nowrap;
       &.days {
-        flex: 1 1 50%;
-        line-height: 4.6rem;
+        flex: 1 1 auto;
+        padding-right: 1.2rem;
       }
       &.hours {
-        flex: 1 1 50%;
-        line-height: 5.3rem;
-      }
-    }
-    tr {
-      &:nth-of-type(odd) td.hours {
-        padding-right: 2rem;
-      }
-      &:nth-of-type(even) td.days {
-        padding-left: 2rem;
+        flex: 0 1 auto;
+        width: 16rem;
+        padding-left: 1.2rem;
       }
     }
   }
