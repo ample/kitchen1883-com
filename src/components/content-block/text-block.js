@@ -47,17 +47,26 @@ const Wrapper = styled.div`
 
   *:not(a) {
     color: ${props => colors[props.bgColor === "white" || !props.bgColor ? "gray800" : "white"]};
-    text-align: ${props => props.textAlign || "center"};
+
+    @media ${screen.min.sm} {
+      text-align: ${props => props.textAlign || "center"};
+    }
   }
 
   .block-content {
     margin-left: ${props => (["right", "center", null].includes(props.textAlign) ? "auto" : null)};
     margin-right: ${props => (["left", "center", null].includes(props.textAlign) ? "auto" : null)};
-    max-width: 40rem;
     padding: 2rem;
+    text-align: center;
+
+    @media ${screen.min.sm} {
+      max-width: 40rem;
+      text-align: left;
+    }
 
     ul {
-      padding-left: 2rem;
+      padding-left: 0;
+      list-style-type: none;
     }
   }
 `
