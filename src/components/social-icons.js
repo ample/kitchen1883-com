@@ -22,11 +22,11 @@ const Icon = styled(Link)`
     border-radius: 100%;
     width: 3.6rem;
     height: 3.6rem;
-    transition: background 0.15s ease;
+    transition: background 0.15s ease-out;
   }
   svg {
     width: ${props => (props.dark ? "1.8rem" : "2.4rem")};
-    transition: fill 0.15s ease;
+    transition: fill 0.15s ease-out;
   }
 
   &:hover {

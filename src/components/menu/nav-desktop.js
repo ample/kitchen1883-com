@@ -20,7 +20,7 @@ const Tab = styled.button`
   &:hover {
     background: rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    transition: background 0.15s ease;
+    transition: background 0.15s ease-out;
   }
   &:focus {
     outline: none;
