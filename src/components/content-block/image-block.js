@@ -27,8 +27,12 @@ const Wrapper = styled.div`
   }
 
   .block-content {
-    position: absolute;
     bottom: 3.6rem;
+    font-family: ${props => (props.solo ? fonts.serif : "inherit")};
+    font-size: ${props => (props.solo ? "2rem" : "inherit")};
+    line-height: ${props => (props.solo ? "2.6rem" : "inherit")};
+    position: absolute;
+    /* width: ${props => (props.solo ? "54rem" : "100%")}; */
     width: 100%;
 
     @media ${screen.min.md} {
@@ -43,12 +47,28 @@ const Wrapper = styled.div`
     }
 
     &,
-    *:not(a) {
+    *:not(a):not(div) {
       color: ${colors.white};
       text-align: center;
 
       @media ${screen.min.md} {
         text-align: ${props => props.textAlign || "left"};
+      }
+    }
+
+    *:not(a):not(div) {
+      @media ${screen.min.md} {
+        /* max-width: ${props =>
+          props.solo && (props.textAlign || "left") === "left" ? "54rem" : "100%"}; */
+        max-width: ${props => (props.solo ? "54rem" : "100%")};
+        margin-left: ${props => {
+          if (!props.solo) return "0"
+          return ["center", "right"].includes(props.textAlign) ? "auto" : "0"
+        }};
+        margin-right: ${props => {
+          if (!props.solo) return "0"
+          return ["center"].includes(props.textAlign) ? "auto" : "0"
+        }};
       }
     }
 
@@ -66,7 +86,7 @@ const Wrapper = styled.div`
 `
 
 const ImageBlock = props => (
-  <Wrapper textAlign={props.text_align} wrapperHeight={props.wrapperHeight}>
+  <Wrapper solo={props.solo} textAlign={props.text_align} wrapperHeight={props.wrapperHeight}>
     <Img className="block-image" fluid={props.image.fluid} />
     <div className="block-content-wrapper">
       <div className="block-content">
