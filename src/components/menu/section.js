@@ -59,7 +59,7 @@ const MenuSection = props => (
     )}
 
     <Items>
-      {props.items.map((item, idx) => (
+      {(props.items || []).map((item, idx) => (
         <MenuItem {...item} key={`${props.label.replace(/\s/g, "")}_menu-item_${idx}`} />
       ))}
     </Items>
