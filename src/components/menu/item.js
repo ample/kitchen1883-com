@@ -42,7 +42,7 @@ const MenuItem = props => (
       </div>
       <div>{props.price}</div>
     </Headline>
-    <HTML field={props.body} />
+    <HTML field={props.body || {}} />
   </div>
 )
 

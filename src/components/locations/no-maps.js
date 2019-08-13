@@ -6,8 +6,12 @@ import { Container, Row, Col } from "react-grid-system"
 import * as g from "../global-variables"
 import Location from "./location"
 
+const colorMap = {
+  grey: g.colors.gray100,
+}
+
 const StyledLocations = styled.div`
-  background-color: ${props => (props.bgColor ? g.colors[props.bgColor] : "transparent")};
+  background-color: ${props => (props.bgColor ? colorMap[props.bgColor] : "transparent")};
   padding-top: 7rem;
   padding-bottom: ${props => (props.label ? "11rem" : "2rem")};
   h2 {

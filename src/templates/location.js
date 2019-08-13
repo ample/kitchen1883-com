@@ -22,7 +22,7 @@ class Location extends React.Component {
         {location.menu_pdf && (
           <p className="text-center">
             <Button to={location.menu_pdf.file.url} color="white">
-              View Menu
+              Download Menu
             </Button>
           </p>
         )}

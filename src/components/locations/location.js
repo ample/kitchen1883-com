@@ -198,11 +198,11 @@ const Location = props => {
         />
       )}
 
-      {(props.menu_pdf || props.order_online_url) && (
+      {(props.permalink || props.order_online_url) && (
         <CTAs>
-          {props.menu_pdf && (
-            <Button to={props.menu_pdf.file.url} block={true}>
-              View Menu
+          {props.permalink && (
+            <Button to={`/locations/${props.permalink}`} block={true}>
+              View Details
             </Button>
           )}
           {props.order_online_url && (
@@ -222,7 +222,7 @@ Location.propTypes = {
   phone: PropTypes.string.isRequired,
   hours: PropTypes.array.isRequired,
   social_links: PropTypes.array,
-  menu_pdf: PropTypes.object,
+  permalink: PropTypes.string,
   order_online_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }

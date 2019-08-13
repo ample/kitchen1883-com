@@ -8,8 +8,11 @@ import TextBlock from "./text-block"
 import { screen } from "../global-variables"
 
 const Wrapper = styled.div`
-  @media ${screen.min.md} {
+  @media ${screen.min.sm} {
     display: flex;
+  }
+  @media ${screen.min.sm} and ${screen.max.lg} {
+    flex-wrap: wrap;
   }
 `
 
@@ -17,7 +20,13 @@ const Block = styled.div`
   height: ${props => (props.height ? props.height.sm : "auto")};
   position: relative;
 
-  @media ${screen.min.md} {
+  @media ${screen.min.sm} and ${screen.max.lg} {
+    flex: 1 1 auto;
+    height: ${props => (props.height ? props.height.sm : "auto")};
+    flex-basis: ${props => (props.solo ? "100%" : "50%")};
+  }
+
+  @media ${screen.min.lg} {
     height: ${props => (props.height ? props.height.lg : "auto")};
     width: ${props => props.width || "100%"};
   }
@@ -58,7 +67,12 @@ class ContentBlock extends React.Component {
   renderBlock(block, idx) {
     const TagName = block.image ? ImageBlock : TextBlock
     return (
-      <Block height={this.wrapperHeight()} width={this.blockWidth(idx)} key={idx}>
+      <Block
+        height={this.wrapperHeight()}
+        width={this.blockWidth(idx)}
+        key={idx}
+        solo={this.isSolo()}
+      >
         <TagName solo={this.isSolo()} wrapperHeight={this.wrapperHeight()} {...block}></TagName>
       </Block>
     )
