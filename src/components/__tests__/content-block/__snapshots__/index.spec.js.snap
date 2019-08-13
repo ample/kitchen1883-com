@@ -2,26 +2,28 @@
 
 exports[`ContentBlock - Image Tiles renders 1`] = `
 <div
-  className="sc-bZQynM fRnuUx"
+  className="sc-bZQynM bxXhLK"
   height={
     Object {
       "lg": "56.3rem",
+      "md": "48rem",
       "sm": "36rem",
     }
   }
 >
   <div
-    className="sc-gzVnrw dMzTKs"
+    className="sc-gzVnrw bZVZxU"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="25%"
   >
     <div
-      className="sc-ifAKCX fsvWyk"
+      className="sc-ifAKCX grtKoR"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -125,17 +127,18 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw dMzTKs"
+    className="sc-gzVnrw fLKEWp"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="25%"
   >
     <div
-      className="sc-EHOje kdgEDg"
+      className="sc-EHOje jbIlOP"
     >
       <div
         className="block-content"
@@ -150,7 +153,7 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat idogEk"
+          className="sc-bdVaJa sc-htpNat iYtZCk"
           color="white"
           href="javascript:void(0)"
           size="md"
@@ -162,17 +165,18 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw dMzTKs"
+    className="sc-gzVnrw bZVZxU"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="25%"
   >
     <div
-      className="sc-ifAKCX fsvWyk"
+      className="sc-ifAKCX grtKoR"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -276,17 +280,18 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw dMzTKs"
+    className="sc-gzVnrw bZVZxU"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="25%"
   >
     <div
-      className="sc-ifAKCX fsvWyk"
+      className="sc-ifAKCX grtKoR"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -400,10 +405,11 @@ exports[`ContentBlock - Image Tiles renders 1`] = `
 
 exports[`ContentBlock - No Blocks renders 1`] = `
 <div
-  className="sc-bZQynM fRnuUx"
+  className="sc-bZQynM bxXhLK"
   height={
     Object {
       "lg": "auto",
+      "md": "auto",
       "sm": "auto",
     }
   }
@@ -412,26 +418,28 @@ exports[`ContentBlock - No Blocks renders 1`] = `
 
 exports[`ContentBlock - Solo Image renders 1`] = `
 <div
-  className="sc-bZQynM fRnuUx"
+  className="sc-bZQynM bxXhLK"
   height={
     Object {
       "lg": "56.3rem",
+      "md": "48rem",
       "sm": "36rem",
     }
   }
 >
   <div
-    className="sc-gzVnrw bMXqBk"
+    className="sc-gzVnrw jlktSJ"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="100%"
   >
     <div
-      className="sc-ifAKCX fsvWyk"
+      className="sc-ifAKCX jPjpZw"
     >
       <div
         className="block-image gatsby-image-wrapper"
@@ -535,13 +543,13 @@ exports[`ContentBlock - Solo Image renders 1`] = `
             dangerouslySetInnerHTML={
               Object {
                 "__html": "<h2>Order Online</h2>
-<p>The food you want to eat. A place to feel happy.<br>Welcome to the melting pot of American flavors.</p>",
+<p>The food you want to eat. A place to feel happy. Welcome to the melting pot of American flavors.</p>",
               }
             }
           />
           <a
             block="false"
-            className="sc-bdVaJa sc-htpNat idogEk"
+            className="sc-bdVaJa sc-htpNat iYtZCk"
             color="white"
             href="javascript:void(0)"
             size="md"
@@ -558,26 +566,28 @@ exports[`ContentBlock - Solo Image renders 1`] = `
 
 exports[`ContentBlock - Solo Text renders 1`] = `
 <div
-  className="sc-bZQynM fRnuUx"
+  className="sc-bZQynM bxXhLK"
   height={
     Object {
       "lg": "auto",
+      "md": "auto",
       "sm": "auto",
     }
   }
 >
   <div
-    className="sc-gzVnrw dTQsyb"
+    className="sc-gzVnrw frIKhJ"
     height={
       Object {
         "lg": "auto",
+        "md": "auto",
         "sm": "auto",
       }
     }
     width="100%"
   >
     <div
-      className="is-solo sc-EHOje itjQMz"
+      className="is-solo sc-EHOje jiLOkX"
     >
       <div
         className="block-content"
@@ -597,7 +607,7 @@ exports[`ContentBlock - Solo Text renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat hjBaWQ"
+          className="sc-bdVaJa sc-htpNat gdTyJl"
           color="gray800"
           href="javascript:void(0)"
           size="md"
@@ -613,26 +623,28 @@ exports[`ContentBlock - Solo Text renders 1`] = `
 
 exports[`ContentBlock - Text Tiles renders 1`] = `
 <div
-  className="sc-bZQynM fRnuUx"
+  className="sc-bZQynM bxXhLK"
   height={
     Object {
       "lg": "56.3rem",
+      "md": "48rem",
       "sm": "36rem",
     }
   }
 >
   <div
-    className="sc-gzVnrw iLkmsn"
+    className="sc-gzVnrw gliZHd"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="50%"
   >
     <div
-      className="sc-EHOje bFlTNz"
+      className="sc-EHOje iKjkti"
     >
       <div
         className="block-content"
@@ -656,17 +668,18 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
     </div>
   </div>
   <div
-    className="sc-gzVnrw iLkmsn"
+    className="sc-gzVnrw gliZHd"
     height={
       Object {
         "lg": "56.3rem",
+        "md": "48rem",
         "sm": "36rem",
       }
     }
     width="50%"
   >
     <div
-      className="sc-EHOje bLhVMQ"
+      className="sc-EHOje cwZtaE"
     >
       <div
         className="block-content"
@@ -688,7 +701,7 @@ exports[`ContentBlock - Text Tiles renders 1`] = `
         />
         <a
           block="false"
-          className="sc-bdVaJa sc-htpNat idogEk"
+          className="sc-bdVaJa sc-htpNat iYtZCk"
           color="white"
           href="javascript:void(0)"
           size="md"
