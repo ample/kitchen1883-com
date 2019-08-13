@@ -38,5 +38,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        short_name: 'Kitchen 1883',
+        theme_color: `#FFFFFF`,
+        icon: `src/images/icons/icon-favicon.png`,
+      },
+    },
   ],
 }
