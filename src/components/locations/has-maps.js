@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-grid-system"
+import MediaQuery from "react-responsive"
 
 import * as g from "../global-variables"
 import Location from "./location"
@@ -54,9 +55,11 @@ const HasMaps = props =>
               <Location {...loc} />
             </div>
           </Col>
-          <Col className="map">
-            <Map lat={loc.lat} lng={loc.lng} />
-          </Col>
+          <MediaQuery query={g.screen.min.md}>
+            <Col className="map">
+              <Map lat={loc.lat} lng={loc.lng} />
+            </Col>
+          </MediaQuery>
         </Row>
       </Container>
     </StyledLocations>
