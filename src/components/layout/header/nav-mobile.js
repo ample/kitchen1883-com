@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import SVG from "react-inlinesvg"
@@ -42,6 +42,11 @@ const StyledList = styled.nav`
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+  position: absolute;
+  top: 7.8rem;
+  left: 0rem;
+  width: 100%;
+  z-index: 9999;
   a {
     ${linkMixin}
   }
@@ -86,8 +91,25 @@ const HeaderNavMobile = props => {
   const [isOpen, setOpen] = useState(false)
   const toggleNav = () => setOpen(!isOpen)
 
+  const nodeRef = useRef()
+
+  useEffect(() => {
+    const handleOutsideClick = e => {
+      if (!nodeRef.current.contains(e.target)) {
+        toggleNav()
+      }
+    }
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick)
+    }
+    // effect clean up function
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick)
+    }
+  }, [isOpen])
+
   return (
-    <>
+    <div ref={nodeRef}>
       <NavIcon onClick={toggleNav}>
         <SVG src={hamburger} />
       </NavIcon>
@@ -113,7 +135,7 @@ const HeaderNavMobile = props => {
           )
         )}
       </StyledList>
-    </>
+    </div>
   )
 }
 
