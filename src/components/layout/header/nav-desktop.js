@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Container } from "react-grid-system"
 
 import * as g from "../../global-variables"
@@ -11,17 +11,29 @@ const StyledNav = styled(Container)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  .tooltip-container {
+    border-radius: 0px !important;
+  }
+`
+
+const linkMixin = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: ${g.fonts.serif};
+`
+
+const LinkContainer = styled.div`
+  flex: auto;
+  position: relative;
+
   a,
   .tooltip-trigger {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-family: ${g.fonts.serif};
+    ${linkMixin}
     padding: 2rem 0.2rem;
     cursor: pointer;
-
     &:hover,
     &:focus,
     &.nav-active {
@@ -30,8 +42,16 @@ const StyledNav = styled(Container)`
     }
   }
 
-  .tooltip-container {
-    border-radius: 0px !important;
+  ${"" /* Creates a spacer element to fix bug with hover: bold */}
+  &:after {
+    ${linkMixin}
+    content: '${props => props.spacer}';
+    position: relative;
+    font-weight: 700;
+    padding: 0rem 0.2rem;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
   }
 `
 
@@ -47,18 +67,21 @@ const HeaderNavDesktop = props => {
       <StyledNav>
         {props.nav.map((navItem, idx) =>
           navItem.contentfulchildren ? (
-            <Tooltip
-              placement="bottom"
-              trigger="click"
-              tooltip={dropdown(navItem.contentfulchildren)}
-              key={`headerNav_${idx}`}
-            >
-              {navItem.title}
-            </Tooltip>
+            <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
+              <Tooltip
+                placement="bottom"
+                trigger="click"
+                tooltip={dropdown(navItem.contentfulchildren)}
+              >
+                {navItem.title}
+              </Tooltip>
+            </LinkContainer>
           ) : (
-            <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${idx}`}>
-              {navItem.title}
-            </Link>
+            <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
+              <Link to={navItem.url} activeClassName="nav-active">
+                {navItem.title}
+              </Link>
+            </LinkContainer>
           )
         )}
       </StyledNav>
