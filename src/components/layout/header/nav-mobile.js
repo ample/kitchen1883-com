@@ -42,6 +42,11 @@ const StyledList = styled.nav`
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+  position: absolute;
+  top: 7.8rem;
+  left: 0rem;
+  width: 100%;
+  z-index: 9999;
   a {
     ${linkMixin}
   }
