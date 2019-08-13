@@ -68,7 +68,6 @@ const HeaderNavDesktop = props => {
         {props.nav.map((navItem, idx) =>
           navItem.contentfulchildren ? (
             <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
-              {console.log("title: ", navItem.title)}
               <Tooltip
                 placement="bottom"
                 trigger="click"
@@ -79,7 +78,6 @@ const HeaderNavDesktop = props => {
             </LinkContainer>
           ) : (
             <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
-              {console.log("title: ", navItem.title)}
               <Link to={navItem.url} activeClassName="nav-active">
                 {navItem.title}
               </Link>
