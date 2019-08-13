@@ -13,9 +13,6 @@ const StyledLocation = styled(Container)`
   h1 {
     margin-bottom: 0.5rem;
   }
-  &.jumbotron * {
-    text-shadow: 0px 1px 1px rgb(20, 20, 20), 0px 0px 9px rgba(0, 0, 0, 0.75);
-  }
 `
 
 const Contact = styled.div``
@@ -169,7 +166,7 @@ const OpenHoursJumbo = styled.table`
 const Location = props => {
   const HoursTag = props.jumbotron ? OpenHoursJumbo : OpenHours
   return (
-    <StyledLocation className={props.jumbotron ? " dark jumbotron " : ""}>
+    <StyledLocation className={props.jumbotron ? " dark " : ""}>
       {props.jumbotron ? <h1>{props.title}</h1> : <h6>{props.title}</h6>}
 
       <Contact className={props.jumbotron ? " text-lg " : ""}>
