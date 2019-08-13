@@ -17,12 +17,12 @@ const Wrapper = styled.div`
 `
 
 const Block = styled.div`
-  height: ${props => (props.height ? props.height.sm : "auto")};
+  height: ${props => (props.height && props.image ? props.height.sm : "auto")};
   position: relative;
 
   @media ${screen.min.sm} and ${screen.max.lg} {
     flex: 1 1 auto;
-    height: ${props => (props.height ? props.height.sm : "auto")};
+    height: ${props => (props.height ? props.height.md : "auto")};
     flex-basis: ${props => (props.solo ? "100%" : "50%")};
   }
 
@@ -46,8 +46,9 @@ class ContentBlock extends React.Component {
   }
 
   wrapperHeight() {
-    if (this.hasMultipleBlocks() || this.hasImages()) return { sm: "36rem", lg: "56.3rem" }
-    return { sm: "auto", lg: "auto" }
+    if (this.hasMultipleBlocks() || this.hasImages())
+      return { sm: "36rem", md: "48rem", lg: "56.3rem" }
+    return { sm: "auto", md: "auto", lg: "auto" }
   }
 
   blockWidth(idx) {
@@ -72,6 +73,7 @@ class ContentBlock extends React.Component {
         width={this.blockWidth(idx)}
         key={idx}
         solo={this.isSolo()}
+        image={block.image ? 1 : 0}
       >
         <TagName solo={this.isSolo()} wrapperHeight={this.wrapperHeight()} {...block}></TagName>
       </Block>

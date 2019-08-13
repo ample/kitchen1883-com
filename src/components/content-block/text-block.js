@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   &.is-solo {
     padding: 2rem 0;
 
-    @media ${screen.min.md} {
+    @media ${screen.min.lg} {
       padding: 6rem 0;
     }
 
@@ -55,6 +55,10 @@ const Wrapper = styled.div`
     margin-right: ${props => (["left", "center", null].includes(props.textAlign) ? "auto" : null)};
     max-width: 40rem;
     padding: 2rem;
+
+    ul {
+      padding-left: 2rem;
+    }
   }
 `
 

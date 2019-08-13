@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     height: ${props => props.wrapperHeight.sm};
     margin: 0 auto;
 
-    @media ${screen.min.md} {
+    @media ${screen.min.lg} {
       height: ${props => props.wrapperHeight.lg};
     }
   }
@@ -32,10 +32,10 @@ const Wrapper = styled.div`
     font-size: ${props => (props.solo ? "2rem" : "inherit")};
     line-height: ${props => (props.solo ? "2.6rem" : "inherit")};
     position: absolute;
-    /* width: ${props => (props.solo ? "54rem" : "100%")}; */
+    padding: 0 2rem;
     width: 100%;
 
-    @media ${screen.min.md} {
+    @media ${screen.min.lg} {
       bottom: 5rem;
       left: ${props => (["left", null].includes(props.textAlign) ? "2rem" : "auto")};
       right: ${props => (props.textAlign === "right" ? "2rem" : "auto")};
@@ -58,8 +58,6 @@ const Wrapper = styled.div`
 
     *:not(a):not(div) {
       @media ${screen.min.md} {
-        /* max-width: ${props =>
-          props.solo && (props.textAlign || "left") === "left" ? "54rem" : "100%"}; */
         max-width: ${props => (props.solo ? "54rem" : "100%")};
         margin-left: ${props => {
           if (!props.solo) return "0"
