@@ -1,13 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
+import { Container } from "react-grid-system"
 
 import * as g from "../global-variables"
 import Link from "../utilities/link"
 import SocialIcons from "../social-icons"
 import Button from "../button"
 
-const StyledLocation = styled.div`
+const StyledLocation = styled(Container)`
   text-align: center;
   h1 {
     margin-bottom: 0.5rem;
@@ -87,8 +88,20 @@ const OpenHours = styled.table`
 
 const OpenHoursJumbo = styled.table`
   ${openHrsMixin}
-  margin-top: 4.4rem;
-  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  &.days {
+    text-transform: capitalize;
+    font-family: ${g.fonts.serif};
+  }
+  &.hours {
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    margin-left: 0rem;
+    text-align: left;
+    padding-left: 0.6rem;
+  }
+
+  margin: 4.4rem auto 1.5rem auto;
   tbody {
     display: block;
     max-width: ${g.breakpoints.sm * 0.5}px;
@@ -96,14 +109,18 @@ const OpenHoursJumbo = styled.table`
   }
   td {
     &.days {
-      flex: 1 1 60%;
+      flex: 1 1 58%;
       text-align: left;
       font-size: 1.4rem;
+      letter-spacing: 1px;
+      line-height: 2.9rem;
     }
     &.hours {
-      flex: 1 1 40%;
+      flex: 1 1 42%;
       font-size: 1.4rem;
       font-weight: 700;
+      letter-spacing: 0.9px;
+      line-height: 2.9rem;
     }
   }
 
@@ -116,38 +133,40 @@ const OpenHoursJumbo = styled.table`
       &.days {
         flex: 1 1 65%;
         font-size: 2.2rem;
+        letter-spacing: 1.5px;
+        line-height: 3.5rem;
       }
       &.hours {
         flex: 1 1 35%;
         font-size: 1.8rem;
         font-weight: 400;
+        letter-spacing: 1.75px;
+        line-height: 4rem;
       }
     }
   }
 
   @media ${g.screen.min.lg} {
     tbody {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 99.2rem;
+      max-width: none;
+      display: inline-grid;
+      grid-column-gap: 12rem;
+      grid-template-columns: repeat(2, auto);
     }
     tr {
-      flex: 1 1 50%;
+      display: inline-flex;
+      align-items: baseline;
     }
     td {
+      white-space: nowrap;
       &.days {
-        flex: 1 1 50%;
+        flex: 1 1 auto;
+        padding-right: 1.2rem;
       }
       &.hours {
-        flex: 1 1 50%;
-      }
-    }
-    tr {
-      &:nth-of-type(odd) td.hours {
-        padding-right: 2rem;
-      }
-      &:nth-of-type(even) td.days {
-        padding-left: 2rem;
+        flex: 0 1 auto;
+        width: 16rem;
+        padding-left: 1.2rem;
       }
     }
   }

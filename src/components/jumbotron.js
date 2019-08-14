@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     height: 100%;
     position: absolute !important;
     width: 100%;
+    z-index: -1;
   }
 
   .jumbotron-content-wrapper {
@@ -24,6 +25,7 @@ const Wrapper = styled.div`
     height: 100%;
     margin: 0 auto;
     position: relative;
+    z-index: 2;
   }
 
   .jumbotron-content {
@@ -69,6 +71,17 @@ const Wrapper = styled.div`
 
 const DefaultWrapper = styled(Wrapper)`
   height: 38rem;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+  }
 
   @media ${screen.min.md} {
     height: 43rem;
@@ -139,6 +152,17 @@ const HomeWrapper = styled(Wrapper)`
 
 const LocationWrapper = styled(Wrapper)`
   height: 45rem;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    height: 90%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+    z-index: 1;
+  }
 
   @media ${screen.min.md} {
     height: 72rem;
