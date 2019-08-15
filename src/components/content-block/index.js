@@ -17,17 +17,17 @@ const Wrapper = styled.div`
 `
 
 const Block = styled.div`
-  height: ${props => (props.height && props.image ? props.height.sm : "auto")};
+  min-height: ${props => (props.height && props.image ? props.height.sm : "auto")};
   position: relative;
 
   @media ${screen.min.sm} and ${screen.max.lg} {
     flex: 1 1 auto;
-    height: ${props => (props.height ? props.height.md : "auto")};
+    min-height: ${props => (props.height ? props.height.md : "auto")};
     flex-basis: ${props => (props.solo ? "100%" : "50%")};
   }
 
   @media ${screen.min.lg} {
-    height: ${props => (props.height ? props.height.lg : "auto")};
+    min-height: ${props => (props.height ? props.height.lg : "auto")};
     width: ${props => props.width || "100%"};
   }
 `
