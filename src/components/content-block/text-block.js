@@ -43,13 +43,19 @@ const Wrapper = styled.div`
           ["left", "center", null].includes(props.textAlign) ? "auto" : null};
       }
     }
+    *:not(a) {
+      @media ${screen.min.sm} {
+        text-align: ${props => props.textAlign || "center"};
+      }
+    }
+
   }
 
   *:not(a) {
     color: ${props => colors[props.bgColor === "white" || !props.bgColor ? "gray800" : "white"]};
 
     @media ${screen.min.sm} {
-      text-align: ${props => props.textAlign || "center"};
+      text-align: ${props => props.textAlign || "left"};
     }
   }
 
