@@ -14,6 +14,9 @@ const StyledSection = styled.section`
 
   @media ${g.screen.max.md} {
     margin-top: 3rem;
+    &:last-of-type {
+      margin-bottom: 6rem;
+    }
   }
 `
 
