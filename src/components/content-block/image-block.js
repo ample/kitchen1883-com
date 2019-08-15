@@ -39,6 +39,11 @@ const Wrapper = styled.div`
     padding: 0 2rem;
     width: 100%;
 
+    ${'' /* reset button font */}
+    a {
+      font-family: ${fonts.sans};
+    }
+
     @media ${screen.min.lg} {
       bottom: 5rem;
       left: ${props => (["left", null].includes(props.textAlign) ? "2rem" : "auto")};
