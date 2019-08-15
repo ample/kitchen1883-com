@@ -48,7 +48,6 @@ const Wrapper = styled.div`
         text-align: ${props => props.textAlign || "center"};
       }
     }
-
   }
 
   *:not(a) {
@@ -78,6 +77,12 @@ const Wrapper = styled.div`
   }
 `
 
+const buttonSizes = {
+  Small: "sm",
+  Medium: "md",
+  Large: "lg",
+}
+
 const TextBlock = props => (
   <Wrapper
     bgColor={props.background_color}
@@ -90,6 +95,7 @@ const TextBlock = props => (
         <Button
           to={props.button_url}
           color={props.background_color === "white" ? "gray800" : "white"}
+          size={buttonSizes[props.button_size]}
         >
           {props.button_label}
         </Button>
@@ -101,6 +107,7 @@ const TextBlock = props => (
 TextBlock.propTypes = {
   background_color: PropTypes.string,
   body: PropTypes.object.isRequired,
+  button_size: PropTypes.string,
   button_label: PropTypes.string,
   button_url: PropTypes.string,
   solo: PropTypes.bool,

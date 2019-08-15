@@ -30,5 +30,6 @@
   image:
   background_color: light_green
   text_align: left
+  button_size: Large
   button_label: Apply Today
   button_url: javascript:void(0)
