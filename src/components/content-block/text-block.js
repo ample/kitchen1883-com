@@ -56,10 +56,11 @@ const Wrapper = styled.div`
   .block-content {
     margin-left: ${props => (["right", "center", null].includes(props.textAlign) ? "auto" : null)};
     margin-right: ${props => (["left", "center", null].includes(props.textAlign) ? "auto" : null)};
-    padding: 2rem;
+    padding: 7rem 2rem;
     text-align: center;
 
     @media ${screen.min.sm} {
+      padding: 2rem;
       max-width: 40rem;
       text-align: left;
     }
