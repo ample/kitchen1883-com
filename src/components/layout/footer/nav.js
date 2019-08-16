@@ -9,20 +9,47 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  margin: 1rem auto;
+  @media ${g.screen.min.sm} {
+    flex-direction: row;
+    margin: auto;
+  }
+`
+
+const LinkContainer = styled.div`
   a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-family: ${g.fonts.serif};
-    padding: 2rem 3.2rem;
+    padding: 1.1rem;
     &:hover {
-      text-decoration: underline;
+      font-weight: bold;
+      color: ${g.colors.olive500};
     }
   }
 
-  @media ${g.screen.max.sm} {
-    flex-direction: column;
-    margin: 1rem auto;
-    a {
-      padding: 1.1rem;
+  @media ${g.screen.min.sm} {
+    position: relative;
+    a{
+      padding: 2rem 3rem;
+    }
+    ${"" /* Creates a spacer element to fix bug with hover: bold */}
+    &:after {
+      position: relative;
+      content: '${props => props.spacer}';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-family: ${g.fonts.serif};
+      font-weight: 700;
+      padding: 0rem 3rem;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
     }
   }
 `
@@ -30,9 +57,9 @@ const StyledNav = styled.nav`
 const FooterNav = props => (
   <StyledNav className="dark">
     {props.nav.map((link, idx) => (
-      <Link to={link.url} key={`footerNav_${idx}`}>
-        {link.title}
-      </Link>
+      <LinkContainer spacer={link.title} key={`footerNav_${idx}`}>
+        <Link to={link.url}>{link.title}</Link>
+      </LinkContainer>
     ))}
   </StyledNav>
 )
