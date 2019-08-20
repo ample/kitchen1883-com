@@ -106,7 +106,7 @@ const HeaderNavDesktop = props => {
                   onClick={() => setShowTooltip(!showTooltip)}
                   onKeyPress={e => handleTab(e)}
                   id="navButton"
-                  aria-controls={`nav${idx}Menu`}
+                  aria-controls={showTooltip ? `nav${idx}Menu` : ""}
                   aria-haspopup="true"
                   aria-expanded={showTooltip}
                 >
