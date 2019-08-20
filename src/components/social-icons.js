@@ -67,7 +67,7 @@ const SocialIcons = props => (
         dark={props.dark ? 1 : 0}
       >
         <div>
-          <SVG src={typeList[icon.icon]} />
+          <SVG src={typeList[icon.icon]} aria-label={`${props.location} Location ${icon.icon} Link`}/>
         </div>
       </Icon>
     ))}

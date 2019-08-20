@@ -180,7 +180,11 @@ const Location = props => {
 
       <Contact className={props.jumbotron ? " text-lg " : ""}>
         <div>{props.address.address}</div>
-        <Link to={`tel:${props.phone}`} target="_self">
+        <Link
+          to={`tel:${props.phone}`}
+          target="_self"
+          aria-roledescription={`${props.title} Location Phone Number Link`}
+        >
           {props.phone}
         </Link>
       </Contact>
