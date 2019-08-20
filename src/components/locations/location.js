@@ -183,7 +183,7 @@ const Location = props => {
         <Link
           to={`tel:${props.phone}`}
           target="_self"
-          aria-roledescription={`${props.title} Location Phone Number Link`}
+          aria-label={`${props.title} Location Phone Number Link`}
         >
           {props.phone}
         </Link>
