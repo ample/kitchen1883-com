@@ -2,11 +2,15 @@ import React from "react"
 import TooltipTrigger from "react-popper-tooltip"
 import "./tooltip.scss"
 
-const Tooltip = ({ children, tooltip, hideArrow, ...props }) => (
+const Tooltip = ({ children, tooltip, hideArrow, id, ariaLabelledby, ...props }) => (
   <TooltipTrigger
     {...props}
     tooltip={({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }) => (
-      <div {...getTooltipProps({ ref: tooltipRef, className: "tooltip-container" })}>
+      <div
+        id={id}
+        aria-labelledby={ariaLabelledby}
+        {...getTooltipProps({ ref: tooltipRef, className: "tooltip-container" })}
+      >
         {!hideArrow && (
           <div
             {...getArrowProps({
@@ -21,7 +25,9 @@ const Tooltip = ({ children, tooltip, hideArrow, ...props }) => (
     )}
   >
     {({ getTriggerProps, triggerRef }) => (
-      <span {...getTriggerProps({ ref: triggerRef, className: "tooltip-trigger" })}>{children}</span>
+      <span {...getTriggerProps({ ref: triggerRef, className: "tooltip-trigger" })}>
+        {children}
+      </span>
     )}
   </TooltipTrigger>
 )

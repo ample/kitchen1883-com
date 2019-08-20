@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import styled, { css } from "styled-components"
 import { Container } from "react-grid-system"
@@ -11,10 +11,6 @@ const StyledNav = styled(Container)`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  .tooltip-container {
-    border-radius: 0px !important;
-  }
 `
 
 const linkMixin = css`
@@ -28,11 +24,9 @@ const linkMixin = css`
 const LinkContainer = styled.div`
   flex: auto;
   position: relative;
-
   a,
   .tooltip-trigger {
     ${linkMixin}
-    padding: 2rem 0.2rem;
     cursor: pointer;
     &:hover,
     &:focus,
@@ -41,6 +35,25 @@ const LinkContainer = styled.div`
       color: ${g.colors.olive500};
     }
   }
+  a {
+    padding: 2rem 0.2rem;
+  }
+  .tooltip-trigger {
+    width: 100%;
+    height: 100%;
+    > div{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    span:focus {
+      outline: none;
+    }
+  }
+
+
 
   ${"" /* Creates a spacer element to fix bug with hover: bold */}
   &:after {
@@ -56,12 +69,23 @@ const LinkContainer = styled.div`
 `
 
 const HeaderNavDesktop = props => {
+  const [showTooltip, setShowTooltip] = useState(false)
   const dropdown = content =>
     content.map((navItem, idx) => (
-      <Link to={navItem.url} activeClassName="nav-active" key={`headerNav_${navItem.title}_${idx}`}>
+      <Link
+        to={navItem.url}
+        activeClassName="nav-active"
+        key={`headerNav_${navItem.title}_${idx}`}
+        tabIndex="0"
+      >
         {navItem.title}
       </Link>
     ))
+  const handleTab = e => {
+    if (e.which === 13) {
+      setShowTooltip(!showTooltip)
+    }
+  }
   return (
     <Container>
       <StyledNav>
@@ -69,11 +93,25 @@ const HeaderNavDesktop = props => {
           navItem.contentfulchildren ? (
             <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
               <Tooltip
-                placement="bottom"
                 trigger="click"
+                tooltipShown={showTooltip}
+                placement="bottom"
                 tooltip={dropdown(navItem.contentfulchildren)}
+                id={`nav${idx}Menu`}
+                ariaLabelledby={`nav${idx}Button`}
               >
-                {navItem.title}
+                <div
+                  tabindex="0"
+                  role="button"
+                  onClick={() => setShowTooltip(!showTooltip)}
+                  onKeyPress={e => handleTab(e)}
+                  id="navButton"
+                  aria-controls={`nav${idx}Menu`}
+                  aria-haspopup="true"
+                  aria-expanded={showTooltip}
+                >
+                  <span tabIndex="-1">{navItem.title}</span>
+                </div>
               </Tooltip>
             </LinkContainer>
           ) : (
