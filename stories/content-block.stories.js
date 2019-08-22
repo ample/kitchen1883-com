@@ -24,6 +24,7 @@ const storyOptions = {
 
 const colorOptions = ["white", "light_green", "dark_green", "grey"]
 const textAlignOptions = ["left", "center", "right"]
+const buttonSizeOptions = ["Small", "Medium", "Large"]
 
 const stories = storiesOf("Content Blocks", module)
 
@@ -34,6 +35,7 @@ stories.add(
   () => {
     const fixture = [...soloTextFeature][0]
     fixture.button_label = boolean("Show Button", false) ? "Say Hi" : null
+    fixture.button_size = select("Button Size", buttonSizeOptions, "Medium")
     fixture.background_color = select("Background Color", colorOptions, "white")
     fixture.text_align = select("Text Align", textAlignOptions, "center")
     return template([fixture])

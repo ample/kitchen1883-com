@@ -43,23 +43,29 @@ const Wrapper = styled.div`
           ["left", "center", null].includes(props.textAlign) ? "auto" : null};
       }
     }
+    *:not(a) {
+      @media ${screen.min.sm} {
+        text-align: ${props => props.textAlign || "center"};
+      }
+    }
   }
 
   *:not(a) {
     color: ${props => colors[props.bgColor === "white" || !props.bgColor ? "gray800" : "white"]};
 
     @media ${screen.min.sm} {
-      text-align: ${props => props.textAlign || "center"};
+      text-align: ${props => props.textAlign || "left"};
     }
   }
 
   .block-content {
     margin-left: ${props => (["right", "center", null].includes(props.textAlign) ? "auto" : null)};
     margin-right: ${props => (["left", "center", null].includes(props.textAlign) ? "auto" : null)};
-    padding: 2rem;
+    padding: 7rem 2rem;
     text-align: center;
 
     @media ${screen.min.sm} {
+      padding: 2rem;
       max-width: 40rem;
       text-align: left;
     }
@@ -70,6 +76,12 @@ const Wrapper = styled.div`
     }
   }
 `
+
+const buttonSizes = {
+  Small: "sm",
+  Medium: "md",
+  Large: "lg",
+}
 
 const TextBlock = props => (
   <Wrapper
@@ -83,6 +95,7 @@ const TextBlock = props => (
         <Button
           to={props.button_url}
           color={props.background_color === "white" ? "gray800" : "white"}
+          size={buttonSizes[props.button_size]}
         >
           {props.button_label}
         </Button>
@@ -94,6 +107,7 @@ const TextBlock = props => (
 TextBlock.propTypes = {
   background_color: PropTypes.string,
   body: PropTypes.object.isRequired,
+  button_size: PropTypes.string,
   button_label: PropTypes.string,
   button_url: PropTypes.string,
   solo: PropTypes.bool,

@@ -96,6 +96,15 @@ The text within the call-to-action button. The button only appears if the
 The `href` value for the call-to-action button. The button only appears if the
 `button_label` option also has a value.
 
+### `button_size`
+
+The size of the call-to-action button. The button defaults to `Medium` if no
+size is passed. The options are:
+
+- `Small`
+- `Medium`
+- `Large`
+
 ## Rendering Logic
 
 To make content editing easier on the editors, this component figures out

@@ -2,10 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { Container, Col } from "react-grid-system"
 
-import { breakpoints, colors, fonts, screen } from "./global-variables"
+import { colors, fonts, screen } from "./global-variables"
 import Location from "./locations/location"
 import Logo from "./logo"
+
+const JumboContentCol = styled(Col)`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+`
 
 // ---------------------------------------- | Base Styles
 
@@ -17,15 +26,6 @@ const Wrapper = styled.div`
     position: absolute !important;
     width: 100%;
     z-index: -1;
-  }
-
-  .jumbotron-content-wrapper {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
   }
 
   .jumbotron-content {
@@ -85,13 +85,6 @@ const DefaultWrapper = styled(Wrapper)`
 
   @media ${screen.min.md} {
     height: 43rem;
-  }
-
-  .jumbotron-content-wrapper {
-    @media ${screen.min.md} {
-      display: block;
-      max-width: ${() => breakpoints.md - 10}px;
-    }
   }
 
   .jumbotron-content {
@@ -168,10 +161,6 @@ const LocationWrapper = styled(Wrapper)`
     height: 72rem;
   }
 
-  .jumbotron-content-wrapper {
-    display: block;
-  }
-
   .jumbotron-content {
     bottom: 3rem;
     position: absolute;
@@ -204,25 +193,27 @@ const Jumbotron = props => {
   return (
     <TagName wrapperHeight={props.height}>
       <Img className="jumbotron-image" fluid={props.image.fluid} />
-      <div className="jumbotron-content-wrapper">
-        <div className="jumbotron-content">
-          {props.theme === "home" && (
-            <div className="jumbotron-logo">
-              <Logo color="white" />
-            </div>
-          )}
-          {props.theme === "location" && props.location && (
-            <Location
-              title={props.location.title}
-              address={props.location.address}
-              phone={props.location.phone}
-              hours={props.location.hours}
-              jumbotron={true}
-            />
-          )}
-          {props.children && <div className="jumbotron-markup">{props.children}</div>}
-        </div>
-      </div>
+      <Container style={{ height: "100%" }}>
+        <JumboContentCol xl={10} push={{ xl: 1 }}>
+          <div className="jumbotron-content">
+            {props.theme === "home" && (
+              <div className="jumbotron-logo">
+                <Logo color="white" />
+              </div>
+            )}
+            {props.theme === "location" && props.location && (
+              <Location
+                title={props.location.title}
+                address={props.location.address}
+                phone={props.location.phone}
+                hours={props.location.hours}
+                jumbotron={true}
+              />
+            )}
+            {props.children && <div className="jumbotron-markup">{props.children}</div>}
+          </div>
+        </JumboContentCol>
+      </Container>
     </TagName>
   )
 }
