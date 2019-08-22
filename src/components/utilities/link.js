@@ -10,7 +10,7 @@ const Link = ({ children, to, activeClassName, target, ...other }) => {
       {children}
     </GatsbyLink>
   ) : (
-    <a href={to} target={target} {...other}>
+    <a href={to} target={target} rel={target === "_blank" ? "noopener" : ""} {...other}>
       {children}
     </a>
   )

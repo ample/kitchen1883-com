@@ -28,8 +28,10 @@ const linkMixin = css`
   }
 `
 
-const NavIcon = styled.div`
-  display: block;
+const NavIcon = styled.button`
+  ${"" /* display: block; */}
+  background: none;
+  border: none;
   position: absolute;
   left: 0rem;
   top: 0rem;
@@ -110,8 +112,8 @@ const HeaderNavMobile = props => {
 
   return (
     <div ref={nodeRef}>
-      <NavIcon onClick={toggleNav}>
-        <SVG src={hamburger} />
+      <NavIcon onClick={toggleNav} role="button" aria-label="Navigation Menu">
+        <SVG src={hamburger} role="img" aria-label="Navigation Menu" />
       </NavIcon>
 
       <StyledList isOpen={isOpen}>
