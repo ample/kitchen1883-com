@@ -7898,6 +7898,20 @@ gatsby-page-utils@^0.0.5:
     micromatch "^3.1.10"
     slash "^1.0.0"
 
+gatsby-plugin-google-analytics@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.10.tgz#50c18afb3aa9b8dc49f5575f0702ce99bbe60ebf"
+  integrity sha512-jVKXKZnwsOEFsvvC5Ik/ZDm/hLv5pp0QJKHiaDCxZWNCG0IkGEAD9XX5TRJWNvQHn/DAXUVfNucS2xes67Utbg==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
+gatsby-plugin-google-tagmanager@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.1.7.tgz#5b6007dfda0da39aeab31ffe67bcc45254ebb0e9"
+  integrity sha512-N3SvfE1h+De7dsztA7UJHbwuLCiPzYptRyA02w4D9NQa+SG0A+2T+ZHOn/YvhBxpbtKvcTAVWjEoWHDlqd6fMw==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
 gatsby-plugin-manifest@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.2.5.tgz#cfa3f5a5f02989e9a15a3b08b11548be45af11e8"

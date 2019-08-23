@@ -51,5 +51,18 @@ module.exports = {
         icon: `src/images/icons/icon-favicon.png`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: process.env.GATSBY_GTM_ID,
+        includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_GA_ID,
+      },
+    },
   ],
 }
