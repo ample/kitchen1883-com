@@ -17,7 +17,7 @@ stories.add(
   () => {
     return (
       <GlobalStyles>
-        <Layout>
+        <Layout location={{}} page={{}} settings={[]}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.

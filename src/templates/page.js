@@ -29,10 +29,10 @@ class Page extends React.Component {
   }
 
   render() {
-    const { children, page, navMenus, settings } = this.props
+    const { children, location, page, navMenus, settings } = this.props
 
     return (
-      <Layout navMenus={navMenus} settings={settings}>
+      <Layout location={location} navMenus={navMenus} settings={settings} page={page}>
         {children}
         {this.containers(page.containers)}
       </Layout>
@@ -42,6 +42,7 @@ class Page extends React.Component {
 
 Page.propTypes = {
   children: PropTypes.element,
+  location: PropTypes.object.isRequired,
   locations: PropTypes.array,
   navMenus: PropTypes.array,
   page: PropTypes.object,
@@ -61,8 +62,14 @@ class PageTemplate extends React.Component {
     const { page } = this.props.data
     const { locations, navMenus, settings } = this.props.pageContext
     return (
-      <Page page={page} locations={locations} navMenus={navMenus} settings={settings}>
-        <Jumbotron theme="default" image={page.jumbotronImage}>
+      <Page
+        page={page}
+        location={this.props.location}
+        locations={locations}
+        navMenus={navMenus}
+        settings={settings}
+      >
+        <Jumbotron theme="default" image={page.jumbotron_image}>
           <h1>{page.title}</h1>
           <HTML field={page.description} />
         </Jumbotron>

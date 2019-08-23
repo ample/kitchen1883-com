@@ -101,7 +101,7 @@ const HeaderNavDesktop = props => {
                 ariaLabelledby={`nav${idx}Button`}
               >
                 <div
-                  tabindex="0"
+                  tabIndex="0"
                   role="button"
                   onClick={() => setShowTooltip(!showTooltip)}
                   onKeyPress={e => handleTab(e)}
