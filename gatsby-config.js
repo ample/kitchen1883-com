@@ -1,8 +1,13 @@
 module.exports = {
+  siteMetadata: {
+    title: "Kitchen 1883",
+    siteUrl: "https://www.kitchen1883.com",
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     {
@@ -41,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        short_name: 'Kitchen 1883',
+        short_name: "Kitchen 1883",
         theme_color: `#FFFFFF`,
         icon: `src/images/icons/icon-favicon.png`,
       },
