@@ -1,0 +1,71 @@
+name: Rspec
+
+on:
+  push:
+    branches:
+    - staging
+    - master
+    - github-ci
+  pull_request:
+    types: opened
+
+jobs:
+  vm-job:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:10.8
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: ""
+          POSTGRES_DB: postgres
+        ports:
+        # will assign a random free host port
+        - 5432/tcp
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Ruby 2.3.7
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.3.7
+    # required to compile pg ruby gem
+    - name: install PostgreSQL client
+      run: sudo apt-get install libpq-dev
+    - name: Build and create DB
+      env:
+        # use localhost for the host here because we have specified a container for the job.
+        # If we were running the job on the VM this would be postgres
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPORT: ${{ job.services.postgres.ports[5432] }} # get randomly assigned published port
+        RAILS_ENV: test
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake db:create
+        bundle exec rake db:schema:load
+    - name: Run specs
+      env:
+        PGHOST: localhost
+        PGUSER: postgres
+        PGPORT: ${{ job.services.postgres.ports[5432] }} # get randomly assigned published port
+        RAILS_ENV: test
+        AZURE_STORAGE_ACCOUNT: kitchen1883
+        AZURE_STORAGE_ACCESS_KEY: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
+        AZURE_CONTAINER_NAME: kitchen1883-development
+        IMGIX_SOURCE: kitchen1883-development.imgix.net
+      run: |
+        bundle exec rspec
+    # - name: Slack Notification
+    #   uses: 8398a7/action-slack@v2
+    #   with:
+    #     status: ${{ job.status }}
+    #     channel: '#ops'
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    #   if: always()
