@@ -94,7 +94,6 @@ const HeaderNavDesktop = props => {
             <LinkContainer spacer={navItem.title} key={`headerNav_${idx}`}>
               <Tooltip
                 trigger="click"
-                tooltipShown={showTooltip}
                 placement="bottom"
                 tooltip={dropdown(navItem.contentfulchildren)}
                 id={`nav${idx}Menu`}
