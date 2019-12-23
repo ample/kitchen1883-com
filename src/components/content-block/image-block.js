@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
 
 import HTML from "../utilities/html"
 
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     padding: 0 2rem;
     width: 100%;
 
-    ${'' /* reset button font */}
+    ${"" /* reset button font */}
     a {
       font-family: ${fonts.sans};
     }

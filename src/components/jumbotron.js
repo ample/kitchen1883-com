@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
 import { Container, Col } from "react-grid-system"
 
 import { colors, fonts, screen } from "./global-variables"
