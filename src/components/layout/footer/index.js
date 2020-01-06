@@ -47,7 +47,7 @@ const Footer = props => (
     <FooterNav nav={props.data.nav} />
     <SocialIcons
       location={props.data.social.location}
-      icons={props.data.social.icons}
+      icons={props.data.social.icons || []}
       dark={true}
     />
     <div className="text-sm copy">&copy; {new Date().getFullYear()} Kitchen 1883</div>

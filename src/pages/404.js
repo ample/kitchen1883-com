@@ -10,7 +10,7 @@ export default class extends React.Component {
     const { page, navMenus, settings } = this.props.data
     return (
       <Layout navMenus={navMenus.edges.map(e => e.node)} settings={settings.edges.map(e => e.node)}>
-        <Jumbotron theme="error" image={page.jumbotronImage}>
+        <Jumbotron theme="error" image={page.jumbotron_image}>
           <h1>Page Not Found</h1>
           <p>The page you're trying to access cannot be located.</p>
           <p>

@@ -16,6 +16,9 @@ export const LocationAttributes = graphql`
       fluid(maxWidth: 2400) {
         ...GatsbyContentfulFluid_withWebp
       }
+      file {
+        url
+      }
     }
     menus {
       title
@@ -54,5 +57,13 @@ export const LocationAttributes = graphql`
     }
     lat
     lng
+    meta_image {
+      file {
+        url
+      }
+    }
+    meta_description {
+      meta_description
+    }
   }
 `

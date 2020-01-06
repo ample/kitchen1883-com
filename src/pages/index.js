@@ -15,11 +15,12 @@ export default class extends React.Component {
     return (
       <Page
         page={page}
+        location={this.props.location}
         locations={locations.edges.map(e => e.node)}
         navMenus={navMenus.edges.map(e => e.node)}
         settings={settings.edges.map(e => e.node)}
       >
-        <Jumbotron theme="home" image={page.jumbotronImage}>
+        <Jumbotron theme="home" image={page.jumbotron_image}>
           <HTML field={page.description} />
         </Jumbotron>
       </Page>

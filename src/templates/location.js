@@ -62,7 +62,12 @@ class Location extends React.Component {
     }
 
     return (
-      <Layout navMenus={navMenus} settings={settings}>
+      <Layout
+        location={this.props.location}
+        navMenus={navMenus}
+        page={location}
+        settings={settings}
+      >
         <Jumbotron
           theme="location"
           image={location.images[0]}

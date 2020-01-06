@@ -7,10 +7,14 @@ export const PageAttributes = graphql`
       childMarkdownRemark {
         html
       }
+      description
     }
-    jumbotronImage: image {
+    jumbotron_image: image {
       fluid(maxWidth: 2400) {
         ...GatsbyContentfulFluid_withWebp
+      }
+      file {
+        url
       }
     }
     containers {
@@ -43,6 +47,14 @@ export const PageAttributes = graphql`
           type
         }
       }
+    }
+    meta_image {
+      file {
+        url
+      }
+    }
+    meta_description {
+      meta_description
     }
   }
 `

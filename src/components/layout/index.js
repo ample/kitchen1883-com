@@ -5,8 +5,9 @@ import GlobalStyles from "./global-styles"
 
 import Header from "./header"
 import Footer from "./footer"
+import SEO from "./seo"
 
-const Layout = ({ children, navMenus = [], settings = [] }) => {
+const Layout = ({ children, location = {}, navMenus = [], page = {}, settings = [] }) => {
   const getMenuLinks = name => {
     const menus = navMenus.filter(n => n.title === name)
     return menus.length > 0 ? menus[0].links : []
@@ -19,6 +20,7 @@ const Layout = ({ children, navMenus = [], settings = [] }) => {
 
   return (
     <GlobalStyles>
+      <SEO location={location} page={page} settings={settings} />
       <Header nav={getMenuLinks("HeaderMenu")} />
       <main>{children}</main>
       <Footer
@@ -33,7 +35,10 @@ const Layout = ({ children, navMenus = [], settings = [] }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
   navMenus: PropTypes.array,
+  page: PropTypes.object.isRequired,
+  settings: PropTypes.array.isRequired,
 }
 
 export default Layout
