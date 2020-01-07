@@ -8,11 +8,12 @@ const SEO = ({ location, page, settings }) => {
 
   const title = page.title || getSetting("default_meta_title")
   const titleTemplate = getSetting("meta_title_template")
-  const image =
+  let image =
     dig((page.images || [])[0] || {}, "file", "url") ||
     dig(page, "jumbotron_image", "file", "url") ||
     dig(page, "meta_image", "file", "url") ||
     getSetting("default_meta_image")
+  if (image.slice(0, 2) === "//") image = `https:${image}`
   const url = location.href
   const description =
     dig(page, "meta_description", "meta_description") ||
