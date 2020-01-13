@@ -6,6 +6,7 @@ import GlobalStyles from "./global-styles"
 import Header from "./header"
 import Footer from "./footer"
 import SEO from "./seo"
+import HelloBarScript from "./hellobar"
 
 const Layout = ({ children, location = {}, navMenus = [], page = {}, settings = [] }) => {
   const getMenuLinks = name => {
@@ -29,6 +30,7 @@ const Layout = ({ children, location = {}, navMenus = [], page = {}, settings = 
           social: { location: "n/a", icons: JSON.parse(getSetting("footer_icons")) },
         }}
       />
+      <HelloBarScript />
     </GlobalStyles>
   )
 }
