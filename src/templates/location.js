@@ -4,10 +4,12 @@ import Img from "gatsby-image/withIEPolyfill"
 import { Container } from "react-grid-system"
 
 import Button from "../components/button"
+import HTML from "../components/utilities/html"
 import Jumbotron from "../components/jumbotron"
 import Layout from "../components/layout"
 import Map from "../components/map"
 import Menu from "../components/menu"
+import SocialIcons from "../components/social-icons"
 
 // eslint-disable-next-line
 import LocationAttributes from "../fragments/location-attributes"
@@ -50,6 +52,19 @@ class Location extends React.Component {
     )
   }
 
+  chef() {
+    const { location } = this.props.data
+    return (
+      <div>
+        {location.chef_heading && <h2>{location.chef_heading}</h2>}
+        {location.chef_subheading && <h3>{location.chef_subheading}</h3>}
+        {location.chef_bio && <HTML field={location.chef_bio} />}
+        {location.chef_image && <Img fluid={location.chef_image.fluid} />}
+        {location.chef_social_links && <SocialIcons icons={location.chef_social_links} />}
+      </div>
+    )
+  }
+
   render() {
     const { location } = this.props.data
     const { navMenus, settings } = this.props.pageContext
@@ -81,6 +96,8 @@ class Location extends React.Component {
         <Container style={{ height: "48rem", marginBottom: "5rem", marginTop: "3rem" }}>
           <Map lat={location.lat} lng={location.lng} />
         </Container>
+
+        {this.chef()}
 
         {this.slideshow()}
       </Layout>

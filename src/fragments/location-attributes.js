@@ -65,5 +65,21 @@ export const LocationAttributes = graphql`
     meta_description {
       meta_description
     }
+    chef_heading
+    chef_subheading
+    chef_bio {
+      childMarkdownRemark {
+        html
+      }
+    }
+    chef_image {
+      fluid(maxWidth: 2400) {
+        ...GatsbyContentfulFluid_withWebp
+      }
+    }
+    chef_social_links {
+      icon
+      url
+    }
   }
 `
