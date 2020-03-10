@@ -61,13 +61,9 @@ const typeList = {
 const SocialIcons = props => (
   <div>
     {props.icons.map((icon, idx) => (
-      <Icon
-        to={icon.url}
-        key={`social_${props.location.replace(/\s/g, "")}_${idx}`}
-        dark={props.dark ? 1 : 0}
-      >
+      <Icon to={icon.url} key={idx} dark={props.dark ? 1 : 0}>
         <div>
-          <SVG src={typeList[icon.icon]} aria-label={`${props.location} Location ${icon.icon} Link`}/>
+          <SVG src={typeList[icon.icon]} aria-label={`${icon.icon} icon`} />
         </div>
       </Icon>
     ))}
@@ -77,7 +73,7 @@ const SocialIcons = props => (
 SocialIcons.propTypes = {
   icons: PropTypes.array.isRequired,
   // valid icon types: "facebook", "twitter", "instagram"
-  location: PropTypes.string.isRequired,
+  location: PropTypes.string,
   dark: PropTypes.bool,
 }
 
