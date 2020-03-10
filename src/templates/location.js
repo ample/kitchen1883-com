@@ -101,6 +101,7 @@ class Location extends React.Component {
 
   chef() {
     const { location } = this.props.data
+    if (!location.chef_heading && !location.chef_subheading && !location.chef_bio) return null
     return (
       <Container style={{ paddingBottom: "8rem", paddingTop: "3rem" }}>
         <ChefSection>
