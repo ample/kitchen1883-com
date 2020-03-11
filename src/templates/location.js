@@ -84,21 +84,6 @@ class Location extends React.Component {
     )
   }
 
-  slideshow() {
-    const { location } = this.props.data
-    if (location.images.length === 0) return null
-    const slides = location.images.map((img, i) => (
-      <div key={i}>
-        <Img fluid={img.fluid} />
-      </div>
-    ))
-    return (
-      <div>
-        <Slideshow>{slides}</Slideshow>
-      </div>
-    )
-  }
-
   chef() {
     const { location } = this.props.data
     if (!location.chef_heading && !location.chef_subheading && !location.chef_bio) return null
@@ -114,6 +99,21 @@ class Location extends React.Component {
           <ChefImage>{location.chef_image && <Img fluid={location.chef_image.fluid} />}</ChefImage>
         </ChefSection>
       </Container>
+    )
+  }
+
+  slideshow() {
+    const { location } = this.props.data
+    if (location.images.length === 0) return null
+    const slides = location.images.map((img, i) => (
+      <div key={i}>
+        <Img fluid={img.fluid} />
+      </div>
+    ))
+    return (
+      <div>
+        <Slideshow>{slides}</Slideshow>
+      </div>
     )
   }
 
