@@ -141,7 +141,9 @@ class Location extends React.Component {
           location={jumbotronAttributes}
         ></Jumbotron>
 
-        <Menu menus={location.menus} />
+        <div>
+          <Menu menus={location.menus} />
+        </div>
 
         {this.menuButtons()}
 
