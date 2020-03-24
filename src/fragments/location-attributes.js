@@ -77,9 +77,9 @@ export const LocationAttributes = graphql`
         ...GatsbyContentfulFluid_withWebp
       }
     }
-    chef_social_links {
-      icon
-      url
-    }
+    # chef_social_links {
+    #   icon
+    #   url
+    # }
   }
 `
