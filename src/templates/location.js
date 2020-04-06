@@ -39,8 +39,8 @@ const ChefSection = styled.div`
 `
 
 const ChefBody = styled.div`
-  flex-basis: 58.33333333%;
-  max-width: 58.33333333%;
+  flex-basis: 70%;
+  max-width: 70%;
   box-sizing: border-box;
 
   @media ${screen.max.md} {
@@ -103,15 +103,15 @@ class Location extends React.Component {
     const { location } = this.props.data
     if (!location.chef_heading && !location.chef_subheading && !location.chef_bio) return null
     return (
-      <Container style={{ paddingBottom: "8rem", paddingTop: "3rem" }}>
+      <Container style={{ paddingBottom: "5rem", paddingTop: "5rem" }}>
         <ChefSection>
+          <ChefImage>{location.chef_image && <Img fluid={location.chef_image.fluid} />}</ChefImage>
           <ChefBody>
             {location.chef_heading && <h2 className="text-left">{location.chef_heading}</h2>}
             {location.chef_subheading && <h5>{location.chef_subheading}</h5>}
-            {location.chef_bio && <HTML field={location.chef_bio} />}
+            {location.chef_bio && <HTML className="xl" field={location.chef_bio} />}
             {location.chef_social_links && <SocialIcons icons={location.chef_social_links} />}
           </ChefBody>
-          <ChefImage>{location.chef_image && <Img fluid={location.chef_image.fluid} />}</ChefImage>
         </ChefSection>
       </Container>
     )
@@ -141,6 +141,8 @@ class Location extends React.Component {
           location={jumbotronAttributes}
         ></Jumbotron>
 
+        {this.chef()}
+
         <div>
           <Menu menus={location.menus} />
         </div>
@@ -150,8 +152,6 @@ class Location extends React.Component {
         <Container style={{ height: "48rem", marginBottom: "5rem", marginTop: "3rem" }}>
           <Map lat={location.lat} lng={location.lng} />
         </Container>
-
-        {this.chef()}
 
         {this.slideshow()}
       </Layout>
