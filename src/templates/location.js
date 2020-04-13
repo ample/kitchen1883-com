@@ -5,6 +5,7 @@ import { Container } from "react-grid-system"
 import styled from "styled-components"
 import { screen } from "../components/global-variables"
 
+import * as g from "../components/global-variables"
 import Button from "../components/button"
 import HTML from "../components/utilities/html"
 import Jumbotron from "../components/jumbotron"
@@ -20,8 +21,8 @@ import Slideshow from "../components/utilities/slideshow"
 const ChefSection = styled.div`
   text-align: left;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   h2,
@@ -39,19 +40,27 @@ const ChefSection = styled.div`
 `
 
 const ChefBody = styled.div`
-  flex-basis: 58.33333333%;
-  max-width: 58.33333333%;
+  flex-basis: 60%;
+  max-width: 60%;
   box-sizing: border-box;
 
   @media ${screen.max.md} {
+    margin-top: 13px;
     flex-basis: 100%;
     max-width: 100%;
+  }
+
+  .serif {
+    font-family: ${g.fonts.serif};
+    font-size: 14px;
+    color: ${g.colors.gray800};
+    line-height: 22px;
   }
 `
 
 const ChefImage = styled.div`
-  flex-basis: 25%;
-  max-width: 25%;
+  flex-basis: 30%;
+  max-width: 30%;
   box-sizing: border-box;
 
   @media ${screen.max.md} {
@@ -59,6 +68,10 @@ const ChefImage = styled.div`
     max-width: 50%;
     align-items: center;
     margin: 13px auto;
+  }
+
+  .gatsby-image-wrapper > div {
+    padding-bottom: 100% !important;
   }
 `
 
@@ -103,15 +116,15 @@ class Location extends React.Component {
     const { location } = this.props.data
     if (!location.chef_heading && !location.chef_subheading && !location.chef_bio) return null
     return (
-      <Container style={{ paddingBottom: "8rem", paddingTop: "3rem" }}>
+      <Container style={{ paddingBottom: "5rem", paddingTop: "5rem" }}>
         <ChefSection>
+          <ChefImage>{location.chef_image && <Img fluid={location.chef_image.fluid} />}</ChefImage>
           <ChefBody>
             {location.chef_heading && <h2 className="text-left">{location.chef_heading}</h2>}
             {location.chef_subheading && <h5>{location.chef_subheading}</h5>}
-            {location.chef_bio && <HTML field={location.chef_bio} />}
+            {location.chef_bio && <HTML className="serif" field={location.chef_bio} />}
             {location.chef_social_links && <SocialIcons icons={location.chef_social_links} />}
           </ChefBody>
-          <ChefImage>{location.chef_image && <Img fluid={location.chef_image.fluid} />}</ChefImage>
         </ChefSection>
       </Container>
     )
@@ -141,6 +154,8 @@ class Location extends React.Component {
           location={jumbotronAttributes}
         ></Jumbotron>
 
+        {this.chef()}
+
         <div>
           <Menu menus={location.menus} />
         </div>
@@ -150,8 +165,6 @@ class Location extends React.Component {
         <Container style={{ height: "48rem", marginBottom: "5rem", marginTop: "3rem" }}>
           <Map lat={location.lat} lng={location.lng} />
         </Container>
-
-        {this.chef()}
 
         {this.slideshow()}
       </Layout>
