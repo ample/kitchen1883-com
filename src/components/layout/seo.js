@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import dig from "object-dig"
+// import HotjarScript from "./hotjar"
 
 const SEO = ({ location, page, settings }) => {
   const getSetting = name => dig(settings.filter(s => s.key === name)[0] || {}, "value", "value")
@@ -32,6 +33,7 @@ const SEO = ({ location, page, settings }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <script src="/hotjar.js"></script>
     </Helmet>
   )
 }
