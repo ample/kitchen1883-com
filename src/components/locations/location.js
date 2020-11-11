@@ -208,16 +208,36 @@ const Location = props => {
         />
       )}
 
-      {(props.permalink || props.order_online_url) && (
+      {(props.permalink || props.order_pickup_url) && (
         <CTAs>
           {props.permalink && (
             <Button to={`/locations/${props.permalink}`} block={true}>
               View Details
             </Button>
           )}
+          {props.order_pickup_url && (
+            <Button to={`/locations/${props.order_pickup_url}`} block={true}>
+              Order Pickup
+            </Button>
+          )}
+        </CTAs>
+      )}
+
+      {props.order_online_url && (
+        <CTAs>
           {props.order_online_url && (
-            <Button to={props.order_online_url} block={true}>
-              Order Online
+            <Button to={props.order_online_url} block={true} style={{ margin: "0" }}>
+              <svg
+                class
+                width="32"
+                height="18"
+                viewBox="0 0 99.5 56.5"
+                fill="#fff"
+                style={{ marginRight: "10px" }}
+              >
+                <path d="M95.64,13.38A25.24,25.24,0,0,0,73.27,0H2.43A2.44,2.44,0,0,0,.72,4.16L16.15,19.68a7.26,7.26,0,0,0,5.15,2.14H71.24a6.44,6.44,0,1,1,.13,12.88H36.94a2.44,2.44,0,0,0-1.72,4.16L50.66,54.39a7.25,7.25,0,0,0,5.15,2.14H71.38c20.26,0,35.58-21.66,24.26-43.16"></path>
+              </svg>
+              Order Delivery
             </Button>
           )}
         </CTAs>
@@ -234,6 +254,7 @@ Location.propTypes = {
   social_links: PropTypes.array,
   permalink: PropTypes.string,
   order_online_url: PropTypes.string,
+  order_pickup_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }
 
