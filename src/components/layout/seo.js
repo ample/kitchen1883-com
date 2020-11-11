@@ -32,6 +32,7 @@ const SEO = ({ location, page, settings }) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <script src="/hotjar.js"></script>
     </Helmet>
   )
 }
