@@ -48,6 +48,7 @@ export const query = graphql`
             hours
           }
           order_online_url
+          order_pickup_url
           menu_pdf {
             file {
               url

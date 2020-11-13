@@ -13,6 +13,8 @@ import Layout from "../components/layout"
 import Map from "../components/map"
 import Menu from "../components/menu"
 import SocialIcons from "../components/social-icons"
+import SVG from "react-inlinesvg"
+import doordash from "../images/icons/doordash.svg"
 
 // eslint-disable-next-line
 import LocationAttributes from "../fragments/location-attributes"
@@ -90,7 +92,15 @@ class Location extends React.Component {
         )}
         {location.order_online_url && (
           <p className="text-center">
-            <Button to={location.order_online_url}>Order Online</Button>
+            <Button to={`/locations/${location.order_pickup_url}`}>Order Pickup</Button>
+          </p>
+        )}
+        {location.order_online_url && (
+          <p className="text-center">
+            <Button to={location.order_online_url}>
+              <SVG src={doordash} role="img" style={{ marginRight: "10px" }} />
+              Order Delivery
+            </Button>
           </p>
         )}
       </Container>
