@@ -181,7 +181,9 @@ const Location = props => {
       {props.jumbotron ? <h1>{props.title}</h1> : <h6>{props.title}</h6>}
 
       <Contact className={props.jumbotron ? " text-lg " : ""}>
-        <div>{props.address.address}</div>
+        <div
+          dangerouslySetInnerHTML={{ __html: props.address.address.replace(",", "<br />") }}
+        ></div>
         <Link
           to={`tel:${props.phone}`}
           target="_self"
