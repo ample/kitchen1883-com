@@ -92,7 +92,7 @@ class Location extends React.Component {
         )}
         {location.order_online_url && (
           <p className="text-center">
-            <Button to={`/locations/${location.order_pickup_url}`}>Order Pickup</Button>
+            <Button to={`${location.order_pickup_url}`}>Order Pickup</Button>
           </p>
         )}
         {location.order_online_url && (

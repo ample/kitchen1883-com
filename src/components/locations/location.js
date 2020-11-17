@@ -218,7 +218,7 @@ const Location = props => {
             </Button>
           )}
           {props.order_pickup_url && (
-            <Button to={`/locations/${props.order_pickup_url}`} block={true}>
+            <Button to={`${props.order_pickup_url}`} block={true}>
               Order Pickup
             </Button>
           )}
