@@ -51,6 +51,7 @@ export const LocationAttributes = graphql`
       }
     }
     order_online_url
+    order_pickup_url
     social_links {
       icon
       url

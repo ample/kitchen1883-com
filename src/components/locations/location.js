@@ -7,6 +7,8 @@ import * as g from "../global-variables"
 import Link from "../utilities/link"
 import SocialIcons from "../social-icons"
 import Button from "../button"
+import SVG from "react-inlinesvg"
+import doordash from "../../images/icons/doordash.svg"
 
 const StyledLocation = styled(Container)`
   text-align: center;
@@ -208,16 +210,27 @@ const Location = props => {
         />
       )}
 
-      {(props.permalink || props.order_online_url) && (
+      {(props.permalink || props.order_pickup_url) && (
         <CTAs>
           {props.permalink && (
             <Button to={`/locations/${props.permalink}`} block={true}>
               View Details
             </Button>
           )}
+          {props.order_pickup_url && (
+            <Button to={`/locations/${props.order_pickup_url}`} block={true}>
+              Order Pickup
+            </Button>
+          )}
+        </CTAs>
+      )}
+
+      {props.order_online_url && (
+        <CTAs>
           {props.order_online_url && (
-            <Button to={props.order_online_url} block={true}>
-              Order Online
+            <Button to={props.order_online_url} block={true} style={{ margin: "0" }}>
+              <SVG src={doordash} role="img" style={{ marginRight: "10px" }} />
+              Order Delivery
             </Button>
           )}
         </CTAs>
@@ -234,6 +247,7 @@ Location.propTypes = {
   social_links: PropTypes.array,
   permalink: PropTypes.string,
   order_online_url: PropTypes.string,
+  order_pickup_url: PropTypes.string,
   jumbotron: PropTypes.bool,
 }
 
