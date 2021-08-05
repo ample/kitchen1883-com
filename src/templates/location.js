@@ -164,13 +164,13 @@ class Location extends React.Component {
           location={jumbotronAttributes}
         ></Jumbotron>
 
-        {this.chef()}
-
         <div>
           <Menu menus={location.menus} />
         </div>
 
         {this.menuButtons()}
+
+        {this.chef()}
 
         <Container style={{ height: "48rem", marginBottom: "5rem", marginTop: "3rem" }}>
           <Map lat={location.lat} lng={location.lng} />
