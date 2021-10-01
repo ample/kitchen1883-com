@@ -192,7 +192,7 @@ const Jumbotron = props => {
 
   return (
     <TagName wrapperHeight={props.height}>
-      <Img className="jumbotron-image" fluid={props.image.fluid} />
+      {props.image.fluid && <Img className="jumbotron-image" fluid={props.image.fluid} />}
       <Container style={{ height: "100%" }}>
         <JumboContentCol xl={10} push={{ xl: 1 }}>
           <div className="jumbotron-content">
